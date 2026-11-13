@@ -185,17 +185,20 @@ def build_main_menu_keyboard(user_id: int) -> InlineKeyboardMarkup:
     mistake_cnt = len(rec["mistakes"])
 
     rows = [
-        [InlineKeyboardButton("📚 Subject-Wise Quiz (13 Modules)", callback_data="menu:subjects")],
+        [InlineKeyboardButton("📚 Subject-Wise Sets (30 Qs each)", callback_data="menu:subjects")],
         [
-            InlineKeyboardButton("🎯 80-Q Exam Mock", callback_data="start:mock:80"),
-            InlineKeyboardButton("⚡ D/E Trap Drill (25 Qs)", callback_data="start:detrap:25"),
+            InlineKeyboardButton("🎯 80-Q Full Mock", callback_data="preview_set:mock_80"),
+            InlineKeyboardButton("⚡ D/E Trap (30 Qs)", callback_data="preview_set:detrap_30"),
         ],
         [
-            InlineKeyboardButton("🔢 Numericals (20 Qs)", callback_data="start:num:20"),
+            InlineKeyboardButton("🔢 Numericals (30 Qs)", callback_data="preview_set:num_30"),
+            InlineKeyboardButton("💡 Facts & NOT-Traps (30 Qs)", callback_data="preview_set:facts_30"),
+        ],
+        [
             InlineKeyboardButton(f"❌ My Mistakes ({mistake_cnt})", callback_data="start:mistakes:25"),
+            InlineKeyboardButton("📝 PYQ 75 Flashcards", callback_data="pyq:start"),
         ],
-        [InlineKeyboardButton("📝 PYQ 75 Mistakes Flashcards", callback_data="pyq:start")],
-        [InlineKeyboardButton("➕ Add to Group / Start in Group", url="https://t.me/Bpsc_tier4_bot?startgroup=true")],
+        [InlineKeyboardButton("➕ Add Bot to Group / Start in Group", url="https://t.me/Bpsc_tier4_bot?startgroup=true")],
         [
             InlineKeyboardButton(timer_txt, callback_data="cfg:timer"),
             InlineKeyboardButton("📊 My Stats", callback_data="menu:stats"),
@@ -203,6 +206,102 @@ def build_main_menu_keyboard(user_id: int) -> InlineKeyboardMarkup:
         [InlineKeyboardButton("🔄 Reset Seen History", callback_data="cfg:reset_ask")],
     ]
     return InlineKeyboardMarkup(rows)
+
+
+def get_module_sets_info(mod_code: str) -> list[tuple[str, str, int]]:
+    """Return list of (set_id, set_label, question_count) for a module in 30-question chunks."""
+    mod = MODULES.get(mod_code)
+    if not mod:
+        return []
+    total = len(mod["questions"])
+    chunk_size = 30
+    num_sets = (total + chunk_size - 1) // chunk_size
+    sets: list[tuple[str, str, int]] = []
+    for i in range(num_sets):
+        start = i * chunk_size
+        end = min(start + chunk_size, total)
+        if (end - start < 30) and total >= 30:
+            start = total - 30
+            end = total
+        set_num = i + 1
+        set_id = f"set_{mod_code}_{set_num}"
+        label = f"Set {set_num} (Q {start + 1}–{end})"
+        count = end - start
+        sets.append((set_id, label, count))
+    return sets
+
+
+def get_quiz_set(set_id: str) -> tuple[str, list[dict[str, Any]]]:
+    """Retrieve quiz title and questions for a named set ID."""
+    if set_id == "mock_80":
+        title = "🎯 BPSC TRE CS 80-Q Full Mock"
+        return title, build_weighted_mock(set())
+
+    if set_id == "detrap_30":
+        title = "⚡ D/E Trap Special Drill (30 Qs)"
+        trap_pool = [
+            q for q in QUESTION_BY_UID.values()
+            if q["module"] == "11" or q["correct"] in ("D", "E")
+        ]
+        random.shuffle(trap_pool)
+        return title, trap_pool[:30]
+
+    if set_id == "num_30":
+        title = "🔢 Numericals & Outputs Drill (30 Qs)"
+        pool = list(MODULES["12"]["questions"])
+        random.shuffle(pool)
+        return title, pool[:30]
+
+    if set_id == "facts_30":
+        title = "💡 High-Yield Facts & NOT-Traps (30 Qs)"
+        pool = list(MODULES["13"]["questions"])
+        random.shuffle(pool)
+        return title, pool[:30]
+
+    if set_id.startswith("set_"):
+        parts = set_id.split("_")
+        if len(parts) >= 3:
+            mod_code = parts[1]
+            try:
+                set_num = int(parts[2])
+            except ValueError:
+                set_num = 1
+            mod = MODULES.get(mod_code)
+            if mod:
+                total = len(mod["questions"])
+                chunk_size = 30
+                start = (set_num - 1) * chunk_size
+                end = min(start + chunk_size, total)
+                if (end - start < 30) and total >= 30:
+                    start = total - 30
+                    end = total
+                qs = list(mod["questions"][start:end])
+                title = f"📘 {mod['label']} — Set {set_num} (Q {start + 1}–{end})"
+                return title, qs
+
+    all_qs = list(QUESTION_BY_UID.values())
+    random.shuffle(all_qs)
+    return "🎯 BPSC Live Quiz (30 Qs)", all_qs[:30]
+
+
+def build_set_preview_card(set_id: str, title: str, count: int, back_cb: str) -> tuple[str, InlineKeyboardMarkup]:
+    """Generate @QuizBot-style set preview card with 'Start in DM' and 'Start in Group' buttons."""
+    bot_username = "Bpsc_tier4_bot"
+    group_url = f"https://t.me/{bot_username}?startgroup={set_id}"
+    text = (
+        f"📘 <b>{html.escape(title)}</b>\n\n"
+        f"📋 <b>Total Questions:</b> <code>{count}</code>\n"
+        f"⏱ <b>Question Timer:</b> <code>60 seconds</code> per question\n"
+        f"🎯 <b>Format:</b> BPSC 5-Options (A, B, C, D, E)\n"
+        f"🏆 <b>Leaderboard:</b> Group mein sabhi participants ka live rank aayega!\n\n"
+        f"<i>Neeche option choose karein:</i>"
+    )
+    kb = InlineKeyboardMarkup([
+        [InlineKeyboardButton("▶️ Start in Private (DM)", callback_data=f"start_set:{set_id}")],
+        [InlineKeyboardButton("👥 Start Quiz in Group", url=group_url)],
+        [InlineKeyboardButton("« Back", callback_data=back_cb)],
+    ])
+    return text, kb
 
 
 def pick_unseen_first(pool: list[dict[str, Any]], seen_set: set[str], count: int) -> list[dict[str, Any]]:
@@ -346,11 +445,28 @@ async def finish_quiz_session(bot: Any, user_id: int, stopped_early: bool) -> No
 
 
 async def start_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Handle /start and /menu commands (adapts for DM vs Group)."""
+    """Handle /start and /menu commands (adapts for DM vs Group + deep links)."""
     chat = update.effective_chat
     user_id = update.effective_user.id
+    payload = context.args[0].strip() if (context.args and len(context.args) > 0) else ""
 
     if chat.type in ("group", "supergroup"):
+        if payload and payload not in ("true", "1"):
+            title, questions = get_quiz_set(payload)
+            if questions:
+                kb = InlineKeyboardMarkup([
+                    [InlineKeyboardButton("▶️ Start This Quiz Now", callback_data=f"grp_start:{payload}")]
+                ])
+                text = (
+                    f"🎯 <b>The quiz '{html.escape(title)}' is ready!</b>\n\n"
+                    f"📋 <b>Questions:</b> <code>{len(questions)}</code>\n"
+                    f"⏱ <b>Timer:</b> <code>60 seconds</code> per question\n"
+                    f"🏆 <b>Leaderboard:</b> Quiz samapt hote hi top ranks publish hongi!\n\n"
+                    f"Sabhi members taiyar rahein! Neeche button dabakar shuru karein 👇"
+                )
+                await update.message.reply_text(text, parse_mode=ParseMode.HTML, reply_markup=kb)
+                return
+
         text = (
             "🎯 <b>BPSC TRE CS Group Quiz Engine</b>\n\n"
             "• <b>Daily 7:00 PM Auto-Quiz:</b> <code>/set_daily_quiz</code>\n"
@@ -361,6 +477,15 @@ async def start_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         )
         await update.message.reply_text(text, parse_mode=ParseMode.HTML)
         return
+
+    # DM flow with deep-link parameter (e.g. /start set_01_1)
+    if payload and payload not in ("true", "1"):
+        title, qs = get_quiz_set(payload)
+        if qs:
+            back_cb = f"pickmod:{payload.split('_')[1]}" if payload.startswith("set_") else "menu:home"
+            text, kb = build_set_preview_card(payload, title, len(qs), back_cb)
+            await update.message.reply_text(text, parse_mode=ParseMode.HTML, reply_markup=kb)
+            return
 
     await update.message.reply_text(
         build_main_menu_text(user_id),
@@ -534,22 +659,91 @@ async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
 
     if data.startswith("pickmod:"):
         mod_code = data.split(":", 1)[1]
-        mod = MODULES[mod_code]
-        seen_set = set(rec["seen"])
-        unseen = sum(1 for q in mod["questions"] if q["uid"] not in seen_set)
-        kb = InlineKeyboardMarkup([
-            [
-                InlineKeyboardButton("10 Qs", callback_data=f"start:mod:{mod_code}:10"),
-                InlineKeyboardButton("20 Qs", callback_data=f"start:mod:{mod_code}:20"),
-                InlineKeyboardButton("50 Qs", callback_data=f"start:mod:{mod_code}:50"),
-            ],
-            [InlineKeyboardButton(f"All ({len(mod['questions'])} Qs)", callback_data=f"start:mod:{mod_code}:{len(mod['questions'])}")],
-            [InlineKeyboardButton("⬅️ Back to Subjects", callback_data="menu:subjects")],
-        ])
-        await query.message.edit_text(
-            f"*{mod_code}. {mod['subject']}*\nTotal: `{len(mod['questions'])}` | Unseen: `{unseen}`\n\nKitne questions chahiye?",
-            parse_mode=ParseMode.MARKDOWN,
-            reply_markup=kb,
+        mod = MODULES.get(mod_code)
+        if not mod:
+            await query.answer("Subject nahi mila.", show_alert=True)
+            return
+
+        sets_info = get_module_sets_info(mod_code)
+        rows: list[list[InlineKeyboardButton]] = []
+        for set_id, label, count in sets_info:
+            rows.append([InlineKeyboardButton(f"▶️ {label} ({count} Qs)", callback_data=f"preview_set:{set_id}")])
+        rows.append([InlineKeyboardButton("⬅️ Back to Subjects", callback_data="menu:subjects")])
+
+        text = (
+            f"📘 <b>{html.escape(mod['label'])}</b>\n"
+            f"Total MCQs in Bank: <code>{len(mod['questions'])}</code>\n\n"
+            f"<i>Neeche se 30-Question Set choose karein:</i>"
+        )
+        await query.message.edit_text(text, parse_mode=ParseMode.HTML, reply_markup=InlineKeyboardMarkup(rows))
+        return
+
+    if data.startswith("preview_set:"):
+        set_id = data.split(":", 1)[1]
+        title, qs = get_quiz_set(set_id)
+        if not qs:
+            await query.answer("Questions load nahi ho sake.", show_alert=True)
+            return
+
+        if set_id.startswith("set_"):
+            mod_code = set_id.split("_")[1]
+            back_cb = f"pickmod:{mod_code}"
+        else:
+            back_cb = "menu:home"
+
+        text, kb = build_set_preview_card(set_id, title, len(qs), back_cb)
+        await query.message.edit_text(text, parse_mode=ParseMode.HTML, reply_markup=kb)
+        return
+
+    if data.startswith("start_set:"):
+        set_id = data.split(":", 1)[1]
+        title, questions = get_quiz_set(set_id)
+        if not questions:
+            await query.answer("Questions load nahi ho sake.", show_alert=True)
+            return
+
+        ACTIVE_SESSIONS[user_id] = {
+            "chat_id": chat_id,
+            "title": title,
+            "questions": questions,
+            "index": 0,
+            "correct": 0,
+            "answered": 0,
+        }
+        await query.message.reply_text(
+            f"🚀 <b>Starting:</b> {html.escape(title)} (<code>{len(questions)}</code> Qs)\nUse <code>/stop</code> anytime to end and see score.",
+            parse_mode=ParseMode.HTML,
+        )
+        await send_next_question(context.bot, user_id)
+        return
+
+    if data.startswith("grp_start:"):
+        set_id = data.split(":", 1)[1]
+        if chat_id in GROUP_QUIZ_SESSIONS:
+            await query.answer("⚠️ Ek quiz pehle se chal rahi hai! Use /stop_quiz.", show_alert=True)
+            return
+
+        title, questions = get_quiz_set(set_id)
+        if not questions:
+            await query.answer("Questions load nahi ho sake.", show_alert=True)
+            return
+
+        sender_name = query.from_user.first_name or "Member"
+        await query.edit_message_text(
+            f"🚀 <b>Quiz Started: {html.escape(title)}</b>\n"
+            f"👤 <b>Started by:</b> {html.escape(sender_name)}\n"
+            f"📋 <b>Total Questions:</b> <code>{len(questions)}</code> | ⏱ <b>Timer:</b> <code>60s/Q</code>\n\n"
+            f"<i>Question 1 aa raha hai...</i>",
+            parse_mode=ParseMode.HTML,
+        )
+        asyncio.create_task(
+            run_group_quiz(
+                context.bot,
+                chat_id=chat_id,
+                questions=questions,
+                title=title,
+                duration=60,
+            )
         )
         return
 
@@ -629,6 +823,7 @@ async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
 async def run_group_quiz(
     bot: Any,
     chat_id: int,
+    questions: list[dict[str, Any]] | None = None,
     count: int = 30,
     duration: int = 60,
     title: str = "🎯 BPSC Daily Group Quiz",
@@ -642,10 +837,11 @@ async def run_group_quiz(
         )
         return
 
-    # Pick randomized balanced pool across 13 modules
-    all_qs = list(QUESTION_BY_UID.values())
-    random.shuffle(all_qs)
-    questions = all_qs[:count]
+    if questions is None:
+        # Pick randomized balanced pool across 13 modules
+        all_qs = list(QUESTION_BY_UID.values())
+        random.shuffle(all_qs)
+        questions = all_qs[:count]
 
     session: dict[str, Any] = {
         "chat_id": chat_id,
