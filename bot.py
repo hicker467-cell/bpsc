@@ -18,6 +18,7 @@ import logging
 import os
 import random
 import threading
+from datetime import datetime, timedelta, timezone
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 from typing import Any
@@ -102,6 +103,14 @@ MODULES, QUESTION_BY_UID, PYQ_MISTAKES = load_question_banks()
 ACTIVE_SESSIONS: dict[int, dict[str, Any]] = {}
 POLL_MAP: dict[str, dict[str, Any]] = {}
 PYQ_SESSIONS: dict[int, dict[str, Any]] = {}
+GROUP_QUIZ_SESSIONS: dict[int, dict[str, Any]] = {}
+
+IST = timezone(timedelta(hours=5, minutes=30))
+
+
+def get_groups_config() -> dict[str, Any]:
+    """Retrieve or initialize group daily schedule dictionary."""
+    return USER_PROGRESS.setdefault("groups", {})
 
 
 def load_all_progress() -> dict[str, Any]:
@@ -348,14 +357,22 @@ async def start_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 async def help_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Handle /help command."""
     text = (
-        "📘 *BPSC TRE CS Quiz Bot — Commands & Tips*\n\n"
-        "• `/start` or `/menu` — Main dashboard kholo\n"
-        "• `/stop` — Chal rahi quiz turant band karo & score dekho\n"
-        "• `/next` — Agar timer expire ho gaya toh agla question bhejo\n"
-        "• `/stats` — Subject-wise accuracy aur Target 75+/80 status\n\n"
-        "💡 *BPSC Rule of 2:* Option `(A)` sahi lagne par bhi `(B)` aur `(C)` zaroor padho — do sahi hote hi answer `(D)` hoga!"
+        "📘 <b>BPSC TRE CS Quiz Bot — Commands & Help</b>\n\n"
+        "<b>Personal / DM Commands:</b>\n"
+        "• <code>/start</code> or <code>/menu</code> — Main dashboard & subject selector\n"
+        "• <code>/stats</code> — Subject-wise accuracy & 75+/80 tracker\n"
+        "• <code>/stop</code> — Active DM quiz stop karo\n"
+        "• <code>/next</code> — Timed poll expire hone par next question\n\n"
+        "<b>Group Commands (Daily 7:00 PM Quiz & Live Competition):</b>\n"
+        "• <code>/set_daily_quiz</code> — Group mein daily 7:00 PM IST (30 Qs, 60s/Q) schedule karo\n"
+        "• <code>/set_daily_quiz 19:00</code> — Custom time set karo (e.g. 19:00 ya 07:00)\n"
+        "• <code>/start_quiz [count]</code> — Abhi group mein live quiz start karo (e.g. <code>/start_quiz 30</code>)\n"
+        "• <code>/stop_quiz</code> — Running group quiz stop karo aur leaderboard dekho\n"
+        "• <code>/stop_daily_quiz</code> — Daily auto-quiz band karo\n"
+        "• <code>/quiz_status</code> — Group schedule aur settings dekho\n\n"
+        "💡 <i>Tip: Group mein bot ko Admin banayein taaki polls post karne ki permission rahe!</i>"
     )
-    await update.message.reply_text(text, parse_mode=ParseMode.MARKDOWN)
+    await update.message.reply_text(text, parse_mode=ParseMode.HTML)
 
 
 async def stop_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -594,24 +611,308 @@ async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
         return
 
 
+async def run_group_quiz(
+    bot: Any,
+    chat_id: int,
+    count: int = 30,
+    duration: int = 60,
+    title: str = "🎯 BPSC Daily Group Quiz",
+) -> None:
+    """Run an automated or manual multi-question group quiz with live leaderboard."""
+    if chat_id in GROUP_QUIZ_SESSIONS:
+        await bot.send_message(
+            chat_id=chat_id,
+            text="⚠️ <b>Ek quiz pehle se chal rahi hai!</b> Use <code>/stop_quiz</code> to stop it.",
+            parse_mode=ParseMode.HTML,
+        )
+        return
+
+    # Pick randomized balanced pool across 13 modules
+    all_qs = list(QUESTION_BY_UID.values())
+    random.shuffle(all_qs)
+    questions = all_qs[:count]
+
+    session: dict[str, Any] = {
+        "chat_id": chat_id,
+        "title": title,
+        "questions": questions,
+        "current_index": 0,
+        "duration": duration,
+        "scores": {},  # user_id -> {"name": str, "score": int, "attempts": int}
+        "is_active": True,
+        "current_poll_id": None,
+    }
+    GROUP_QUIZ_SESSIONS[chat_id] = session
+
+    start_msg = (
+        f"🚀 <b>{html.escape(title)}</b>\n\n"
+        f"📋 <b>Total Questions:</b> <code>{len(questions)}</code>\n"
+        f"⏱ <b>Timer:</b> <code>{duration} seconds</code> per question\n"
+        f"💡 Sabhi members poll par tap karein. End mein top scorers ka <b>Leaderboard</b> aayega!\n\n"
+        f"<i>Question 1 shuru ho raha hai...</i>"
+    )
+    await bot.send_message(chat_id=chat_id, text=start_msg, parse_mode=ParseMode.HTML)
+    await asyncio.sleep(3)
+
+    try:
+        for idx, q in enumerate(questions):
+            if not session.get("is_active"):
+                break
+            session["current_index"] = idx
+            total = len(questions)
+            mod_label = MODULE_META.get(q["module"], (q["module"], 0))[0]
+            header = f"[Q {idx + 1}/{total} | {mod_label}] "
+            poll_question = truncate(header + q["question"], 300)
+            options_list = [truncate(f"({k}) {q['options'][k]}", 100) for k in OPTION_KEYS]
+            correct_idx = OPTION_KEYS.index(q["correct"])
+            explanation = truncate(q.get("explanation", ""), 200)
+
+            poll_msg = await bot.send_poll(
+                chat_id=chat_id,
+                question=poll_question,
+                options=options_list,
+                type=Poll.QUIZ,
+                correct_option_id=correct_idx,
+                explanation=explanation or None,
+                is_anonymous=False,
+                open_period=duration,
+            )
+            session["current_poll_id"] = poll_msg.poll.id
+            POLL_MAP[poll_msg.poll.id] = {
+                "is_group": True,
+                "chat_id": chat_id,
+                "q_uid": q["uid"],
+                "correct_idx": correct_idx,
+                "module": q["module"],
+            }
+
+            # Wait for question duration + 2s before next
+            await asyncio.sleep(duration + 2)
+            POLL_MAP.pop(poll_msg.poll.id, None)
+
+    except Exception as e:
+        logger.exception("Error in group quiz session %d: %s", chat_id, e)
+    finally:
+        GROUP_QUIZ_SESSIONS.pop(chat_id, None)
+
+    scores = session.get("scores", {})
+    if not scores:
+        await bot.send_message(
+            chat_id=chat_id,
+            text=f"🏁 <b>Quiz Samapt: {html.escape(title)}</b>\nKisi member ne participate nahi kiya.",
+            parse_mode=ParseMode.HTML,
+        )
+        return
+
+    sorted_users = sorted(
+        scores.values(),
+        key=lambda x: (x["score"], -x["attempts"]),
+        reverse=True,
+    )
+    medals = ["🥇", "🥈", "🥉", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣", "🔟"]
+    lines = [f"🏆 <b>Leaderboard: {html.escape(title)}</b>\n"]
+    for rank, u in enumerate(sorted_users[:10]):
+        medal = medals[rank] if rank < len(medals) else f"#{rank + 1}"
+        acc = (u["score"] / u["attempts"] * 100) if u["attempts"] else 0
+        lines.append(
+            f"{medal} <b>{html.escape(u['name'])}</b>: <code>{u['score']}/{len(questions)}</code> ({acc:.0f}%)"
+        )
+
+    lines.append(f"\n🎉 <i>Congratulations all participants! Keep practicing daily!</i>")
+    await bot.send_message(chat_id=chat_id, text="\n".join(lines), parse_mode=ParseMode.HTML)
+
+
+async def daily_scheduler_loop(app: Application) -> None:
+    """Check every 30 seconds if any registered group has reached its scheduled time (IST)."""
+    logger.info("Daily quiz scheduler loop started (IST timezone).")
+    while True:
+        try:
+            now = datetime.now(IST)
+            current_time_str = now.strftime("%H:%M")
+            current_date_str = now.strftime("%Y-%m-%d")
+
+            groups = get_groups_config()
+            for chat_id_str, cfg in list(groups.items()):
+                target_time = cfg.get("time", "19:00")  # Default 7:00 PM IST
+                last_run = cfg.get("last_run", "")
+
+                if current_time_str == target_time and last_run != current_date_str:
+                    cfg["last_run"] = current_date_str
+                    save_progress()
+                    chat_id = int(chat_id_str)
+                    count = cfg.get("count", 30)
+                    duration = cfg.get("duration", 60)
+                    logger.info("Triggering scheduled quiz for group %d at %s IST (%d Qs, %ds)", chat_id, current_time_str, count, duration)
+                    asyncio.create_task(
+                        run_group_quiz(
+                            app.bot,
+                            chat_id=chat_id,
+                            count=count,
+                            duration=duration,
+                            title=f"🎯 BPSC Daily Quiz ({current_date_str} • {target_time} IST)",
+                        )
+                    )
+        except Exception as e:
+            logger.exception("Error in daily_scheduler_loop: %s", e)
+
+        await asyncio.sleep(30)
+
+
+async def set_daily_quiz_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Schedule daily automated quiz for this group (default 19:00 IST / 7:00 PM)."""
+    chat = update.effective_chat
+    if chat.type in ("private",):
+        await update.message.reply_text("Ye command group mein chalayein jahan daily quiz auto-start karni hai.")
+        return
+
+    # Check optional time argument (e.g. /set_daily_quiz 19:00)
+    target_time = "19:00"
+    if context.args:
+        arg_time = context.args[0].strip()
+        try:
+            datetime.strptime(arg_time, "%H:%M")
+            target_time = arg_time
+        except ValueError:
+            await update.message.reply_text("❌ Galat format! Format HH:MM mein dein, jaise: <code>/set_daily_quiz 19:00</code>", parse_mode=ParseMode.HTML)
+            return
+
+    groups = get_groups_config()
+    groups[str(chat.id)] = {
+        "title": chat.title or "BPSC Study Group",
+        "time": target_time,
+        "count": 30,
+        "duration": 60,
+        "last_run": "",
+    }
+    save_progress()
+
+    text = (
+        f"✅ <b>Daily Quiz Scheduled!</b>\n\n"
+        f"• <b>Group:</b> {html.escape(chat.title or 'Group')}\n"
+        f"• <b>Time:</b> <code>{target_time} IST</code> (Daily)\n"
+        f"• <b>Questions:</b> <code>30</code>\n"
+        f"• <b>Timer:</b> <code>60 seconds</code> per question\n"
+        f"• <b>Leaderboard:</b> Quiz khatam hote hi top scores auto-publish honge!\n\n"
+        f"<i>Khabar: Bot ko group ka Admin banayein taaki polls post karne ki permission rahe.</i>\n"
+        f"Test karne ke liye abhi <code>/start_quiz 5</code> chala sakte ho!"
+    )
+    await update.message.reply_text(text, parse_mode=ParseMode.HTML)
+
+
+async def stop_daily_quiz_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Cancel scheduled daily quiz for this group."""
+    chat = update.effective_chat
+    groups = get_groups_config()
+    if str(chat.id) in groups:
+        groups.pop(str(chat.id), None)
+        save_progress()
+        await update.message.reply_text("🛑 Is group ka daily auto-quiz schedule cancel kar diya gaya hai.")
+    else:
+        await update.message.reply_text("Is group mein koi daily quiz scheduled nahi tha.")
+
+
+async def start_quiz_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Manually start a live quiz in group or DM (e.g. /start_quiz 30)."""
+    chat = update.effective_chat
+    count = 30
+    if context.args:
+        try:
+            count = max(1, min(100, int(context.args[0])))
+        except ValueError:
+            pass
+
+    asyncio.create_task(
+        run_group_quiz(
+            context.bot,
+            chat_id=chat.id,
+            count=count,
+            duration=60,
+            title=f"🎯 BPSC Live Quiz ({count} Qs)",
+        )
+    )
+
+
+async def stop_quiz_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Stop an in-progress group quiz and show current leaderboard."""
+    chat = update.effective_chat
+    sess = GROUP_QUIZ_SESSIONS.get(chat.id)
+    if not sess:
+        await update.message.reply_text("Is group mein abhi koi quiz nahi chal rahi hai.")
+        return
+    sess["is_active"] = False
+    await update.message.reply_text("🛑 Running quiz ko stop kiya ja raha hai... Leaderboard taiyar ho rahi hai.")
+
+
+async def quiz_status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Display group daily quiz schedule status."""
+    chat = update.effective_chat
+    groups = get_groups_config()
+    cfg = groups.get(str(chat.id))
+    if not cfg:
+        await update.message.reply_text("Is group mein daily quiz scheduled nahi hai. Schedule karne ke liye <code>/set_daily_quiz</code> dabayein.", parse_mode=ParseMode.HTML)
+        return
+
+    text = (
+        f"📅 <b>Group Daily Quiz Status</b>\n\n"
+        f"• <b>Status:</b> Active ✅\n"
+        f"• <b>Daily Time:</b> <code>{cfg.get('time', '19:00')} IST</code>\n"
+        f"• <b>Questions:</b> <code>{cfg.get('count', 30)}</code>\n"
+        f"• <b>Timer:</b> <code>{cfg.get('duration', 60)}s</code>\n"
+        f"• <b>Last Run:</b> <code>{cfg.get('last_run') or 'Pending'}</code>"
+    )
+    await update.message.reply_text(text, parse_mode=ParseMode.HTML)
+
+
 async def on_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Record answer accuracy, update mistake queue, and send next quiz poll."""
+    """Record answer accuracy, update mistake queue, and handle DM vs Group quiz."""
     answer = update.poll_answer
     if not answer or not answer.option_ids:
         return
 
-    meta = POLL_MAP.pop(answer.poll_id, None)
+    meta = POLL_MAP.get(answer.poll_id)
     if not meta:
-        return
-
-    user_id = meta["user_id"]
-    if answer.user and answer.user.id != user_id:
         return
 
     chosen_idx = answer.option_ids[0]
     is_correct = chosen_idx == meta["correct_idx"]
     q_uid = meta["q_uid"]
     mod_code = meta["module"]
+
+    # 1. GROUP QUIZ HANDLING (multiple members answer within 60s window!)
+    if meta.get("is_group"):
+        chat_id = meta["chat_id"]
+        sess = GROUP_QUIZ_SESSIONS.get(chat_id)
+        if not sess or not answer.user:
+            return
+        user_id = answer.user.id
+        user_name = answer.user.first_name or "Student"
+        user_entry = sess["scores"].setdefault(
+            user_id, {"name": user_name, "score": 0, "attempts": 0}
+        )
+        user_entry["attempts"] += 1
+        if is_correct:
+            user_entry["score"] += 1
+
+        rec = get_user_record(user_id)
+        if q_uid not in rec["seen"]:
+            rec["seen"].append(q_uid)
+        mod_stats = rec["stats"].setdefault(mod_code, {"attempted": 0, "correct": 0})
+        mod_stats["attempted"] += 1
+        if is_correct:
+            mod_stats["correct"] += 1
+            if q_uid in rec["mistakes"]:
+                rec["mistakes"].remove(q_uid)
+        else:
+            if q_uid not in rec["mistakes"]:
+                rec["mistakes"].append(q_uid)
+        save_progress()
+        return
+
+    # 2. PRIVATE 1-ON-1 DM HANDLING (instant auto-advance!)
+    POLL_MAP.pop(answer.poll_id, None)
+    user_id = meta["user_id"]
+    if answer.user and answer.user.id != user_id:
+        return
 
     rec = get_user_record(user_id)
     if q_uid not in rec["seen"]:
@@ -680,12 +981,20 @@ def main() -> None:
     total_bank = sum(len(m["questions"]) for m in MODULES.values())
     logger.info("Loaded %d modules (%d MCQs) + %d PYQ flashcards.", len(MODULES), total_bank, len(PYQ_MISTAKES))
 
-    app = Application.builder().token(token).build()
+    async def post_init(application: Application) -> None:
+        asyncio.create_task(daily_scheduler_loop(application))
+
+    app = Application.builder().token(token).post_init(post_init).build()
     app.add_handler(CommandHandler(["start", "menu"], start_cmd))
     app.add_handler(CommandHandler("help", help_cmd))
     app.add_handler(CommandHandler("stop", stop_cmd))
     app.add_handler(CommandHandler("next", next_cmd))
     app.add_handler(CommandHandler("stats", stats_cmd))
+    app.add_handler(CommandHandler(["start_quiz", "quiz"], start_quiz_cmd))
+    app.add_handler(CommandHandler(["stop_quiz"], stop_quiz_cmd))
+    app.add_handler(CommandHandler(["set_daily_quiz", "daily_quiz"], set_daily_quiz_cmd))
+    app.add_handler(CommandHandler(["stop_daily_quiz"], stop_daily_quiz_cmd))
+    app.add_handler(CommandHandler(["quiz_status"], quiz_status_cmd))
     app.add_handler(CallbackQueryHandler(on_callback))
     app.add_handler(PollAnswerHandler(on_poll_answer))
 
