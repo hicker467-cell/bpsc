@@ -902,7 +902,7 @@ async def run_channel_quiz(
         f"⏱ <b>Timer:</b> <code>{duration} seconds</code> per question\n"
         f"🔀 <b>Shuffle:</b> Random order ON ✅\n"
         f"🎯 <b>Format:</b> BPSC 5-Options (A, B, C, D, E)\n\n"
-        f"💡 <i>Har question 30s tak open rahega. Turant vote karein aur explanation bulb dekhein! End mein Official Answer Key aayegi.</i>"
+        f"💡 <i>Har question 30s tak open rahega. Turant vote karein aur 💡 bulb icon par tap karke explanation padhein!</i>"
     )
     try:
         await bot.send_message(chat_id=channel_id, text=start_msg, parse_mode=ParseMode.HTML)
@@ -938,23 +938,12 @@ async def run_channel_quiz(
             logger.exception("Failed to send poll Q%d to channel %s: %s", idx + 1, channel_id, e)
             await asyncio.sleep(2)
 
-    # Post final Quiz Completion & Official Answer Key Summary
+    # Clean completion note (No answer key list)
     await asyncio.sleep(2)
-    ans_lines = []
-    chunk = 5
-    for i in range(0, len(shuffled_qs), chunk):
-        sub = shuffled_qs[i : i + chunk]
-        line = " • ".join(f"Q{i + j + 1}: <b>({q['correct']})</b>" for j, q in enumerate(sub))
-        ans_lines.append(line)
-
     summary_msg = (
         f"🏁 <b>Quiz Samapt: {html.escape(title)}</b>\n\n"
         f"📋 <b>Total Questions:</b> <code>{len(shuffled_qs)}</code>\n"
-        f"⏱ <b>Time per Question:</b> <code>{duration}s</code>\n\n"
-        f"🔑 <b>Official Answer Key:</b>\n"
-        + "\n".join(ans_lines) + "\n\n"
-        f"💡 <i>Detailed concept janne ke liye har poll ke 💡 bulb icon par tap karein!</i>\n"
-        f"🏆 <i>Daily Live Test har shaam 7:00 PM IST par aayega!</i>"
+        f"🎉 <i>Aaj ka test complete hua! Agla live test roz shaam 7:00 PM IST par aayega.</i>"
     )
     try:
         await bot.send_message(chat_id=channel_id, text=summary_msg, parse_mode=ParseMode.HTML)
