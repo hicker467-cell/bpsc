@@ -17,6 +17,8 @@ import json
 import logging
 import os
 import random
+import threading
+from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 from typing import Any
 
@@ -639,9 +641,38 @@ async def on_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     await send_next_question(context.bot, user_id)
 
 
+class HealthCheckHandler(BaseHTTPRequestHandler):
+    """Minimal HTTP handler to satisfy Render/Cloud web service health checks."""
+
+    def do_GET(self) -> None:
+        self.send_response(200)
+        self.send_header("Content-type", "text/plain; charset=utf-8")
+        self.end_headers()
+        self.wfile.write(b"BPSC Quiz Bot is Live!")
+
+    def log_message(self, format: str, *args: Any) -> None:
+        pass  # Suppress health check log spam
+
+
+def start_health_check_server() -> None:
+    """Start lightweight HTTP server if PORT environment variable is set (Render/Cloud)."""
+    port_str = os.getenv("PORT", "").strip()
+    if not port_str:
+        return
+    try:
+        port = int(port_str)
+        server = HTTPServer(("0.0.0.0", port), HealthCheckHandler)
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        logger.info("Health check server listening on port %d for Render/Cloud Web Service.", port)
+    except Exception as e:
+        logger.warning("Could not start health check server on port %s: %s", port_str, e)
+
+
 def main() -> None:
     """Load environment and start polling Telegram updates."""
     load_dotenv(BASE_DIR / ".env")
+    start_health_check_server()
     token = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
     if not token:
         raise RuntimeError("TELEGRAM_BOT_TOKEN missing in .env")
