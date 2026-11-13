@@ -287,6 +287,7 @@ def get_quiz_set(set_id: str) -> tuple[str, list[dict[str, Any]]]:
                     start = total - 30
                     end = total
                 qs = list(mod["questions"][start:end])
+                random.shuffle(qs)
                 title = f"📘 {mod['label']} — Set {set_num} (Q {start + 1}–{end})"
                 return title, qs
 
@@ -887,15 +888,20 @@ async def run_channel_quiz(
     channel_id: str,
     questions: list[dict[str, Any]],
     title: str = "🎯 BPSC Channel Quiz",
-    delay_between_qs: int = 4,
+    duration: int = 60,
+    delay_between_qs: int = 60,
 ) -> None:
-    """Post quiz questions sequentially to the Telegram channel as native quiz polls."""
+    """Post quiz questions sequentially to the Telegram channel as native quiz polls with 60s timer and shuffle."""
+    shuffled_qs = list(questions)
+    random.shuffle(shuffled_qs)
+
     start_msg = (
         f"📢 <b>{html.escape(title)}</b>\n\n"
-        f"📋 <b>Total Questions:</b> <code>{len(questions)}</code>\n"
-        f"🎯 <b>Format:</b> BPSC 5-Options (A, B, C, D, E)\n"
-        f"💡 Sabhi questions ke polls neeche aa rahe hain. Sahi option tap karein aur bulb par click karke explanation dekhein!\n\n"
-        f"<i>Target: 75+ / 80 Marks</i>"
+        f"📋 <b>Total Questions:</b> <code>{len(shuffled_qs)}</code>\n"
+        f"⏱ <b>Timer:</b> <code>{duration} seconds</code> per question\n"
+        f"🔀 <b>Shuffle:</b> Random order ON ✅\n"
+        f"🎯 <b>Format:</b> BPSC 5-Options (A, B, C, D, E)\n\n"
+        f"💡 <i>Har question 60s tak open rahega. Turant vote karein aur explanation bulb dekhein!</i>"
     )
     try:
         await bot.send_message(chat_id=channel_id, text=start_msg, parse_mode=ParseMode.HTML)
@@ -905,9 +911,9 @@ async def run_channel_quiz(
 
     await asyncio.sleep(2)
 
-    for idx, q in enumerate(questions):
+    for idx, q in enumerate(shuffled_qs):
         try:
-            total = len(questions)
+            total = len(shuffled_qs)
             mod_label = MODULE_META.get(q["module"], (q["module"], 0))[0]
             header = f"[Q {idx + 1}/{total} | {mod_label}] "
             poll_question = truncate(header + q["question"], 300)
@@ -923,8 +929,9 @@ async def run_channel_quiz(
                 correct_option_id=correct_idx,
                 explanation=explanation or None,
                 is_anonymous=True,
+                open_period=duration,  # 60 seconds countdown ring!
             )
-            if idx < len(questions) - 1:
+            if idx < len(shuffled_qs) - 1:
                 await asyncio.sleep(delay_between_qs)
         except Exception as e:
             logger.exception("Failed to send poll Q%d to channel %s: %s", idx + 1, channel_id, e)
@@ -953,6 +960,9 @@ async def run_group_quiz(
         all_qs = list(QUESTION_BY_UID.values())
         random.shuffle(all_qs)
         questions = all_qs[:count]
+    else:
+        questions = list(questions)
+        random.shuffle(questions)
 
     session: dict[str, Any] = {
         "chat_id": chat_id,
@@ -970,6 +980,7 @@ async def run_group_quiz(
         f"🚀 <b>{html.escape(title)}</b>\n\n"
         f"📋 <b>Total Questions:</b> <code>{len(questions)}</code>\n"
         f"⏱ <b>Timer:</b> <code>{duration} seconds</code> per question\n"
+        f"🔀 <b>Shuffle:</b> Random order ON ✅\n"
         f"💡 Sabhi members poll par tap karein. End mein top scorers ka <b>Leaderboard</b> aayega!\n\n"
         f"<i>Question 1 shuru ho raha hai...</i>"
     )
