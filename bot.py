@@ -805,7 +805,8 @@ async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
                 channel_id=channel_name,
                 questions=questions,
                 title=title,
-                delay_between_qs=4,
+                duration=60,
+                delay_between_qs=60,
             )
         )
         return
@@ -1106,7 +1107,8 @@ async def daily_scheduler_loop(app: Application) -> None:
                             channel_id=target_chan,
                             questions=qs,
                             title=f"📢 BPSC Daily Quiz ({current_date_str} • {chan_time} IST)",
-                            delay_between_qs=4,
+                            duration=60,
+                            delay_between_qs=60,
                         )
                     )
         except Exception as e:
@@ -1252,7 +1254,8 @@ async def post_channel_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -
             channel_id=target_chan,
             questions=questions,
             title=title,
-            delay_between_qs=4,
+            duration=60,
+            delay_between_qs=60,
         )
     )
 
