@@ -195,6 +195,7 @@ def build_main_menu_keyboard(user_id: int) -> InlineKeyboardMarkup:
             InlineKeyboardButton(f"❌ My Mistakes ({mistake_cnt})", callback_data="start:mistakes:25"),
         ],
         [InlineKeyboardButton("📝 PYQ 75 Mistakes Flashcards", callback_data="pyq:start")],
+        [InlineKeyboardButton("➕ Add to Group / Start in Group", url="https://t.me/Bpsc_tier4_bot?startgroup=true")],
         [
             InlineKeyboardButton(timer_txt, callback_data="cfg:timer"),
             InlineKeyboardButton("📊 My Stats", callback_data="menu:stats"),
@@ -345,8 +346,22 @@ async def finish_quiz_session(bot: Any, user_id: int, stopped_early: bool) -> No
 
 
 async def start_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Handle /start and /menu commands."""
+    """Handle /start and /menu commands (adapts for DM vs Group)."""
+    chat = update.effective_chat
     user_id = update.effective_user.id
+
+    if chat.type in ("group", "supergroup"):
+        text = (
+            "🎯 <b>BPSC TRE CS Group Quiz Engine</b>\n\n"
+            "• <b>Daily 7:00 PM Auto-Quiz:</b> <code>/set_daily_quiz</code>\n"
+            "• <b>Live Quiz Abhi Start Karein:</b> <code>/start_quiz 30</code>\n"
+            "• <b>Running Quiz Stop Karein:</b> <code>/stop_quiz</code>\n"
+            "• <b>Settings Check Karein:</b> <code>/quiz_status</code>\n\n"
+            "💡 <i>Tip: Har question mein 60s timer chalega aur end mein Top-10 Leaderboard aayega!</i>"
+        )
+        await update.message.reply_text(text, parse_mode=ParseMode.HTML)
+        return
+
     await update.message.reply_text(
         build_main_menu_text(user_id),
         parse_mode=ParseMode.MARKDOWN,
