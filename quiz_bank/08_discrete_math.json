@@ -1,0 +1,908 @@
+{
+  "subject": "Discrete Structures (Mathematics)",
+  "module": "08",
+  "total": 60,
+  "exam_relevance": "4-6 questions expected in BPSC TRE CS exam",
+  "questions": [
+    {
+      "id": 1,
+      "topic": "Sets",
+      "difficulty": "easy",
+      "question": "If A = {1, 2, 3} and B = {3, 4, 5}, what is A ∪ B (union)?",
+      "options": {
+        "A": "{3}",
+        "B": "{1, 2, 4, 5}",
+        "C": "{1, 2, 3, 4, 5}",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A ∪ B contains all elements in A OR B (without duplicates): {1, 2, 3} ∪ {3, 4, 5} = {1, 2, 3, 4, 5}."
+    },
+    {
+      "id": 2,
+      "topic": "Sets",
+      "difficulty": "easy",
+      "question": "If A = {1, 2, 3} and B = {3, 4, 5}, what is A ∩ B (intersection)?",
+      "options": {
+        "A": "{1, 2, 3, 4, 5}",
+        "B": "{3}",
+        "C": "{1, 2}",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A ∩ B contains elements in BOTH A and B: {1,2,3} ∩ {3,4,5} = {3}. Only element 3 is common to both sets."
+    },
+    {
+      "id": 3,
+      "topic": "Sets",
+      "difficulty": "easy",
+      "question": "The power set of a set with n elements has how many elements?",
+      "options": {
+        "A": "n",
+        "B": "2^n",
+        "C": "2n",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Power set P(A) of a set with n elements has 2^n subsets. For A={1,2,3} (n=3), P(A) has 2^3 = 8 subsets including ∅ and {1,2,3} itself."
+    },
+    {
+      "id": 4,
+      "topic": "Sets",
+      "difficulty": "easy",
+      "question": "The complement of a set A (denoted A') contains:",
+      "options": {
+        "A": "All elements in the universal set U that are NOT in A",
+        "B": "All elements in A",
+        "C": "All elements common to A and U",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "The complement A' (or Ā) of set A contains all elements in the universal set U that do not belong to A. A' = U - A."
+    },
+    {
+      "id": 5,
+      "topic": "Sets",
+      "difficulty": "medium",
+      "question": "If |A| = 10, |B| = 8, |A ∩ B| = 3, what is |A ∪ B|?",
+      "options": {
+        "A": "18",
+        "B": "15",
+        "C": "21",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "By inclusion-exclusion: |A ∪ B| = |A| + |B| - |A ∩ B| = 10 + 8 - 3 = 15. The formula avoids double-counting elements in both sets."
+    },
+    {
+      "id": 6,
+      "topic": "Sets",
+      "difficulty": "medium",
+      "question": "The Cartesian product A × B of sets A = {1, 2} and B = {a, b} contains how many elements?",
+      "options": {
+        "A": "6",
+        "B": "2",
+        "C": "4",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A × B = {(1,a),(1,b),(2,a),(2,b)} — has |A|×|B| = 2×2 = 4 ordered pairs. The Cartesian product produces all ordered pair combinations."
+    },
+    {
+      "id": 7,
+      "topic": "Sets",
+      "difficulty": "easy",
+      "question": "A set with no elements is called:",
+      "options": {
+        "A": "Empty Set (Null Set)",
+        "B": "Universal Set",
+        "C": "Singleton Set",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "An empty set (null set) has no elements. It is denoted by ∅ or {}. It is a subset of every set. |∅| = 0."
+    },
+    {
+      "id": 8,
+      "topic": "Sets",
+      "difficulty": "medium",
+      "question": "De Morgan's Law for sets states: (A ∪ B)' equals:",
+      "options": {
+        "A": "A' ∪ B'",
+        "B": "A' ∩ B'",
+        "C": "A ∩ B",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "De Morgan's Law: (A ∪ B)' = A' ∩ B' and (A ∩ B)' = A' ∪ B'. The complement of union is intersection of complements."
+    },
+    {
+      "id": 9,
+      "topic": "Sets",
+      "difficulty": "medium",
+      "question": "A - B (set difference) contains:",
+      "options": {
+        "A": "Elements in B that are NOT in A",
+        "B": "Elements in A that are also in B",
+        "C": "Elements in A that are NOT in B",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A - B (or A \\ B) contains elements in A that are NOT in B. For A={1,2,3}, B={2,3,4}: A-B = {1}. Also written as A ∩ B'."
+    },
+    {
+      "id": 10,
+      "topic": "Sets",
+      "difficulty": "hard",
+      "question": "If the power set of set A has 32 elements, then |A| (number of elements in A) is:",
+      "options": {
+        "A": "16",
+        "B": "6",
+        "C": "5",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "|P(A)| = 2^n = 32 = 2^5, so n = 5. Set A has 5 elements. Power set has 2^5 = 32 subsets."
+    },
+    {
+      "id": 11,
+      "topic": "Sets",
+      "difficulty": "medium",
+      "question": "The symmetric difference A △ B contains:",
+      "options": {
+        "A": "Elements in neither A nor B",
+        "B": "Elements in A or B but not both",
+        "C": "Elements in both A and B",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Symmetric difference A △ B = (A ∪ B) - (A ∩ B) contains elements in A or B but NOT in both. It equals (A-B) ∪ (B-A)."
+    },
+    {
+      "id": 12,
+      "topic": "Sets",
+      "difficulty": "hard",
+      "question": "For sets A, B, C, which of the following is a valid set identity?",
+      "options": {
+        "A": "A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)",
+        "B": "A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)",
+        "C": "A ∩ (A ∪ B) = A",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three are valid set identities: A is distributive law (∩ over ∪), B is distributive law (∪ over ∩), C is absorption law. All are correct."
+    },
+    {
+      "id": 13,
+      "topic": "Relations & Functions",
+      "difficulty": "easy",
+      "question": "A relation R on set A is reflexive if:",
+      "options": {
+        "A": "For all a, b, c ∈ A, if (a,b) ∈ R and (b,c) ∈ R then (a,c) ∈ R",
+        "B": "For all a, b ∈ A, if (a,b) ∈ R then (b,a) ∈ R",
+        "C": "For all a ∈ A, (a,a) ∈ R",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Reflexive: every element is related to itself — (a,a) ∈ R for all a. Symmetric means A implies B. Transitive means A and B implies C."
+    },
+    {
+      "id": 14,
+      "topic": "Relations & Functions",
+      "difficulty": "easy",
+      "question": "A relation R is symmetric if:",
+      "options": {
+        "A": "For all a ∈ A, (a,a) ∈ R",
+        "B": "For all a,b,c ∈ A, (a,b) ∈ R and (b,c) ∈ R implies (a,c) ∈ R",
+        "C": "For all a,b ∈ A, if (a,b) ∈ R then (b,a) ∈ R",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Symmetric relation: if (a,b) ∈ R then (b,a) ∈ R. Example: 'is sibling of' is symmetric. 'is parent of' is NOT symmetric."
+    },
+    {
+      "id": 15,
+      "topic": "Relations & Functions",
+      "difficulty": "medium",
+      "question": "An equivalence relation must satisfy which properties?",
+      "options": {
+        "A": "Symmetric and Transitive only",
+        "B": "Reflexive, Symmetric, and Transitive",
+        "C": "Reflexive and Symmetric only",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "An equivalence relation must be Reflexive (a,a), Symmetric (a,b→b,a), AND Transitive (a,b and b,c→a,c). Example: equality (=) is an equivalence relation."
+    },
+    {
+      "id": 16,
+      "topic": "Relations & Functions",
+      "difficulty": "medium",
+      "question": "A function f: A → B is injective (one-to-one) if:",
+      "options": {
+        "A": "Every element of B has a preimage in A",
+        "B": "Different elements of A map to different elements of B",
+        "C": "Every element of A maps to the same element of B",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Injective (one-to-one): f(a₁) = f(a₂) implies a₁ = a₂. No two different inputs map to the same output. Surjective means every B element is mapped."
+    },
+    {
+      "id": 17,
+      "topic": "Relations & Functions",
+      "difficulty": "medium",
+      "question": "A function f: A → B is surjective (onto) if:",
+      "options": {
+        "A": "Every element of B is the image of at least one element of A",
+        "B": "f(a) = a for all a",
+        "C": "Different inputs always give different outputs",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Surjective (onto): range of f equals codomain B — every element of B has at least one preimage in A. The function 'covers' all of B."
+    },
+    {
+      "id": 18,
+      "topic": "Relations & Functions",
+      "difficulty": "medium",
+      "question": "A bijective function is one that is:",
+      "options": {
+        "A": "Surjective (onto) only",
+        "B": "Injective (one-to-one) only",
+        "C": "Both injective and surjective",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A bijection is both injective (one-to-one) AND surjective (onto). It creates a perfect pairing between sets A and B. It has an inverse function."
+    },
+    {
+      "id": 19,
+      "topic": "Relations & Functions",
+      "difficulty": "hard",
+      "question": "The relation 'is divisible by' on positive integers is:",
+      "options": {
+        "A": "Symmetric but not reflexive",
+        "B": "Both reflexive and symmetric",
+        "C": "Reflexive but not symmetric",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "'Divisible by' is reflexive (a divides a) and transitive (a|b and b|c → a|c), but NOT symmetric (2|4 but 4 does not divide 2)."
+    },
+    {
+      "id": 20,
+      "topic": "Relations & Functions",
+      "difficulty": "medium",
+      "question": "If f: A → B and g: B → C are both bijections, then g ∘ f is:",
+      "options": {
+        "A": "Only injective but not surjective",
+        "B": "Also a bijection from A to C",
+        "C": "Not a function",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Composition of two bijections is also a bijection. If f: A→B and g: B→C are bijections, g∘f: A→C is also a bijection."
+    },
+    {
+      "id": 21,
+      "topic": "Relations & Functions",
+      "difficulty": "hard",
+      "question": "The domain of the function f(x) = √(x-2) is:",
+      "options": {
+        "A": "x ≥ 2",
+        "B": "x < 2",
+        "C": "x > 2",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "For f(x) = √(x-2), we need x-2 ≥ 0, so x ≥ 2. The domain is [2, ∞). At x=2, f(x)=0 (defined); at x<2, the square root is undefined in reals."
+    },
+    {
+      "id": 22,
+      "topic": "Relations & Functions",
+      "difficulty": "hard",
+      "question": "A relation R on set A = {1, 2, 3} defined as R = {(1,1),(2,2),(3,3),(1,2),(2,1)} is:",
+      "options": {
+        "A": "Only Symmetric",
+        "B": "Reflexive and Symmetric but not Transitive",
+        "C": "Reflexive, Symmetric, and Transitive (equivalence relation)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "R has (a,a) for all a (reflexive), is symmetric, and (1,2)+(2,1)→we need (1,1) which is there; check: it is transitive. So it's an equivalence relation."
+    },
+    {
+      "id": 23,
+      "topic": "Logic & Propositional Calculus",
+      "difficulty": "easy",
+      "question": "The truth value of p ∧ q (p AND q) is TRUE only when:",
+      "options": {
+        "A": "Both p and q are TRUE",
+        "B": "At least one of p or q is TRUE",
+        "C": "p is TRUE and q is FALSE",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "p ∧ q (AND) is TRUE only when BOTH p and q are TRUE. If either is FALSE, the conjunction is FALSE."
+    },
+    {
+      "id": 24,
+      "topic": "Logic & Propositional Calculus",
+      "difficulty": "easy",
+      "question": "The truth value of p ∨ q (p OR q) is FALSE only when:",
+      "options": {
+        "A": "Both p and q are FALSE",
+        "B": "Both p and q are TRUE",
+        "C": "p is TRUE and q is FALSE",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "p ∨ q (OR) is FALSE ONLY when both p AND q are FALSE. It is TRUE whenever at least one of them is TRUE."
+    },
+    {
+      "id": 25,
+      "topic": "Logic & Propositional Calculus",
+      "difficulty": "medium",
+      "question": "The implication p → q (p implies q) is FALSE only when:",
+      "options": {
+        "A": "p is FALSE and q is TRUE",
+        "B": "Both p and q are FALSE",
+        "C": "p is TRUE and q is FALSE",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "p → q is FALSE only when p is TRUE and q is FALSE. 'If it rains, the ground is wet' — only false if it rained but ground isn't wet."
+    },
+    {
+      "id": 26,
+      "topic": "Logic & Propositional Calculus",
+      "difficulty": "medium",
+      "question": "A tautology is a proposition that is:",
+      "options": {
+        "A": "Always TRUE for all truth value assignments",
+        "B": "TRUE for some assignments and FALSE for others",
+        "C": "Always FALSE for all truth value assignments",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "A tautology is always TRUE regardless of truth values of its variables. Example: p ∨ ¬p is always true. Contradiction is always FALSE."
+    },
+    {
+      "id": 27,
+      "topic": "Logic & Propositional Calculus",
+      "difficulty": "medium",
+      "question": "De Morgan's Law in propositional logic states: ¬(p ∧ q) is logically equivalent to:",
+      "options": {
+        "A": "¬p ∧ ¬q",
+        "B": "p ∨ q",
+        "C": "¬p ∨ ¬q",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "De Morgan's Law: ¬(p ∧ q) ≡ ¬p ∨ ¬q; and ¬(p ∨ q) ≡ ¬p ∧ ¬q. The negation of AND is OR of negations."
+    },
+    {
+      "id": 28,
+      "topic": "Logic & Propositional Calculus",
+      "difficulty": "medium",
+      "question": "The biconditional p ↔ q is TRUE when:",
+      "options": {
+        "A": "Both p and q have the same truth value",
+        "B": "p is TRUE and q is FALSE",
+        "C": "p is FALSE and q is TRUE",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Biconditional p ↔ q is TRUE when p and q have the same truth value (both TRUE or both FALSE). It means 'p if and only if q' (p iff q)."
+    },
+    {
+      "id": 29,
+      "topic": "Logic & Propositional Calculus",
+      "difficulty": "hard",
+      "question": "Which of the following is logically equivalent to p → q?",
+      "options": {
+        "A": "¬q → ¬p (contrapositive)",
+        "B": "¬p ∨ q",
+        "C": "q → p (converse)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "p → q ≡ ¬p ∨ q (definition) ≡ ¬q → ¬p (contrapositive). Both A and B are equivalent to p→q. C (converse) is NOT equivalent."
+    },
+    {
+      "id": 30,
+      "topic": "Logic & Propositional Calculus",
+      "difficulty": "hard",
+      "question": "A contradiction is a proposition that is:",
+      "options": {
+        "A": "Always FALSE",
+        "B": "Always TRUE",
+        "C": "Sometimes TRUE and sometimes FALSE",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "A contradiction (absurdity) is always FALSE for all truth assignments. Example: p ∧ ¬p. Opposite of tautology (always TRUE)."
+    },
+    {
+      "id": 31,
+      "topic": "Logic & Propositional Calculus",
+      "difficulty": "medium",
+      "question": "If p is TRUE and q is FALSE, what is the truth value of p → q?",
+      "options": {
+        "A": "FALSE",
+        "B": "TRUE",
+        "C": "Cannot be determined",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "p → q is FALSE only when p=TRUE and q=FALSE. Here p=T, q=F, so p→q = FALSE. This is the only case where implication is false."
+    },
+    {
+      "id": 32,
+      "topic": "Logic & Propositional Calculus",
+      "difficulty": "medium",
+      "question": "The negation of 'All students passed the exam' is:",
+      "options": {
+        "A": "At least one student did not pass the exam",
+        "B": "All students failed the exam",
+        "C": "No student passed the exam",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Negation of ∀x P(x) is ∃x ¬P(x). So 'All students passed' negated is 'There exists at least one student who did not pass.'"
+    },
+    {
+      "id": 33,
+      "topic": "Logic & Propositional Calculus",
+      "difficulty": "hard",
+      "question": "The inverse of p → q is:",
+      "options": {
+        "A": "¬q → ¬p",
+        "B": "¬p → ¬q",
+        "C": "q → p",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "For p→q: Converse=q→p; Inverse=¬p→¬q; Contrapositive=¬q→¬p. Contrapositive is equivalent to original; inverse is equivalent to converse."
+    },
+    {
+      "id": 34,
+      "topic": "Logic & Propositional Calculus",
+      "difficulty": "medium",
+      "question": "How many rows are in the truth table of a formula with 3 propositional variables?",
+      "options": {
+        "A": "6",
+        "B": "9",
+        "C": "8",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A truth table with n variables has 2^n rows. For 3 variables: 2^3 = 8 rows. Each row represents one combination of T/F assignments."
+    },
+    {
+      "id": 35,
+      "topic": "Permutation & Combination",
+      "difficulty": "easy",
+      "question": "The formula for permutation nPr is:",
+      "options": {
+        "A": "n! / (r! × (n-r)!)",
+        "B": "n! / (n-r)!",
+        "C": "n! / r!",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "nPr = n!/(n-r)! — number of ways to arrange r items from n distinct items where ORDER matters. nCr = n!/(r!(n-r)!) is for combinations."
+    },
+    {
+      "id": 36,
+      "topic": "Permutation & Combination",
+      "difficulty": "easy",
+      "question": "The formula for combination nCr is:",
+      "options": {
+        "A": "n! / (r! × (n-r)!)",
+        "B": "n! / (n-r)!",
+        "C": "n! / r!",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "nCr = n!/(r!(n-r)!) — number of ways to CHOOSE r items from n items where ORDER does NOT matter. Also written as C(n,r) or (n choose r)."
+    },
+    {
+      "id": 37,
+      "topic": "Permutation & Combination",
+      "difficulty": "medium",
+      "question": "In how many ways can 5 students be arranged in a row?",
+      "options": {
+        "A": "120",
+        "B": "60",
+        "C": "25",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "5P5 = 5! = 5×4×3×2×1 = 120. Arranging all n items in a row gives n! arrangements. Order matters in permutations."
+    },
+    {
+      "id": 38,
+      "topic": "Permutation & Combination",
+      "difficulty": "medium",
+      "question": "How many ways can a committee of 3 be chosen from 7 people?",
+      "options": {
+        "A": "210",
+        "B": "21",
+        "C": "35",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "7C3 = 7!/(3!×4!) = (7×6×5)/(3×2×1) = 210/6 = 35. Committees are combinations (order doesn't matter — {A,B,C} = {B,C,A})."
+    },
+    {
+      "id": 39,
+      "topic": "Permutation & Combination",
+      "difficulty": "medium",
+      "question": "The Pigeonhole Principle states that if n items are placed in m containers where n > m, then:",
+      "options": {
+        "A": "At least one container must have more than one item",
+        "B": "All containers have the same number of items",
+        "C": "All items fit without any container having more than one",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Pigeonhole Principle: if n > m (more pigeons than holes), at least one hole must contain more than one pigeon. Example: 13 people must share a birth month."
+    },
+    {
+      "id": 40,
+      "topic": "Permutation & Combination",
+      "difficulty": "medium",
+      "question": "What is 0! (zero factorial)?",
+      "options": {
+        "A": "1",
+        "B": "0",
+        "C": "Undefined",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "0! = 1 by definition. This is needed for combinatorial formulas to work correctly. For example, nC0 = n!/(0!×n!) = 1, which makes sense (1 way to choose nothing)."
+    },
+    {
+      "id": 41,
+      "topic": "Permutation & Combination",
+      "difficulty": "hard",
+      "question": "In how many ways can the letters of the word 'APPLE' be arranged?",
+      "options": {
+        "A": "30",
+        "B": "120",
+        "C": "60",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "APPLE has 5 letters with P repeated twice. Arrangements = 5!/2! = 120/2 = 60. When letters repeat, divide by factorial of repetition count."
+    },
+    {
+      "id": 42,
+      "topic": "Permutation & Combination",
+      "difficulty": "hard",
+      "question": "How many 3-digit numbers can be formed using digits {1,2,3,4,5} without repetition?",
+      "options": {
+        "A": "15",
+        "B": "60",
+        "C": "125",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "5P3 = 5!/(5-3)! = 5!/2! = 120/2 = 60. We arrange 3 items from 5 distinct items where order matters (316 ≠ 631). Without repetition."
+    },
+    {
+      "id": 43,
+      "topic": "Permutation & Combination",
+      "difficulty": "hard",
+      "question": "The number of ways to select 2 cards from a deck of 52 cards is:",
+      "options": {
+        "A": "52 × 2 = 104",
+        "B": "52C2 = 1326",
+        "C": "52 × 51 = 2652",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "52C2 = 52!/(2!×50!) = (52×51)/2 = 1326. Order doesn't matter (choosing {Ace,King} = {King,Ace}), so we use combination."
+    },
+    {
+      "id": 44,
+      "topic": "Permutation & Combination",
+      "difficulty": "medium",
+      "question": "How many binary strings of length 4 are possible?",
+      "options": {
+        "A": "16",
+        "B": "8",
+        "C": "4",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Each position in the binary string can be 0 or 1 (2 choices). For 4 positions: 2×2×2×2 = 2^4 = 16 possible binary strings (with repetition)."
+    },
+    {
+      "id": 45,
+      "topic": "Permutation & Combination",
+      "difficulty": "hard",
+      "question": "nCr + nC(r-1) equals:",
+      "options": {
+        "A": "2nCr",
+        "B": "nCr",
+        "C": "(n+1)Cr",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Pascal's identity: nCr + nC(r-1) = (n+1)Cr. This is the basis for Pascal's triangle where each entry is the sum of two entries above it."
+    },
+    {
+      "id": 46,
+      "topic": "Permutation & Combination",
+      "difficulty": "medium",
+      "question": "If nP2 = 20, what is n?",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "10",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "nP2 = n(n-1) = 20. So n²-n-20 = 0 → (n-5)(n+4) = 0 → n=5 (positive). Verify: 5P2 = 5×4 = 20. ✓"
+    },
+    {
+      "id": 47,
+      "topic": "Graph Theory",
+      "difficulty": "easy",
+      "question": "In graph theory, the degree of a vertex is:",
+      "options": {
+        "A": "The number of vertices adjacent to it",
+        "B": "The number of edges incident to it",
+        "C": "The shortest path from it to any other vertex",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Degree of a vertex = number of edges incident to it = number of adjacent vertices (for simple graphs). Both A and B define the same thing for simple graphs."
+    },
+    {
+      "id": 48,
+      "topic": "Graph Theory",
+      "difficulty": "medium",
+      "question": "An Euler path visits:",
+      "options": {
+        "A": "Every vertex exactly once",
+        "B": "Every edge exactly once",
+        "C": "Every edge and vertex exactly once",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Euler path traverses every EDGE exactly once. Hamiltonian path visits every VERTEX exactly once. Euler circuit is a closed Euler path."
+    },
+    {
+      "id": 49,
+      "topic": "Graph Theory",
+      "difficulty": "medium",
+      "question": "A Hamiltonian path visits:",
+      "options": {
+        "A": "Every edge exactly once",
+        "B": "Only the adjacent vertices",
+        "C": "Every vertex exactly once",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A Hamiltonian path visits every VERTEX exactly once. If it returns to the starting vertex, it's a Hamiltonian cycle (circuit)."
+    },
+    {
+      "id": 50,
+      "topic": "Graph Theory",
+      "difficulty": "medium",
+      "question": "A complete graph Kn has how many edges?",
+      "options": {
+        "A": "n",
+        "B": "n(n-1)/2",
+        "C": "n-1",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "In Kn (complete graph), every vertex connects to every other vertex. Edges = n(n-1)/2 = nC2. For K5: 5×4/2 = 10 edges."
+    },
+    {
+      "id": 51,
+      "topic": "Graph Theory",
+      "difficulty": "hard",
+      "question": "A graph has an Eulerian circuit if and only if:",
+      "options": {
+        "A": "The graph has at most 2 vertices with odd degree",
+        "B": "All vertices have even degree",
+        "C": "The graph is connected and all vertices have even degree",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Eulerian circuit exists iff the graph is CONNECTED and ALL vertices have EVEN degree. If exactly 2 vertices have odd degree, there is an Euler path (not circuit)."
+    },
+    {
+      "id": 52,
+      "topic": "Graph Theory",
+      "difficulty": "medium",
+      "question": "The sum of degrees of all vertices in a graph with E edges equals:",
+      "options": {
+        "A": "E",
+        "B": "2E",
+        "C": "E/2",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Handshaking Lemma: Sum of all vertex degrees = 2|E|. Each edge contributes 2 to the total degree (one for each endpoint)."
+    },
+    {
+      "id": 53,
+      "topic": "Graph Theory",
+      "difficulty": "hard",
+      "question": "A bipartite graph is one where:",
+      "options": {
+        "A": "It has exactly two vertices",
+        "B": "Two disjoint vertex sets, edges only across",
+        "C": "Every vertex has degree 2",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A bipartite graph has vertices divided into two disjoint sets (U, V) where every edge connects a vertex in U to one in V. No edges within a set."
+    },
+    {
+      "id": 54,
+      "topic": "Graph Theory",
+      "difficulty": "hard",
+      "question": "A graph is planar if it can be drawn on a plane such that:",
+      "options": {
+        "A": "All vertices are on the outer boundary",
+        "B": "No edges cross each other",
+        "C": "It has at most 5 vertices",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A planar graph can be drawn on a plane without edge crossings. K4 is planar; K5 and K3,3 are not planar (Kuratowski's theorem)."
+    },
+    {
+      "id": 55,
+      "topic": "Trees",
+      "difficulty": "easy",
+      "question": "A tree with n vertices has how many edges?",
+      "options": {
+        "A": "n-1",
+        "B": "n+1",
+        "C": "n",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "A tree with n vertices always has exactly n-1 edges. This is a fundamental property: trees are connected, acyclic graphs with minimum edges."
+    },
+    {
+      "id": 56,
+      "topic": "Trees",
+      "difficulty": "easy",
+      "question": "A tree is defined as a graph that is:",
+      "options": {
+        "A": "Connected and contains cycles",
+        "B": "Connected and acyclic",
+        "C": "Disconnected and acyclic",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A tree is a CONNECTED and ACYCLIC (no cycles) undirected graph. With n vertices and n-1 edges, it has the minimum edges to remain connected."
+    },
+    {
+      "id": 57,
+      "topic": "Trees",
+      "difficulty": "medium",
+      "question": "In a binary tree, each node has at most how many children?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "1",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "In a binary tree, each node has at most 2 children (left child and right child). BST, heaps, and expression trees are common binary trees."
+    },
+    {
+      "id": 58,
+      "topic": "Trees",
+      "difficulty": "medium",
+      "question": "A spanning tree of a graph G is:",
+      "options": {
+        "A": "A tree that includes all vertices of G with minimum edges",
+        "B": "A subgraph of G that is a tree and includes all vertices of G",
+        "C": "A connected acyclic subgraph with no isolated vertices",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three definitions (A, B, C) correctly describe a spanning tree: includes all n vertices, is a tree (n-1 edges, connected, acyclic). Answer is D."
+    },
+    {
+      "id": 59,
+      "topic": "Trees",
+      "difficulty": "hard",
+      "question": "A full binary tree with n internal nodes has how many leaf nodes?",
+      "options": {
+        "A": "n+1",
+        "B": "n",
+        "C": "2n",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "In a full binary tree (every internal node has exactly 2 children), if there are n internal nodes, there are n+1 leaf nodes. Total nodes = 2n+1."
+    },
+    {
+      "id": 60,
+      "topic": "Trees",
+      "difficulty": "hard",
+      "question": "The height of a complete binary tree with n nodes is approximately:",
+      "options": {
+        "A": "n/2",
+        "B": "n",
+        "C": "⌊log₂ n⌋",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Height of complete binary tree with n nodes = ⌊log₂ n⌋. A tree of height h can have at most 2^(h+1) - 1 nodes. This is why binary search is O(log n)."
+    }
+  ]
+}

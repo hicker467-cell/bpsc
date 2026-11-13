@@ -1,0 +1,1508 @@
+{
+  "subject": "Computer Networks & Security",
+  "module": "07",
+  "total": 100,
+  "exam_relevance": "8-10 questions expected in BPSC TRE CS exam",
+  "questions": [
+    {
+      "id": 1,
+      "topic": "OSI Model",
+      "difficulty": "easy",
+      "question": "How many layers does the OSI reference model have?",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "7",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "The OSI (Open Systems Interconnection) model has 7 layers: Physical, Data Link, Network, Transport, Session, Presentation, Application."
+    },
+    {
+      "id": 2,
+      "topic": "OSI Model",
+      "difficulty": "easy",
+      "question": "Which layer of the OSI model is responsible for physical transmission of raw bits over a communication channel?",
+      "options": {
+        "A": "Network Layer",
+        "B": "Physical Layer",
+        "C": "Data Link Layer",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "The Physical layer (Layer 1) handles transmission of raw bits over the physical medium, defining hardware specifications like cables and voltages."
+    },
+    {
+      "id": 3,
+      "topic": "OSI Model",
+      "difficulty": "easy",
+      "question": "Which OSI layer is responsible for framing, error detection, and MAC addressing?",
+      "options": {
+        "A": "Physical Layer",
+        "B": "Network Layer",
+        "C": "Data Link Layer",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Data Link Layer (Layer 2) handles framing, error detection/correction, and MAC addressing. It is divided into LLC and MAC sublayers."
+    },
+    {
+      "id": 4,
+      "topic": "OSI Model",
+      "difficulty": "easy",
+      "question": "The MAC (Media Access Control) sublayer is part of which OSI layer?",
+      "options": {
+        "A": "Data Link Layer",
+        "B": "Network Layer",
+        "C": "Physical Layer",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "MAC sublayer is the lower sublayer of the Data Link Layer (Layer 2). It controls how devices on a network gain access to the medium."
+    },
+    {
+      "id": 5,
+      "topic": "OSI Model",
+      "difficulty": "easy",
+      "question": "Which OSI layer is responsible for logical addressing (IP addresses) and routing?",
+      "options": {
+        "A": "Transport Layer",
+        "B": "Data Link Layer",
+        "C": "Network Layer",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Network Layer (Layer 3) provides logical addressing (IP) and routing — it determines the best path for data to travel across networks."
+    },
+    {
+      "id": 6,
+      "topic": "OSI Model",
+      "difficulty": "medium",
+      "question": "Which OSI layer provides end-to-end communication, flow control, and error recovery?",
+      "options": {
+        "A": "Network Layer",
+        "B": "Transport Layer",
+        "C": "Session Layer",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Transport Layer (Layer 4) provides end-to-end communication, segmentation, flow control, and error recovery. TCP and UDP operate here."
+    },
+    {
+      "id": 7,
+      "topic": "OSI Model",
+      "difficulty": "medium",
+      "question": "Which OSI layer is responsible for establishing, managing, and terminating sessions between applications?",
+      "options": {
+        "A": "Session Layer",
+        "B": "Presentation Layer",
+        "C": "Transport Layer",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Session Layer (Layer 5) establishes, manages, and terminates communication sessions between applications on different devices."
+    },
+    {
+      "id": 8,
+      "topic": "OSI Model",
+      "difficulty": "medium",
+      "question": "Which OSI layer handles data encryption, compression, and format conversion?",
+      "options": {
+        "A": "Presentation Layer",
+        "B": "Application Layer",
+        "C": "Session Layer",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Presentation Layer (Layer 6) handles data translation, encryption, decryption, and compression — it ensures data is in usable format."
+    },
+    {
+      "id": 9,
+      "topic": "OSI Model",
+      "difficulty": "easy",
+      "question": "Which OSI layer is closest to the end user and provides network services to user applications?",
+      "options": {
+        "A": "Session Layer",
+        "B": "Presentation Layer",
+        "C": "Application Layer",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Application Layer (Layer 7) is the topmost layer and provides interfaces for end users and applications like HTTP, FTP, SMTP, DNS."
+    },
+    {
+      "id": 10,
+      "topic": "OSI Model",
+      "difficulty": "medium",
+      "question": "In the OSI model, which layer converts data into signals suitable for transmission?",
+      "options": {
+        "A": "Physical Layer",
+        "B": "Data Link Layer",
+        "C": "Network Layer",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Physical Layer converts data bits into electrical, optical, or radio signals for transmission over the physical medium."
+    },
+    {
+      "id": 11,
+      "topic": "OSI Model",
+      "difficulty": "medium",
+      "question": "The process of adding headers and trailers at each OSI layer is called:",
+      "options": {
+        "A": "Encapsulation",
+        "B": "Segmentation",
+        "C": "Multiplexing",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Encapsulation is the process of adding protocol headers/trailers at each OSI layer as data moves from Application down to Physical layer."
+    },
+    {
+      "id": 12,
+      "topic": "OSI Model",
+      "difficulty": "medium",
+      "question": "Which two sublayers does the Data Link Layer consist of?",
+      "options": {
+        "A": "FTP and HTTP",
+        "B": "LLC and MAC",
+        "C": "TCP and UDP",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Data Link Layer is divided into LLC (Logical Link Control) for error control and MAC (Media Access Control) for channel access."
+    },
+    {
+      "id": 13,
+      "topic": "OSI Model",
+      "difficulty": "hard",
+      "question": "What is the Protocol Data Unit (PDU) at the Transport layer called?",
+      "options": {
+        "A": "Segment",
+        "B": "Packet",
+        "C": "Frame",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "PDU names: Physical=Bits, Data Link=Frame, Network=Packet, Transport=Segment, Session/Presentation/Application=Data/Message."
+    },
+    {
+      "id": 14,
+      "topic": "OSI Model",
+      "difficulty": "hard",
+      "question": "At which OSI layer does a Router primarily operate?",
+      "options": {
+        "A": "Network Layer",
+        "B": "Physical Layer",
+        "C": "Data Link Layer",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Routers operate at the Network Layer (Layer 3), using IP addresses to forward packets between different networks."
+    },
+    {
+      "id": 15,
+      "topic": "OSI Model",
+      "difficulty": "medium",
+      "question": "Which OSI layer is responsible for port addressing and multiplexing?",
+      "options": {
+        "A": "Transport Layer",
+        "B": "Network Layer",
+        "C": "Session Layer",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Transport Layer uses port numbers to identify processes (multiplexing). TCP/UDP port numbers allow multiple services on one IP address."
+    },
+    {
+      "id": 16,
+      "topic": "TCP-IP Model",
+      "difficulty": "easy",
+      "question": "How many layers does the TCP/IP model have?",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "7",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "The TCP/IP model has 4 layers: Network Access (Link), Internet, Transport, and Application. Unlike OSI's 7 layers."
+    },
+    {
+      "id": 17,
+      "topic": "TCP-IP Model",
+      "difficulty": "easy",
+      "question": "Which TCP/IP layer corresponds to both the Physical and Data Link layers of the OSI model?",
+      "options": {
+        "A": "Network Access Layer",
+        "B": "Internet Layer",
+        "C": "Transport Layer",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "The Network Access (Link) layer in TCP/IP combines OSI's Physical and Data Link layers, handling hardware addressing and media access."
+    },
+    {
+      "id": 18,
+      "topic": "TCP-IP Model",
+      "difficulty": "medium",
+      "question": "TCP (Transmission Control Protocol) is best described as:",
+      "options": {
+        "A": "Connectionless and unreliable",
+        "B": "Used only for video streaming",
+        "C": "Connection-oriented and reliable",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "TCP is connection-oriented (uses 3-way handshake), reliable (acknowledgements, retransmission), and provides ordered delivery."
+    },
+    {
+      "id": 19,
+      "topic": "TCP-IP Model",
+      "difficulty": "medium",
+      "question": "UDP (User Datagram Protocol) is described as:",
+      "options": {
+        "A": "Always slower than TCP",
+        "B": "Connectionless and unreliable",
+        "C": "Connection-oriented and reliable",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "UDP is connectionless (no handshake), unreliable (no acknowledgements), but faster. Used for DNS, video streaming, online gaming."
+    },
+    {
+      "id": 20,
+      "topic": "TCP-IP Model",
+      "difficulty": "medium",
+      "question": "Which protocol provides reliable, ordered delivery using a three-way handshake?",
+      "options": {
+        "A": "UDP",
+        "B": "ICMP",
+        "C": "TCP",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "TCP uses a 3-way handshake (SYN, SYN-ACK, ACK) to establish a connection before data transfer, ensuring reliability and order."
+    },
+    {
+      "id": 21,
+      "topic": "TCP-IP Model",
+      "difficulty": "medium",
+      "question": "Which layer of the TCP/IP model is responsible for routing packets across networks?",
+      "options": {
+        "A": "Transport Layer",
+        "B": "Internet Layer",
+        "C": "Network Access Layer",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "The Internet Layer (equivalent to OSI Network layer) handles logical addressing and routing using IP. Contains IP, ICMP, ARP protocols."
+    },
+    {
+      "id": 22,
+      "topic": "TCP-IP Model",
+      "difficulty": "medium",
+      "question": "ICMP (Internet Control Message Protocol) operates at which TCP/IP layer?",
+      "options": {
+        "A": "Application Layer",
+        "B": "Internet Layer",
+        "C": "Transport Layer",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "ICMP operates at the Internet Layer. It is used for error reporting and diagnostics (e.g., the ping command uses ICMP echo requests)."
+    },
+    {
+      "id": 23,
+      "topic": "TCP-IP Model",
+      "difficulty": "hard",
+      "question": "The ping command is used to test network connectivity. Which of the following is true about ping?",
+      "options": {
+        "A": "It uses TCP protocol",
+        "B": "It uses ICMP echo request and reply",
+        "C": "It summarizes packet loss statistics",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Ping uses ICMP echo request/reply (not TCP) and summarizes round-trip time and packet loss stats. Both B and C are correct."
+    },
+    {
+      "id": 24,
+      "topic": "TCP-IP Model",
+      "difficulty": "medium",
+      "question": "Which TCP/IP layer corresponds to the Session, Presentation, and Application layers of the OSI model?",
+      "options": {
+        "A": "Transport Layer",
+        "B": "Application Layer",
+        "C": "Internet Layer",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "TCP/IP's Application layer combines OSI's Session, Presentation, and Application layers. Contains HTTP, FTP, SMTP, DNS, etc."
+    },
+    {
+      "id": 25,
+      "topic": "TCP-IP Model",
+      "difficulty": "hard",
+      "question": "Which of the following correctly maps OSI layers to TCP/IP layers?",
+      "options": {
+        "A": "OSI Network ↔ TCP/IP Internet Layer",
+        "B": "OSI Transport ↔ TCP/IP Transport Layer",
+        "C": "OSI Physical+DataLink ↔ TCP/IP Network Access",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three mappings (A, B, C) are correct: OSI Network=TCP/IP Internet; OSI Transport=TCP/IP Transport; OSI Phy+DL=TCP/IP Network Access."
+    },
+    {
+      "id": 26,
+      "topic": "Protocols & Ports",
+      "difficulty": "easy",
+      "question": "What is the default port number for HTTP (HyperText Transfer Protocol)?",
+      "options": {
+        "A": "80",
+        "B": "21",
+        "C": "443",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "HTTP uses port 80 for unencrypted web traffic. HTTPS uses port 443. FTP uses ports 20 (data) and 21 (control)."
+    },
+    {
+      "id": 27,
+      "topic": "Protocols & Ports",
+      "difficulty": "easy",
+      "question": "Which port is used by HTTPS (HTTP Secure)?",
+      "options": {
+        "A": "8080",
+        "B": "443",
+        "C": "80",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "HTTPS (HTTP over SSL/TLS) uses port 443. It is the secure version of HTTP that encrypts communication between browser and server."
+    },
+    {
+      "id": 28,
+      "topic": "Protocols & Ports",
+      "difficulty": "easy",
+      "question": "FTP uses which two port numbers?",
+      "options": {
+        "A": "Port 22 (data) and Port 23 (control)",
+        "B": "Port 20 (data) and Port 21 (control)",
+        "C": "Port 25 (data) and Port 110 (control)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "FTP uses port 21 for control (commands) and port 20 for data transfer. Both ports are needed for full FTP operation."
+    },
+    {
+      "id": 29,
+      "topic": "Protocols & Ports",
+      "difficulty": "easy",
+      "question": "Which port number is used by SMTP (Simple Mail Transfer Protocol)?",
+      "options": {
+        "A": "25",
+        "B": "110",
+        "C": "143",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "SMTP uses port 25. It is used to send emails. POP3 uses port 110, IMAP uses port 143 — both for receiving emails."
+    },
+    {
+      "id": 30,
+      "topic": "Protocols & Ports",
+      "difficulty": "medium",
+      "question": "Which protocol and port is used for secure remote login to a server?",
+      "options": {
+        "A": "FTP on port 21",
+        "B": "Telnet on port 23",
+        "C": "SSH on port 22",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "SSH (Secure Shell) on port 22 provides encrypted remote login. Telnet on port 23 is insecure (unencrypted) predecessor to SSH."
+    },
+    {
+      "id": 31,
+      "topic": "Protocols & Ports",
+      "difficulty": "medium",
+      "question": "Which port does DNS (Domain Name System) use?",
+      "options": {
+        "A": "53",
+        "B": "67",
+        "C": "80",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "DNS uses port 53 for both UDP (queries) and TCP (zone transfers). It resolves domain names to IP addresses."
+    },
+    {
+      "id": 32,
+      "topic": "Protocols & Ports",
+      "difficulty": "medium",
+      "question": "POP3 (Post Office Protocol version 3) uses which port?",
+      "options": {
+        "A": "25",
+        "B": "143",
+        "C": "110",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "POP3 uses port 110. It downloads emails from server to client and usually deletes them from the server. IMAP (143) keeps emails on server."
+    },
+    {
+      "id": 33,
+      "topic": "Protocols & Ports",
+      "difficulty": "medium",
+      "question": "IMAP (Internet Message Access Protocol) uses which port number?",
+      "options": {
+        "A": "143",
+        "B": "25",
+        "C": "110",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "IMAP uses port 143. Unlike POP3 (port 110), IMAP keeps emails on the server and allows access from multiple devices."
+    },
+    {
+      "id": 34,
+      "topic": "Protocols & Ports",
+      "difficulty": "medium",
+      "question": "DHCP (Dynamic Host Configuration Protocol) uses which port numbers?",
+      "options": {
+        "A": "Port 25 and Port 110",
+        "B": "Port 53 and Port 80",
+        "C": "Port 67 (server) and Port 68 (client)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "DHCP uses port 67 for server (receives client requests) and port 68 for client (receives server responses). It auto-assigns IP addresses."
+    },
+    {
+      "id": 35,
+      "topic": "Protocols & Ports",
+      "difficulty": "hard",
+      "question": "Which port does RIP (Routing Information Protocol) use?",
+      "options": {
+        "A": "520",
+        "B": "521",
+        "C": "179",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "RIP uses UDP port 520. It is a distance-vector routing protocol that uses hop count as the metric (max 15 hops)."
+    },
+    {
+      "id": 36,
+      "topic": "Protocols & Ports",
+      "difficulty": "medium",
+      "question": "When a mail server sends mail to other mail servers, it acts as:",
+      "options": {
+        "A": "SMTP client",
+        "B": "IMAP server",
+        "C": "POP3 server",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "When sending mail to another server, the mail server acts as an SMTP client. The receiving server acts as SMTP server."
+    },
+    {
+      "id": 37,
+      "topic": "Protocols & Ports",
+      "difficulty": "medium",
+      "question": "Telnet operates on which port number?",
+      "options": {
+        "A": "21",
+        "B": "23",
+        "C": "22",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Telnet uses port 23. It provides remote login but transmits data in plaintext (unencrypted), making it insecure. SSH (port 22) replaced it."
+    },
+    {
+      "id": 38,
+      "topic": "Protocols & Ports",
+      "difficulty": "hard",
+      "question": "Which of the following protocols operate at the Application layer of the TCP/IP model?",
+      "options": {
+        "A": "HTTP (port 80)",
+        "B": "FTP (port 21)",
+        "C": "SMTP (port 25)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "HTTP, FTP, and SMTP all operate at the Application layer of TCP/IP. All three are correct, so D (More than one) is the answer."
+    },
+    {
+      "id": 39,
+      "topic": "Protocols & Ports",
+      "difficulty": "medium",
+      "question": "ARP (Address Resolution Protocol) is used to:",
+      "options": {
+        "A": "Resolve IP address to MAC address",
+        "B": "Assign IP addresses to hosts",
+        "C": "Resolve domain name to IP address",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "ARP resolves IP addresses to MAC (hardware) addresses. DNS resolves domain names to IPs. DHCP assigns IP addresses to hosts."
+    },
+    {
+      "id": 40,
+      "topic": "Protocols & Ports",
+      "difficulty": "medium",
+      "question": "DNS (Domain Name System) primarily performs which function?",
+      "options": {
+        "A": "Encrypts web traffic",
+        "B": "Resolves domain names to IP addresses",
+        "C": "Assigns IP addresses dynamically",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "DNS translates human-readable domain names (e.g., www.google.com) to IP addresses. It is the internet's phone book."
+    },
+    {
+      "id": 41,
+      "topic": "IPv4 Addressing",
+      "difficulty": "easy",
+      "question": "An IPv4 address is how many bits long?",
+      "options": {
+        "A": "32 bits",
+        "B": "16 bits",
+        "C": "64 bits",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "IPv4 addresses are 32 bits long, written as four octets in dotted-decimal notation (e.g., 192.168.1.1). Range: 0.0.0.0 to 255.255.255.255."
+    },
+    {
+      "id": 42,
+      "topic": "IPv4 Addressing",
+      "difficulty": "easy",
+      "question": "Class A IPv4 addresses have their first octet in which range?",
+      "options": {
+        "A": "0-127",
+        "B": "192-223",
+        "C": "128-191",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Class A: 0-127 (first bit = 0). Class B: 128-191 (first bits = 10). Class C: 192-223 (first bits = 110). Class D: 224-239 (multicast)."
+    },
+    {
+      "id": 43,
+      "topic": "IPv4 Addressing",
+      "difficulty": "easy",
+      "question": "Class B IPv4 addresses start with which range in the first octet?",
+      "options": {
+        "A": "192-223",
+        "B": "0-127",
+        "C": "128-191",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Class B addresses have 128-191 as the first octet. They support up to 65,534 hosts per network. Used by medium to large organizations."
+    },
+    {
+      "id": 44,
+      "topic": "IPv4 Addressing",
+      "difficulty": "easy",
+      "question": "Which class of IPv4 addresses is used for multicasting?",
+      "options": {
+        "A": "Class E",
+        "B": "Class D",
+        "C": "Class C",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Class D (224.0.0.0 to 239.255.255.255) is reserved for multicasting. Class E (240-255) is reserved for research/experimental use."
+    },
+    {
+      "id": 45,
+      "topic": "IPv4 Addressing",
+      "difficulty": "medium",
+      "question": "Which of the following is a private IP address range?",
+      "options": {
+        "A": "192.168.0.0 to 192.168.255.255",
+        "B": "10.0.0.0 to 10.255.255.255",
+        "C": "172.16.0.0 to 172.31.255.255",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three are private IP ranges per RFC 1918: Class A (10.x.x.x), Class B (172.16-31.x.x), Class C (192.168.x.x). All correct → D."
+    },
+    {
+      "id": 46,
+      "topic": "IPv4 Addressing",
+      "difficulty": "medium",
+      "question": "What is the default subnet mask for a Class C network?",
+      "options": {
+        "A": "255.255.0.0",
+        "B": "255.0.0.0",
+        "C": "255.255.255.0",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Class C default subnet mask is 255.255.255.0 (/24). Class A: 255.0.0.0 (/8). Class B: 255.255.0.0 (/16)."
+    },
+    {
+      "id": 47,
+      "topic": "IPv4 Addressing",
+      "difficulty": "medium",
+      "question": "The loopback address in IPv4 is:",
+      "options": {
+        "A": "192.168.0.1",
+        "B": "0.0.0.0",
+        "C": "127.0.0.1",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "127.0.0.1 (localhost) is the loopback address used to test the TCP/IP stack on the local machine without sending data to any external network."
+    },
+    {
+      "id": 48,
+      "topic": "IPv4 Addressing",
+      "difficulty": "hard",
+      "question": "How many usable host addresses are available in a /24 subnet?",
+      "options": {
+        "A": "255",
+        "B": "254",
+        "C": "256",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A /24 subnet has 256 addresses (2^8), minus 2 (network and broadcast) = 254 usable host addresses."
+    },
+    {
+      "id": 49,
+      "topic": "IPv4 Addressing",
+      "difficulty": "medium",
+      "question": "Which class of IPv4 supports the largest number of hosts per network?",
+      "options": {
+        "A": "Class B",
+        "B": "Class C",
+        "C": "Class A",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Class A has 24 bits for host ID, supporting 2^24 - 2 = 16,777,214 hosts per network. Largest host capacity among standard classes."
+    },
+    {
+      "id": 50,
+      "topic": "IPv4 Addressing",
+      "difficulty": "medium",
+      "question": "The IP address 172.20.5.10 belongs to which class?",
+      "options": {
+        "A": "Class C",
+        "B": "Class B",
+        "C": "Class A",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "172 falls in the range 128-191, so 172.20.5.10 is a Class B address. It also falls in the private range 172.16.0.0-172.31.255.255."
+    },
+    {
+      "id": 51,
+      "topic": "IPv4 Addressing",
+      "difficulty": "hard",
+      "question": "NAT (Network Address Translation) is primarily used to:",
+      "options": {
+        "A": "Assign IP addresses automatically",
+        "B": "Encrypt network traffic",
+        "C": "Allow private IP addresses to access the internet",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "NAT translates private IP addresses to public IP addresses, allowing multiple private hosts to share a single public IP address for internet access."
+    },
+    {
+      "id": 52,
+      "topic": "IPv4 Addressing",
+      "difficulty": "medium",
+      "question": "The purpose of a subnet mask in TCP/IP networking is:",
+      "options": {
+        "A": "To identify the network portion of an IP address",
+        "B": "To determine if two hosts are on the same network",
+        "C": "To encrypt data packets",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Subnet mask identifies the network portion of an IP address AND is used to determine if a host is on the same or different network. Both A and B are correct."
+    },
+    {
+      "id": 53,
+      "topic": "IPv6",
+      "difficulty": "easy",
+      "question": "An IPv6 address is how many bits long?",
+      "options": {
+        "A": "128 bits",
+        "B": "32 bits",
+        "C": "64 bits",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "IPv6 addresses are 128 bits long, written as 8 groups of 4 hexadecimal digits separated by colons. This allows 2^128 unique addresses."
+    },
+    {
+      "id": 54,
+      "topic": "IPv6",
+      "difficulty": "medium",
+      "question": "An IPv6 address is written as how many groups of hexadecimal digits?",
+      "options": {
+        "A": "16 groups of 2 hex digits",
+        "B": "8 groups of 4 hex digits",
+        "C": "4 groups of 8 hex digits",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "IPv6 is written as 8 groups of 4 hexadecimal digits separated by colons (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334)."
+    },
+    {
+      "id": 55,
+      "topic": "IPv6",
+      "difficulty": "medium",
+      "question": "Which technique allows IPv4 and IPv6 to coexist on the same network device?",
+      "options": {
+        "A": "Subnetting",
+        "B": "NAT",
+        "C": "Dual Stack",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Dual Stack allows a device to run both IPv4 and IPv6 simultaneously. Tunneling encapsulates IPv6 within IPv4. Both are IPv6 transition mechanisms."
+    },
+    {
+      "id": 56,
+      "topic": "IPv6",
+      "difficulty": "medium",
+      "question": "IPv6 provides which advantages over IPv4?",
+      "options": {
+        "A": "Larger address space (128-bit vs 32-bit)",
+        "B": "Built-in IPSec support for security",
+        "C": "Simplified header format and auto-configuration",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "IPv6 offers larger address space, built-in security (IPSec), simplified header, stateless auto-configuration (SLAAC). All A, B, C are advantages."
+    },
+    {
+      "id": 57,
+      "topic": "IPv6",
+      "difficulty": "hard",
+      "question": "In IPv6 header translation, which statement is correct regarding the IPv6 flow label?",
+      "options": {
+        "A": "IPv6 flow label is directly converted to IPv4 flow label",
+        "B": "IPv6 header is smaller than IPv4 header",
+        "C": "IPv6 flow label field has no equivalent in IPv4 header",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "IPv6 flow label (20-bit) has no equivalent in IPv4. During header translation, flow labels cannot be directly mapped — they are discarded."
+    },
+    {
+      "id": 58,
+      "topic": "IPv6",
+      "difficulty": "hard",
+      "question": "IPv6 uses which technique to send IPv6 packets through IPv4 networks?",
+      "options": {
+        "A": "Tunneling",
+        "B": "CIDR",
+        "C": "NAT64",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Tunneling encapsulates IPv6 packets inside IPv4 packets to traverse IPv4 networks. This is one of the IPv4-to-IPv6 transition mechanisms."
+    },
+    {
+      "id": 59,
+      "topic": "IPv6",
+      "difficulty": "medium",
+      "question": "The IPv6 loopback address is:",
+      "options": {
+        "A": "::1",
+        "B": "FE80::1",
+        "C": "0:0:0:0:0:0:0:0",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "::1 is the IPv6 loopback address (equivalent to 127.0.0.1 in IPv4). It represents 0000:0000:0000:0000:0000:0000:0000:0001."
+    },
+    {
+      "id": 60,
+      "topic": "IPv6",
+      "difficulty": "hard",
+      "question": "IPv6 addresses use how many bytes (octets)?",
+      "options": {
+        "A": "32 bytes",
+        "B": "8 bytes",
+        "C": "16 bytes",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "IPv6 is 128 bits = 16 bytes (octets). Each hex digit represents 4 bits, so 128 bits = 32 hex digits arranged in 8 groups of 4."
+    },
+    {
+      "id": 61,
+      "topic": "Network Devices",
+      "difficulty": "easy",
+      "question": "At which OSI layer does a Hub operate?",
+      "options": {
+        "A": "Data Link Layer",
+        "B": "Network Layer",
+        "C": "Physical Layer",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A hub operates at the Physical Layer (Layer 1). It broadcasts data to all ports — it has no intelligence to filter based on MAC or IP addresses."
+    },
+    {
+      "id": 62,
+      "topic": "Network Devices",
+      "difficulty": "easy",
+      "question": "At which OSI layer does a Switch primarily operate?",
+      "options": {
+        "A": "Physical Layer",
+        "B": "Data Link Layer",
+        "C": "Network Layer",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A switch operates at the Data Link Layer (Layer 2). It uses MAC addresses to forward frames only to the destination port, unlike a hub."
+    },
+    {
+      "id": 63,
+      "topic": "Network Devices",
+      "difficulty": "easy",
+      "question": "The primary function of a router is:",
+      "options": {
+        "A": "To connect multiple networks and route packets",
+        "B": "To amplify network signals",
+        "C": "To filter frames using MAC addresses",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Router's primary function is to connect multiple networks and determine the best path to route packets. It operates at the Network Layer (Layer 3)."
+    },
+    {
+      "id": 64,
+      "topic": "Network Devices",
+      "difficulty": "medium",
+      "question": "A gateway operates at which layer(s) of the OSI model?",
+      "options": {
+        "A": "Only Network Layer",
+        "B": "All layers (can work up to Application layer)",
+        "C": "Only Physical Layer",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A gateway can operate at all 7 OSI layers (most commonly Transport and Application layers). It connects networks with different protocols."
+    },
+    {
+      "id": 65,
+      "topic": "Network Devices",
+      "difficulty": "medium",
+      "question": "A repeater operates at which OSI layer and what is its function?",
+      "options": {
+        "A": "Network Layer — routes packets",
+        "B": "Data Link Layer — filters MAC addresses",
+        "C": "Physical Layer — regenerates and amplifies signals",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A repeater operates at the Physical Layer (Layer 1). It regenerates and amplifies the signal to extend the network's physical range."
+    },
+    {
+      "id": 66,
+      "topic": "Network Devices",
+      "difficulty": "medium",
+      "question": "A bridge operates at which OSI layer?",
+      "options": {
+        "A": "Network Layer",
+        "B": "Physical Layer",
+        "C": "Data Link Layer",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A bridge operates at the Data Link Layer (Layer 2). It connects two LAN segments and uses MAC addresses to filter and forward frames."
+    },
+    {
+      "id": 67,
+      "topic": "Network Devices",
+      "difficulty": "medium",
+      "question": "What is the size of a MAC (Media Access Control) address?",
+      "options": {
+        "A": "128 bits",
+        "B": "32 bits",
+        "C": "48 bits",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A MAC address is 48 bits (6 bytes) long, written as 12 hexadecimal digits (e.g., 00:1A:2B:3C:4D:5E). First 24 bits: OUI, last 24 bits: device ID."
+    },
+    {
+      "id": 68,
+      "topic": "Network Devices",
+      "difficulty": "medium",
+      "question": "A NIC (Network Interface Card) operates at which layers?",
+      "options": {
+        "A": "Only Network Layer",
+        "B": "Physical and Data Link Layers",
+        "C": "Only Physical Layer",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "NIC operates at both Physical and Data Link Layers. It has a MAC address (Data Link) and handles physical signal transmission (Physical layer)."
+    },
+    {
+      "id": 69,
+      "topic": "Network Devices",
+      "difficulty": "hard",
+      "question": "Which device uses MAC address table to forward frames only to the correct port?",
+      "options": {
+        "A": "Router",
+        "B": "Hub",
+        "C": "Switch",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A switch maintains a MAC address table (CAM table) to intelligently forward frames only to the correct destination port, reducing collisions."
+    },
+    {
+      "id": 70,
+      "topic": "Network Devices",
+      "difficulty": "medium",
+      "question": "Which device would you use to connect a LAN to the internet?",
+      "options": {
+        "A": "Hub",
+        "B": "Switch",
+        "C": "Router",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A router connects different networks (like a LAN to the internet). It routes packets between networks using IP addresses at Layer 3."
+    },
+    {
+      "id": 71,
+      "topic": "Transmission Media",
+      "difficulty": "easy",
+      "question": "Which of the following is a guided (wired) transmission media?",
+      "options": {
+        "A": "Radio waves",
+        "B": "Fiber optic cable",
+        "C": "Microwave",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Fiber optic cable is guided (wired) media. Microwave and radio waves are unguided (wireless) media. Guided media includes twisted pair, coax, fiber."
+    },
+    {
+      "id": 72,
+      "topic": "Transmission Media",
+      "difficulty": "easy",
+      "question": "Which transmission medium provides the highest bandwidth and is immune to electromagnetic interference?",
+      "options": {
+        "A": "Twisted pair cable",
+        "B": "Fiber optic cable",
+        "C": "Coaxial cable",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Fiber optic cable uses light pulses, providing the highest bandwidth, longest range, and immunity to electromagnetic interference (EMI)."
+    },
+    {
+      "id": 73,
+      "topic": "Transmission Media",
+      "difficulty": "medium",
+      "question": "Twisted pair cable is widely used in which type of network?",
+      "options": {
+        "A": "Wide Area Networks (WAN)",
+        "B": "Local Area Networks (LAN)",
+        "C": "Satellite networks",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Twisted pair (Cat5e, Cat6) is the most common medium for LANs. It is inexpensive and easy to install. Ethernet uses twisted pair cables."
+    },
+    {
+      "id": 74,
+      "topic": "Transmission Media",
+      "difficulty": "medium",
+      "question": "Which unguided medium uses line-of-sight transmission and is used for satellite communication?",
+      "options": {
+        "A": "Radio waves",
+        "B": "Infrared",
+        "C": "Microwave",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Microwave uses line-of-sight transmission and is used for satellite and long-distance communication. It cannot pass through buildings."
+    },
+    {
+      "id": 75,
+      "topic": "Transmission Media",
+      "difficulty": "medium",
+      "question": "Infrared transmission is typically used for:",
+      "options": {
+        "A": "Short-range communication like TV remotes and IrDA",
+        "B": "Underground cable TV distribution",
+        "C": "Long-distance satellite communication",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Infrared is used for short-range, line-of-sight communication such as TV remotes, IrDA port transfers. It cannot pass through walls."
+    },
+    {
+      "id": 76,
+      "topic": "Transmission Media",
+      "difficulty": "hard",
+      "question": "Coaxial cable consists of which layers (from inner to outer)?",
+      "options": {
+        "A": "Two twisted copper wires with insulation",
+        "B": "Inner conductor, insulating layer, metallic shield, outer jacket",
+        "C": "Glass/plastic core, cladding, protective coating",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Coaxial cable has: inner conductor → insulating layer → metallic mesh shield → outer plastic jacket. Option B describes twisted pair, C describes fiber."
+    },
+    {
+      "id": 77,
+      "topic": "Transmission Media",
+      "difficulty": "medium",
+      "question": "Which category of UTP cable supports Gigabit Ethernet (1000BASE-T)?",
+      "options": {
+        "A": "Cat 5e or Cat 6",
+        "B": "Cat 3",
+        "C": "Cat 5",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Cat 5e and Cat 6 support Gigabit Ethernet. Cat 5 supports up to 100 Mbps. Cat 3 supports 10 Mbps. Cat 6 supports 10 Gbps at shorter lengths."
+    },
+    {
+      "id": 78,
+      "topic": "Transmission Media",
+      "difficulty": "hard",
+      "question": "Which of the following about fiber optic cable is true?",
+      "options": {
+        "A": "It transmits data as light pulses",
+        "B": "It is immune to electromagnetic interference",
+        "C": "It supports much higher bandwidth than copper cables",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three statements about fiber optic are true: transmits light pulses, immune to EMI, and provides much higher bandwidth than copper. Answer is D."
+    },
+    {
+      "id": 79,
+      "topic": "Network Topologies",
+      "difficulty": "easy",
+      "question": "In which network topology does every device connect to a central hub or switch?",
+      "options": {
+        "A": "Bus Topology",
+        "B": "Star Topology",
+        "C": "Ring Topology",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "In Star topology, all devices connect to a central hub or switch. It is the most common LAN topology — easy to manage but central point of failure."
+    },
+    {
+      "id": 80,
+      "topic": "Network Topologies",
+      "difficulty": "easy",
+      "question": "In a Bus topology, all devices share a single communication line called:",
+      "options": {
+        "A": "Ring",
+        "B": "Backbone",
+        "C": "Mesh",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "In Bus topology, all devices share a single backbone cable. Data travels in both directions. A failure in the backbone affects the entire network."
+    },
+    {
+      "id": 81,
+      "topic": "Network Topologies",
+      "difficulty": "medium",
+      "question": "In a Ring topology, data travels in which manner?",
+      "options": {
+        "A": "Data is broadcast to all devices simultaneously",
+        "B": "Data travels in one direction (unidirectional) through each node",
+        "C": "Data is routed via the central hub",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "In Ring topology, each device connects to two others, forming a ring. Data travels in one direction (or bidirectional in dual ring) through each node."
+    },
+    {
+      "id": 82,
+      "topic": "Network Topologies",
+      "difficulty": "medium",
+      "question": "In a Mesh topology, every device is connected to every other device. For N nodes, how many connections are needed in a full mesh?",
+      "options": {
+        "A": "N(N-1)/2",
+        "B": "N-1",
+        "C": "N",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Full mesh requires N(N-1)/2 connections. For 5 nodes: 5×4/2=10 connections. It offers highest redundancy but is expensive to implement."
+    },
+    {
+      "id": 83,
+      "topic": "Network Topologies",
+      "difficulty": "medium",
+      "question": "Which network topology is a combination of two or more different topologies?",
+      "options": {
+        "A": "Mesh Topology",
+        "B": "Hybrid Topology",
+        "C": "Tree Topology",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Hybrid topology combines two or more different topologies (e.g., Star-Bus, Star-Ring). Most real-world networks use hybrid topologies."
+    },
+    {
+      "id": 84,
+      "topic": "Network Topologies",
+      "difficulty": "medium",
+      "question": "Tree topology is a variation of which basic topology?",
+      "options": {
+        "A": "Star Topology",
+        "B": "Bus Topology",
+        "C": "Ring Topology",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Tree topology is a hierarchical variation of Star topology. Multiple star networks are connected to a backbone bus, forming a tree structure."
+    },
+    {
+      "id": 85,
+      "topic": "Network Topologies",
+      "difficulty": "hard",
+      "question": "Which topology provides the highest fault tolerance and redundancy?",
+      "options": {
+        "A": "Bus",
+        "B": "Mesh",
+        "C": "Star",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Mesh topology provides the highest fault tolerance. Full mesh has multiple paths between any two devices, so if one link fails, others remain active."
+    },
+    {
+      "id": 86,
+      "topic": "Network Topologies",
+      "difficulty": "medium",
+      "question": "The main disadvantage of Star topology is:",
+      "options": {
+        "A": "Data collision on the single cable",
+        "B": "Difficult to add new devices",
+        "C": "Single point of failure at the central hub/switch",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Star topology's main disadvantage is the central hub/switch is a single point of failure — if it fails, the entire network goes down."
+    },
+    {
+      "id": 87,
+      "topic": "Network Topologies",
+      "difficulty": "easy",
+      "question": "Which topology is easiest to install and most commonly used in modern LANs?",
+      "options": {
+        "A": "Star Topology",
+        "B": "Ring Topology",
+        "C": "Mesh Topology",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Star topology is the most commonly used in modern LANs. It is easy to install, troubleshoot, and manage. Used with Ethernet switches."
+    },
+    {
+      "id": 88,
+      "topic": "Network Topologies",
+      "difficulty": "medium",
+      "question": "Which network topology requires the most cabling?",
+      "options": {
+        "A": "Bus Topology",
+        "B": "Star Topology",
+        "C": "Full Mesh Topology",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Full Mesh requires N(N-1)/2 cables, the most of any topology. For 10 devices, that's 45 connections. Very expensive but most redundant."
+    },
+    {
+      "id": 89,
+      "topic": "Cryptography",
+      "difficulty": "easy",
+      "question": "In symmetric key cryptography, the same key is used for:",
+      "options": {
+        "A": "Only encryption",
+        "B": "Both encryption and decryption",
+        "C": "Only decryption",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Symmetric key cryptography uses the SAME key for both encryption and decryption. Examples: DES, AES, 3DES. Key must be securely shared."
+    },
+    {
+      "id": 90,
+      "topic": "Cryptography",
+      "difficulty": "medium",
+      "question": "In asymmetric key cryptography, who keeps the private key?",
+      "options": {
+        "A": "The sender",
+        "B": "The receiver",
+        "C": "A trusted third party",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "In asymmetric cryptography, the receiver keeps the private key (for decryption). The public key is shared openly. Sender uses public key to encrypt."
+    },
+    {
+      "id": 91,
+      "topic": "Cryptography",
+      "difficulty": "medium",
+      "question": "Which of the following is an example of a symmetric key encryption algorithm?",
+      "options": {
+        "A": "AES (Advanced Encryption Standard)",
+        "B": "Diffie-Hellman",
+        "C": "RSA",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "AES (and DES, 3DES) are symmetric algorithms. RSA and Diffie-Hellman are asymmetric. AES is currently the most widely used encryption standard."
+    },
+    {
+      "id": 92,
+      "topic": "Cryptography",
+      "difficulty": "medium",
+      "question": "RSA is an example of which type of encryption?",
+      "options": {
+        "A": "Hash function",
+        "B": "Symmetric key encryption",
+        "C": "Asymmetric (public key) encryption",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "RSA (Rivest-Shamir-Adleman) is an asymmetric public-key encryption algorithm. It uses a pair of keys: public key (encrypt) and private key (decrypt)."
+    },
+    {
+      "id": 93,
+      "topic": "Network Security",
+      "difficulty": "easy",
+      "question": "A computer virus has which essential ability that distinguishes it from other malware?",
+      "options": {
+        "A": "Clone (replicate) itself",
+        "B": "Spy on user activity",
+        "C": "Encrypt files for ransom",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "A computer virus's essential and defining ability is to replicate/clone itself by attaching to other files. This self-replication distinguishes it from other malware."
+    },
+    {
+      "id": 94,
+      "topic": "Network Security",
+      "difficulty": "medium",
+      "question": "Which of the following would breach system integrity?",
+      "options": {
+        "A": "Using a firewall",
+        "B": "Encrypting sensitive data",
+        "C": "Full access rights for all users",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Giving all users full access rights violates the principle of least privilege and breaches system integrity. Users should only have permissions they need."
+    },
+    {
+      "id": 95,
+      "topic": "Network Security",
+      "difficulty": "medium",
+      "question": "A firewall in network security is used to:",
+      "options": {
+        "A": "Speed up internet connection",
+        "B": "Assign IP addresses to devices",
+        "C": "Monitor and control incoming and outgoing network traffic",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A firewall monitors and controls network traffic based on predefined security rules. It acts as a barrier between trusted internal and untrusted external networks."
+    },
+    {
+      "id": 96,
+      "topic": "Network Security",
+      "difficulty": "hard",
+      "question": "A digital signature provides which security services?",
+      "options": {
+        "A": "Authentication (verifies sender identity)",
+        "B": "Non-repudiation (sender cannot deny sending)",
+        "C": "Data integrity (message not altered)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Digital signatures provide authentication, non-repudiation, and data integrity. All three options A, B, C are correct services provided by digital signatures."
+    },
+    {
+      "id": 97,
+      "topic": "Network Security",
+      "difficulty": "medium",
+      "question": "DES (Data Encryption Standard) uses which key length?",
+      "options": {
+        "A": "128 bits",
+        "B": "56 bits",
+        "C": "256 bits",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "DES uses a 56-bit key (64-bit with 8 parity bits). It is now considered insecure due to short key length. AES replaced it — 128, 192, or 256-bit keys."
+    },
+    {
+      "id": 98,
+      "topic": "Network Security",
+      "difficulty": "hard",
+      "question": "Which type of attack involves an attacker intercepting communication between two parties without their knowledge?",
+      "options": {
+        "A": "Man-in-the-Middle (MITM)",
+        "B": "Denial of Service (DoS)",
+        "C": "SQL Injection",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Man-in-the-Middle (MITM) attack involves intercepting communication between two parties. The attacker can eavesdrop or alter the communication."
+    },
+    {
+      "id": 99,
+      "topic": "Network Security",
+      "difficulty": "medium",
+      "question": "SSL/TLS protocols are used to provide security for which application?",
+      "options": {
+        "A": "Email via SMTP",
+        "B": "HTTPS (secure web browsing)",
+        "C": "File transfer via FTP",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "SSL/TLS primarily secures HTTPS web traffic. HTTPS = HTTP + SSL/TLS encryption on port 443. It ensures confidentiality and authentication on the web."
+    },
+    {
+      "id": 100,
+      "topic": "Network Security",
+      "difficulty": "hard",
+      "question": "In public-key (asymmetric) cryptography, if Alice wants to send a secret message to Bob, she should encrypt it with:",
+      "options": {
+        "A": "Alice's private key",
+        "B": "Alice's public key",
+        "C": "Bob's public key",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "To send a secret message to Bob, Alice encrypts with BOB's public key. Only Bob's private key can decrypt it. Alice's private key is used for digital signatures."
+    }
+  ]
+}

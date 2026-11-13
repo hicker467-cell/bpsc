@@ -1,0 +1,1208 @@
+{
+  "subject": "BPSC E-Trap & D-Trap Special Confusion Drill",
+  "module": "11",
+  "total": 80,
+  "exam_relevance": "High-frequency BPSC TRE 5-option trap drill (targeting None of the above & More than one of the above)",
+  "questions": [
+    {
+      "id": 1,
+      "topic": "Digital Electronics & Number Systems",
+      "difficulty": "medium",
+      "question": "What is the maximum decimal digit that can be represented in a single 4-bit 8421 BCD code?",
+      "options": {
+        "A": "15",
+        "B": "16",
+        "C": "10",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Single-digit 8421 BCD represents only 0–9 (max is 9). Codes 1010–1111 (10–15) are invalid in BCD."
+    },
+    {
+      "id": 2,
+      "topic": "Digital Electronics & Number Systems",
+      "difficulty": "medium",
+      "question": "Which 4-bit Gray code corresponds to the binary number 1010?",
+      "options": {
+        "A": "1100",
+        "B": "1011",
+        "C": "1110",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Binary 1010 to Gray: G3=1, G2=1^0=1, G1=0^1=1, G0=1^0=1, giving 1111. None of A/B/C is 1111."
+    },
+    {
+      "id": 3,
+      "topic": "Digital Electronics & Number Systems",
+      "difficulty": "easy",
+      "question": "Which of the following logic gates are classified as universal gates?",
+      "options": {
+        "A": "NAND gate",
+        "B": "NOR gate",
+        "C": "XOR gate",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Both NAND (A) and NOR (B) are universal gates capable of implementing any Boolean function; XOR is not."
+    },
+    {
+      "id": 4,
+      "topic": "Digital Electronics & Number Systems",
+      "difficulty": "hard",
+      "question": "In a 4-bit R-2R ladder DAC with Vref = 5 V, what is the step size (LSB weight = Vref / 2^n)?",
+      "options": {
+        "A": "0.50 V",
+        "B": "1.25 V",
+        "C": "0.25 V",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "For a 4-bit DAC, step size = 5 / 2^4 = 5 / 16 = 0.3125 V. None of 0.50 V, 1.25 V, or 0.25 V matches."
+    },
+    {
+      "id": 5,
+      "topic": "Digital Electronics & Number Systems",
+      "difficulty": "hard",
+      "question": "How many clock cycles does an n-bit Successive Approximation Register (SAR) ADC require per conversion?",
+      "options": {
+        "A": "2^n clock cycles",
+        "B": "2^n - 1 clock cycles",
+        "C": "n^2 clock cycles",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "An n-bit SAR ADC performs binary search bit by bit and takes exactly n clock cycles (not 2^n or n^2)."
+    },
+    {
+      "id": 6,
+      "topic": "Digital Electronics & Number Systems",
+      "difficulty": "medium",
+      "question": "Which statements are true regarding a JK flip-flop?",
+      "options": {
+        "A": "J=1, K=1 toggles the output on an active clock trigger",
+        "B": "J=0, K=0 holds the previous output state",
+        "C": "Level-triggered JK suffers from race-around if clock pulse exceeds propagation delay",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three statements (A, B, and C) accurately describe standard JK flip-flop behavior."
+    },
+    {
+      "id": 7,
+      "topic": "Digital Electronics & Number Systems",
+      "difficulty": "easy",
+      "question": "For a 4-input AND gate, how many rows in its truth table produce a HIGH (1) output?",
+      "options": {
+        "A": "4 rows",
+        "B": "8 rows",
+        "C": "15 rows",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Out of 16 rows in a 4-input AND truth table, only 1 row (1111) outputs 1; the other 15 rows output 0."
+    },
+    {
+      "id": 8,
+      "topic": "Digital Electronics & Number Systems",
+      "difficulty": "medium",
+      "question": "What is the minimum number of 2-input NAND gates required to implement an XOR gate (A ⊕ B)?",
+      "options": {
+        "A": "4 NAND gates",
+        "B": "3 NAND gates",
+        "C": "5 NAND gates",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Implementing 2-input XOR requires a minimum of 4 two-input NAND gates (XNOR requires 5)."
+    },
+    {
+      "id": 9,
+      "topic": "Digital Electronics & Number Systems",
+      "difficulty": "medium",
+      "question": "In 8-bit 2's complement signed representation, what is the valid decimal range?",
+      "options": {
+        "A": "-127 to +127",
+        "B": "-128 to +128",
+        "C": "-255 to +255",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "8-bit 2's complement range is -2^7 to +(2^7 - 1), which is -128 to +127. None of A/B/C matches."
+    },
+    {
+      "id": 10,
+      "topic": "Digital Electronics & Number Systems",
+      "difficulty": "hard",
+      "question": "Which of the following 4-bit binary codes are self-complementing codes?",
+      "options": {
+        "A": "Excess-3 code",
+        "B": "2421 weighted code",
+        "C": "8421 BCD code",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Both Excess-3 (A) and 2421 (B) are self-complementing (9's complement via bitwise inversion); 8421 BCD is not."
+    },
+    {
+      "id": 11,
+      "topic": "Digital Electronics & Number Systems",
+      "difficulty": "medium",
+      "question": "A MOD-16 asynchronous ripple counter requires at least how many flip-flops?",
+      "options": {
+        "A": "2 flip-flops",
+        "B": "3 flip-flops",
+        "C": "8 flip-flops",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "A MOD-N counter needs ceil(log2(N)) flip-flops: for MOD-16, 2^4 = 16, so 4 flip-flops are required."
+    },
+    {
+      "id": 12,
+      "topic": "Digital Electronics & Number Systems",
+      "difficulty": "easy",
+      "question": "Which of the following Boolean identities represent De Morgan's laws?",
+      "options": {
+        "A": "(A + B)' = A' · B'",
+        "B": "(A · B)' = A' + B'",
+        "C": "(A + B)' = A' + B'",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Both A and B are De Morgan's theorems; C is incorrect."
+    },
+    {
+      "id": 13,
+      "topic": "Digital Electronics & Number Systems",
+      "difficulty": "easy",
+      "question": "How many select lines are required for a 32-to-1 multiplexer (MUX)?",
+      "options": {
+        "A": "4 select lines",
+        "B": "6 select lines",
+        "C": "16 select lines",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "A 2^n-to-1 MUX requires n select lines; since 32 = 2^5, exactly 5 select lines are needed."
+    },
+    {
+      "id": 14,
+      "topic": "Digital Electronics & Number Systems",
+      "difficulty": "medium",
+      "question": "Which analog-to-digital converter (ADC) architecture provides the fastest conversion speed?",
+      "options": {
+        "A": "Dual-slope integrating ADC",
+        "B": "Flash (parallel comparator) ADC",
+        "C": "Counter-ramp ADC",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Flash ADC uses 2^n - 1 comparators in parallel to convert an analog input in a single step (fastest)."
+    },
+    {
+      "id": 15,
+      "topic": "Digital Electronics & Number Systems",
+      "difficulty": "medium",
+      "question": "Which characteristics belong to combinational logic circuits (unlike sequential circuits)?",
+      "options": {
+        "A": "Outputs depend solely on the present combination of inputs",
+        "B": "Contain no memory elements or feedback paths",
+        "C": "Require a global clock pulse for state transitions",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Combinational circuits depend only on present inputs (A) and have no memory/feedback (B); clocks belong to sequential circuits."
+    },
+    {
+      "id": 16,
+      "topic": "C++ & OOPs",
+      "difficulty": "easy",
+      "question": "In C++, what are the default access specifiers for members of a class and a struct, respectively?",
+      "options": {
+        "A": "public for class, private for struct",
+        "B": "public for both class and struct",
+        "C": "private for both class and struct",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "In C++, class members are private by default while struct members are public by default."
+    },
+    {
+      "id": 17,
+      "topic": "C++ & OOPs",
+      "difficulty": "medium",
+      "question": "Which of the following C++ functions CANNOT be declared using the virtual keyword?",
+      "options": {
+        "A": "Constructors",
+        "B": "Static member functions",
+        "C": "Friend functions",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Constructors, static member functions, and friend functions cannot be virtual in C++ (all three A, B, C)."
+    },
+    {
+      "id": 18,
+      "topic": "C++ & OOPs",
+      "difficulty": "medium",
+      "question": "In standard C++, what does sizeof(Empty) evaluate to for an empty class 'class Empty {};'?",
+      "options": {
+        "A": "0 bytes",
+        "B": "4 bytes",
+        "C": "8 bytes",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "sizeof an empty class is never 0; C++ assigns it 1 byte (nonzero) so separate instances get unique addresses."
+    },
+    {
+      "id": 19,
+      "topic": "C++ & OOPs",
+      "difficulty": "hard",
+      "question": "In 16-bit Turbo C++ (frequently tested in BPSC TRE), what are the sizes of 'int' and 'long double'?",
+      "options": {
+        "A": "int = 4 bytes, long double = 8 bytes",
+        "B": "int = 2 bytes, long double = 8 bytes",
+        "C": "int = 4 bytes, long double = 16 bytes",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "In 16-bit Turbo C++, int occupies 2 bytes and long double occupies 10 bytes. None of A/B/C matches."
+    },
+    {
+      "id": 20,
+      "topic": "C++ & OOPs",
+      "difficulty": "medium",
+      "question": "Which statements are true about a 'friend' function in C++?",
+      "options": {
+        "A": "It can access private and protected members of the class",
+        "B": "It is not in class scope and has no 'this' pointer",
+        "C": "Friendship is automatically inherited by derived classes",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Friend functions can access private/protected members (A) and lack a 'this' pointer (B); friendship is not inherited."
+    },
+    {
+      "id": 21,
+      "topic": "C++ & OOPs",
+      "difficulty": "hard",
+      "question": "Which C++ file stream mode ensures every write operation always appends to the end of the file?",
+      "options": {
+        "A": "ios::trunc",
+        "B": "ios::ate",
+        "C": "ios::nocreate",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "ios::app forces all writes to the end of the file. ios::ate only positions at end on open and allows seeking elsewhere."
+    },
+    {
+      "id": 22,
+      "topic": "C++ & OOPs",
+      "difficulty": "easy",
+      "question": "Which of the following C++ operators CANNOT be overloaded?",
+      "options": {
+        "A": "+ (binary addition)",
+        "B": "[] (array subscript)",
+        "C": ":: (scope resolution)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": ":: (scope resolution), . (dot), .* (member pointer), ?: (ternary), and sizeof cannot be overloaded in C++."
+    },
+    {
+      "id": 23,
+      "topic": "C++ & OOPs",
+      "difficulty": "hard",
+      "question": "When deleting a Derived object through a Base pointer (Base *p = new Derived; delete p;), what ensures ~Derived() runs?",
+      "options": {
+        "A": "Declaring the Derived constructor virtual",
+        "B": "Declaring the Base constructor virtual",
+        "C": "Declaring the Derived destructor static",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Declaring the BASE class destructor 'virtual' ensures ~Derived() executes before ~Base() on polymorphic delete."
+    },
+    {
+      "id": 24,
+      "topic": "C++ & OOPs",
+      "difficulty": "medium",
+      "question": "Which statements are true regarding pure virtual functions and abstract classes in C++?",
+      "options": {
+        "A": "A pure virtual function is declared using '= 0' in the base class",
+        "B": "Objects of an abstract class cannot be instantiated directly",
+        "C": "A derived class that omits overriding a pure virtual function remains abstract",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three statements (A, B, C) are valid rules for pure virtual functions and abstract classes in C++."
+    },
+    {
+      "id": 25,
+      "topic": "C++ & OOPs",
+      "difficulty": "medium",
+      "question": "In C++, if two functions in the same scope differ ONLY in their return type (identical name and parameters), what occurs?",
+      "options": {
+        "A": "Compiler resolves the call from the assignment target type",
+        "B": "The first declared function is always invoked",
+        "C": "Both functions execute sequentially at runtime",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "It triggers a compile-time error: functions cannot be overloaded solely by return type in C++."
+    },
+    {
+      "id": 26,
+      "topic": "C++ & OOPs",
+      "difficulty": "medium",
+      "question": "Which C++ operators can be overloaded as non-static class member functions?",
+      "options": {
+        "A": "= (assignment operator)",
+        "B": "[] (subscript operator)",
+        "C": "() (function call operator)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three operators (=, [], and ()) can — and must — be overloaded as non-static member functions in C++."
+    },
+    {
+      "id": 27,
+      "topic": "C++ & OOPs",
+      "difficulty": "medium",
+      "question": "In C++, if class B inherits from class A using protected inheritance (class B : protected A), public members of A become:",
+      "options": {
+        "A": "Public in class B",
+        "B": "Private in class B",
+        "C": "Inaccessible inside class B",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "With protected inheritance, public and protected members of A become protected members inside B."
+    },
+    {
+      "id": 28,
+      "topic": "C++ & OOPs",
+      "difficulty": "easy",
+      "question": "In C++, what is the default argument-passing mechanism for fundamental types such as int or double?",
+      "options": {
+        "A": "Pass by value",
+        "B": "Pass by reference",
+        "C": "Pass by pointer",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "C++ passes scalar arguments by value by default (making a copy); reference (&) or pointer (*) must be explicit."
+    },
+    {
+      "id": 29,
+      "topic": "C++ & OOPs",
+      "difficulty": "hard",
+      "question": "Which C++ keyword allows a specific data member of a class to be modified even inside a const member function?",
+      "options": {
+        "A": "volatile",
+        "B": "static",
+        "C": "register",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "The 'mutable' keyword lets a non-static data member be modified inside const member functions."
+    },
+    {
+      "id": 30,
+      "topic": "C++ & OOPs",
+      "difficulty": "medium",
+      "question": "Which statements accurately describe destructors in C++?",
+      "options": {
+        "A": "A class can have only one destructor and it takes no arguments",
+        "B": "Destructors are called in reverse order of constructor execution",
+        "C": "A class can overload multiple destructors with different parameters",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "A class has one parameterless destructor (A), invoked in reverse order of construction (B); destructors cannot be overloaded."
+    },
+    {
+      "id": 31,
+      "topic": "Data Structures & Algorithms",
+      "difficulty": "medium",
+      "question": "What is the worst-case time complexity of Quicksort on an already sorted array when always choosing the last element as pivot?",
+      "options": {
+        "A": "O(n log n)",
+        "B": "O(n)",
+        "C": "O(log n)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Worst-case Quicksort creates 0 and (n-1) partitions each step, yielding O(n^2) time complexity."
+    },
+    {
+      "id": 32,
+      "topic": "Data Structures & Algorithms",
+      "difficulty": "medium",
+      "question": "Which of the following sorting algorithms guarantee O(n log n) worst-case time complexity?",
+      "options": {
+        "A": "Merge Sort",
+        "B": "Heap Sort",
+        "C": "Insertion Sort",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Both Merge Sort (A) and Heap Sort (B) run in O(n log n) worst-case; Insertion Sort is O(n^2) worst-case."
+    },
+    {
+      "id": 33,
+      "topic": "Data Structures & Algorithms",
+      "difficulty": "easy",
+      "question": "In a Binary Search Tree (BST) with distinct keys, which traversal always visits all keys in ascending sorted order?",
+      "options": {
+        "A": "Preorder traversal",
+        "B": "Postorder traversal",
+        "C": "Level-order traversal",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Inorder traversal (Left → Root → Right) visits BST keys in strictly ascending order."
+    },
+    {
+      "id": 34,
+      "topic": "Data Structures & Algorithms",
+      "difficulty": "medium",
+      "question": "In an AVL height-balanced binary search tree, what is the maximum allowed magnitude of the balance factor at any node?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "log2(n)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Every AVL node must have balance factor in {-1, 0, +1}, so the maximum magnitude is 1."
+    },
+    {
+      "id": 35,
+      "topic": "Data Structures & Algorithms",
+      "difficulty": "medium",
+      "question": "Which statements are true for a Circular Queue implemented using an array of size N?",
+      "options": {
+        "A": "Eliminates the wasted front space (false overflow) of a linear array queue",
+        "B": "Distinguishing full vs empty needs keeping 1 slot unused or a separate count",
+        "C": "Front and rear indices wrap around using modulo N arithmetic",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three statements (A, B, and C) are standard properties of array-based circular queues."
+    },
+    {
+      "id": 36,
+      "topic": "Data Structures & Algorithms",
+      "difficulty": "hard",
+      "question": "What is the worst-case (non-expected) search time complexity in a randomized Skip List containing n elements?",
+      "options": {
+        "A": "O(1)",
+        "B": "O(log n)",
+        "C": "O(sqrt(n))",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "While average/expected Skip List search is O(log n), the worst-case time complexity is O(n)."
+    },
+    {
+      "id": 37,
+      "topic": "Data Structures & Algorithms",
+      "difficulty": "easy",
+      "question": "Which data structure is standardly used to evaluate a postfix (Reverse Polish) arithmetic expression?",
+      "options": {
+        "A": "Queue",
+        "B": "Stack",
+        "C": "Binary Heap",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A Stack stores operands during postfix evaluation and pops two operands whenever an operator is scanned."
+    },
+    {
+      "id": 38,
+      "topic": "Data Structures & Algorithms",
+      "difficulty": "hard",
+      "question": "In a B-Tree of order m = 5 (Knuth definition), every non-root internal node must have at least how many children?",
+      "options": {
+        "A": "1 child",
+        "B": "2 children",
+        "C": "4 children",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "A non-root internal node in an order-m B-Tree must have at least ceil(m/2) children; for m=5, ceil(5/2) = 3 children."
+    },
+    {
+      "id": 39,
+      "topic": "Data Structures & Algorithms",
+      "difficulty": "medium",
+      "question": "Which of the following hash collision resolution methods belong to Open Addressing?",
+      "options": {
+        "A": "Linear probing",
+        "B": "Quadratic probing",
+        "C": "Double hashing",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Linear probing, quadratic probing, and double hashing are all Open Addressing (closed hashing) techniques."
+    },
+    {
+      "id": 40,
+      "topic": "Data Structures & Algorithms",
+      "difficulty": "medium",
+      "question": "What is the minimum number of nodes in a binary tree of height h (where a single-node tree has height 0)?",
+      "options": {
+        "A": "2^h",
+        "B": "2^(h + 1) - 1",
+        "C": "h^2",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Minimum nodes in a binary tree of height h is h + 1 (skewed tree); 2^(h+1) - 1 is the maximum number of nodes."
+    },
+    {
+      "id": 41,
+      "topic": "Data Structures & Algorithms",
+      "difficulty": "easy",
+      "question": "What is the time complexity of finding the minimum element in a Min-Heap of n elements?",
+      "options": {
+        "A": "O(log n)",
+        "B": "O(n)",
+        "C": "O(1)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "In a Min-Heap, the minimum key is always stored at the root (index 0), so finding it takes O(1) time."
+    },
+    {
+      "id": 42,
+      "topic": "Data Structures & Algorithms",
+      "difficulty": "medium",
+      "question": "Which statements are true about standard array Merge Sort?",
+      "options": {
+        "A": "It is a stable sorting algorithm",
+        "B": "It follows the Divide and Conquer paradigm",
+        "C": "It sorts in-place using only O(1) auxiliary space",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Merge Sort is stable (A) and uses Divide and Conquer (B), though standard array Merge Sort needs O(n) extra space."
+    },
+    {
+      "id": 43,
+      "topic": "Data Structures & Algorithms",
+      "difficulty": "medium",
+      "question": "Which graph algorithm uses a Queue data structure to find shortest paths (by edge count) in unweighted graphs?",
+      "options": {
+        "A": "Depth-First Search (DFS)",
+        "B": "Recursive Topological Sort",
+        "C": "Kruskal's MST algorithm",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Breadth-First Search (BFS) uses a Queue and guarantees shortest paths in unweighted graphs."
+    },
+    {
+      "id": 44,
+      "topic": "Data Structures & Algorithms",
+      "difficulty": "hard",
+      "question": "Which invariants hold for every valid Red-Black tree?",
+      "options": {
+        "A": "Every node is colored either red or black",
+        "B": "The root node is always black",
+        "C": "No red node can have a red child (no two consecutive reds)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three (A, B, and C) are fundamental Red-Black tree properties."
+    },
+    {
+      "id": 45,
+      "topic": "Data Structures & Algorithms",
+      "difficulty": "medium",
+      "question": "What is the worst-case time complexity of searching for a key in a separate-chaining hash table storing n keys in m buckets?",
+      "options": {
+        "A": "O(1)",
+        "B": "O(log n)",
+        "C": "O(log m)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "If all n keys collide into a single bucket's linked list, worst-case search degrades to O(n)."
+    },
+    {
+      "id": 46,
+      "topic": "Operating Systems",
+      "difficulty": "easy",
+      "question": "In the 5-state process model, a Running process that initiates a blocking disk I/O read transitions directly to which state?",
+      "options": {
+        "A": "Ready state",
+        "B": "Terminated state",
+        "C": "New state",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "A process waiting for I/O or an event transitions from Running to the Waiting (Blocked) state."
+    },
+    {
+      "id": 47,
+      "topic": "Operating Systems",
+      "difficulty": "easy",
+      "question": "Which of the following belong to the four necessary Coffman conditions for a deadlock to occur?",
+      "options": {
+        "A": "Mutual exclusion and Hold-and-wait",
+        "B": "No preemption",
+        "C": "Circular wait",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All four Coffman conditions (mutual exclusion, hold-and-wait, no preemption, circular wait) appear across A, B, C."
+    },
+    {
+      "id": 48,
+      "topic": "Operating Systems",
+      "difficulty": "medium",
+      "question": "Which CPU scheduling algorithm is known for causing the 'convoy effect' when short jobs wait behind one long CPU-bound job?",
+      "options": {
+        "A": "Shortest Job First (SJF)",
+        "B": "Round Robin (RR) with small time quantum",
+        "C": "Shortest Remaining Time First (SRTF)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "First-Come, First-Served (FCFS) suffers from the convoy effect because it is non-preemptive and ignores burst length."
+    },
+    {
+      "id": 49,
+      "topic": "Operating Systems",
+      "difficulty": "hard",
+      "question": "In a paged system without parallel lookup, if TLB access takes 10 ns and RAM access takes 100 ns, what is the access time on a TLB HIT?",
+      "options": {
+        "A": "10 ns",
+        "B": "100 ns",
+        "C": "210 ns",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "On a TLB hit, time = TLB lookup (10 ns) + 1 RAM access for data (100 ns) = 110 ns (210 ns is for a TLB miss)."
+    },
+    {
+      "id": 50,
+      "topic": "Operating Systems",
+      "difficulty": "medium",
+      "question": "Which statements accurately describe Thrashing in virtual memory systems?",
+      "options": {
+        "A": "The system spends more time swapping pages than executing instructions",
+        "B": "CPU utilization plunges sharply when multiprogramming exceeds available frames",
+        "C": "It can be controlled using Denning's Working Set model",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three statements (A, B, and C) accurately describe thrashing and its Working Set mitigation."
+    },
+    {
+      "id": 51,
+      "topic": "Operating Systems",
+      "difficulty": "medium",
+      "question": "Which disk file allocation method suffers from external fragmentation and makes dynamic file growth difficult?",
+      "options": {
+        "A": "Linked allocation",
+        "B": "Single-level indexed allocation",
+        "C": "Multi-level indexed allocation (UNIX inode)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Contiguous allocation stores files in consecutive disk blocks, causing external fragmentation and fixed-size growth limits."
+    },
+    {
+      "id": 52,
+      "topic": "Operating Systems",
+      "difficulty": "medium",
+      "question": "Which page replacement algorithm can exhibit Belady's Anomaly (more frames yielding more page faults)?",
+      "options": {
+        "A": "FIFO (First-In, First-Out)",
+        "B": "LRU (Least Recently Used)",
+        "C": "Optimal (OPT)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "FIFO is not a stack algorithm and suffers from Belady's Anomaly; LRU and Optimal are stack algorithms and never do."
+    },
+    {
+      "id": 53,
+      "topic": "Operating Systems",
+      "difficulty": "medium",
+      "question": "In the Banker's Algorithm for deadlock avoidance, how is the remaining Need[i] vector calculated for process i?",
+      "options": {
+        "A": "Max[i] + Allocation[i]",
+        "B": "Allocation[i] - Available",
+        "C": "Available - Max[i]",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "In Banker's Algorithm, Need[i] = Max[i] - Allocation[i]. None of A/B/C uses the correct formula."
+    },
+    {
+      "id": 54,
+      "topic": "Operating Systems",
+      "difficulty": "easy",
+      "question": "Which statements correctly compare Threads and Processes within an operating system?",
+      "options": {
+        "A": "Threads in the same process share code, global data, and open files",
+        "B": "Each thread maintains its own stack, registers, and program counter",
+        "C": "Thread context switching is faster than switching full processes",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three (A, B, and C) are true characteristics of threads compared to heavyweight processes."
+    },
+    {
+      "id": 55,
+      "topic": "Operating Systems",
+      "difficulty": "medium",
+      "question": "What is the primary role of the Translation Lookaside Buffer (TLB) in an OS/MMU?",
+      "options": {
+        "A": "Buffer dirty disk blocks before swap write-back",
+        "B": "Cache recently decoded machine instructions",
+        "C": "Store user process call stacks",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "The TLB is an associative hardware cache that stores recent page table entries (virtual-to-physical frame mappings)."
+    },
+    {
+      "id": 56,
+      "topic": "Operating Systems",
+      "difficulty": "easy",
+      "question": "Which CPU scheduling algorithm achieves the provably minimum average waiting time for a fixed set of processes?",
+      "options": {
+        "A": "First-Come, First-Served (FCFS)",
+        "B": "Shortest Job First (SJF)",
+        "C": "Static Priority Scheduling",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "SJF (and preemptive SRTF) yields the minimum possible average waiting time for a given set of jobs."
+    },
+    {
+      "id": 57,
+      "topic": "Operating Systems",
+      "difficulty": "hard",
+      "question": "Internal fragmentation is an inherent issue in which of the following memory management schemes?",
+      "options": {
+        "A": "Pure dynamic partitioning with best-fit",
+        "B": "Pure segmentation without paging",
+        "C": "Variable-size contiguous segment allocation",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Paging and fixed-size partitioning suffer from internal fragmentation; variable partitioning and pure segmentation cause external fragmentation."
+    },
+    {
+      "id": 58,
+      "topic": "Operating Systems",
+      "difficulty": "hard",
+      "question": "Which statements are true about a binary semaphore initialized to 1?",
+      "options": {
+        "A": "wait() / P() decrements it to 0 or blocks if it is already 0",
+        "B": "signal() / V() wakes a blocked process or sets the value back to 1",
+        "C": "Its integer value can grow arbitrarily above 1 on repeated signal() calls",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Both A and B describe a binary semaphore (values restricted to 0 and 1); growing above 1 applies to a counting semaphore."
+    },
+    {
+      "id": 59,
+      "topic": "Operating Systems",
+      "difficulty": "easy",
+      "question": "In POSIX/UNIX systems, which system call creates a new child process by duplicating the calling parent process?",
+      "options": {
+        "A": "exec()",
+        "B": "wait()",
+        "C": "exit()",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "fork() creates a duplicate child process; exec() replaces the current process's memory image."
+    },
+    {
+      "id": 60,
+      "topic": "Operating Systems",
+      "difficulty": "medium",
+      "question": "Which CPU scheduling algorithm is strictly guaranteed to be free from starvation?",
+      "options": {
+        "A": "Non-preemptive Shortest Job First (SJF)",
+        "B": "Static Priority Scheduling without aging",
+        "C": "Shortest Remaining Time First (SRTF)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "SJF, SRTF, and static priority without aging can all starve long/low-priority jobs; FCFS and Round Robin are starvation-free."
+    },
+    {
+      "id": 61,
+      "topic": "Computer Networks & Discrete Math",
+      "difficulty": "easy",
+      "question": "In the 7-layer OSI model, which layer provides end-to-end reliability, segmentation, and port addressing?",
+      "options": {
+        "A": "Network layer",
+        "B": "Data Link layer",
+        "C": "Session layer",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "The Transport layer (Layer 4) handles segmentation, port numbers, flow control, and end-to-end reliability."
+    },
+    {
+      "id": 62,
+      "topic": "Computer Networks & Discrete Math",
+      "difficulty": "medium",
+      "question": "What are the standard well-known TCP port numbers for HTTP, HTTPS, and SSH, respectively?",
+      "options": {
+        "A": "21, 22, 23",
+        "B": "25, 110, 143",
+        "C": "80, 443, 23",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Correct ports are HTTP = 80, HTTPS = 443, and SSH = 22 (port 23 is Telnet)."
+    },
+    {
+      "id": 63,
+      "topic": "Computer Networks & Discrete Math",
+      "difficulty": "medium",
+      "question": "Which statements are true regarding IPv4 and IPv6 addressing?",
+      "options": {
+        "A": "IPv4 uses 32-bit addresses typically written in dotted-decimal format",
+        "B": "IPv6 uses 128-bit addresses written in colon-separated hexadecimal",
+        "C": "IPv6 removes the header checksum field to streamline router forwarding",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three statements (A, B, and C) accurately describe IPv4 and IPv6 specifications."
+    },
+    {
+      "id": 64,
+      "topic": "Computer Networks & Discrete Math",
+      "difficulty": "medium",
+      "question": "In classful IPv4 addressing, what are the default subnet mask and first-octet range for Class B networks?",
+      "options": {
+        "A": "255.0.0.0 and 1–126",
+        "B": "255.255.255.0 and 192–223",
+        "C": "255.255.0.0 and 192–223",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Class B uses default mask 255.255.0.0 and first-octet range 128–191 (192–223 is Class C)."
+    },
+    {
+      "id": 65,
+      "topic": "Computer Networks & Discrete Math",
+      "difficulty": "medium",
+      "question": "In Stop-and-Wait ARQ, if link bandwidth is 1 Mbps and round-trip delay is 40 ms, what is the sender window size?",
+      "options": {
+        "A": "2 frames",
+        "B": "10 frames",
+        "C": "20 frames",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Stop-and-Wait ARQ always has a sender window size of exactly 1 frame regardless of bandwidth or delay."
+    },
+    {
+      "id": 66,
+      "topic": "Computer Networks & Discrete Math",
+      "difficulty": "medium",
+      "question": "Which statements are true about CSMA/CD (Carrier Sense Multiple Access with Collision Detection)?",
+      "options": {
+        "A": "Used in classic wired IEEE 802.3 Ethernet LANs",
+        "B": "Nodes sense the channel before transmitting and abort on collision",
+        "C": "Used in IEEE 802.11 wireless LANs (Wi-Fi)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Both A and B are true for CSMA/CD; IEEE 802.11 Wi-Fi uses CSMA/CA (Collision Avoidance), not CSMA/CD."
+    },
+    {
+      "id": 67,
+      "topic": "Computer Networks & Discrete Math",
+      "difficulty": "hard",
+      "question": "In CSMA/CD, what minimum frame transmission time Tt (relative to one-way propagation delay Tp) ensures collision detection?",
+      "options": {
+        "A": "Tt >= Tp",
+        "B": "Tt >= Tp / 2",
+        "C": "Tt <= Tp",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "CSMA/CD requires Tt >= 2 × Tp (one round-trip propagation time) to reliably detect collisions."
+    },
+    {
+      "id": 68,
+      "topic": "Computer Networks & Discrete Math",
+      "difficulty": "easy",
+      "question": "Which protocol resolves an IPv4 address into its corresponding physical MAC address on a local Ethernet LAN?",
+      "options": {
+        "A": "DNS",
+        "B": "RARP",
+        "C": "ICMP",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "ARP (Address Resolution Protocol) maps an IPv4 address to a MAC address; RARP maps MAC to IP."
+    },
+    {
+      "id": 69,
+      "topic": "Computer Networks & Discrete Math",
+      "difficulty": "easy",
+      "question": "Which of the following protocols operate at the Application Layer of the TCP/IP suite?",
+      "options": {
+        "A": "HTTP and DNS",
+        "B": "SMTP and FTP",
+        "C": "SNMP and DHCP",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "HTTP, DNS, SMTP, FTP, SNMP, and DHCP are all TCP/IP Application Layer protocols."
+    },
+    {
+      "id": 70,
+      "topic": "Computer Networks & Discrete Math",
+      "difficulty": "hard",
+      "question": "In Go-Back-N ARQ using an n-bit sequence number field, what is the maximum allowed sender window size?",
+      "options": {
+        "A": "2^n",
+        "B": "2^(n - 1)",
+        "C": "2^n - 1",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Go-Back-N allows up to 2^n - 1 unacknowledged frames; Selective Repeat allows up to 2^(n - 1)."
+    },
+    {
+      "id": 71,
+      "topic": "Computer Networks & Discrete Math",
+      "difficulty": "medium",
+      "question": "Which of the following propositional logic formulas is a TAUTOLOGY (always TRUE)?",
+      "options": {
+        "A": "p ∧ ¬p",
+        "B": "(p → q) ∧ (p ∧ ¬q)",
+        "C": "p ↔ ¬p",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "All three formulas (A, B, and C) are contradictions (always FALSE), not tautologies."
+    },
+    {
+      "id": 72,
+      "topic": "Computer Networks & Discrete Math",
+      "difficulty": "hard",
+      "question": "Which theorems hold for every simple connected planar graph G with v >= 3 vertices, e edges, and f faces?",
+      "options": {
+        "A": "Euler's formula: v - e + f = 2",
+        "B": "Edge bound: e <= 3v - 6",
+        "C": "Four-color theorem (<= 4 colors)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three (Euler's formula, e <= 3v - 6, and 4-colorability) are true theorems for simple connected planar graphs."
+    },
+    {
+      "id": 73,
+      "topic": "Computer Networks & Discrete Math",
+      "difficulty": "medium",
+      "question": "A connected undirected graph possesses an Eulerian circuit (closed Eulerian trail) if and only if:",
+      "options": {
+        "A": "Exactly two vertices have odd degree",
+        "B": "Every vertex has odd degree",
+        "C": "The graph is bipartite",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "An Eulerian circuit exists iff every vertex has EVEN degree; exactly 2 odd vertices gives an open Eulerian path."
+    },
+    {
+      "id": 74,
+      "topic": "Computer Networks & Discrete Math",
+      "difficulty": "hard",
+      "question": "According to Kuratowski's theorem, which of the following graphs is NON-PLANAR?",
+      "options": {
+        "A": "Complete graph K3",
+        "B": "Complete graph K4",
+        "C": "Complete bipartite graph K2,3",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "K3, K4, and K2,3 are all planar; the minimal non-planar graphs are K5 and K3,3."
+    },
+    {
+      "id": 75,
+      "topic": "Computer Networks & Discrete Math",
+      "difficulty": "easy",
+      "question": "Which statements are equivalent properties of every Tree on n vertices?",
+      "options": {
+        "A": "It is connected and contains no cycles",
+        "B": "It has exactly n - 1 edges",
+        "C": "Every pair of vertices is joined by a unique simple path",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three (A, B, and C) are equivalent textbook characterizations of an n-vertex tree."
+    },
+    {
+      "id": 76,
+      "topic": "Computer Networks & Discrete Math",
+      "difficulty": "medium",
+      "question": "For the conditional proposition 'p → q', which expression represents its contrapositive?",
+      "options": {
+        "A": "q → p",
+        "B": "¬p → ¬q",
+        "C": "p ∧ ¬q",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "The contrapositive of p → q is ¬q → ¬p (A is converse, B is inverse, C is negation)."
+    },
+    {
+      "id": 77,
+      "topic": "Computer Networks & Discrete Math",
+      "difficulty": "easy",
+      "question": "How many edges are present in a simple complete undirected graph K_n with n vertices?",
+      "options": {
+        "A": "n(n - 1) / 2",
+        "B": "n(n + 1) / 2",
+        "C": "n^2",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Every pair among n vertices shares one edge, giving C(n, 2) = n(n - 1) / 2 edges."
+    },
+    {
+      "id": 78,
+      "topic": "Computer Networks & Discrete Math",
+      "difficulty": "hard",
+      "question": "By Dirac's theorem, a simple graph with n >= 3 vertices is guaranteed to have a Hamiltonian cycle if:",
+      "options": {
+        "A": "Every vertex has degree >= 2",
+        "B": "The sum of all vertex degrees is >= n",
+        "C": "Every vertex has degree <= n / 2",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Dirac's theorem guarantees a Hamiltonian cycle if every vertex has degree >= n / 2."
+    },
+    {
+      "id": 79,
+      "topic": "Computer Networks & Discrete Math",
+      "difficulty": "medium",
+      "question": "Which of the following are valid logical equivalences in propositional logic?",
+      "options": {
+        "A": "¬(p ∨ q) ≡ (¬p ∧ ¬q)",
+        "B": "(p → q) ≡ (¬p ∨ q)",
+        "C": "¬(p → q) ≡ (p ∧ ¬q)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three (De Morgan's law, implication identity, and negation of implication) are valid equivalences."
+    },
+    {
+      "id": 80,
+      "topic": "Computer Networks & Discrete Math",
+      "difficulty": "easy",
+      "question": "In a network of 6 routers connected in a full-mesh topology, how many point-to-point links are needed?",
+      "options": {
+        "A": "6 links",
+        "B": "12 links",
+        "C": "30 links",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "A full mesh of n nodes needs n(n - 1) / 2 links: 6 × 5 / 2 = 15 links."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+[Unit]
+Description=BPSC TRE CS Telegram Quiz Bot Service
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/bpsc
+ExecStart=/home/ubuntu/bpsc/venv/bin/python bot.py
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

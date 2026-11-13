@@ -1,0 +1,1508 @@
+{
+  "subject": "Database Management Systems & SQL",
+  "module": "06",
+  "total": 100,
+  "exam_relevance": "8-10 questions expected in BPSC TRE CS exam",
+  "questions": [
+    {
+      "id": 1,
+      "topic": "DBMS Architecture",
+      "difficulty": "easy",
+      "question": "In the three-schema (ANSI-SPARC) architecture of a DBMS, the three levels are:",
+      "options": {
+        "A": "External, Conceptual, and Internal levels",
+        "B": "Client, Application Server, and Database Server",
+        "C": "Physical, Network, and Hierarchical levels",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "ANSI-SPARC 3-schema DBMS architecture consists of External (view), Conceptual (logical), and Internal (physical) levels."
+    },
+    {
+      "id": 2,
+      "topic": "DBMS Architecture",
+      "difficulty": "medium",
+      "question": "Which level of the three-schema DBMS architecture describes how data is actually stored on physical storage devices?",
+      "options": {
+        "A": "Internal level",
+        "B": "External level",
+        "C": "Conceptual level",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "The internal (physical) schema describes the physical storage structures, file organization, and access paths of the database."
+    },
+    {
+      "id": 3,
+      "topic": "DBMS Architecture",
+      "difficulty": "medium",
+      "question": "Logical data independence is the capacity to change the _____ without changing external schemas or application programs.",
+      "options": {
+        "A": "Conceptual schema",
+        "B": "External schema",
+        "C": "Internal schema",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Logical data independence means modifying the conceptual schema (e.g., adding tables/columns) without rewriting user views or apps."
+    },
+    {
+      "id": 4,
+      "topic": "DBMS Architecture",
+      "difficulty": "medium",
+      "question": "Physical data independence allows changing the _____ without affecting the conceptual schema.",
+      "options": {
+        "A": "External schema",
+        "B": "Conceptual schema",
+        "C": "Internal schema",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Physical data independence protects the conceptual schema from changes in physical storage or indexing (internal schema)."
+    },
+    {
+      "id": 5,
+      "topic": "DBMS Architecture",
+      "difficulty": "easy",
+      "question": "In a three-tier web DBMS architecture, the middle tier between the client and the database server is the:",
+      "options": {
+        "A": "Storage engine",
+        "B": "Data dictionary",
+        "C": "Application server",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Three-tier web architecture consists of Client (presentation), Application Server (business logic), and Database Server (data)."
+    },
+    {
+      "id": 6,
+      "topic": "DBMS Architecture",
+      "difficulty": "easy",
+      "question": "Which level of DBMS architecture provides customized views of the database to different end users?",
+      "options": {
+        "A": "Conceptual level",
+        "B": "External level",
+        "C": "Internal level",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "The external (view) level defines user-specific views, hiding irrelevant details and enforcing security."
+    },
+    {
+      "id": 7,
+      "topic": "DBMS Architecture",
+      "difficulty": "medium",
+      "question": "Metadata (data about data), such as table definitions and constraints, is stored by a DBMS in the:",
+      "options": {
+        "A": "Transaction log",
+        "B": "Data dictionary (System catalog)",
+        "C": "Buffer pool",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "The data dictionary (system catalog) stores metadata describing schemas, tables, attributes, constraints, and permissions."
+    },
+    {
+      "id": 8,
+      "topic": "DBMS Architecture",
+      "difficulty": "easy",
+      "question": "Which of the following is an advantage of a DBMS over a traditional file-processing system?",
+      "options": {
+        "A": "Reduced data redundancy and inconsistency",
+        "B": "Data integrity and security enforcement",
+        "C": "Concurrent access and crash recovery",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "DBMS reduces redundancy, enforces integrity/security, and supports concurrency control and recovery—all three options are true."
+    },
+    {
+      "id": 9,
+      "topic": "Data Models",
+      "difficulty": "easy",
+      "question": "In the relational data model, a row of a table is formally called a:",
+      "options": {
+        "A": "Domain",
+        "B": "Attribute",
+        "C": "Tuple",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "In relational terminology: table = relation, row = tuple, column = attribute."
+    },
+    {
+      "id": 10,
+      "topic": "Data Models",
+      "difficulty": "easy",
+      "question": "The set of permitted data values for each column in a relational database table is called a:",
+      "options": {
+        "A": "Domain",
+        "B": "Tuple",
+        "C": "Degree",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "A domain is the set of atomic, valid values allowed for an attribute (column). (BPSC TRE 2.0 actual question)"
+    },
+    {
+      "id": 11,
+      "topic": "Data Models",
+      "difficulty": "easy",
+      "question": "The number of attributes (columns) in a relation is called its:",
+      "options": {
+        "A": "Domain",
+        "B": "Degree",
+        "C": "Cardinality",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Degree (arity) = number of columns/attributes in a relation. Cardinality = number of rows/tuples."
+    },
+    {
+      "id": 12,
+      "topic": "Data Models",
+      "difficulty": "easy",
+      "question": "The number of tuples (rows) currently present in a relation is called its:",
+      "options": {
+        "A": "Degree",
+        "B": "Schema",
+        "C": "Domain",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "The number of tuples (rows) in a relation is called Cardinality (Degree = columns, Domain = allowed values)."
+    },
+    {
+      "id": 13,
+      "topic": "Data Models",
+      "difficulty": "medium",
+      "question": "If relation R has 5 columns and 10 rows, and relation S has 3 columns and 4 rows, what are the degree and cardinality of R × S (Cartesian product)?",
+      "options": {
+        "A": "Degree = 8, Cardinality = 14",
+        "B": "Degree = 15, Cardinality = 14",
+        "C": "Degree = 8, Cardinality = 40",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Cartesian product adds degrees (5+3=8) and multiplies cardinalities (10×4=40)."
+    },
+    {
+      "id": 14,
+      "topic": "Data Models",
+      "difficulty": "easy",
+      "question": "Which data model organizes data in a tree-like parent-child structure where a child has at most one parent?",
+      "options": {
+        "A": "Network model",
+        "B": "Relational model",
+        "C": "Hierarchical model",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "The hierarchical model represents 1:N relationships as a tree; each child node has only one parent (network allows many)."
+    },
+    {
+      "id": 15,
+      "topic": "Data Models",
+      "difficulty": "medium",
+      "question": "Who proposed the Relational Data Model in 1970?",
+      "options": {
+        "A": "Peter Chen",
+        "B": "Charles Bachman",
+        "C": "Donald Chamberlin",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "E. F. Codd proposed the Relational Data Model in 1970 (Chen proposed ER model; Bachman proposed Network model)."
+    },
+    {
+      "id": 16,
+      "topic": "Data Models",
+      "difficulty": "medium",
+      "question": "In relational databases, a NULL value in an attribute represents:",
+      "options": {
+        "A": "Numeric value zero (0)",
+        "B": "Blank ASCII space string",
+        "C": "Unknown or missing value",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "NULL is not 0 or blank space; it denotes a missing, unknown, or inapplicable attribute value."
+    },
+    {
+      "id": 17,
+      "topic": "Keys",
+      "difficulty": "easy",
+      "question": "A minimal super key (a super key with no redundant attributes) is called a:",
+      "options": {
+        "A": "Composite key",
+        "B": "Foreign key",
+        "C": "Candidate key",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A candidate key is a minimal super key: it uniquely identifies tuples and no proper subset of it is a super key."
+    },
+    {
+      "id": 18,
+      "topic": "Keys",
+      "difficulty": "easy",
+      "question": "Which constraint requires that values in an attribute of a referencing relation must appear in the referenced relation (or be NULL)?",
+      "options": {
+        "A": "Referential integrity",
+        "B": "Domain integrity",
+        "C": "Entity integrity",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Referential integrity ensures foreign key values match an existing primary/unique key in the referenced table. (BPSC TRE 1.0)"
+    },
+    {
+      "id": 19,
+      "topic": "Keys",
+      "difficulty": "easy",
+      "question": "Entity integrity constraint states that no attribute of a _____ can contain a NULL value.",
+      "options": {
+        "A": "Foreign key",
+        "B": "Alternate key",
+        "C": "Primary key",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Entity integrity mandates that primary key attributes must be unique and NOT NULL so every tuple is uniquely identifiable."
+    },
+    {
+      "id": 20,
+      "topic": "Keys",
+      "difficulty": "easy",
+      "question": "Candidate keys that are NOT chosen as the primary key of a relation are called:",
+      "options": {
+        "A": "Foreign keys",
+        "B": "Super keys",
+        "C": "Composite keys",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Candidate keys not chosen as the primary key are called Alternate keys (or secondary keys)."
+    },
+    {
+      "id": 21,
+      "topic": "Keys",
+      "difficulty": "medium",
+      "question": "For relation Student(RollNo, Email, AadharNo, Name), where RollNo, Email, and AadharNo are each unique, how many candidate keys exist if RollNo is chosen as primary key?",
+      "options": {
+        "A": "3 candidate keys",
+        "B": "2 alternate keys",
+        "C": "1 primary key",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "There are 3 candidate keys (RollNo, Email, AadharNo), 1 primary key (RollNo), and 2 alternate keys (Email, AadharNo). All A, B, C are true."
+    },
+    {
+      "id": 22,
+      "topic": "Keys",
+      "difficulty": "medium",
+      "question": "Which statement is TRUE about a Primary Key and a Foreign Key?",
+      "options": {
+        "A": "A table can have at most one Primary Key",
+        "B": "A table can have multiple Foreign Keys",
+        "C": "A Foreign Key can accept duplicate and NULL values (unless restricted)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "A relation has one primary key, may have multiple foreign keys, and foreign keys can contain duplicates or NULLs."
+    },
+    {
+      "id": 23,
+      "topic": "Keys",
+      "difficulty": "medium",
+      "question": "Every _____ is a super key, though the converse is not always true.",
+      "options": {
+        "A": "Foreign key",
+        "B": "Candidate key",
+        "C": "Non-prime attribute",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Every candidate key is a minimal super key, though not every super key is minimal (hence not always a candidate key)."
+    },
+    {
+      "id": 24,
+      "topic": "Keys",
+      "difficulty": "medium",
+      "question": "In relation R(A, B, C, D) with A as the sole candidate key, how many super keys does R have?",
+      "options": {
+        "A": "4",
+        "B": "8",
+        "C": "16",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Any subset containing A is a super key. With 3 remaining attributes {B,C,D}, there are 2^3 = 8 super keys."
+    },
+    {
+      "id": 25,
+      "topic": "Keys",
+      "difficulty": "easy",
+      "question": "A primary key that consists of two or more attributes combined together is called a:",
+      "options": {
+        "A": "Foreign key",
+        "B": "Composite key",
+        "C": "Surrogate key",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A composite key uses two or more attributes together (e.g., (StudentID, CourseID)) to uniquely identify a tuple."
+    },
+    {
+      "id": 26,
+      "topic": "Keys",
+      "difficulty": "medium",
+      "question": "An attribute that is part of at least one candidate key is known as a:",
+      "options": {
+        "A": "Non-prime attribute",
+        "B": "Derived attribute",
+        "C": "Prime attribute",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Prime attributes belong to at least one candidate key; attributes not in any candidate key are non-prime."
+    },
+    {
+      "id": 27,
+      "topic": "Keys",
+      "difficulty": "medium",
+      "question": "If a referenced tuple in a parent table is deleted, which foreign key action automatically deletes matching rows in the child table?",
+      "options": {
+        "A": "ON DELETE SET NULL",
+        "B": "ON DELETE RESTRICT",
+        "C": "ON DELETE CASCADE",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "ON DELETE CASCADE propagates deletion from parent to child rows; SET NULL sets FK to NULL; RESTRICT blocks deletion."
+    },
+    {
+      "id": 28,
+      "topic": "Keys",
+      "difficulty": "medium",
+      "question": "A super key of a relation R is a set of attributes that:",
+      "options": {
+        "A": "Cannot contain more than two attributes",
+        "B": "Uniquely identifies each tuple in R",
+        "C": "Must always be minimal",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A super key uniquely identifies tuples in a relation and may contain extra redundant attributes (minimality makes it a candidate key)."
+    },
+    {
+      "id": 29,
+      "topic": "Normalization",
+      "difficulty": "easy",
+      "question": "A relation is in First Normal Form (1NF) if and only if:",
+      "options": {
+        "A": "All attribute domains contain only atomic (indivisible) values",
+        "B": "There are no repeating groups or multivalued attributes",
+        "C": "There are no transitive dependencies",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "1NF requires atomic values in every cell and no repeating groups/multivalued attributes. Both A and B define 1NF."
+    },
+    {
+      "id": 30,
+      "topic": "Normalization",
+      "difficulty": "medium",
+      "question": "Second Normal Form (2NF) removes which type of functional dependency?",
+      "options": {
+        "A": "Partial dependency",
+        "B": "Transitive dependency",
+        "C": "Multivalued dependency",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "2NF requires 1NF and no partial dependency (no non-prime attribute depends on a proper subset of a candidate key)."
+    },
+    {
+      "id": 31,
+      "topic": "Normalization",
+      "difficulty": "medium",
+      "question": "Third Normal Form (3NF) eliminates which type of dependency among non-prime attributes?",
+      "options": {
+        "A": "Join dependency",
+        "B": "Transitive dependency",
+        "C": "Partial dependency",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "3NF requires 2NF and no transitive dependency (non-prime attribute depending on another non-prime attribute)."
+    },
+    {
+      "id": 32,
+      "topic": "Normalization",
+      "difficulty": "medium",
+      "question": "A relation is in Boyce-Codd Normal Form (BCNF) if for every non-trivial functional dependency X → Y:",
+      "options": {
+        "A": "Y is a non-prime attribute",
+        "B": "X is a proper subset of a candidate key",
+        "C": "Y is a super key",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "BCNF requires the determinant X (left side) to be a super key for every non-trivial FD X -> Y."
+    },
+    {
+      "id": 33,
+      "topic": "Normalization",
+      "difficulty": "medium",
+      "question": "If a relation in 1NF has a single-attribute candidate key (no composite candidate keys), then it is automatically in:",
+      "options": {
+        "A": "2NF",
+        "B": "3NF",
+        "C": "BCNF",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Partial dependency requires a proper subset of a composite key; with single-attribute keys, 1NF is automatically in 2NF."
+    },
+    {
+      "id": 34,
+      "topic": "Normalization",
+      "difficulty": "easy",
+      "question": "Which anomalies can occur in an unnormalized database table?",
+      "options": {
+        "A": "Insertion anomaly",
+        "B": "Deletion anomaly",
+        "C": "Update (Modification) anomaly",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Redundancy in unnormalized tables causes insertion, deletion, and update anomalies—normalization reduces all three."
+    },
+    {
+      "id": 35,
+      "topic": "Normalization",
+      "difficulty": "medium",
+      "question": "Which normal form is strictly stronger than 3NF?",
+      "options": {
+        "A": "2NF",
+        "B": "BCNF",
+        "C": "1NF",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Hierarchy: 1NF ⊃ 2NF ⊃ 3NF ⊃ BCNF. Every BCNF relation is in 3NF, but not every 3NF relation is in BCNF."
+    },
+    {
+      "id": 36,
+      "topic": "Normalization",
+      "difficulty": "hard",
+      "question": "In relation R(A, B, C) with candidate key (A, B), the functional dependency B → C is an example of:",
+      "options": {
+        "A": "Partial dependency",
+        "B": "Transitive dependency",
+        "C": "Multivalued dependency",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Non-prime C depends on B, a proper subset of candidate key (A,B), which is a partial dependency violating 2NF."
+    },
+    {
+      "id": 37,
+      "topic": "Normalization",
+      "difficulty": "hard",
+      "question": "In relation R(EmpID, DeptID, DeptName) with candidate key EmpID and FDs EmpID → DeptID, DeptID → DeptName, R is in:",
+      "options": {
+        "A": "1NF and 2NF, but not 3NF",
+        "B": "BCNF",
+        "C": "3NF, but not BCNF",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "EmpID is a single key (so 2NF holds), but EmpID → DeptID → DeptName is a transitive dependency, so R is not in 3NF."
+    },
+    {
+      "id": 38,
+      "topic": "Normalization",
+      "difficulty": "medium",
+      "question": "Fourth Normal Form (4NF) is concerned with eliminating:",
+      "options": {
+        "A": "Partial dependencies",
+        "B": "Transitive dependencies",
+        "C": "Join dependencies",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "4NF eliminates non-trivial multivalued dependencies (MVDs); partial=2NF, transitive=3NF, join=5NF."
+    },
+    {
+      "id": 39,
+      "topic": "Normalization",
+      "difficulty": "medium",
+      "question": "Fifth Normal Form (5NF), also called Project-Join Normal Form (PJNF), deals with:",
+      "options": {
+        "A": "Join dependencies",
+        "B": "Partial dependencies",
+        "C": "Transitive dependencies",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "5NF (PJNF) eliminates redundancy caused by join dependencies so tables decompose losslessly."
+    },
+    {
+      "id": 40,
+      "topic": "Normalization",
+      "difficulty": "medium",
+      "question": "Which two properties are desirable when decomposing a relation during normalization?",
+      "options": {
+        "A": "Lossless-join property",
+        "B": "Dependency preservation",
+        "C": "Maximum data redundancy",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Good schema decomposition ensures lossless-join (no spurious tuples) and dependency preservation (A and B)."
+    },
+    {
+      "id": 41,
+      "topic": "Normalization",
+      "difficulty": "hard",
+      "question": "Which normal form always guarantees both lossless-join and dependency-preserving decomposition for any set of functional dependencies?",
+      "options": {
+        "A": "4NF",
+        "B": "3NF",
+        "C": "BCNF",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Every relation can be decomposed into 3NF with both lossless-join and dependency preservation; BCNF may sacrifice dependency preservation."
+    },
+    {
+      "id": 42,
+      "topic": "Normalization",
+      "difficulty": "medium",
+      "question": "In functional dependency X → Y, X is called the _____ and Y is called the dependent.",
+      "options": {
+        "A": "Candidate key",
+        "B": "Determinant",
+        "C": "Super key",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "In X → Y (X functionally determines Y), the left-hand side X is the determinant."
+    },
+    {
+      "id": 43,
+      "topic": "Normalization",
+      "difficulty": "medium",
+      "question": "Which of Armstrong's axioms states that if X → Y and Y → Z, then X → Z?",
+      "options": {
+        "A": "Transitivity",
+        "B": "Reflexivity",
+        "C": "Augmentation",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Armstrong's three inference axioms are Reflexivity (Y⊆X ⇒ X→Y), Augmentation (X→Y ⇒ XZ→YZ), and Transitivity (X→Y, Y→Z ⇒ X→Z)."
+    },
+    {
+      "id": 44,
+      "topic": "SQL DDL",
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a constraint in SQL?",
+      "options": {
+        "A": "PRIMARY KEY",
+        "B": "UNION",
+        "C": "UNIQUE",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "UNION is a set operator combining SELECT results, not a table constraint. PRIMARY KEY and UNIQUE are constraints. (BPSC TRE 1.0)"
+    },
+    {
+      "id": 45,
+      "topic": "SQL DDL",
+      "difficulty": "easy",
+      "question": "Which SQL commands belong to Data Definition Language (DDL)?",
+      "options": {
+        "A": "CREATE and ALTER",
+        "B": "DROP and TRUNCATE",
+        "C": "INSERT and UPDATE",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "CREATE, ALTER, DROP, and TRUNCATE are all DDL commands (define/modify structure). INSERT and UPDATE are DML."
+    },
+    {
+      "id": 46,
+      "topic": "SQL DDL",
+      "difficulty": "medium",
+      "question": "What is the key difference between TRUNCATE TABLE and DELETE FROM table?",
+      "options": {
+        "A": "TRUNCATE is a DDL command that removes all rows without a WHERE clause",
+        "B": "DELETE is a DML command that can use a WHERE clause to remove specific rows",
+        "C": "DROP removes both table data and structure, whereas TRUNCATE keeps the structure",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three statements A, B, and C accurately distinguish TRUNCATE, DELETE, and DROP in standard SQL."
+    },
+    {
+      "id": 47,
+      "topic": "SQL DDL",
+      "difficulty": "easy",
+      "question": "Which SQL command is used to add a new column to an existing table?",
+      "options": {
+        "A": "UPDATE TABLE",
+        "B": "MODIFY TABLE",
+        "C": "INSERT COLUMN",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "ALTER TABLE table_name ADD col datatype; is used in SQL to add a new column to an existing table."
+    },
+    {
+      "id": 48,
+      "topic": "SQL DDL",
+      "difficulty": "easy",
+      "question": "Which SQL constraint ensures that a column cannot store a NULL value?",
+      "options": {
+        "A": "CHECK",
+        "B": "UNIQUE",
+        "C": "NOT NULL",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "NOT NULL rejects NULL values in the column. UNIQUE allows NULL (in standard SQL) while enforcing uniqueness."
+    },
+    {
+      "id": 49,
+      "topic": "SQL DDL",
+      "difficulty": "medium",
+      "question": "Which SQL constraint validates that values inserted into a column satisfy a specified condition (e.g., age >= 18)?",
+      "options": {
+        "A": "CHECK",
+        "B": "UNIQUE",
+        "C": "DEFAULT",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "The CHECK constraint enforces domain conditions such as CHECK (age >= 18) on inserted or updated rows."
+    },
+    {
+      "id": 50,
+      "topic": "SQL DDL",
+      "difficulty": "easy",
+      "question": "Which SQL command permanently deletes a table's data as well as its schema/definition from the database?",
+      "options": {
+        "A": "DELETE TABLE",
+        "B": "TRUNCATE TABLE",
+        "C": "DROP TABLE",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "DROP TABLE removes both the data and the table definition completely; TRUNCATE and DELETE keep the table structure."
+    },
+    {
+      "id": 51,
+      "topic": "SQL DDL",
+      "difficulty": "easy",
+      "question": "Which SQL constraint assigns a predefined value to a column when no value is supplied during INSERT?",
+      "options": {
+        "A": "CHECK",
+        "B": "NOT NULL",
+        "C": "UNIQUE",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "The DEFAULT constraint assigns a predefined value when no value is supplied during INSERT."
+    },
+    {
+      "id": 52,
+      "topic": "SQL DDL",
+      "difficulty": "medium",
+      "question": "Which SQL command creates a virtual table based on the result-set of a SELECT query?",
+      "options": {
+        "A": "CREATE INDEX",
+        "B": "CREATE VIEW",
+        "C": "CREATE TABLE",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A view is a virtual table defined by a stored SQL query using CREATE VIEW view_name AS SELECT ..."
+    },
+    {
+      "id": 53,
+      "topic": "SQL DDL",
+      "difficulty": "medium",
+      "question": "How many UNIQUE constraints can a single SQL table have?",
+      "options": {
+        "A": "Only one",
+        "B": "Multiple (any number of columns/combinations)",
+        "C": "At most two",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A table can have only one PRIMARY KEY, but it can have multiple UNIQUE constraints."
+    },
+    {
+      "id": 54,
+      "topic": "SQL DML",
+      "difficulty": "easy",
+      "question": "Which SQL commands are classified as Data Manipulation Language (DML)?",
+      "options": {
+        "A": "INSERT",
+        "B": "UPDATE",
+        "C": "DELETE",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "INSERT, UPDATE, and DELETE (and SELECT in many textbooks) are DML commands used to manipulate table rows."
+    },
+    {
+      "id": 55,
+      "topic": "SQL DML",
+      "difficulty": "easy",
+      "question": "Which SQL keyword is used to sort the result-set of a SELECT query?",
+      "options": {
+        "A": "ORDER BY",
+        "B": "SORT BY",
+        "C": "GROUP BY",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "ORDER BY sorts output rows (ASC by default, or DESC). GROUP BY groups rows for aggregation."
+    },
+    {
+      "id": 56,
+      "topic": "SQL DML",
+      "difficulty": "medium",
+      "question": "Which SQL clause is used to filter groups created by GROUP BY based on aggregate conditions?",
+      "options": {
+        "A": "ORDER BY",
+        "B": "HAVING",
+        "C": "WHERE",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "WHERE filters individual rows before grouping; HAVING filters grouped rows after GROUP BY and supports aggregate functions."
+    },
+    {
+      "id": 57,
+      "topic": "SQL DML",
+      "difficulty": "easy",
+      "question": "In SQL, what is the default sort order of the ORDER BY clause when neither ASC nor DESC is specified?",
+      "options": {
+        "A": "Random",
+        "B": "Descending (DESC)",
+        "C": "Ascending (ASC)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "ORDER BY sorts in ascending order (ASC) by default; DESC must be written explicitly for descending order."
+    },
+    {
+      "id": 58,
+      "topic": "SQL DML",
+      "difficulty": "medium",
+      "question": "What happens if an UPDATE statement is executed without a WHERE clause?",
+      "options": {
+        "A": "All rows in the table are updated",
+        "B": "Syntax error occurs",
+        "C": "Only the first row is updated",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Omitting WHERE in UPDATE (or DELETE) applies the operation to every single row in the table."
+    },
+    {
+      "id": 59,
+      "topic": "SQL DML",
+      "difficulty": "medium",
+      "question": "Which SQL operator checks whether a value falls within a specified inclusive range?",
+      "options": {
+        "A": "LIKE",
+        "B": "BETWEEN ... AND ...",
+        "C": "IN",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "BETWEEN low AND high matches values >= low and <= high (inclusive of both boundary values)."
+    },
+    {
+      "id": 60,
+      "topic": "SQL DML",
+      "difficulty": "easy",
+      "question": "To check if a column value is NULL in a SQL WHERE clause, which syntax is correct?",
+      "options": {
+        "A": "WHERE col IS NULL",
+        "B": "WHERE col == NULL",
+        "C": "WHERE col = NULL",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Comparing with = NULL always evaluates to UNKNOWN; SQL requires IS NULL or IS NOT NULL."
+    },
+    {
+      "id": 61,
+      "topic": "SQL DML",
+      "difficulty": "medium",
+      "question": "What is the logical execution order of clauses in a SQL SELECT query?",
+      "options": {
+        "A": "FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY",
+        "B": "SELECT → FROM → WHERE → GROUP BY → HAVING → ORDER BY",
+        "C": "FROM → GROUP BY → WHERE → SELECT → HAVING → ORDER BY",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "SQL evaluates FROM first, filters rows via WHERE, forms groups (GROUP BY), filters groups (HAVING), projects (SELECT), then sorts (ORDER BY)."
+    },
+    {
+      "id": 62,
+      "topic": "SQL DML",
+      "difficulty": "easy",
+      "question": "Which SQL statement is used to insert new rows into an existing table?",
+      "options": {
+        "A": "ADD INTO",
+        "B": "UPDATE INTO",
+        "C": "APPEND ROW",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "INSERT INTO table_name ... VALUES ... is the standard SQL statement to insert new rows."
+    },
+    {
+      "id": 63,
+      "topic": "SQL DML",
+      "difficulty": "medium",
+      "question": "Which SQL operator tests whether a value matches any value in a list or subquery?",
+      "options": {
+        "A": "EXISTS",
+        "B": "IN",
+        "C": "LIKE",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "IN compares a value against a list or single-column subquery (e.g., WHERE dept IN ('CS', 'IT'))."
+    },
+    {
+      "id": 64,
+      "topic": "SQL DML",
+      "difficulty": "medium",
+      "question": "Which SQL command modifies existing data values inside rows of a table?",
+      "options": {
+        "A": "ALTER",
+        "B": "MODIFY",
+        "C": "UPDATE",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "UPDATE table_name SET col = val WHERE ... modifies row data (DML), whereas ALTER modifies table schema (DDL)."
+    },
+    {
+      "id": 65,
+      "topic": "SQL DML",
+      "difficulty": "hard",
+      "question": "In SQL, GRANT and REVOKE belong to which sublanguage?",
+      "options": {
+        "A": "DDL (Data Definition Language)",
+        "B": "DCL (Data Control Language)",
+        "C": "DML (Data Manipulation Language)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "GRANT and REVOKE are DCL (Data Control Language) commands used to manage user privileges and access rights."
+    },
+    {
+      "id": 66,
+      "topic": "SQL DML",
+      "difficulty": "medium",
+      "question": "What does SELECT * FROM Employee; return?",
+      "options": {
+        "A": "Only the primary key column of Employee",
+        "B": "Only the column names without data",
+        "C": "All columns and all rows of the Employee table",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "The wildcard * in SELECT * projects every attribute of the table, and without WHERE it returns all rows."
+    },
+    {
+      "id": 67,
+      "topic": "SQL DML",
+      "difficulty": "hard",
+      "question": "Which SQL query finds the second highest salary from an Employee(Salary) table?",
+      "options": {
+        "A": "SELECT MAX(Salary) FROM Employee WHERE Salary < (SELECT MAX(Salary) FROM Employee);",
+        "B": "SELECT MIN(Salary) FROM Employee WHERE Salary > (SELECT MIN(Salary) FROM Employee);",
+        "C": "SELECT MAX(Salary) FROM Employee WHERE Salary = (SELECT AVG(Salary) FROM Employee);",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Taking MAX(Salary) strictly less than the overall MAX(Salary) yields the second highest distinct salary."
+    },
+    {
+      "id": 68,
+      "topic": "SQL DML",
+      "difficulty": "medium",
+      "question": "Which SQL clause is used to remove duplicate rows from the result of a SELECT query?",
+      "options": {
+        "A": "UNIQUE",
+        "B": "DIFFERENT",
+        "C": "DISTINCT",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "SELECT DISTINCT column_name removes duplicate values from the query output."
+    },
+    {
+      "id": 69,
+      "topic": "SQL Functions",
+      "difficulty": "medium",
+      "question": "What will the SQL query SELECT ROUND(65.726, -1) FROM DUAL; output?",
+      "options": {
+        "A": "65.7",
+        "B": "66",
+        "C": "70",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Negative second argument -1 rounds to the nearest 10 (tens place): 65.726 rounds up to 70. (BPSC TRE 1.0 actual question)"
+    },
+    {
+      "id": 70,
+      "topic": "SQL Functions",
+      "difficulty": "easy",
+      "question": "Which SQL keyword is used to display data matching a specified character pattern?",
+      "options": {
+        "A": "LIKE",
+        "B": "MATCH",
+        "C": "SIMILAR",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "LIKE performs pattern matching using % (zero or more chars) and _ (single char). (BPSC TRE 2.0 actual question)"
+    },
+    {
+      "id": 71,
+      "topic": "SQL Functions",
+      "difficulty": "easy",
+      "question": "In SQL LIKE pattern matching, which wildcard characters are standard?",
+      "options": {
+        "A": "% (matches zero or more characters)",
+        "B": "_ (matches exactly one character)",
+        "C": "? (matches zero or more characters)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Standard SQL LIKE uses % for zero or more characters and _ for a single character. Both A and B are correct."
+    },
+    {
+      "id": 72,
+      "topic": "SQL Functions",
+      "difficulty": "medium",
+      "question": "How do COUNT(*) and COUNT(column_name) differ in SQL?",
+      "options": {
+        "A": "Both always return the exact same number even when NULLs exist",
+        "B": "COUNT(*) counts all rows including NULLs, while COUNT(column_name) ignores NULL values",
+        "C": "COUNT(*) ignores NULL rows, while COUNT(column_name) counts NULLs",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "COUNT(*) counts every row in the table/group; COUNT(col) counts only rows where col is NOT NULL."
+    },
+    {
+      "id": 73,
+      "topic": "SQL Functions",
+      "difficulty": "easy",
+      "question": "Which of the following are SQL aggregate functions?",
+      "options": {
+        "A": "COUNT() and SUM()",
+        "B": "AVG(), MAX(), and MIN()",
+        "C": "ROUND() and LENGTH()",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "COUNT, SUM, AVG, MAX, and MIN are the five standard SQL aggregate functions (both A and B). ROUND/LENGTH are scalar functions."
+    },
+    {
+      "id": 74,
+      "topic": "SQL Functions",
+      "difficulty": "medium",
+      "question": "If a column Marks has values {10, 20, NULL, 30}, what does AVG(Marks) return in SQL?",
+      "options": {
+        "A": "NULL",
+        "B": "15",
+        "C": "20",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Aggregate functions (except COUNT(*)) ignore NULLs: (10 + 20 + 30) / 3 = 60 / 3 = 20."
+    },
+    {
+      "id": 75,
+      "topic": "SQL Functions",
+      "difficulty": "medium",
+      "question": "Why is SELECT Name FROM Emp WHERE AVG(Salary) > 50000; invalid in SQL?",
+      "options": {
+        "A": "WHERE cannot be used with SELECT statements",
+        "B": "AVG() only works on character columns",
+        "C": "Aggregate functions cannot be used directly in a WHERE clause",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "WHERE filters individual rows before grouping; aggregate conditions must be placed in a HAVING clause."
+    },
+    {
+      "id": 76,
+      "topic": "SQL Functions",
+      "difficulty": "medium",
+      "question": "Which SQL pattern in LIKE matches any string of at least 3 characters?",
+      "options": {
+        "A": "'___%'",
+        "B": "'%__'",
+        "C": "'___'",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Three underscores (___) require 3 characters, and % allows 0 or more additional characters, matching length >= 3."
+    },
+    {
+      "id": 77,
+      "topic": "SQL Functions",
+      "difficulty": "medium",
+      "question": "What does SELECT ROUND(123.456, 2); return?",
+      "options": {
+        "A": "123.5",
+        "B": "123.45",
+        "C": "123.46",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "ROUND(123.456, 2) rounds to 2 decimal places; since the 3rd digit is 6 (>=5), it rounds up to 123.46."
+    },
+    {
+      "id": 78,
+      "topic": "SQL Functions",
+      "difficulty": "easy",
+      "question": "Which SQL function returns the number of characters in a string?",
+      "options": {
+        "A": "COUNT()",
+        "B": "SUM()",
+        "C": "MAX()",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "LENGTH() / CHAR_LENGTH() / LEN() returns string character count; COUNT, SUM, MAX are aggregate functions."
+    },
+    {
+      "id": 79,
+      "topic": "Joins",
+      "difficulty": "easy",
+      "question": "Which SQL JOIN returns only the rows that have matching values in both tables?",
+      "options": {
+        "A": "INNER JOIN",
+        "B": "LEFT OUTER JOIN",
+        "C": "FULL OUTER JOIN",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "INNER JOIN (the default JOIN) returns only tuples where the join condition matches in both tables."
+    },
+    {
+      "id": 80,
+      "topic": "Joins",
+      "difficulty": "medium",
+      "question": "A LEFT OUTER JOIN between table A and table B returns:",
+      "options": {
+        "A": "Only rows matching in both A and B",
+        "B": "All rows from A, and matching rows from B (with NULLs for B when there is no match)",
+        "C": "All rows from B, and matching rows from A",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "LEFT OUTER JOIN preserves all rows from the left table (A) and fills unmatched right-table (B) columns with NULL."
+    },
+    {
+      "id": 81,
+      "topic": "Joins",
+      "difficulty": "medium",
+      "question": "Which join produces the Cartesian product of two tables when no join condition is specified?",
+      "options": {
+        "A": "CROSS JOIN",
+        "B": "SELF JOIN",
+        "C": "NATURAL JOIN",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "CROSS JOIN pairs every row of the first table with every row of the second table (Cartesian product)."
+    },
+    {
+      "id": 82,
+      "topic": "Joins",
+      "difficulty": "medium",
+      "question": "Joining a table with itself (for example, Employee joined with Employee to find each employee's manager) is called a:",
+      "options": {
+        "A": "CROSS JOIN",
+        "B": "FULL OUTER JOIN",
+        "C": "NATURAL JOIN",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Joining a table with itself using table aliases is called a SELF JOIN."
+    },
+    {
+      "id": 83,
+      "topic": "Joins",
+      "difficulty": "medium",
+      "question": "How does NATURAL JOIN work between two tables?",
+      "options": {
+        "A": "Joins automatically on same-named columns",
+        "B": "Always returns full Cartesian product",
+        "C": "Requires an explicit ON join condition",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "NATURAL JOIN implicitly performs an equijoin on common attribute names and retains only one copy of each common column."
+    },
+    {
+      "id": 84,
+      "topic": "Joins",
+      "difficulty": "medium",
+      "question": "What is the difference between UNION and UNION ALL in SQL?",
+      "options": {
+        "A": "UNION requires tables to have different numbers of columns",
+        "B": "UNION eliminates duplicate rows, whereas UNION ALL retains all duplicate rows",
+        "C": "UNION ALL eliminates duplicates, whereas UNION keeps them",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "UNION performs duplicate elimination (set union); UNION ALL keeps all rows from both queries and is faster."
+    },
+    {
+      "id": 85,
+      "topic": "Joins",
+      "difficulty": "medium",
+      "question": "For UNION of two SELECT queries to be valid, what must be true (union compatibility)?",
+      "options": {
+        "A": "Both queries must select the same number of columns",
+        "B": "Corresponding columns must have compatible data types",
+        "C": "Both tables must have the same number of rows",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Union compatibility requires the same number of columns (A) and compatible data types in corresponding positions (B)."
+    },
+    {
+      "id": 86,
+      "topic": "Joins",
+      "difficulty": "medium",
+      "question": "Which join returns all rows from both the left and right tables, placing NULLs where matches do not exist on either side?",
+      "options": {
+        "A": "INNER JOIN",
+        "B": "RIGHT OUTER JOIN",
+        "C": "FULL OUTER JOIN",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "FULL OUTER JOIN combines LEFT and RIGHT outer joins, keeping unmatched rows from both tables with NULL padding."
+    },
+    {
+      "id": 87,
+      "topic": "Joins",
+      "difficulty": "hard",
+      "question": "If table A has 3 rows and table B has 4 rows with no matching keys, how many rows are returned by A LEFT OUTER JOIN B?",
+      "options": {
+        "A": "0",
+        "B": "3",
+        "C": "12",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "LEFT OUTER JOIN preserves all 3 rows from left table A, pairing them with NULLs for table B columns."
+    },
+    {
+      "id": 88,
+      "topic": "Joins",
+      "difficulty": "medium",
+      "question": "Which SQL set operator returns only rows that appear in BOTH SELECT query results?",
+      "options": {
+        "A": "UNION",
+        "B": "EXCEPT (MINUS)",
+        "C": "INTERSECT",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "INTERSECT returns common rows present in both queries; EXCEPT/MINUS returns rows in the first query not in the second."
+    },
+    {
+      "id": 89,
+      "topic": "ACID & Transactions",
+      "difficulty": "easy",
+      "question": "In DBMS transactions, what does the acronym ACID stand for?",
+      "options": {
+        "A": "Atomicity, Consistency, Isolation, Durability",
+        "B": "Accuracy, Concurrency, Integrity, Durability",
+        "C": "Atomicity, Concurrency, Isolation, Dependency",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "ACID stands for Atomicity, Consistency, Isolation, and Durability—the four core properties of database transactions."
+    },
+    {
+      "id": 90,
+      "topic": "ACID & Transactions",
+      "difficulty": "medium",
+      "question": "Which ACID property guarantees that a transaction executes completely (all operations) or not at all (rolled back)?",
+      "options": {
+        "A": "Consistency",
+        "B": "Isolation",
+        "C": "Durability",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Atomicity ('all-or-nothing') guarantees a transaction executes completely or rolls back entirely."
+    },
+    {
+      "id": 91,
+      "topic": "ACID & Transactions",
+      "difficulty": "medium",
+      "question": "Which ACID property ensures that once a transaction commits, its changes survive system crashes or power failures?",
+      "options": {
+        "A": "Consistency",
+        "B": "Durability",
+        "C": "Isolation",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Durability guarantees committed updates are permanently stored in non-volatile memory (via logs/disk) even after crashes."
+    },
+    {
+      "id": 92,
+      "topic": "ACID & Transactions",
+      "difficulty": "medium",
+      "question": "Which ACID property ensures that concurrent execution of transactions yields the same result as serial execution without interference?",
+      "options": {
+        "A": "Isolation",
+        "B": "Atomicity",
+        "C": "Durability",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Isolation prevents concurrent transactions from observing each other's uncommitted intermediate states."
+    },
+    {
+      "id": 93,
+      "topic": "ACID & Transactions",
+      "difficulty": "easy",
+      "question": "Which SQL commands belong to Transaction Control Language (TCL)?",
+      "options": {
+        "A": "COMMIT and ROLLBACK",
+        "B": "SAVEPOINT",
+        "C": "CREATE and DROP",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "COMMIT, ROLLBACK, and SAVEPOINT are TCL commands (both A and B). CREATE and DROP are DDL."
+    },
+    {
+      "id": 94,
+      "topic": "ACID & Transactions",
+      "difficulty": "easy",
+      "question": "Which SQL command undoes all uncommitted changes in the current transaction (or back to a SAVEPOINT)?",
+      "options": {
+        "A": "TRUNCATE",
+        "B": "COMMIT",
+        "C": "ROLLBACK",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "ROLLBACK aborts/undoes uncommitted changes; COMMIT makes them permanent."
+    },
+    {
+      "id": 95,
+      "topic": "ACID & Transactions",
+      "difficulty": "medium",
+      "question": "Which DBMS components are primarily responsible for ensuring Atomicity and Durability?",
+      "options": {
+        "A": "Query optimizer",
+        "B": "External schema",
+        "C": "Transaction log & recovery manager",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "The recovery manager (using undo/redo logs) enforces Atomicity and Durability; concurrency control enforces Isolation."
+    },
+    {
+      "id": 96,
+      "topic": "ACID & Transactions",
+      "difficulty": "medium",
+      "question": "A schedule of concurrent transactions is called conflict-serializable if:",
+      "options": {
+        "A": "It is conflict-equivalent to some serial schedule",
+        "B": "Its precedence (serialization) graph has no cycles",
+        "C": "All transactions are read-only",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "A schedule is conflict-serializable iff it is conflict-equivalent to a serial schedule, tested by an acyclic precedence graph (A & B)."
+    },
+    {
+      "id": 97,
+      "topic": "ER Model",
+      "difficulty": "easy",
+      "question": "In an Entity-Relationship (ER) diagram, what shapes represent an Entity Set, a Relationship Set, and an Attribute respectively?",
+      "options": {
+        "A": "Diamond, Oval, Rectangle",
+        "B": "Rectangle, Diamond, Oval (Ellipse)",
+        "C": "Oval, Rectangle, Diamond",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Standard Chen ER notation uses Rectangle for Entity Set, Diamond for Relationship Set, and Ellipse/Oval for Attribute."
+    },
+    {
+      "id": 98,
+      "topic": "ER Model",
+      "difficulty": "medium",
+      "question": "A weak entity set in an ER model is represented by a _____ and has a _____ rather than its own primary key.",
+      "options": {
+        "A": "Single rectangle; foreign key",
+        "B": "Dashed oval; derived attribute",
+        "C": "Double rectangle; partial key (discriminator)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A weak entity set depends on an owner/identifying entity, is drawn as a double rectangle, and uses a partial key (dashed underline)."
+    },
+    {
+      "id": 99,
+      "topic": "ER Model",
+      "difficulty": "easy",
+      "question": "In an ER diagram, an attribute that can be calculated from another attribute (e.g., Age from Date of Birth) is called a _____ attribute and is drawn as a _____.",
+      "options": {
+        "A": "Multivalued attribute; double oval",
+        "B": "Derived attribute; dashed oval",
+        "C": "Composite attribute; tree of ovals",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Derived attributes (e.g., Age from DOB) use a dashed ellipse; multivalued attributes (e.g., PhoneNumbers) use a double ellipse."
+    },
+    {
+      "id": 100,
+      "topic": "ER Model",
+      "difficulty": "medium",
+      "question": "When converting a Many-to-Many (M:N) binary relationship between two strong entity sets into relational tables, how many tables are required?",
+      "options": {
+        "A": "3 tables (two entities + junction table)",
+        "B": "2 tables (one merged into the other)",
+        "C": "1 combined table for both entities",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "An M:N relationship requires a separate third relation containing the primary keys of both participating entity sets."
+    }
+  ]
+}

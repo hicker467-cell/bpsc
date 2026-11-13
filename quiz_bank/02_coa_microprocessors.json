@@ -1,0 +1,1508 @@
+{
+  "subject": "Computer Organization & Architecture (COA) & Microprocessors",
+  "module": "02",
+  "total": 100,
+  "exam_relevance": "12-14 questions expected in BPSC TRE CS exam",
+  "questions": [
+    {
+      "id": 1,
+      "topic": "Microprocessor Generations",
+      "difficulty": "medium",
+      "question": "Intel 8085 microprocessor belongs to which generation?",
+      "options": {
+        "A": "Third generation (16-bit)",
+        "B": "Second generation (8-bit)",
+        "C": "First generation (4-bit)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "8085 is 2nd generation, 8-bit NMOS processor. 1st gen=4004(4-bit), 3rd gen=8086(16-bit)."
+    },
+    {
+      "id": 2,
+      "topic": "Microprocessor Generations",
+      "difficulty": "medium",
+      "question": "The maximum addressable memory of the third generation microprocessor (Intel 80286) is:",
+      "options": {
+        "A": "16 MB",
+        "B": "4 GB",
+        "C": "1 MB",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "80286 (3rd gen) has a 24-bit address bus, giving 2^24 = 16 MB maximum addressable memory."
+    },
+    {
+      "id": 3,
+      "topic": "Microprocessor Generations",
+      "difficulty": "easy",
+      "question": "Which microprocessor is considered the first commercially available microprocessor?",
+      "options": {
+        "A": "Intel 8085",
+        "B": "Intel 4004",
+        "C": "Intel 8080",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Intel 4004 (1971) was the first commercial microprocessor — 4-bit, 1st generation, designed for calculators."
+    },
+    {
+      "id": 4,
+      "topic": "Microprocessor Generations",
+      "difficulty": "easy",
+      "question": "A microprocessor is best defined as:",
+      "options": {
+        "A": "CPU on a single chip",
+        "B": "Computer on a single chip",
+        "C": "Memory on a single chip",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Microprocessor = CPU (ALU + CU + registers) on a single IC chip. Microcontroller = computer on a single chip."
+    },
+    {
+      "id": 5,
+      "topic": "Microprocessor Generations",
+      "difficulty": "easy",
+      "question": "A microcontroller is best defined as:",
+      "options": {
+        "A": "Computer on a single chip",
+        "B": "CPU on a single chip",
+        "C": "ALU on a single chip",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Microcontroller = CPU + RAM + ROM + I/O ports on a single chip (computer on a single chip), e.g., Intel 8051."
+    },
+    {
+      "id": 6,
+      "topic": "Microprocessor Generations",
+      "difficulty": "medium",
+      "question": "If the last memory location is FFFFH (starting from 0000H), the size of the memory is:",
+      "options": {
+        "A": "64 K",
+        "B": "32 K",
+        "C": "128 K",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "0000H to FFFFH = 65536 locations = 64 K. A 16-bit address bus addresses 2^16 = 64 K locations."
+    },
+    {
+      "id": 7,
+      "topic": "Microprocessor Generations",
+      "difficulty": "easy",
+      "question": "The term 'Tera' in computer memory sizing represents:",
+      "options": {
+        "A": "2^40",
+        "B": "2^30",
+        "C": "2^50",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Tera = 2^40. Kilo = 2^10, Mega = 2^20, Giga = 2^30, Tera = 2^40, Peta = 2^50."
+    },
+    {
+      "id": 8,
+      "topic": "Microprocessor Generations",
+      "difficulty": "medium",
+      "question": "Which of the following are 8-bit second-generation microprocessors?",
+      "options": {
+        "A": "Intel 8085",
+        "B": "Zilog Z80",
+        "C": "Motorola 6800",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Intel 8085, Zilog Z80, and Motorola 6800 are all classic 8-bit 2nd-generation microprocessors."
+    },
+    {
+      "id": 9,
+      "topic": "Microprocessor Generations",
+      "difficulty": "medium",
+      "question": "Which generation microprocessor introduced a 32-bit architecture with 4 GB addressable memory (e.g., Intel 80386)?",
+      "options": {
+        "A": "Third generation",
+        "B": "Fourth generation",
+        "C": "Second generation",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "80386/80486 (4th gen) introduced 32-bit data & address buses, giving 2^32 = 4 GB maximum addressable memory."
+    },
+    {
+      "id": 10,
+      "topic": "Microprocessor Generations",
+      "difficulty": "medium",
+      "question": "The Intel 8085 microprocessor is fabricated using which technology?",
+      "options": {
+        "A": "NMOS",
+        "B": "PMOS",
+        "C": "CMOS",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "8085 uses NMOS (N-channel Metal Oxide Semiconductor) technology and operates at 3–6 MHz."
+    },
+    {
+      "id": 11,
+      "topic": "Microprocessor Generations",
+      "difficulty": "medium",
+      "question": "How many pins does the standard Intel 8085 microprocessor IC package have?",
+      "options": {
+        "A": "28 pins",
+        "B": "32 pins",
+        "C": "64 pins",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Intel 8085 comes in a 40-pin DIP package. Since 28, 32, and 64 are all wrong, (E) is correct."
+    },
+    {
+      "id": 12,
+      "topic": "Microprocessor Generations",
+      "difficulty": "hard",
+      "question": "Fifth-generation 64-bit microprocessors (using 44+ address lines) can practically address memory in excess of:",
+      "options": {
+        "A": "16 TB",
+        "B": "64 KB",
+        "C": "4 GB",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "64-bit 5th-gen processors support 16 TB+ physical memory (2^44 = 16 TB; theoretical 2^64 = 16 EB)."
+    },
+    {
+      "id": 13,
+      "topic": "8085 Architecture",
+      "difficulty": "easy",
+      "question": "Which register in the Intel 8085 serves as the accumulator?",
+      "options": {
+        "A": "Register B",
+        "B": "Register A",
+        "C": "Register H",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Register A (8-bit) is the accumulator in 8085; it holds one ALU operand and stores arithmetic/logic results."
+    },
+    {
+      "id": 14,
+      "topic": "8085 Architecture",
+      "difficulty": "easy",
+      "question": "The ALE (Address Latch Enable) pin in Intel 8085 is used to:",
+      "options": {
+        "A": "Enable the external data bus only",
+        "B": "Reset the microprocessor",
+        "C": "Demultiplex the lower 8-bit address from the multiplexed AD0–AD7 bus",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "ALE goes HIGH during T1 to indicate AD0–AD7 carries the lower 8 address bits so an external latch captures them."
+    },
+    {
+      "id": 15,
+      "topic": "8085 Architecture",
+      "difficulty": "medium",
+      "question": "How many status flags are present in the Intel 8085 flag register?",
+      "options": {
+        "A": "4",
+        "B": "6",
+        "C": "8",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "8085 has 5 flags: Sign (S), Zero (Z), Auxiliary Carry (AC), Parity (P), and Carry (CY). None of A/B/C is 5."
+    },
+    {
+      "id": 16,
+      "topic": "8085 Architecture",
+      "difficulty": "medium",
+      "question": "The Sign flag (S) in Intel 8085 is set to 1 when:",
+      "options": {
+        "A": "The result of an operation is zero",
+        "B": "Bit D7 (MSB) of the result is 1",
+        "C": "There is a carry from bit D3 to bit D4",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Sign flag S=1 when MSB (D7) of the 8-bit result is 1 (negative in 2's complement), and S=0 when D7=0."
+    },
+    {
+      "id": 17,
+      "topic": "8085 Architecture",
+      "difficulty": "medium",
+      "question": "The Auxiliary Carry flag (AC) in Intel 8085 is primarily used internally for:",
+      "options": {
+        "A": "Signed binary multiplication",
+        "B": "BCD arithmetic (DAA instruction)",
+        "C": "Floating-point division",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "AC is set on a carry from bit 3 to bit 4 (lower nibble to upper nibble) and is used by DAA for BCD adjustment."
+    },
+    {
+      "id": 18,
+      "topic": "8085 Architecture",
+      "difficulty": "medium",
+      "question": "Which of the following are valid 16-bit general-purpose register pairs in Intel 8085?",
+      "options": {
+        "A": "BC pair",
+        "B": "DE pair",
+        "C": "HL pair",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "In 8085, the six 8-bit general-purpose registers form three 16-bit pairs: BC, DE, and HL (all of A, B, C)."
+    },
+    {
+      "id": 19,
+      "topic": "8085 Architecture",
+      "difficulty": "medium",
+      "question": "The Stack Pointer (SP) in Intel 8085 is a:",
+      "options": {
+        "A": "8-bit register pointing to the top of the stack",
+        "B": "16-bit register pointing to the next instruction to fetch",
+        "C": "16-bit register pointing to the top of the stack in memory",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "SP in 8085 is a 16-bit register holding the memory address of the stack top; PUSH decrements SP, POP increments SP."
+    },
+    {
+      "id": 20,
+      "topic": "8085 Architecture",
+      "difficulty": "easy",
+      "question": "The READY input pin of Intel 8085 is used to:",
+      "options": {
+        "A": "Insert wait states to synchronize with slow memory or I/O devices",
+        "B": "Reset the microprocessor to initial state",
+        "C": "Indicate an external interrupt request",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "When READY is LOW, 8085 enters WAIT states until the slow memory/I/O pulls READY HIGH."
+    },
+    {
+      "id": 21,
+      "topic": "8085 Architecture",
+      "difficulty": "medium",
+      "question": "In Intel 8085, which pins form the multiplexed lower address and data bus?",
+      "options": {
+        "A": "A8–A15",
+        "B": "S0–S1",
+        "C": "AD0–AD7",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "AD0–AD7 carries the lower 8-bit address during T1 and 8-bit data during T2–T3; A8–A15 carries upper address bits."
+    },
+    {
+      "id": 22,
+      "topic": "8085 Architecture",
+      "difficulty": "hard",
+      "question": "Which of the following are programmer-accessible 8-bit general-purpose registers in Intel 8085?",
+      "options": {
+        "A": "Registers B and C",
+        "B": "Registers D and E",
+        "C": "Registers H and L",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "8085 has 6 programmer-accessible 8-bit general-purpose registers: B, C, D, E, H, and L (all of A, B, C)."
+    },
+    {
+      "id": 23,
+      "topic": "8085 Architecture",
+      "difficulty": "medium",
+      "question": "When RESET IN (active LOW) is activated in Intel 8085, the Program Counter (PC) is initialized to:",
+      "options": {
+        "A": "FFFFH",
+        "B": "0001H",
+        "C": "8000H",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Activating RESET IN resets PC to 0000H, so execution starts at address 0000H. None of A/B/C is 0000H."
+    },
+    {
+      "id": 24,
+      "topic": "8085 Architecture",
+      "difficulty": "hard",
+      "question": "The HOLD and HLDA pins of Intel 8085 are used for:",
+      "options": {
+        "A": "Direct Memory Access (DMA) — HOLD requests buses, HLDA acknowledges",
+        "B": "Masking hardware interrupts",
+        "C": "Serial input/output communication",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "DMA controller asserts HOLD to request the system bus; 8085 floats buses and replies with HLDA."
+    },
+    {
+      "id": 25,
+      "topic": "8085 Interrupts",
+      "difficulty": "easy",
+      "question": "Which hardware interrupt of Intel 8085 has the highest priority?",
+      "options": {
+        "A": "TRAP",
+        "B": "RST 7.5",
+        "C": "INTR",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "TRAP has the highest priority in 8085. Priority order: TRAP > RST 7.5 > RST 6.5 > RST 5.5 > INTR."
+    },
+    {
+      "id": 26,
+      "topic": "8085 Interrupts",
+      "difficulty": "easy",
+      "question": "The TRAP interrupt in Intel 8085 is:",
+      "options": {
+        "A": "Non-maskable and both edge and level triggered",
+        "B": "Maskable and edge-triggered only",
+        "C": "Maskable and level-triggered only",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "TRAP is the only non-maskable 8085 interrupt and is both edge- and level-triggered (vectors to 0024H)."
+    },
+    {
+      "id": 27,
+      "topic": "8085 Interrupts",
+      "difficulty": "medium",
+      "question": "Which hardware interrupt of Intel 8085 has the lowest priority?",
+      "options": {
+        "A": "RST 7.5",
+        "B": "RST 6.5",
+        "C": "RST 5.5",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "INTR has the lowest priority among 8085 hardware interrupts. Since INTR is not listed in A/B/C, (E) is correct."
+    },
+    {
+      "id": 28,
+      "topic": "8085 Interrupts",
+      "difficulty": "medium",
+      "question": "In Intel 8085, the RST 7.5 interrupt is:",
+      "options": {
+        "A": "Active-HIGH level-triggered only",
+        "B": "Positive edge-triggered",
+        "C": "Non-maskable",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "RST 7.5 is rising-edge-triggered and internally latched; RST 6.5 and RST 5.5 are level-triggered."
+    },
+    {
+      "id": 29,
+      "topic": "8085 Interrupts",
+      "difficulty": "medium",
+      "question": "Which of the following hardware interrupts in Intel 8085 are maskable using SIM/DI instructions?",
+      "options": {
+        "A": "RST 7.5",
+        "B": "RST 6.5",
+        "C": "RST 5.5",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "RST 7.5, RST 6.5, and RST 5.5 (plus INTR) are all maskable interrupts in 8085; only TRAP is non-maskable."
+    },
+    {
+      "id": 30,
+      "topic": "8085 Interrupts",
+      "difficulty": "medium",
+      "question": "When RST 7.5 interrupt is acknowledged by Intel 8085, the Program Counter jumps to which vector address?",
+      "options": {
+        "A": "003CH",
+        "B": "0034H",
+        "C": "0024H",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Vector addresses: TRAP=0024H, RST 5.5=002CH, RST 6.5=0034H, RST 7.5=003CH (7.5 × 8 = 60 = 3CH)."
+    },
+    {
+      "id": 31,
+      "topic": "8085 Interrupts",
+      "difficulty": "hard",
+      "question": "Which Intel 8085 instruction reads the interrupt mask bits, pending interrupts, and the SID pin into the accumulator?",
+      "options": {
+        "A": "RIM",
+        "B": "EI",
+        "C": "SIM",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "RIM (Read Interrupt Mask) reads mask status of RST 5.5/6.5/7.5, pending flags, IE flag, and Serial Input Data (SID)."
+    },
+    {
+      "id": 32,
+      "topic": "8085 Interrupts",
+      "difficulty": "hard",
+      "question": "Which statement accurately describes the INTR pin in Intel 8085?",
+      "options": {
+        "A": "It is a non-vectored, maskable interrupt requiring an external INTA handshake",
+        "B": "It has higher priority than TRAP",
+        "C": "It cannot be disabled by the DI instruction",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "INTR is maskable (disabled by DI), lowest priority, and non-vectored — external hardware supplies RST/CALL on INTA."
+    },
+    {
+      "id": 33,
+      "topic": "8086 Architecture",
+      "difficulty": "easy",
+      "question": "The Intel 8086 microprocessor has what size data bus and address bus?",
+      "options": {
+        "A": "16-bit data bus, 20-bit address bus",
+        "B": "8-bit data bus, 16-bit address bus",
+        "C": "16-bit data bus, 24-bit address bus",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Intel 8086 has a 16-bit data bus and a 20-bit address bus, allowing 2^20 = 1 MB of physical memory."
+    },
+    {
+      "id": 34,
+      "topic": "8086 Architecture",
+      "difficulty": "easy",
+      "question": "What is the maximum physical memory directly addressable by the Intel 8086 microprocessor?",
+      "options": {
+        "A": "64 KB",
+        "B": "512 KB",
+        "C": "16 MB",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "8086 has a 20-bit address bus, so max memory is 2^20 = 1 MB (00000H–FFFFFH). None of A/B/C equals 1 MB."
+    },
+    {
+      "id": 35,
+      "topic": "8086 Architecture",
+      "difficulty": "medium",
+      "question": "In Intel 8086, a 20-bit physical address is calculated from segment and offset registers as:",
+      "options": {
+        "A": "Segment Register × 8 + Offset Register",
+        "B": "Segment Register + Offset Register",
+        "C": "Segment Register × 16 + Offset Register",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Physical Address = Segment × 16 (shifted left by 4 bits / 1 hex digit) + Offset, producing a 20-bit address."
+    },
+    {
+      "id": 36,
+      "topic": "8086 Architecture",
+      "difficulty": "medium",
+      "question": "In Intel 8086, which segment and offset pair is used to locate the next instruction to fetch?",
+      "options": {
+        "A": "SS : SP",
+        "B": "DS : SI",
+        "C": "CS : IP",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "CS (Code Segment) holds the segment base and IP (Instruction Pointer) holds the offset of the next instruction."
+    },
+    {
+      "id": 37,
+      "topic": "8086 Architecture",
+      "difficulty": "medium",
+      "question": "Which of the following are valid 16-bit segment registers in Intel 8086?",
+      "options": {
+        "A": "CS (Code Segment) and DS (Data Segment)",
+        "B": "SS (Stack Segment)",
+        "C": "ES (Extra Segment)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Intel 8086 has four 16-bit segment registers: CS, DS, SS, and ES (all of A, B, C are valid)."
+    },
+    {
+      "id": 38,
+      "topic": "8086 Architecture",
+      "difficulty": "medium",
+      "question": "In Intel 8086, the Bus Interface Unit (BIU) is responsible for:",
+      "options": {
+        "A": "Fetching instructions into the queue and managing bus transfers",
+        "B": "Setting and clearing ALU status flags only",
+        "C": "Executing arithmetic and logic operations",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "BIU calculates 20-bit physical addresses, fetches instructions into the prefetch queue, and performs bus reads/writes."
+    },
+    {
+      "id": 39,
+      "topic": "8086 Architecture",
+      "difficulty": "medium",
+      "question": "The Execution Unit (EU) of Intel 8086:",
+      "options": {
+        "A": "Decodes and executes instructions taken from the BIU prefetch queue",
+        "B": "Generates the 20-bit physical memory address",
+        "C": "Manages the external address and data buses directly",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "EU decodes and executes instructions fetched by BIU, allowing fetch and execute to overlap (2-stage pipelining)."
+    },
+    {
+      "id": 40,
+      "topic": "8086 Architecture",
+      "difficulty": "hard",
+      "question": "If CS = 2000H and IP = 0500H in Intel 8086, the physical address of the next instruction is:",
+      "options": {
+        "A": "25000H",
+        "B": "02500H",
+        "C": "20500H",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Physical address = CS × 16 + IP = 2000H × 10H + 0500H = 20000H + 0500H = 20500H."
+    },
+    {
+      "id": 41,
+      "topic": "8086 Architecture",
+      "difficulty": "medium",
+      "question": "The Extra Segment (ES) register in Intel 8086 is used by default for:",
+      "options": {
+        "A": "Fetching program opcodes",
+        "B": "Stack PUSH and POP operations",
+        "C": "Destination operand in string operations (with DI)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "ES:DI addresses the destination in string instructions (MOVS, STOS, SCAS, CMPS); SS:SP handles the stack."
+    },
+    {
+      "id": 42,
+      "topic": "8086 Architecture",
+      "difficulty": "hard",
+      "question": "What is the capacity of the internal instruction prefetch queue in the Intel 8086 BIU?",
+      "options": {
+        "A": "2 bytes",
+        "B": "4 bytes",
+        "C": "8 bytes",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Intel 8086 has a 6-byte instruction prefetch queue (8088 has 4 bytes). None of 2, 4, or 8 bytes is 6."
+    },
+    {
+      "id": 43,
+      "topic": "CPU Registers & Instruction Cycle",
+      "difficulty": "easy",
+      "question": "Which register always holds the address of the next instruction to be fetched?",
+      "options": {
+        "A": "MAR (Memory Address Register)",
+        "B": "PC (Program Counter)",
+        "C": "IR (Instruction Register)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "PC holds the address of the next instruction to execute and is incremented automatically after fetching."
+    },
+    {
+      "id": 44,
+      "topic": "CPU Registers & Instruction Cycle",
+      "difficulty": "easy",
+      "question": "The Instruction Register (IR) in a CPU is used to:",
+      "options": {
+        "A": "Hold the address of the next instruction",
+        "B": "Hold the currently fetched instruction while it is decoded and executed",
+        "C": "Store the result of ALU operations",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "IR holds the instruction word fetched from memory so the Control Unit can decode its opcode."
+    },
+    {
+      "id": 45,
+      "topic": "CPU Registers & Instruction Cycle",
+      "difficulty": "medium",
+      "question": "The correct sequence of stages in the basic instruction cycle is:",
+      "options": {
+        "A": "Execute → Fetch → Decode",
+        "B": "Fetch → Decode → Execute",
+        "C": "Decode → Fetch → Execute",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Basic instruction cycle: Fetch instruction from memory → Decode opcode in CU → Execute operation."
+    },
+    {
+      "id": 46,
+      "topic": "CPU Registers & Instruction Cycle",
+      "difficulty": "medium",
+      "question": "Which CPU register temporarily holds the data word being transferred to or from main memory?",
+      "options": {
+        "A": "Program Counter (PC)",
+        "B": "Memory Address Register (MAR)",
+        "C": "Stack Pointer (SP)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "The Memory Buffer/Data Register (MBR/MDR) holds data transferred to/from memory. None of A/B/C is MBR/MDR."
+    },
+    {
+      "id": 47,
+      "topic": "CPU Registers & Instruction Cycle",
+      "difficulty": "medium",
+      "question": "In Von Neumann architecture, program instructions and data are stored:",
+      "options": {
+        "A": "In completely separate physical memories",
+        "B": "In the same shared main memory",
+        "C": "Only inside CPU registers",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Von Neumann architecture uses a single shared memory and bus for instructions and data (stored-program concept)."
+    },
+    {
+      "id": 48,
+      "topic": "CPU Registers & Instruction Cycle",
+      "difficulty": "medium",
+      "question": "Harvard architecture differs from Von Neumann architecture by using:",
+      "options": {
+        "A": "Separate memory and buses for instructions and data",
+        "B": "No Program Counter register",
+        "C": "A single memory for both instructions and data",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Harvard architecture has separate instruction and data memories/buses, enabling simultaneous instruction fetch and data access."
+    },
+    {
+      "id": 49,
+      "topic": "CPU Registers & Instruction Cycle",
+      "difficulty": "medium",
+      "question": "The Accumulator (ACC) register in a CPU is used to:",
+      "options": {
+        "A": "Store the base address for indexed addressing",
+        "B": "Point to the top of the stack",
+        "C": "Hold one operand and store the result of ALU operations",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "ACC supplies one input operand to the ALU and receives the output result in accumulator-based CPUs."
+    },
+    {
+      "id": 50,
+      "topic": "CPU Registers & Instruction Cycle",
+      "difficulty": "medium",
+      "question": "What does the Control Unit (CU) of a CPU generate?",
+      "options": {
+        "A": "Control signals to direct CPU and memory operations",
+        "B": "Timing signals to synchronize operations",
+        "C": "Arithmetic sum and carry results",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "CU generates both control signals (A) and timing signals (B); ALU produces arithmetic results (C)."
+    },
+    {
+      "id": 51,
+      "topic": "CPU Registers & Instruction Cycle",
+      "difficulty": "hard",
+      "question": "The Memory Address Register (MAR) holds:",
+      "options": {
+        "A": "The opcode currently being decoded",
+        "B": "The address of the memory location currently being accessed",
+        "C": "Data read from or to be written to memory",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "MAR holds the memory address placed on the address bus during a read or write cycle; MBR holds the data."
+    },
+    {
+      "id": 52,
+      "topic": "CPU Registers & Instruction Cycle",
+      "difficulty": "hard",
+      "question": "In a standard downward-growing stack, a PUSH operation:",
+      "options": {
+        "A": "Increments SP and reads data from memory",
+        "B": "Decrements SP and writes data to the new stack top address",
+        "C": "Resets SP to 0000H",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Stack grows downward from high to low addresses: PUSH decrements SP then stores data; POP reads then increments SP."
+    },
+    {
+      "id": 53,
+      "topic": "Addressing Modes",
+      "difficulty": "easy",
+      "question": "In which addressing mode is the operand value directly specified inside the instruction itself?",
+      "options": {
+        "A": "Direct addressing",
+        "B": "Immediate addressing",
+        "C": "Indirect addressing",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "In immediate addressing, the constant operand is embedded in the instruction (e.g., MVI A, 05H); no memory lookup needed."
+    },
+    {
+      "id": 54,
+      "topic": "Addressing Modes",
+      "difficulty": "easy",
+      "question": "Which is the most common addressing technique used in basic computer instruction sets?",
+      "options": {
+        "A": "Stack addressing",
+        "B": "Direct addressing",
+        "C": "Base-indexed addressing",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Direct (Absolute) addressing specifies the operand's memory address directly in the instruction and is the most common technique."
+    },
+    {
+      "id": 55,
+      "topic": "Addressing Modes",
+      "difficulty": "medium",
+      "question": "Which addressing mode requires two memory accesses to fetch the operand (first for a pointer address, second for the data)?",
+      "options": {
+        "A": "Register addressing",
+        "B": "Immediate addressing",
+        "C": "Indirect addressing",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "In memory indirect addressing, the address field points to a memory word holding the effective address of the operand."
+    },
+    {
+      "id": 56,
+      "topic": "Addressing Modes",
+      "difficulty": "medium",
+      "question": "In register addressing mode, the operand is located in:",
+      "options": {
+        "A": "A main memory location",
+        "B": "The instruction opcode byte",
+        "C": "A CPU register specified in the instruction",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Register addressing fetches the operand directly from a CPU register (e.g., MOV A, B), requiring zero memory accesses."
+    },
+    {
+      "id": 57,
+      "topic": "Addressing Modes",
+      "difficulty": "medium",
+      "question": "In indexed addressing mode, the effective address is calculated as:",
+      "options": {
+        "A": "Index Register + Address/Displacement field",
+        "B": "Program Counter + Base Register",
+        "C": "Stack Pointer + 1",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Indexed addressing computes EA = Index Register + displacement, ideal for stepping through array elements."
+    },
+    {
+      "id": 58,
+      "topic": "Addressing Modes",
+      "difficulty": "medium",
+      "question": "Relative addressing mode calculates the effective address by adding the signed displacement to the:",
+      "options": {
+        "A": "Base Register",
+        "B": "Program Counter (PC)",
+        "C": "Accumulator",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Relative addressing computes EA = PC + signed offset, commonly used in branch instructions for position-independent code."
+    },
+    {
+      "id": 59,
+      "topic": "Addressing Modes",
+      "difficulty": "medium",
+      "question": "In Intel 8085, the instruction 'MVI A, 32H' uses which addressing mode?",
+      "options": {
+        "A": "Direct addressing",
+        "B": "Register indirect addressing",
+        "C": "Implied addressing",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "MVI A, 32H loads immediate data 32H into A, so it uses Immediate addressing — none of A/B/C."
+    },
+    {
+      "id": 60,
+      "topic": "Addressing Modes",
+      "difficulty": "hard",
+      "question": "Base register addressing mode is primarily used for:",
+      "options": {
+        "A": "Program relocation and accessing fields of data records",
+        "B": "Single-operand accumulator complement",
+        "C": "Loading immediate constants",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "EA = Base Register + offset; changing the base register relocates a whole segment/record in memory."
+    },
+    {
+      "id": 61,
+      "topic": "Addressing Modes",
+      "difficulty": "hard",
+      "question": "Which of the following 8085 instructions use Implied (Implicit) addressing mode?",
+      "options": {
+        "A": "CMA (Complement Accumulator)",
+        "B": "RAL (Rotate Accumulator Left)",
+        "C": "STC (Set Carry)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "CMA, RAL, and STC all act on an implicit operand (A or CY) determined by the opcode alone; all three are implied."
+    },
+    {
+      "id": 62,
+      "topic": "Addressing Modes",
+      "difficulty": "hard",
+      "question": "In Intel 8085, the instruction 'LDA 2050H' uses which addressing mode?",
+      "options": {
+        "A": "Register indirect addressing",
+        "B": "Immediate addressing",
+        "C": "Direct addressing",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "LDA 2050H places the 16-bit memory address 2050H directly in the instruction -> Direct addressing."
+    },
+    {
+      "id": 63,
+      "topic": "Memory Hierarchy",
+      "difficulty": "easy",
+      "question": "The correct order of memory hierarchy from fastest to slowest access speed is:",
+      "options": {
+        "A": "Registers → Cache → RAM → Hard Disk",
+        "B": "RAM → Cache → Registers → Hard Disk",
+        "C": "Cache → Registers → RAM → Hard Disk",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Speed decreases from CPU outward: Registers (fastest) → Cache → Main Memory (RAM) → Hard Disk (slowest)."
+    },
+    {
+      "id": 64,
+      "topic": "Memory Hierarchy",
+      "difficulty": "easy",
+      "question": "As we move down the memory hierarchy from registers to secondary storage:",
+      "options": {
+        "A": "Both capacity and cost per bit decrease",
+        "B": "Capacity increases and cost per bit decreases",
+        "C": "Capacity decreases and cost per bit increases",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Moving from registers toward disk: storage capacity increases, access time increases, and cost per bit decreases."
+    },
+    {
+      "id": 65,
+      "topic": "Memory Hierarchy",
+      "difficulty": "medium",
+      "question": "Virtual memory allows programs larger than physical RAM to execute by using:",
+      "options": {
+        "A": "CPU registers as main storage",
+        "B": "ROM chips for writable program pages",
+        "C": "Secondary disk space (paging/swap area) as an extension of RAM",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Virtual memory maps pages between RAM and disk swap space, giving processes a large logical address space."
+    },
+    {
+      "id": 66,
+      "topic": "Memory Hierarchy",
+      "difficulty": "medium",
+      "question": "Buffer registers in a computer system are used to overcome:",
+      "options": {
+        "A": "Differences in data transfer rates between devices",
+        "B": "Power supply voltage fluctuations",
+        "C": "Shortage of secondary storage",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Buffer registers temporarily hold data to smooth out speed mismatches between CPU, memory, and slower I/O devices."
+    },
+    {
+      "id": 67,
+      "topic": "Memory Hierarchy",
+      "difficulty": "hard",
+      "question": "Which of the following memory types is BOTH volatile AND requires periodic refreshing?",
+      "options": {
+        "A": "SRAM",
+        "B": "ROM",
+        "C": "Flash memory",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "DRAM is volatile and needs capacitor refresh. SRAM needs no refresh; ROM and Flash are non-volatile."
+    },
+    {
+      "id": 68,
+      "topic": "Memory Hierarchy",
+      "difficulty": "medium",
+      "question": "The principle of locality of reference, which makes cache memory effective, includes:",
+      "options": {
+        "A": "Temporal locality (recently accessed items are likely to be reused soon)",
+        "B": "Spatial locality (items near recently accessed addresses are likely to be accessed)",
+        "C": "Sequential-only magnetic tape access",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Locality of reference has two forms: temporal locality (A) and spatial locality (B). Both make caching effective."
+    },
+    {
+      "id": 69,
+      "topic": "Memory Hierarchy",
+      "difficulty": "hard",
+      "question": "SRAM is preferred over DRAM for CPU cache memory primarily because SRAM:",
+      "options": {
+        "A": "Has higher bit density per chip",
+        "B": "Is faster and requires no refresh circuitry",
+        "C": "Is much cheaper per gigabyte",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "SRAM uses flip-flops, making it much faster than capacitor-based DRAM and eliminating refresh overhead."
+    },
+    {
+      "id": 70,
+      "topic": "Memory Hierarchy",
+      "difficulty": "medium",
+      "question": "ROM (Read Only Memory) is classified as:",
+      "options": {
+        "A": "Magnetic secondary memory",
+        "B": "Non-volatile primary memory",
+        "C": "Volatile primary memory",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "ROM is directly addressable by the CPU (primary memory) and retains contents without power (non-volatile)."
+    },
+    {
+      "id": 71,
+      "topic": "Cache Memory",
+      "difficulty": "easy",
+      "question": "The primary purpose of cache memory is to:",
+      "options": {
+        "A": "Replace secondary hard disk storage",
+        "B": "Provide large archival storage at low cost",
+        "C": "Bridge the speed gap between fast CPU and slower main memory (RAM)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Cache is a small, fast SRAM between CPU and RAM that lowers average memory access time using locality."
+    },
+    {
+      "id": 72,
+      "topic": "Cache Memory",
+      "difficulty": "medium",
+      "question": "In direct-mapped cache, each block of main memory maps to:",
+      "options": {
+        "A": "Any line within a 4-line set",
+        "B": "Any cache line in the entire cache",
+        "C": "Exactly one specific cache line",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Direct mapping assigns each block to (block_no mod cache_lines) — exactly one line; simple hardware, higher conflicts."
+    },
+    {
+      "id": 73,
+      "topic": "Cache Memory",
+      "difficulty": "medium",
+      "question": "Which cache mapping technique allows a main memory block to be placed in ANY cache line?",
+      "options": {
+        "A": "Fully associative mapping",
+        "B": "2-way set-associative mapping",
+        "C": "Direct mapping",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Fully associative cache allows a block in any line, eliminating conflict misses at the cost of searching all tags."
+    },
+    {
+      "id": 74,
+      "topic": "Cache Memory",
+      "difficulty": "medium",
+      "question": "Set-associative cache mapping is a compromise between:",
+      "options": {
+        "A": "Direct mapping and fully associative mapping",
+        "B": "Write-through and write-back policies",
+        "C": "SRAM and DRAM",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Set-associative maps a block to one set (like direct) and lets it occupy any line in that set (like associative)."
+    },
+    {
+      "id": 75,
+      "topic": "Cache Memory",
+      "difficulty": "medium",
+      "question": "In a write-through cache policy:",
+      "options": {
+        "A": "Writes go only to cache and main memory is updated upon eviction",
+        "B": "Every write updates both cache and main memory simultaneously",
+        "C": "Writes go only to main memory, bypassing cache",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Write-through updates cache and RAM together on every write, keeping memory consistent at the cost of bus traffic."
+    },
+    {
+      "id": 76,
+      "topic": "Cache Memory",
+      "difficulty": "medium",
+      "question": "Which control bit is needed in a write-back cache to indicate whether a cache line has been modified?",
+      "options": {
+        "A": "Sign bit",
+        "B": "Parity bit",
+        "C": "Dirty bit",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "In write-back cache, a dirty bit marks modified lines so they are written back to RAM only when evicted."
+    },
+    {
+      "id": 77,
+      "topic": "Cache Memory",
+      "difficulty": "hard",
+      "question": "If cache hit ratio is 0.9, cache access time is 10 ns, and main memory access time is 100 ns, the effective access time under simultaneous (parallel) access is:",
+      "options": {
+        "A": "91 ns",
+        "B": "19 ns",
+        "C": "11 ns",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Under parallel access: EMAT = h × Tc + (1 - h) × Tm = 0.9 × 10 + 0.1 × 100 = 9 + 10 = 19 ns."
+    },
+    {
+      "id": 78,
+      "topic": "Cache Memory",
+      "difficulty": "hard",
+      "question": "Under the LRU (Least Recently Used) cache replacement policy, which block is evicted on a miss?",
+      "options": {
+        "A": "The block most recently loaded into cache",
+        "B": "The block accessed most frequently",
+        "C": "A randomly selected block",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "LRU evicts the block that has not been accessed for the longest time. None of A/B/C describes LRU."
+    },
+    {
+      "id": 79,
+      "topic": "Pipelining",
+      "difficulty": "easy",
+      "question": "The standard 5 stages of a classic instruction pipeline in order are:",
+      "options": {
+        "A": "Fetch (IF) → Execute (EX) → Decode (ID) → Write Back (WB) → Memory (MEM)",
+        "B": "Decode (ID) → Fetch (IF) → Execute (EX) → Memory (MEM) → Write Back (WB)",
+        "C": "Fetch (IF) → Decode (ID) → Execute (EX) → Memory (MEM) → Write Back (WB)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Classic 5-stage RISC pipeline order: IF → ID → EX → MEM → WB."
+    },
+    {
+      "id": 80,
+      "topic": "Pipelining",
+      "difficulty": "medium",
+      "question": "The ideal speedup of a k-stage pipeline over non-pipelined execution for a large number of instructions is:",
+      "options": {
+        "A": "n / k",
+        "B": "k^2",
+        "C": "k",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Speedup S = (k × n) / (k + n - 1), which approaches k as the number of instructions n becomes large."
+    },
+    {
+      "id": 81,
+      "topic": "Pipelining",
+      "difficulty": "medium",
+      "question": "A RAW (Read-After-Write) data hazard occurs in pipelining when:",
+      "options": {
+        "A": "Two instructions require the same hardware unit simultaneously",
+        "B": "An instruction tries to read a register before a prior instruction writes to it",
+        "C": "A branch instruction changes the PC",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "RAW (true dependency) occurs when a subsequent instruction needs a result not yet written back by an earlier one."
+    },
+    {
+      "id": 82,
+      "topic": "Pipelining",
+      "difficulty": "medium",
+      "question": "Control (branch) hazards in a pipeline are caused by:",
+      "options": {
+        "A": "Floating-point arithmetic overflow",
+        "B": "Insufficient register file read ports",
+        "C": "Branch or jump instructions changing sequential PC flow",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Control hazards arise from branches/jumps because the next PC isn't resolved until EX/ID while IF fetches sequentially."
+    },
+    {
+      "id": 83,
+      "topic": "Pipelining",
+      "difficulty": "medium",
+      "question": "Operand forwarding (bypassing) in a pipeline is used to resolve:",
+      "options": {
+        "A": "Structural hazards",
+        "B": "Instruction cache misses",
+        "C": "RAW data hazards without stalling",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Forwarding routes ALU/MEM results directly to a dependent instruction's EX input, avoiding RAW pipeline stalls."
+    },
+    {
+      "id": 84,
+      "topic": "Pipelining",
+      "difficulty": "easy",
+      "question": "Which of the following are standard categories of pipeline hazards?",
+      "options": {
+        "A": "Structural hazards",
+        "B": "Data hazards",
+        "C": "Control hazards",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "The three classic pipeline hazard types are structural (resource), data (dependency), and control (branch) hazards."
+    },
+    {
+      "id": 85,
+      "topic": "Pipelining",
+      "difficulty": "hard",
+      "question": "Branch prediction is used in modern pipelined processors primarily to minimize stalls from:",
+      "options": {
+        "A": "WAW data hazards",
+        "B": "Control hazards",
+        "C": "Structural hazards",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Branch prediction predicts branch outcome/target early in IF so the pipeline keeps fetching, reducing control stalls."
+    },
+    {
+      "id": 86,
+      "topic": "Pipelining",
+      "difficulty": "hard",
+      "question": "How many clock cycles does an ideal 5-stage pipeline take to execute 100 instructions (1 cycle per stage, no hazards)?",
+      "options": {
+        "A": "500 cycles",
+        "B": "100 cycles",
+        "C": "105 cycles",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Total cycles = k + n - 1 = 5 + 100 - 1 = 104 cycles. None of 500, 100, or 105 is 104."
+    },
+    {
+      "id": 87,
+      "topic": "Pipelining",
+      "difficulty": "medium",
+      "question": "Booth's algorithm in computer arithmetic is used for:",
+      "options": {
+        "A": "Floating-point normalization",
+        "B": "Unsigned binary division",
+        "C": "Signed binary multiplication",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Booth's algorithm multiplies signed binary numbers in 2's complement by recoding runs of 1s to reduce additions."
+    },
+    {
+      "id": 88,
+      "topic": "Pipelining",
+      "difficulty": "hard",
+      "question": "In a pipelined processor, a 'pipeline bubble' (NOP stall) is inserted when:",
+      "options": {
+        "A": "The processor doubles its clock frequency",
+        "B": "No instructions remain in main memory",
+        "C": "A dependency (such as a load-use data hazard) cannot be resolved by forwarding alone",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A bubble (stall/NOP) delays dependent instructions by one or more cycles when forwarding cannot supply the data in time."
+    },
+    {
+      "id": 89,
+      "topic": "IO Organization",
+      "difficulty": "easy",
+      "question": "The method of accessing I/O devices in which the CPU repeatedly checks the device status flag is called:",
+      "options": {
+        "A": "Direct Memory Access (DMA)",
+        "B": "Vectored interrupt I/O",
+        "C": "Program-controlled I/O (Polling)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "In programmed I/O (polling), the CPU stays in a busy-wait loop checking the status register until the device is ready."
+    },
+    {
+      "id": 90,
+      "topic": "IO Organization",
+      "difficulty": "medium",
+      "question": "In interrupt-driven I/O, the CPU is freed from busy-waiting because:",
+      "options": {
+        "A": "All I/O data bypasses memory via cache",
+        "B": "The CPU continuously polls the status register",
+        "C": "The I/O interface sends an interrupt signal to the CPU only when ready",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Interrupt-driven I/O lets the CPU execute other tasks until the I/O module signals readiness via an interrupt."
+    },
+    {
+      "id": 91,
+      "topic": "IO Organization",
+      "difficulty": "medium",
+      "question": "Which I/O technique transfers large blocks of data directly between peripherals and RAM without continuous CPU involvement?",
+      "options": {
+        "A": "Direct Memory Access (DMA)",
+        "B": "Programmed I/O",
+        "C": "Status polling",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "DMA controller takes over the system bus to transfer blocks directly between I/O and RAM, interrupting CPU only at completion."
+    },
+    {
+      "id": 92,
+      "topic": "IO Organization",
+      "difficulty": "medium",
+      "question": "Which of the following statements are true about Memory-Mapped I/O?",
+      "options": {
+        "A": "I/O ports share the same address space as main memory",
+        "B": "Standard memory instructions (LOAD/STORE/MOV) are used to access I/O devices",
+        "C": "Dedicated IN and OUT instructions are strictly mandatory",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "In memory-mapped I/O, I/O shares memory address space (A) and uses regular memory instructions (B); IN/OUT is for isolated I/O."
+    },
+    {
+      "id": 93,
+      "topic": "IO Organization",
+      "difficulty": "medium",
+      "question": "In Isolated (Port-Mapped) I/O, peripheral ports are accessed using:",
+      "options": {
+        "A": "Only DMA burst transfers",
+        "B": "A separate I/O address space with dedicated IN and OUT instructions",
+        "C": "Regular memory read/write instructions only",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Isolated I/O separates memory and I/O address spaces, using special IN/OUT instructions (e.g., 8085 and x86 I/O ports)."
+    },
+    {
+      "id": 94,
+      "topic": "IO Organization",
+      "difficulty": "hard",
+      "question": "In DMA 'cycle stealing' mode:",
+      "options": {
+        "A": "The CPU is permanently halted until power-off",
+        "B": "The DMA controller borrows one bus cycle at a time from the CPU to transfer a word",
+        "C": "CPU cache lines are overwritten by I/O hardware",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Cycle stealing lets DMA take the bus for one memory cycle per word transfer, minimally slowing the CPU."
+    },
+    {
+      "id": 95,
+      "topic": "RISC vs CISC",
+      "difficulty": "easy",
+      "question": "RISC (Reduced Instruction Set Computer) architecture is characterized by:",
+      "options": {
+        "A": "Arithmetic instructions that directly modify main memory operands",
+        "B": "Variable-length instructions and microprogrammed control unit",
+        "C": "Fixed-length instructions, load-store model, and hardwired control unit",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "RISC uses fixed-width instructions, hardwired control, a large register file, and load-store memory access (~1 CPI)."
+    },
+    {
+      "id": 96,
+      "topic": "RISC vs CISC",
+      "difficulty": "easy",
+      "question": "CISC (Complex Instruction Set Computer) architecture typically features:",
+      "options": {
+        "A": "Fixed-length instructions with single-cycle execution for all instructions",
+        "B": "Load-store architecture with no memory operands in ALU instructions",
+        "C": "Variable-length instructions, many addressing modes, and microprogrammed control",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "CISC uses variable-length multi-cycle instructions, rich addressing modes, and microprogrammed control (e.g., x86)."
+    },
+    {
+      "id": 97,
+      "topic": "RISC vs CISC",
+      "difficulty": "medium",
+      "question": "Which of the following processor architectures follow the RISC design philosophy?",
+      "options": {
+        "A": "ARM",
+        "B": "MIPS",
+        "C": "SPARC",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "ARM (Advanced RISC Machine), MIPS, and SPARC are all classic RISC architectures."
+    },
+    {
+      "id": 98,
+      "topic": "RISC vs CISC",
+      "difficulty": "medium",
+      "question": "Which of the following is a well-known example of a CISC architecture?",
+      "options": {
+        "A": "MIPS",
+        "B": "Intel x86",
+        "C": "ARM",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Intel x86 (IA-32 / x86-64) is the classic CISC ISA with variable-length instructions; MIPS and ARM are RISC."
+    },
+    {
+      "id": 99,
+      "topic": "RISC vs CISC",
+      "difficulty": "hard",
+      "question": "In a load-store (RISC) architecture, which instructions are permitted to access main memory?",
+      "options": {
+        "A": "All arithmetic ADD and SUB instructions",
+        "B": "Only conditional branch instructions",
+        "C": "None — RISC processors cannot access main memory",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "In load-store (RISC) architecture, only dedicated LOAD and STORE instructions access memory; ALU ops use registers."
+    },
+    {
+      "id": 100,
+      "topic": "RISC vs CISC",
+      "difficulty": "medium",
+      "question": "Compared to CISC, a key performance advantage of RISC is:",
+      "options": {
+        "A": "Simpler fixed-length decoding enabling hardwired control and ~1 CPI pipelining",
+        "B": "Using far fewer CPU general-purpose registers",
+        "C": "Fewer total instructions per compiled program",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "RISC's simple fixed-format instructions allow hardwired control and deep pipelining (~1 CPI), though programs have more instructions."
+    }
+  ]
+}

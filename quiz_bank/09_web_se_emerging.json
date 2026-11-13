@@ -1,0 +1,908 @@
+{
+  "subject": "Web Technology, Software Engineering & Emerging Technologies",
+  "module": "09",
+  "total": 60,
+  "exam_relevance": "4-6 questions expected in BPSC TRE CS exam",
+  "questions": [
+    {
+      "id": 1,
+      "topic": "HTML & Web Basics",
+      "difficulty": "easy",
+      "question": "Who is credited with inventing the World Wide Web (WWW)?",
+      "options": {
+        "A": "Marc Andreessen",
+        "B": "Tim Berners-Lee",
+        "C": "Vint Cerf",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Tim Berners-Lee invented the World Wide Web in 1989 at CERN, along with HTML, HTTP, and the first web browser."
+    },
+    {
+      "id": 2,
+      "topic": "HTML & Web Basics",
+      "difficulty": "easy",
+      "question": "What does HTML stand for?",
+      "options": {
+        "A": "High Text Machine Language",
+        "B": "HyperText Markup Language",
+        "C": "Hyperlink Text Management Language",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "HTML stands for HyperText Markup Language, the standard markup language used to structure content on the web."
+    },
+    {
+      "id": 3,
+      "topic": "HTML & Web Basics",
+      "difficulty": "easy",
+      "question": "Which HTML tag is used to create a hyperlink?",
+      "options": {
+        "A": "<href>",
+        "B": "<a>",
+        "C": "<link>",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "The <a> (anchor) tag with the href attribute creates hyperlinks in HTML (e.g., <a href='url'>text</a>). <link> links external resources."
+    },
+    {
+      "id": 4,
+      "topic": "HTML & Web Basics",
+      "difficulty": "easy",
+      "question": "Which HTML tag is used to embed an image in a web page?",
+      "options": {
+        "A": "<image>",
+        "B": "<picture-src>",
+        "C": "<pic>",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Images are embedded using the <img> tag with src and alt attributes. None of <image>, <picture-src>, or <pic> is the standard HTML tag."
+    },
+    {
+      "id": 5,
+      "topic": "HTML & Web Basics",
+      "difficulty": "easy",
+      "question": "Which HTML tags define the main document structure of an HTML page?",
+      "options": {
+        "A": "<html>",
+        "B": "<head>",
+        "C": "<body>",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "An HTML document uses <html> as root, <head> for metadata/title, and <body> for visible content. All three are structural tags."
+    },
+    {
+      "id": 6,
+      "topic": "HTML & Web Basics",
+      "difficulty": "medium",
+      "question": "Which HTML tags are used inside a <table> element to create rows and cells?",
+      "options": {
+        "A": "<tr> for table row",
+        "B": "<td> for table data cell",
+        "C": "<th> for table header cell",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Inside <table>, <tr> defines rows, <td> defines standard data cells, and <th> defines header cells. All three are valid table tags."
+    },
+    {
+      "id": 7,
+      "topic": "HTML & Web Basics",
+      "difficulty": "medium",
+      "question": "Which HTML element is used to collect user input and submit it to a server?",
+      "options": {
+        "A": "<div>",
+        "B": "<form>",
+        "C": "<p>",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "The <form> tag creates an HTML form for user input (with <input>, <textarea>, <select>, etc.) and submits data via GET or POST."
+    },
+    {
+      "id": 8,
+      "topic": "HTML & Web Basics",
+      "difficulty": "medium",
+      "question": "What is the main difference between HTTP and HTTPS?",
+      "options": {
+        "A": "HTTPS encrypts data using SSL/TLS whereas HTTP sends plaintext",
+        "B": "HTTP supports multimedia while HTTPS only sends text",
+        "C": "HTTP uses port 443 while HTTPS uses port 80",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "HTTPS is HTTP over SSL/TLS (port 443), providing encrypted and authenticated communication, unlike plaintext HTTP (port 80)."
+    },
+    {
+      "id": 9,
+      "topic": "HTML & Web Basics",
+      "difficulty": "medium",
+      "question": "In the URL 'https://www.example.com:8080/page/index.html', what is 'https'?",
+      "options": {
+        "A": "Protocol (Scheme)",
+        "B": "Path",
+        "C": "Domain name",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "In a URL, the first part before '://' is the protocol/scheme (https). 'www.example.com' is host/domain, '8080' is port, '/page/index.html' is path."
+    },
+    {
+      "id": 10,
+      "topic": "HTML & Web Basics",
+      "difficulty": "easy",
+      "question": "Which HTML tag defines a paragraph of text?",
+      "options": {
+        "A": "<para>",
+        "B": "<paragraph>",
+        "C": "<text>",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "The <p> tag defines a paragraph in HTML. None of <para>, <paragraph>, or <text> is a standard HTML tag."
+    },
+    {
+      "id": 11,
+      "topic": "Client & Server Side Scripting",
+      "difficulty": "easy",
+      "question": "Which of the following is primarily a client-side scripting language executed in the web browser?",
+      "options": {
+        "A": "JavaScript",
+        "B": "PHP",
+        "C": "JSP",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "JavaScript runs directly inside the user's web browser (client-side) for DOM manipulation and interactivity. PHP and JSP execute on the server."
+    },
+    {
+      "id": 12,
+      "topic": "Client & Server Side Scripting",
+      "difficulty": "medium",
+      "question": "Which of the following is an example of a server-side scripting language?",
+      "options": {
+        "A": "HTML",
+        "B": "CSS",
+        "C": "Client-side JavaScript",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "HTML (markup), CSS (styling), and client-side JavaScript all run on the client browser. Server-side languages include PHP, ASP, JSP, Node.js."
+    },
+    {
+      "id": 13,
+      "topic": "Client & Server Side Scripting",
+      "difficulty": "easy",
+      "question": "Which of the following are server-side web technologies?",
+      "options": {
+        "A": "PHP",
+        "B": "ASP (Active Server Pages)",
+        "C": "JSP (JavaServer Pages)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "PHP, ASP, and JSP are all server-side scripting technologies that process requests on the web server and generate dynamic HTML responses."
+    },
+    {
+      "id": 14,
+      "topic": "Client & Server Side Scripting",
+      "difficulty": "medium",
+      "question": "What does PHP stand for?",
+      "options": {
+        "A": "PHP: Hypertext Preprocessor",
+        "B": "Private Hosting Protocol",
+        "C": "Programmed HTML Processor",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "PHP originally stood for Personal Home Page and now stands recursively for 'PHP: Hypertext Preprocessor'. It is a widely used server-side scripting language."
+    },
+    {
+      "id": 15,
+      "topic": "Client & Server Side Scripting",
+      "difficulty": "medium",
+      "question": "Which runtime environment allows JavaScript to be executed on the server side?",
+      "options": {
+        "A": "Node.js",
+        "B": "CSS3",
+        "C": "VBScript",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Node.js is an open-source, cross-platform JavaScript runtime built on Chrome's V8 engine that executes JavaScript code on the server side."
+    },
+    {
+      "id": 16,
+      "topic": "Client & Server Side Scripting",
+      "difficulty": "medium",
+      "question": "In Java, which access specifier allows members to be accessed only by classes within the same package when no keyword is specified?",
+      "options": {
+        "A": "package-private",
+        "B": "private",
+        "C": "public",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "In Java, omitting an access modifier gives package-private (default) access, making the member visible to all classes within the same package."
+    },
+    {
+      "id": 17,
+      "topic": "Client & Server Side Scripting",
+      "difficulty": "medium",
+      "question": "Where does server-side script execution take place?",
+      "options": {
+        "A": "On the web server before sending the response to the client",
+        "B": "In the client's web browser",
+        "C": "Inside the router firmware",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Server-side scripts execute on the web server, often interacting with databases, and send generated HTML/JSON output to the client's browser."
+    },
+    {
+      "id": 18,
+      "topic": "Client & Server Side Scripting",
+      "difficulty": "hard",
+      "question": "Which of the following is true about client-side scripting (like browser JavaScript or VBScript)?",
+      "options": {
+        "A": "It reduces server load by validating forms in the browser",
+        "B": "Its source code is visible to the end user",
+        "C": "It directly accesses the server's database without an API",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Client-side scripts reduce server load (e.g., input validation) and their source code is visible in the browser, but they cannot directly access server DBs."
+    },
+    {
+      "id": 19,
+      "topic": "SDLC Models",
+      "difficulty": "easy",
+      "question": "Which SDLC model follows a strict linear sequential flow where each phase must be completed before the next begins?",
+      "options": {
+        "A": "Agile Model",
+        "B": "Spiral Model",
+        "C": "Waterfall Model",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "The Waterfall model is a linear, sequential SDLC model (Requirements → Design → Implementation → Testing → Deployment → Maintenance) with no easy backtracking."
+    },
+    {
+      "id": 20,
+      "topic": "SDLC Models",
+      "difficulty": "medium",
+      "question": "Which SDLC model explicitly emphasizes risk analysis in every iteration?",
+      "options": {
+        "A": "Waterfall Model",
+        "B": "RAD Model",
+        "C": "Spiral Model",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Barry Boehm's Spiral Model combines iterative development with systematic risk analysis in each loop (Planning, Risk Analysis, Engineering, Evaluation)."
+    },
+    {
+      "id": 21,
+      "topic": "SDLC Models",
+      "difficulty": "easy",
+      "question": "Which SDLC model focuses on iterative delivery, customer collaboration, and responding to change over following a rigid plan?",
+      "options": {
+        "A": "Agile Model",
+        "B": "Waterfall Model",
+        "C": "V-Model",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Agile methodology delivers working software in short iterations (sprints) with continuous feedback and flexibility to accommodate changing requirements."
+    },
+    {
+      "id": 22,
+      "topic": "SDLC Models",
+      "difficulty": "medium",
+      "question": "What is the primary purpose of building a software prototype in the Prototyping SDLC model?",
+      "options": {
+        "A": "To eliminate all software testing",
+        "B": "To replace final system documentation",
+        "C": "To skip requirement gathering completely",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "The primary purpose of a software prototype is to gather early user feedback and clarify unclear requirements before full-scale development."
+    },
+    {
+      "id": 23,
+      "topic": "SDLC Models",
+      "difficulty": "medium",
+      "question": "What does RAD stand for in Software Engineering?",
+      "options": {
+        "A": "Random Access Design",
+        "B": "Reliable Architecture Deployment",
+        "C": "Rapid Application Development",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "RAD stands for Rapid Application Development, an SDLC model emphasizing quick prototyping, reusable components, and rapid delivery (typically 60-90 days)."
+    },
+    {
+      "id": 24,
+      "topic": "SDLC Models",
+      "difficulty": "easy",
+      "question": "Which is the first phase of the Software Development Life Cycle (SDLC)?",
+      "options": {
+        "A": "Coding",
+        "B": "Testing",
+        "C": "Deployment",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "The first phase of SDLC is Requirement Gathering and Analysis (feasibility study & SRS), which precedes coding, testing, and deployment."
+    },
+    {
+      "id": 25,
+      "topic": "SDLC Models",
+      "difficulty": "medium",
+      "question": "What is an SRS document in Software Engineering?",
+      "options": {
+        "A": "Structured Regression Suite",
+        "B": "System Recovery Script",
+        "C": "Software Requirements Specification",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "SRS stands for Software Requirements Specification — a formal document describing functional and non-functional requirements of the software."
+    },
+    {
+      "id": 26,
+      "topic": "SDLC Models",
+      "difficulty": "hard",
+      "question": "In which situation is the Waterfall model MOST suitable?",
+      "options": {
+        "A": "When high risk requires frequent prototyping",
+        "B": "When requirements are unclear and frequently changing",
+        "C": "When requirements are well-understood, fixed, and stable",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "The Waterfall model works best when requirements are clearly defined, stable, and unlikely to change during development."
+    },
+    {
+      "id": 27,
+      "topic": "SDLC Models",
+      "difficulty": "medium",
+      "question": "Which SDLC phase consumes the largest share of effort and cost over the entire software lifespan?",
+      "options": {
+        "A": "Maintenance",
+        "B": "Coding",
+        "C": "Design",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Software Maintenance (bug fixes, enhancements, adaptation after deployment) typically consumes 60% or more of total lifecycle cost."
+    },
+    {
+      "id": 28,
+      "topic": "SDLC Models",
+      "difficulty": "hard",
+      "question": "Which of the following is an Agile software development framework?",
+      "options": {
+        "A": "Scrum",
+        "B": "Extreme Programming (XP)",
+        "C": "Kanban",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Scrum, Extreme Programming (XP), and Kanban are all popular Agile frameworks emphasizing iterative delivery and collaboration."
+    },
+    {
+      "id": 29,
+      "topic": "SDLC Models",
+      "difficulty": "medium",
+      "question": "In the V-Model of software development, every development phase has a corresponding:",
+      "options": {
+        "A": "Marketing phase",
+        "B": "Hardware procurement phase",
+        "C": "Testing phase",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "The V-Model (Verification and Validation model) pairs each development stage (Requirements, Design, Coding) with a matching testing stage."
+    },
+    {
+      "id": 30,
+      "topic": "SDLC Models",
+      "difficulty": "hard",
+      "question": "In software design, what is desirable for modular, maintainable software?",
+      "options": {
+        "A": "High cohesion",
+        "B": "Low coupling",
+        "C": "Minimal inter-module dependency",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Good modular software design requires high cohesion within modules and low coupling (minimal inter-module dependency). All A, B, C are desirable."
+    },
+    {
+      "id": 31,
+      "topic": "Software Testing",
+      "difficulty": "medium",
+      "question": "What is the main difference between Verification and Validation in software engineering?",
+      "options": {
+        "A": "Verification checks if built correctly; Validation checks if right product",
+        "B": "Verification checks code; Validation checks only documentation",
+        "C": "Verification is done by end users; Validation is done by developers",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Verification checks conformance to specifications ('building the product right'); Validation checks whether it meets user needs ('building the right product')."
+    },
+    {
+      "id": 32,
+      "topic": "Software Testing",
+      "difficulty": "easy",
+      "question": "Which testing technique examines internal code structure, logic, and execution paths?",
+      "options": {
+        "A": "Acceptance testing",
+        "B": "White-box testing",
+        "C": "Black-box testing",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "White-box (glass-box/structural) testing requires knowledge of internal code logic and paths. Black-box testing tests functionality without seeing code."
+    },
+    {
+      "id": 33,
+      "topic": "Software Testing",
+      "difficulty": "easy",
+      "question": "Black-box testing focuses primarily on:",
+      "options": {
+        "A": "Internal code statements and branches",
+        "B": "Database schema normalization",
+        "C": "CPU register allocation",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Black-box testing tests inputs against expected functional outputs from specifications without looking at internal code, DB schema, or CPU registers."
+    },
+    {
+      "id": 34,
+      "topic": "Software Testing",
+      "difficulty": "easy",
+      "question": "What is the correct sequence of testing levels from smallest scope to full system?",
+      "options": {
+        "A": "System → Integration → Unit",
+        "B": "Unit → Integration → System → Acceptance",
+        "C": "Acceptance → Unit → System",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Testing progresses bottom-up: Unit testing (individual modules) → Integration testing (module interfaces) → System testing (entire system) → Acceptance testing."
+    },
+    {
+      "id": 35,
+      "topic": "Software Testing",
+      "difficulty": "medium",
+      "question": "Which testing ensures that recent code changes have not broken existing functionality?",
+      "options": {
+        "A": "Unit testing",
+        "B": "Alpha testing",
+        "C": "Regression testing",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Regression testing re-runs existing test cases after bug fixes or modifications to verify that previously working features still work properly."
+    },
+    {
+      "id": 36,
+      "topic": "Software Testing",
+      "difficulty": "medium",
+      "question": "Which of the following is a Black-Box testing technique?",
+      "options": {
+        "A": "Equivalence Partitioning",
+        "B": "Boundary Value Analysis",
+        "C": "Cyclomatic Complexity path testing",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Equivalence Partitioning (A) and Boundary Value Analysis (B) are both black-box techniques. Cyclomatic Complexity / path testing is white-box."
+    },
+    {
+      "id": 37,
+      "topic": "Software Testing",
+      "difficulty": "medium",
+      "question": "Alpha testing is performed by:",
+      "options": {
+        "A": "End users at their own external sites",
+        "B": "Automated compilers only",
+        "C": "Internal staff/testers at the developer's site before release",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Alpha testing is done in-house at the developer's site; Beta testing is done by real end users in their own environment before final release."
+    },
+    {
+      "id": 38,
+      "topic": "Software Testing",
+      "difficulty": "medium",
+      "question": "Unit testing is typically performed by:",
+      "options": {
+        "A": "Developers",
+        "B": "End customers",
+        "C": "Network administrators",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Unit testing verifies individual functions, classes, or modules in isolation and is usually written and executed by software developers."
+    },
+    {
+      "id": 39,
+      "topic": "Software Testing",
+      "difficulty": "hard",
+      "question": "Which of the following activities belong to Verification (static checking without executing code)?",
+      "options": {
+        "A": "Code walkthroughs",
+        "B": "Formal inspections and design reviews",
+        "C": "Running stress tests on live servers",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Code walkthroughs (A) and formal inspections/reviews (B) are static verification techniques. Stress testing is dynamic validation/testing."
+    },
+    {
+      "id": 40,
+      "topic": "Software Testing",
+      "difficulty": "hard",
+      "question": "Who introduced McCabe's Cyclomatic Complexity metric used in white-box path testing?",
+      "options": {
+        "A": "Barry Boehm",
+        "B": "Edsger Dijkstra",
+        "C": "James Gosling",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Thomas J. McCabe introduced Cyclomatic Complexity V(G) = E - N + 2P in 1976. None of Barry Boehm, Dijkstra, or Gosling introduced it."
+    },
+    {
+      "id": 41,
+      "topic": "AI & ML Basics",
+      "difficulty": "easy",
+      "question": "Which of the following is a recognized subfield of Artificial Intelligence (AI)?",
+      "options": {
+        "A": "Machine Learning (ML)",
+        "B": "Natural Language Processing (NLP)",
+        "C": "Computer Vision",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Machine Learning, Natural Language Processing, and Computer Vision (along with Robotics and Expert Systems) are all core subfields of AI."
+    },
+    {
+      "id": 42,
+      "topic": "AI & ML Basics",
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a component of a standard Turing Machine?",
+      "options": {
+        "A": "Infinite tape divided into cells",
+        "B": "Separate output tape",
+        "C": "Read/Write head and state register",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A standard Turing Machine consists of an infinite tape, read/write head, state register, and transition function. It does NOT have a separate output tape."
+    },
+    {
+      "id": 43,
+      "topic": "AI & ML Basics",
+      "difficulty": "easy",
+      "question": "In Machine Learning, training a model using labeled input-output pairs is called:",
+      "options": {
+        "A": "Unsupervised Learning",
+        "B": "Supervised Learning",
+        "C": "Reinforcement Learning",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Supervised learning trains on labeled data (classification and regression). Unsupervised learning finds hidden patterns in unlabeled data (e.g., clustering)."
+    },
+    {
+      "id": 44,
+      "topic": "AI & ML Basics",
+      "difficulty": "medium",
+      "question": "K-means clustering is an example of:",
+      "options": {
+        "A": "Unsupervised Learning",
+        "B": "Supervised Learning",
+        "C": "Expert System rule-base",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Clustering (such as K-means) groups unlabeled data points based on similarity, making it a classic Unsupervised Learning technique."
+    },
+    {
+      "id": 45,
+      "topic": "AI & ML Basics",
+      "difficulty": "medium",
+      "question": "What is the Turing Test designed to evaluate?",
+      "options": {
+        "A": "CPU clock speed of a computer",
+        "B": "Network bandwidth capacity",
+        "C": "Disk read/write throughput",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Proposed by Alan Turing in 1950, the Turing Test evaluates whether a machine can exhibit intelligent conversational behavior indistinguishable from a human."
+    },
+    {
+      "id": 46,
+      "topic": "AI & ML Basics",
+      "difficulty": "medium",
+      "question": "Artificial Neural Networks (ANN) are computational models inspired by:",
+      "options": {
+        "A": "Sorting algorithms",
+        "B": "Biological neurons in the human brain",
+        "C": "Relational database tables",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Artificial Neural Networks are inspired by interconnected biological neurons in the brain, organized into input, hidden, and output layers."
+    },
+    {
+      "id": 47,
+      "topic": "AI & ML Basics",
+      "difficulty": "medium",
+      "question": "Which AI system emulates the decision-making ability of a human specialist using a knowledge base and inference engine?",
+      "options": {
+        "A": "Disk Defragmenter",
+        "B": "Compiler",
+        "C": "Expert System",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "An Expert System uses a Knowledge Base (facts & rules) and an Inference Engine to solve domain-specific problems like a human expert (e.g., MYCIN)."
+    },
+    {
+      "id": 48,
+      "topic": "AI & ML Basics",
+      "difficulty": "hard",
+      "question": "Which search algorithm uses a heuristic function f(n) = g(n) + h(n) to find the optimal path?",
+      "options": {
+        "A": "Depth-First Search (DFS)",
+        "B": "A* (A-star) Search",
+        "C": "Breadth-First Search (BFS)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A* search uses f(n) = g(n) + h(n), combining path cost so far g(n) and heuristic estimate h(n) to find an optimal path when h(n) is admissible."
+    },
+    {
+      "id": 49,
+      "topic": "E-Commerce",
+      "difficulty": "easy",
+      "question": "Amazon selling books and electronics directly to individual consumers is an example of which E-Commerce model?",
+      "options": {
+        "A": "C2C (Consumer-to-Consumer)",
+        "B": "B2B (Business-to-Business)",
+        "C": "B2C (Business-to-Consumer)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "B2C (Business-to-Consumer) involves businesses selling products or services directly to individual end consumers (e.g., Amazon retail, Flipkart)."
+    },
+    {
+      "id": 50,
+      "topic": "E-Commerce",
+      "difficulty": "easy",
+      "question": "OLX or eBay where individuals sell used goods to other individuals is an example of:",
+      "options": {
+        "A": "C2C (Consumer-to-Consumer)",
+        "B": "B2C",
+        "C": "B2B",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "C2C (Consumer-to-Consumer) enables individuals to trade directly with other consumers via a platform (e.g., eBay, OLX)."
+    },
+    {
+      "id": 51,
+      "topic": "E-Commerce",
+      "difficulty": "medium",
+      "question": "Alibaba connecting manufacturers and wholesalers with bulk business buyers is primarily an example of:",
+      "options": {
+        "A": "C2B",
+        "B": "B2B (Business-to-Business)",
+        "C": "C2C",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "B2B (Business-to-Business) involves transactions between businesses, such as manufacturers selling wholesale to retailers on Alibaba."
+    },
+    {
+      "id": 52,
+      "topic": "E-Commerce",
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a common E-Commerce business model?",
+      "options": {
+        "A": "B2B (Business-to-Business)",
+        "B": "B2C (Business-to-Consumer)",
+        "C": "C2B (Consumer-to-Business)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "B2B, B2C, and C2B (e.g., freelancers/influencers offering services to businesses) are all valid E-Commerce models. Therefore, None of the above (E)."
+    },
+    {
+      "id": 53,
+      "topic": "E-Commerce",
+      "difficulty": "medium",
+      "question": "A government portal allowing businesses to file taxes or bid on tenders online represents:",
+      "options": {
+        "A": "C2B",
+        "B": "B2G (Business-to-Government)",
+        "C": "C2C",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "B2G (Business-to-Government), also called B2A, covers online transactions between companies and government agencies (e.g., e-procurement, tax portals)."
+    },
+    {
+      "id": 54,
+      "topic": "E-Commerce",
+      "difficulty": "hard",
+      "question": "What does EDI stand for in B2B E-Commerce?",
+      "options": {
+        "A": "Encrypted Digital Invoice",
+        "B": "External Database Interface",
+        "C": "Electronic Data Integration Hub",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "EDI stands for Electronic Data Interchange — computer-to-computer exchange of standard business documents between organizations."
+    },
+    {
+      "id": 55,
+      "topic": "Multimedia",
+      "difficulty": "easy",
+      "question": "Which of the following are core elements of Multimedia?",
+      "options": {
+        "A": "Text and Images",
+        "B": "Audio and Video",
+        "C": "Animation",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Multimedia integrates five basic elements: Text, Images (graphics), Audio, Video, and Animation. All three options list valid elements."
+    },
+    {
+      "id": 56,
+      "topic": "Multimedia",
+      "difficulty": "medium",
+      "question": "Which of the following is a well-known multimedia authoring tool?",
+      "options": {
+        "A": "WinRAR",
+        "B": "Microsoft Notepad",
+        "C": "Adobe Flash (now Adobe Animate)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Adobe Flash (originally Macromedia Flash, now Adobe Animate) and Macromedia/Adobe Director are classic multimedia authoring tools."
+    },
+    {
+      "id": 57,
+      "topic": "Multimedia",
+      "difficulty": "medium",
+      "question": "Which file format uses lossy compression specifically designed for photographic images?",
+      "options": {
+        "A": "TXT",
+        "B": "JPEG",
+        "C": "WAV",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "JPEG (Joint Photographic Experts Group) uses lossy compression for photographs. WAV is uncompressed audio; PNG/GIF use lossless image compression."
+    },
+    {
+      "id": 58,
+      "topic": "Multimedia",
+      "difficulty": "medium",
+      "question": "MIDI (Musical Instrument Digital Interface) files store:",
+      "options": {
+        "A": "Recorded analog sound waveforms",
+        "B": "Compressed video frames",
+        "C": "Digital note, timing & instrument commands",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "MIDI stores musical performance instructions (note pitch, duration, velocity, instrument) rather than sampled audio waveforms, keeping file sizes tiny."
+    },
+    {
+      "id": 59,
+      "topic": "Emerging Technologies",
+      "difficulty": "easy",
+      "question": "Which of the following are standard Cloud Computing service models?",
+      "options": {
+        "A": "IaaS (Infrastructure as a Service)",
+        "B": "PaaS (Platform as a Service)",
+        "C": "SaaS (Software as a Service)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Cloud computing has three primary service models: IaaS (e.g., AWS EC2), PaaS (e.g., Google App Engine), and SaaS (e.g., Gmail, Google Docs)."
+    },
+    {
+      "id": 60,
+      "topic": "Emerging Technologies",
+      "difficulty": "medium",
+      "question": "Which emerging technology provides a decentralized, immutable distributed ledger of cryptographically linked blocks?",
+      "options": {
+        "A": "Virtual Reality (VR)",
+        "B": "Internet of Things (IoT)",
+        "C": "Blockchain",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Blockchain is a decentralized, tamper-resistant distributed ledger storing transactions in cryptographically chained blocks. IoT connects physical devices."
+    }
+  ]
+}

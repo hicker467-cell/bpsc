@@ -1,0 +1,1508 @@
+{
+  "subject": "C++ Programming & Object-Oriented Programming",
+  "module": "04",
+  "total": 100,
+  "exam_relevance": "10-12 questions expected in BPSC TRE CS exam",
+  "questions": [
+    {
+      "id": 1,
+      "topic": "OOPs Concepts",
+      "difficulty": "easy",
+      "question": "Which OOP concept binds data and functions that manipulate data together into a single unit called a class?",
+      "options": {
+        "A": "Abstraction",
+        "B": "Encapsulation",
+        "C": "Inheritance",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Encapsulation wraps data and methods into a single unit (class). It is a fundamental OOP principle in Balaguruswamy C++."
+    },
+    {
+      "id": 2,
+      "topic": "OOPs Concepts",
+      "difficulty": "easy",
+      "question": "Which OOP concept allows a class to acquire properties and behaviours of another class?",
+      "options": {
+        "A": "Encapsulation",
+        "B": "Inheritance",
+        "C": "Polymorphism",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Inheritance enables a derived class to acquire properties of a base class, promoting code reuse. (Balaguruswamy Ch.6)"
+    },
+    {
+      "id": 3,
+      "topic": "OOPs Concepts",
+      "difficulty": "easy",
+      "question": "Which OOP concept means 'showing only essential features and hiding implementation details'?",
+      "options": {
+        "A": "Encapsulation",
+        "B": "Abstraction",
+        "C": "Polymorphism",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Abstraction hides complexity by exposing only essential features. Example: using a car without knowing the engine internals."
+    },
+    {
+      "id": 4,
+      "topic": "OOPs Concepts",
+      "difficulty": "easy",
+      "question": "Which OOP concept means 'one name, many forms'?",
+      "options": {
+        "A": "Polymorphism",
+        "B": "Encapsulation",
+        "C": "Abstraction",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Polymorphism means 'one name, many forms'. It allows functions or operators to behave differently based on context."
+    },
+    {
+      "id": 5,
+      "topic": "OOPs Concepts",
+      "difficulty": "medium",
+      "question": "Which of the following is a key benefit of encapsulation in OOP?",
+      "options": {
+        "A": "Code reuse through class hierarchies",
+        "B": "Data hiding and protection from accidental modification",
+        "C": "Ability to define multiple functions with the same name",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Encapsulation's primary benefit is data hiding — private members are inaccessible from outside the class, protecting data integrity."
+    },
+    {
+      "id": 6,
+      "topic": "OOPs Concepts",
+      "difficulty": "medium",
+      "question": "In C++, compile-time polymorphism is achieved through which of the following?",
+      "options": {
+        "A": "Virtual functions",
+        "B": "Function overloading",
+        "C": "Operator overloading",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Both function overloading (B) and operator overloading (C) achieve compile-time (static) polymorphism. Virtual functions give runtime polymorphism."
+    },
+    {
+      "id": 7,
+      "topic": "OOPs Concepts",
+      "difficulty": "medium",
+      "question": "Which of the following is true about Object-Oriented Programming?",
+      "options": {
+        "A": "Data and functions are treated as separate entities",
+        "B": "Programs are organised around objects rather than functions",
+        "C": "It follows top-down approach like structured programming",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "OOP organises programs around objects. Structured programming uses top-down/function-centric approach. OOP is bottom-up."
+    },
+    {
+      "id": 8,
+      "topic": "OOPs Concepts",
+      "difficulty": "medium",
+      "question": "Which OOP feature helps in achieving runtime polymorphism in C++?",
+      "options": {
+        "A": "Virtual functions",
+        "B": "Function overloading",
+        "C": "Operator overloading",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Virtual functions enable runtime polymorphism via late binding. The function call is resolved at runtime based on the actual object type."
+    },
+    {
+      "id": 9,
+      "topic": "OOPs Concepts",
+      "difficulty": "easy",
+      "question": "In C++, a class is a _____ and an object is a _____ of that class.",
+      "options": {
+        "A": "instance, blueprint",
+        "B": "blueprint, instance",
+        "C": "function, variable",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A class is a user-defined blueprint/template. An object is an instance (variable) of a class. (Balaguruswamy, Ch. 5)"
+    },
+    {
+      "id": 10,
+      "topic": "OOPs Concepts",
+      "difficulty": "medium",
+      "question": "Which of the following languages supports all four OOP pillars: Abstraction, Encapsulation, Inheritance, Polymorphism?",
+      "options": {
+        "A": "C",
+        "B": "Assembly language",
+        "C": "C++",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "C++ fully supports all four OOP pillars. C is procedural and does not natively support OOP. Assembly is low-level."
+    },
+    {
+      "id": 11,
+      "topic": "OOPs Concepts",
+      "difficulty": "medium",
+      "question": "Which of the following statements about OOP is CORRECT?",
+      "options": {
+        "A": "OOP emphasises on functions rather than data",
+        "B": "In OOP, data moves freely from function to function",
+        "C": "OOP follows a bottom-up approach in program design",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "OOP follows a bottom-up approach. It emphasises data over functions, and data is not freely accessible (encapsulation protects it)."
+    },
+    {
+      "id": 12,
+      "topic": "OOPs Concepts",
+      "difficulty": "hard",
+      "question": "Which concept in OOP allows the same interface to be used for different underlying data types?",
+      "options": {
+        "A": "Polymorphism",
+        "B": "Encapsulation",
+        "C": "Inheritance",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Polymorphism allows the same interface (function/operator name) to work with different types, enabling flexible and reusable code."
+    },
+    {
+      "id": 13,
+      "topic": "Classes & Objects",
+      "difficulty": "easy",
+      "question": "What is the default access specifier for members of a class in C++?",
+      "options": {
+        "A": "private",
+        "B": "protected",
+        "C": "public",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "In C++, the default access specifier for class members is private. For struct, it is public. (Balaguruswamy, Ch. 5)"
+    },
+    {
+      "id": 14,
+      "topic": "Classes & Objects",
+      "difficulty": "easy",
+      "question": "Which keyword is used to define a class in C++?",
+      "options": {
+        "A": "class",
+        "B": "struct",
+        "C": "object",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "The keyword 'class' is used to define a class in C++. 'struct' also creates a class-like type but with public default access."
+    },
+    {
+      "id": 15,
+      "topic": "Classes & Objects",
+      "difficulty": "easy",
+      "question": "Members declared as 'private' in a class are accessible:",
+      "options": {
+        "A": "Within the class and all derived classes",
+        "B": "From anywhere in the program",
+        "C": "Only within the class itself (member functions of that class)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Private members are accessible only within the same class. Derived classes cannot access them directly (use protected for that)."
+    },
+    {
+      "id": 16,
+      "topic": "Classes & Objects",
+      "difficulty": "easy",
+      "question": "Members declared as 'protected' in a class are accessible:",
+      "options": {
+        "A": "Within the class and its derived classes",
+        "B": "From anywhere in the program",
+        "C": "Only within the class itself",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Protected members are accessible within the class and its derived classes, but not from outside the class hierarchy."
+    },
+    {
+      "id": 17,
+      "topic": "Classes & Objects",
+      "difficulty": "medium",
+      "question": "Which of the following correctly defines a class named 'Student' in C++?",
+      "options": {
+        "A": "class Student( int roll; public: void show(); );",
+        "B": "class Student { int roll; public: void show(); };",
+        "C": "Class Student { int roll; public: void show(); };",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Class definition uses lowercase 'class' keyword with curly braces and semicolon at end. 'Class' (uppercase) is invalid in C++."
+    },
+    {
+      "id": 18,
+      "topic": "Classes & Objects",
+      "difficulty": "medium",
+      "question": "A member function defined outside the class uses which operator to associate with the class?",
+      "options": {
+        "A": ":: (scope resolution operator)",
+        "B": "-> (arrow operator)",
+        "C": ". (dot operator)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "The scope resolution operator (::) is used to define a member function outside the class: void ClassName::funcName() { }"
+    },
+    {
+      "id": 19,
+      "topic": "Classes & Objects",
+      "difficulty": "medium",
+      "question": "To access a member of an object using a pointer to that object, which operator is used?",
+      "options": {
+        "A": "-> (arrow operator)",
+        "B": ":: (scope resolution operator)",
+        "C": ". (dot operator)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Arrow operator (->) accesses members via pointer. Dot operator (.) accesses members via object directly. e.g., ptr->show();"
+    },
+    {
+      "id": 20,
+      "topic": "Classes & Objects",
+      "difficulty": "medium",
+      "question": "How many objects can be created from a single class in C++?",
+      "options": {
+        "A": "Only two",
+        "B": "Any number (multiple objects can be created)",
+        "C": "Only one",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Multiple objects can be created from a single class. Each object has its own copy of data members but shares member functions."
+    },
+    {
+      "id": 21,
+      "topic": "Classes & Objects",
+      "difficulty": "hard",
+      "question": "In C++, which of the following is true about static data members of a class?",
+      "options": {
+        "A": "They are shared by all objects of the class",
+        "B": "They must be defined outside the class",
+        "C": "Only one copy exists regardless of how many objects are created",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Static data members: shared by all objects (A), must be defined outside class (B), only one copy exists (C) — all three are correct."
+    },
+    {
+      "id": 22,
+      "topic": "Classes & Objects",
+      "difficulty": "medium",
+      "question": "Which of the following is true about 'public' access specifier in a class?",
+      "options": {
+        "A": "Members are accessible only inside the class",
+        "B": "Members are accessible only in derived classes",
+        "C": "Members are accessible from anywhere in the program",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Public members are accessible from anywhere in the program — inside the class, in derived classes, and from main() or any function."
+    },
+    {
+      "id": 23,
+      "topic": "Inheritance",
+      "difficulty": "easy",
+      "question": "In C++, the class that inherits properties of another class is called:",
+      "options": {
+        "A": "Super class",
+        "B": "Derived class",
+        "C": "Base class",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "The class that inherits is called Derived class (also called child/sub class). The class being inherited from is Base/Parent/Super class."
+    },
+    {
+      "id": 24,
+      "topic": "Inheritance",
+      "difficulty": "easy",
+      "question": "Which of the following is the correct syntax for public inheritance in C++?",
+      "options": {
+        "A": "class D inherits B { };",
+        "B": "class D : public B { };",
+        "C": "class D extends B { };",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "C++ uses colon (:) syntax for inheritance: class Derived : access_specifier Base { }. 'extends' is Java syntax, not C++."
+    },
+    {
+      "id": 25,
+      "topic": "Inheritance",
+      "difficulty": "medium",
+      "question": "Which of the following are CORRECT syntax options for defining inheritance in C++? (From BPSC TRE 1.0)",
+      "options": {
+        "A": "class D : public B { };",
+        "B": "class D : B { };",
+        "C": "class D : private B { };",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three are valid C++ inheritance syntaxes. Without specifier it defaults to private. D is correct as A, B, and C are all valid."
+    },
+    {
+      "id": 26,
+      "topic": "Inheritance",
+      "difficulty": "easy",
+      "question": "When a class inherits from only ONE base class, it is called:",
+      "options": {
+        "A": "Multiple inheritance",
+        "B": "Multilevel inheritance",
+        "C": "Single inheritance",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Single inheritance: one derived class inherits from one base class. Multiple: inherits from more than one base class."
+    },
+    {
+      "id": 27,
+      "topic": "Inheritance",
+      "difficulty": "medium",
+      "question": "When class C inherits from class B, and class B inherits from class A, it is called:",
+      "options": {
+        "A": "Hierarchical inheritance",
+        "B": "Multiple inheritance",
+        "C": "Multilevel inheritance",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Multilevel: A→B→C (chain). Multiple: D inherits from both B and C. Hierarchical: multiple derived from same base."
+    },
+    {
+      "id": 28,
+      "topic": "Inheritance",
+      "difficulty": "medium",
+      "question": "When more than one class inherits from the SAME base class, it is called:",
+      "options": {
+        "A": "Multilevel inheritance",
+        "B": "Multiple inheritance",
+        "C": "Hierarchical inheritance",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Hierarchical: One base class → multiple derived classes (B, C both inherit from A). Multiple: one class inherits from multiple bases."
+    },
+    {
+      "id": 29,
+      "topic": "Inheritance",
+      "difficulty": "medium",
+      "question": "In C++ public inheritance, public members of the base class become _____ in the derived class.",
+      "options": {
+        "A": "public",
+        "B": "protected",
+        "C": "private",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "In public inheritance: public→public, protected→protected, private→inaccessible. Access level is preserved for public members."
+    },
+    {
+      "id": 30,
+      "topic": "Inheritance",
+      "difficulty": "medium",
+      "question": "In C++ private inheritance, public members of the base class become _____ in the derived class.",
+      "options": {
+        "A": "protected",
+        "B": "public",
+        "C": "private",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "In private inheritance, all accessible base class members (public and protected) become private in the derived class."
+    },
+    {
+      "id": 31,
+      "topic": "Inheritance",
+      "difficulty": "hard",
+      "question": "The 'diamond problem' in C++ occurs due to which type of inheritance?",
+      "options": {
+        "A": "Multilevel inheritance",
+        "B": "Multiple inheritance",
+        "C": "Single inheritance",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Diamond problem: class D inherits from B and C, both inherit from A — two copies of A's data in D. Solved by virtual base class."
+    },
+    {
+      "id": 32,
+      "topic": "Inheritance",
+      "difficulty": "hard",
+      "question": "Which keyword is used to prevent duplication of base class data in multiple/hybrid inheritance (diamond problem)?",
+      "options": {
+        "A": "static",
+        "B": "abstract",
+        "C": "virtual",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Virtual base class (using 'virtual' keyword) ensures only one copy of base class is shared in diamond inheritance hierarchy."
+    },
+    {
+      "id": 33,
+      "topic": "Inheritance",
+      "difficulty": "medium",
+      "question": "Which type of inheritance combines multiple types (e.g., multiple + multilevel) in a single hierarchy?",
+      "options": {
+        "A": "Hybrid inheritance",
+        "B": "Hierarchical inheritance",
+        "C": "Single inheritance",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Hybrid inheritance is a combination of two or more types of inheritance (e.g., multiple + multilevel). It may cause diamond problem."
+    },
+    {
+      "id": 34,
+      "topic": "Inheritance",
+      "difficulty": "medium",
+      "question": "Private members of a base class in public inheritance are _____ in the derived class.",
+      "options": {
+        "A": "inherited but not directly accessible",
+        "B": "not inherited at all",
+        "C": "accessible directly",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Private members are inherited (occupy memory in derived object) but cannot be accessed directly. Access via public/protected base functions."
+    },
+    {
+      "id": 35,
+      "topic": "Polymorphism",
+      "difficulty": "easy",
+      "question": "Function overloading in C++ is an example of which type of polymorphism?",
+      "options": {
+        "A": "Dynamic polymorphism",
+        "B": "Compile-time polymorphism",
+        "C": "Runtime polymorphism",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Function overloading is resolved at compile time (static/early binding), hence it is compile-time (static) polymorphism."
+    },
+    {
+      "id": 36,
+      "topic": "Polymorphism",
+      "difficulty": "easy",
+      "question": "Virtual functions in C++ are used to achieve:",
+      "options": {
+        "A": "Runtime polymorphism",
+        "B": "Data encapsulation",
+        "C": "Compile-time polymorphism",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Virtual functions enable runtime (dynamic) polymorphism via late binding — the correct function is selected at runtime based on object type."
+    },
+    {
+      "id": 37,
+      "topic": "Polymorphism",
+      "difficulty": "medium",
+      "question": "Which keyword is used to declare a virtual function in C++?",
+      "options": {
+        "A": "virtual",
+        "B": "override",
+        "C": "abstract",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "The 'virtual' keyword before a base class member function makes it virtual, enabling runtime polymorphism through overriding."
+    },
+    {
+      "id": 38,
+      "topic": "Polymorphism",
+      "difficulty": "medium",
+      "question": "Operator overloading in C++ allows:",
+      "options": {
+        "A": "Giving additional meaning to existing operators for user-defined types",
+        "B": "Defining new operators not present in C++",
+        "C": "Changing the precedence of operators",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Operator overloading redefines existing operators for user-defined types. New operators cannot be created; precedence cannot be changed."
+    },
+    {
+      "id": 39,
+      "topic": "Polymorphism",
+      "difficulty": "medium",
+      "question": "Which of the following operators CANNOT be overloaded in C++?",
+      "options": {
+        "A": "+ (addition operator)",
+        "B": "[] (subscript operator)",
+        "C": ":: (scope resolution operator)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Operators that cannot be overloaded: :: (scope resolution), . (dot), .* (pointer-to-member), ?: (ternary), sizeof. ++ and [] can be overloaded."
+    },
+    {
+      "id": 40,
+      "topic": "Polymorphism",
+      "difficulty": "medium",
+      "question": "Function overriding in C++ occurs when:",
+      "options": {
+        "A": "A derived class defines a function with the same name and signature as in the base class",
+        "B": "Two functions in the same class have the same name but different parameters",
+        "C": "A function is called using a pointer to base class",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Function overriding: derived class redefines base class function with identical name and signature. Overloading has different parameters."
+    },
+    {
+      "id": 41,
+      "topic": "Polymorphism",
+      "difficulty": "hard",
+      "question": "A pure virtual function in C++ is declared as:",
+      "options": {
+        "A": "virtual void show() { }",
+        "B": "virtual void show() = 0;",
+        "C": "void show() = 0;",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Pure virtual function syntax: virtual returnType funcName() = 0; A class with at least one pure virtual function is an abstract class."
+    },
+    {
+      "id": 42,
+      "topic": "Polymorphism",
+      "difficulty": "hard",
+      "question": "A class that contains at least one pure virtual function is called:",
+      "options": {
+        "A": "Interface class",
+        "B": "Virtual class",
+        "C": "Abstract class",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A class with at least one pure virtual function is called an abstract class. Objects of abstract class cannot be created."
+    },
+    {
+      "id": 43,
+      "topic": "Polymorphism",
+      "difficulty": "medium",
+      "question": "Which of the following about function overloading is CORRECT?",
+      "options": {
+        "A": "Overloaded functions must differ in number or type of parameters",
+        "B": "Overloaded functions must have same number and type of parameters",
+        "C": "Return type alone can distinguish overloaded functions in C++",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Overloaded functions must differ in number or type (or order) of parameters. Return type alone is NOT sufficient to overload a function."
+    },
+    {
+      "id": 44,
+      "topic": "Polymorphism",
+      "difficulty": "medium",
+      "question": "Early binding (static binding) in C++ is associated with:",
+      "options": {
+        "A": "Function overloading and normal (non-virtual) function calls",
+        "B": "Virtual functions",
+        "C": "Function overriding at runtime",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Early/static binding: function call resolved at compile time. Function overloading and regular function calls use early binding."
+    },
+    {
+      "id": 45,
+      "topic": "Polymorphism",
+      "difficulty": "hard",
+      "question": "In C++, which of the following correctly describes late binding?",
+      "options": {
+        "A": "Function address is determined at compile time",
+        "B": "It is used only with function overloading",
+        "C": "Function is selected based on the actual object type at runtime",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Late binding (dynamic binding): function address resolved at runtime based on actual object pointed to, used with virtual functions."
+    },
+    {
+      "id": 46,
+      "topic": "Polymorphism",
+      "difficulty": "medium",
+      "question": "Which of the following operators is typically overloaded to display object data using cout?",
+      "options": {
+        "A": "= operator",
+        "B": ">> operator",
+        "C": "<< operator",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "The << (insertion/left-shift) operator is overloaded for cout to display object data. >> is overloaded for cin input."
+    },
+    {
+      "id": 47,
+      "topic": "Constructors & Destructors",
+      "difficulty": "easy",
+      "question": "A constructor in C++ is a special member function that:",
+      "options": {
+        "A": "Destroys the object when it goes out of scope",
+        "B": "Is automatically called when an object is created",
+        "C": "Must be explicitly called by the programmer",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Constructor is automatically invoked when an object is created to initialise it. It has the same name as the class and no return type."
+    },
+    {
+      "id": 48,
+      "topic": "Constructors & Destructors",
+      "difficulty": "easy",
+      "question": "Which of the following is true about constructors in C++?",
+      "options": {
+        "A": "Constructor has the same name as the class",
+        "B": "Constructor has no return type (not even void)",
+        "C": "Constructor is called automatically when an object is created",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three are true: constructors have same name as class (A), no return type (B), and are called automatically on object creation (C)."
+    },
+    {
+      "id": 49,
+      "topic": "Constructors & Destructors",
+      "difficulty": "medium",
+      "question": "A constructor that takes no arguments is called a:",
+      "options": {
+        "A": "Default constructor",
+        "B": "Copy constructor",
+        "C": "Parameterized constructor",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Default constructor takes no arguments. If not defined, C++ provides an implicit default constructor. Parameterized takes arguments."
+    },
+    {
+      "id": 50,
+      "topic": "Constructors & Destructors",
+      "difficulty": "medium",
+      "question": "A copy constructor takes as its argument:",
+      "options": {
+        "A": "An integer value",
+        "B": "A reference to another object of the same class",
+        "C": "A pointer to another object",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Copy constructor signature: ClassName(const ClassName &obj). It takes a const reference to another object of the same class."
+    },
+    {
+      "id": 51,
+      "topic": "Constructors & Destructors",
+      "difficulty": "medium",
+      "question": "A destructor in C++ is a special function that:",
+      "options": {
+        "A": "Has the same name as the class preceded by tilde (~)",
+        "B": "Is called automatically when an object goes out of scope",
+        "C": "Frees resources acquired by the object",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three are true about destructors: name is ~ClassName (A), called automatically at object end of life (B), frees resources (C)."
+    },
+    {
+      "id": 52,
+      "topic": "Constructors & Destructors",
+      "difficulty": "medium",
+      "question": "Can a constructor be overloaded in C++?",
+      "options": {
+        "A": "Yes, a class can have multiple constructors with different parameter lists",
+        "B": "Yes, but only with the same parameters",
+        "C": "No, only one constructor is allowed per class",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Constructors can be overloaded — a class can have default, parameterized, and copy constructors, all with different signatures."
+    },
+    {
+      "id": 53,
+      "topic": "Constructors & Destructors",
+      "difficulty": "hard",
+      "question": "In a multilevel inheritance (A → B → C), when an object of C is created, the order of constructor calls is:",
+      "options": {
+        "A": "B, A, C",
+        "B": "A, B, C",
+        "C": "C, B, A",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Constructors are called from base to derived: A first, then B, then C. Destructors are called in reverse order: C, B, A."
+    },
+    {
+      "id": 54,
+      "topic": "Constructors & Destructors",
+      "difficulty": "hard",
+      "question": "In C++, if a class has dynamically allocated memory, which constructor should be explicitly defined to avoid shallow copy?",
+      "options": {
+        "A": "Default constructor",
+        "B": "Copy constructor",
+        "C": "Parameterized constructor",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Copy constructor must be explicitly defined for deep copy when class has pointer members (dynamic memory) to avoid shared pointer issues."
+    },
+    {
+      "id": 55,
+      "topic": "Constructors & Destructors",
+      "difficulty": "medium",
+      "question": "How many destructors can a class have in C++?",
+      "options": {
+        "A": "Only one",
+        "B": "As many as needed",
+        "C": "Two — one for static and one for dynamic objects",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "A class can have only ONE destructor. Destructors cannot be overloaded — they take no parameters and have no return type."
+    },
+    {
+      "id": 56,
+      "topic": "Constructors & Destructors",
+      "difficulty": "medium",
+      "question": "When is the destructor of an object called?",
+      "options": {
+        "A": "When the program starts",
+        "B": "When the object is created",
+        "C": "When object goes out of scope or is deleted",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Destructor is called when object goes out of scope (local objects) or when delete is used (dynamic objects). Cleans up resources."
+    },
+    {
+      "id": 57,
+      "topic": "Friend & This",
+      "difficulty": "medium",
+      "question": "A friend function in C++:",
+      "options": {
+        "A": "Is a member function of the class",
+        "B": "Can access private and protected members of the class",
+        "C": "Is declared using the 'friend' keyword inside the class",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Friend function: not a member (A is false), but can access private/protected (B true), declared with 'friend' keyword inside class (C true). B and C correct."
+    },
+    {
+      "id": 58,
+      "topic": "Friend & This",
+      "difficulty": "medium",
+      "question": "Which of the following is true about a friend function?",
+      "options": {
+        "A": "It is not a member of the class",
+        "B": "It can access private members of the class",
+        "C": "It is declared with the 'friend' keyword",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three (A, B, C) are correct about friend functions. It is NOT a member but IS granted access to private/protected members."
+    },
+    {
+      "id": 59,
+      "topic": "Friend & This",
+      "difficulty": "medium",
+      "question": "The 'this' pointer in C++ refers to:",
+      "options": {
+        "A": "The base class of the current object",
+        "B": "The next object in memory",
+        "C": "The address of the current calling object",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "'this' pointer holds the address of the object that invoked the member function. It is an implicit parameter in every non-static member function."
+    },
+    {
+      "id": 60,
+      "topic": "Friend & This",
+      "difficulty": "hard",
+      "question": "Which of the following statements about 'this' pointer is CORRECT?",
+      "options": {
+        "A": "It is available in all member functions including static member functions",
+        "B": "It points to the object for which the member function is called",
+        "C": "Its type is: ClassName * const",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "B and C are correct. 'this' is NOT available in static functions (A is false). Static functions have no 'this' pointer."
+    },
+    {
+      "id": 61,
+      "topic": "Friend & This",
+      "difficulty": "medium",
+      "question": "A friend function is called:",
+      "options": {
+        "A": "Using an object: obj.friendFunc()",
+        "B": "Using the class name: ClassName::friendFunc()",
+        "C": "Without using an object: friendFunc(obj)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Friend functions are not member functions, so called without dot/arrow notation. The object is passed as an argument: friendFunc(obj)."
+    },
+    {
+      "id": 62,
+      "topic": "Friend & This",
+      "difficulty": "hard",
+      "question": "Can a friend function be a member of another class in C++?",
+      "options": {
+        "A": "No, friend functions must always be global",
+        "B": "Yes, but only for public member functions",
+        "C": "Yes, a member function of one class can be a friend of another class",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A member function of class X can be declared as a friend of class Y. This allows X's function to access Y's private members."
+    },
+    {
+      "id": 63,
+      "topic": "Friend & This",
+      "difficulty": "medium",
+      "question": "Which of the following about 'this' pointer is FALSE?",
+      "options": {
+        "A": "It can be used to return a reference to the calling object",
+        "B": "It is implicitly passed to all non-static member functions",
+        "C": "It is available in static member functions",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "'this' pointer is NOT available in static member functions because static functions are not associated with any particular object."
+    },
+    {
+      "id": 64,
+      "topic": "Friend & This",
+      "difficulty": "medium",
+      "question": "Friend classes in C++ allow:",
+      "options": {
+        "A": "Only public functions of the friend class to access private members",
+        "B": "The friend class to inherit from the granting class",
+        "C": "All member functions of the friend class to access private members of the granting class",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "When class A declares class B as friend, ALL member functions of B can access private/protected members of A. Friendship is not inheritance."
+    },
+    {
+      "id": 65,
+      "topic": "Pointers",
+      "difficulty": "easy",
+      "question": "Which operator is used to declare a pointer in C++?",
+      "options": {
+        "A": "-> (arrow operator)",
+        "B": "* (asterisk)",
+        "C": "& (address-of operator)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "* is used to declare a pointer: int *p; The & operator gives the address of a variable. -> accesses members via pointer."
+    },
+    {
+      "id": 66,
+      "topic": "Pointers",
+      "difficulty": "easy",
+      "question": "If int x = 10; and int *p = &x; then what does *p give?",
+      "options": {
+        "A": "Value stored at x, i.e., 10",
+        "B": "Address of x",
+        "C": "Address of p",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "*p dereferences the pointer — gives the value at the address stored in p. Since p = &x and x = 10, *p = 10."
+    },
+    {
+      "id": 67,
+      "topic": "Pointers",
+      "difficulty": "medium",
+      "question": "Which operator gives the address of a variable in C++?",
+      "options": {
+        "A": "* (dereference operator)",
+        "B": "& (address-of operator)",
+        "C": "-> (arrow operator)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "& (address-of operator) gives the memory address of a variable. e.g., int x=5; int *p=&x; — p stores address of x."
+    },
+    {
+      "id": 68,
+      "topic": "Pointers",
+      "difficulty": "medium",
+      "question": "Which keyword is used for dynamic memory allocation in C++?",
+      "options": {
+        "A": "alloc",
+        "B": "new",
+        "C": "malloc",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "'new' is C++ operator for dynamic allocation. 'malloc' is C function. Example: int *p = new int; allocates int on heap."
+    },
+    {
+      "id": 69,
+      "topic": "Pointers",
+      "difficulty": "medium",
+      "question": "Which keyword is used to free dynamically allocated memory in C++?",
+      "options": {
+        "A": "free",
+        "B": "dealloc",
+        "C": "delete",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "'delete' frees memory allocated by 'new'. 'free' is the C counterpart for 'malloc'. Use delete[] for arrays: delete[] p;"
+    },
+    {
+      "id": 70,
+      "topic": "Pointers",
+      "difficulty": "medium",
+      "question": "To dynamically allocate an array of 5 integers in C++, the correct statement is:",
+      "options": {
+        "A": "int *p = new int(5);",
+        "B": "int *p = new int[5];",
+        "C": "int p = new int[5];",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "new int[5] allocates array of 5 ints. new int(5) allocates one int initialised to 5. Square brackets [ ] are used for arrays."
+    },
+    {
+      "id": 71,
+      "topic": "Pointers",
+      "difficulty": "hard",
+      "question": "If Student *p = new Student; is used to create a dynamic object, how is a member function show() called?",
+      "options": {
+        "A": "*p.show()",
+        "B": "p->show()",
+        "C": "p.show()",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Arrow operator (->) is used to access members through a pointer: p->show(). Dot (.) is used for objects, not pointers."
+    },
+    {
+      "id": 72,
+      "topic": "Pointers",
+      "difficulty": "medium",
+      "question": "A NULL pointer in C++ is:",
+      "options": {
+        "A": "A pointer to a void type",
+        "B": "A pointer pointing to address 0 (or nullptr in C++11)",
+        "C": "A pointer that has not been declared",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "NULL pointer points to address 0. In C++11, nullptr is preferred. A void pointer (void*) is different from a NULL pointer."
+    },
+    {
+      "id": 73,
+      "topic": "Pointers",
+      "difficulty": "hard",
+      "question": "In C++, int *p = new int[10]; then to free the memory, you should use:",
+      "options": {
+        "A": "free(p);",
+        "B": "delete p;",
+        "C": "delete[] p;",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "For array allocated with new[], use delete[] to free. delete p would cause undefined behavior. free() is for malloc only."
+    },
+    {
+      "id": 74,
+      "topic": "Pointers",
+      "difficulty": "medium",
+      "question": "A void pointer (void *) in C++:",
+      "options": {
+        "A": "Cannot store any address",
+        "B": "Can only store integer addresses",
+        "C": "Can store address of any data type",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "void* is a generic pointer that can hold the address of any data type. It must be cast to the appropriate type before dereferencing."
+    },
+    {
+      "id": 75,
+      "topic": "File Handling",
+      "difficulty": "easy",
+      "question": "Which header file is required for file handling in C++?",
+      "options": {
+        "A": "#include <fstream>",
+        "B": "#include <file.h>",
+        "C": "#include <stdio.h>",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "<fstream> header provides ifstream (input), ofstream (output), and fstream (both) for C++ file handling. stdio.h is for C."
+    },
+    {
+      "id": 76,
+      "topic": "File Handling",
+      "difficulty": "easy",
+      "question": "Which class is used to write data to a file in C++?",
+      "options": {
+        "A": "ifstream",
+        "B": "ofstream",
+        "C": "fstream",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "ofstream (output file stream) is specifically for writing. fstream supports both reading and writing. Both B and C can write."
+    },
+    {
+      "id": 77,
+      "topic": "File Handling",
+      "difficulty": "medium",
+      "question": "Which file open mode in C++ opens a file for appending (adds data at the end)?",
+      "options": {
+        "A": "ios::in",
+        "B": "ios::out",
+        "C": "ios::app",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "ios::app opens file for appending — writes at end of file. ios::out truncates existing file. ios::in opens for reading."
+    },
+    {
+      "id": 78,
+      "topic": "File Handling",
+      "difficulty": "medium",
+      "question": "Which class is used to READ data from a file in C++?",
+      "options": {
+        "A": "ifstream",
+        "B": "ofstream",
+        "C": "filestream",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "ifstream (input file stream) is used to read from files. ofstream is for output/writing. fstream handles both."
+    },
+    {
+      "id": 79,
+      "topic": "File Handling",
+      "difficulty": "medium",
+      "question": "Which file open mode is used to open a file for binary operations in C++?",
+      "options": {
+        "A": "ios::text",
+        "B": "ios::bin",
+        "C": "ios::binary",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "ios::binary opens the file in binary mode (no text translations). Used for binary files. ios::text is not a valid mode flag."
+    },
+    {
+      "id": 80,
+      "topic": "File Handling",
+      "difficulty": "hard",
+      "question": "In C++, which member function is used to check if a file has been opened successfully?",
+      "options": {
+        "A": "fail()",
+        "B": "good()",
+        "C": "is_open()",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "is_open() returns true if the file is open. good() checks for no errors. fail() returns true if an operation failed."
+    },
+    {
+      "id": 81,
+      "topic": "C++ Basics",
+      "difficulty": "easy",
+      "question": "In C++, 'cout' stands for:",
+      "options": {
+        "A": "Common output",
+        "B": "Character output",
+        "C": "Console output terminal",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "cout stands for 'character output'. It is an object of the ostream class used for output. (BPSC TRE 2.0 — answer B)"
+    },
+    {
+      "id": 82,
+      "topic": "C++ Basics",
+      "difficulty": "easy",
+      "question": "Which shortcut key is used to compile and run a C++ program in Turbo C++?",
+      "options": {
+        "A": "Ctrl + F9",
+        "B": "Alt + F5",
+        "C": "Ctrl + F5",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Ctrl+F9 compiles and runs in Turbo C++. Alt+F5 shows the user (output) screen. (BPSC TRE 1.0 — answer C)"
+    },
+    {
+      "id": 83,
+      "topic": "C++ Basics",
+      "difficulty": "easy",
+      "question": "Which shortcut key is used to view the user (output) screen in Turbo C++?",
+      "options": {
+        "A": "Ctrl + F9",
+        "B": "Ctrl + F5",
+        "C": "Alt + F5",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Alt+F5 displays the user output screen in Turbo C++. Ctrl+F9 compiles and runs. These are frequently asked in BPSC TRE."
+    },
+    {
+      "id": 84,
+      "topic": "C++ Basics",
+      "difficulty": "easy",
+      "question": "What is the correct extension for a C++ source file?",
+      "options": {
+        "A": ".c",
+        "B": ".cpp",
+        "C": ".cxx",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Both .cpp (B) and .cxx (C) are valid C++ extensions. .c is for C language. In Turbo C++, .cpp is most commonly used."
+    },
+    {
+      "id": 85,
+      "topic": "C++ Basics",
+      "difficulty": "easy",
+      "question": "Which header file must be included to use cout and cin in C++?",
+      "options": {
+        "A": "#include <conio.h>",
+        "B": "#include <stdio.h>",
+        "C": "#include <iostream>",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "<iostream> provides cout and cin. <stdio.h> is for C's printf/scanf. <conio.h> provides getch(), clrscr() (Turbo C++)."
+    },
+    {
+      "id": 86,
+      "topic": "C++ Basics",
+      "difficulty": "medium",
+      "question": "What does the 'sizeof' operator return in C++?",
+      "options": {
+        "A": "The size in bytes of a data type or variable",
+        "B": "The number of elements in an array",
+        "C": "The value stored in the variable",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "sizeof returns the size in bytes of a type or variable. sizeof(int) is typically 2 (Turbo) or 4 (modern). It is a compile-time operator."
+    },
+    {
+      "id": 87,
+      "topic": "C++ Basics",
+      "difficulty": "medium",
+      "question": "In Turbo C++, sizeof(int) returns:",
+      "options": {
+        "A": "4 bytes",
+        "B": "2 bytes",
+        "C": "8 bytes",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "In Turbo C++ (16-bit), sizeof(int) = 2 bytes. In modern 32/64-bit compilers, sizeof(int) = 4 bytes."
+    },
+    {
+      "id": 88,
+      "topic": "C++ Basics",
+      "difficulty": "medium",
+      "question": "The insertion operator (<<) is used with which object in C++?",
+      "options": {
+        "A": "cin",
+        "B": "cout",
+        "C": "cerr",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "<< is used with cout (B) for standard output AND with cerr (C) for error output. >> (extraction) is used with cin."
+    },
+    {
+      "id": 89,
+      "topic": "C++ Basics",
+      "difficulty": "medium",
+      "question": "Which of the following is a valid C++ data type?",
+      "options": {
+        "A": "int",
+        "B": "float",
+        "C": "double",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three — int (A), float (B), and double (C) — are valid built-in C++ data types. All are correct."
+    },
+    {
+      "id": 90,
+      "topic": "C++ Basics",
+      "difficulty": "medium",
+      "question": "The 'using namespace std;' directive in C++ is used to:",
+      "options": {
+        "A": "Define a new namespace",
+        "B": "Avoid writing std:: before cout, cin, etc.",
+        "C": "Include the standard library",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "using namespace std; allows using cout, cin without std:: prefix. It doesn't include libraries or define namespaces."
+    },
+    {
+      "id": 91,
+      "topic": "Output Tracing",
+      "difficulty": "medium",
+      "question": "What is the output of the following code?\n#include<iostream>\nusing namespace std;\nint main(){\n  int a=5, b=3;\n  cout << a+b;\n  return 0;\n}",
+      "options": {
+        "A": "53",
+        "B": "8",
+        "C": "5+3",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "a=5, b=3. a+b = 8. cout prints 8. No quotes around a+b, so it evaluates the expression."
+    },
+    {
+      "id": 92,
+      "topic": "Output Tracing",
+      "difficulty": "easy",
+      "question": "What is the output of the following code?\n#include<iostream>\nusing namespace std;\nint main(){\n  cout << \"Hello\" << endl;\n  cout << \"World\";\n  return 0;\n}",
+      "options": {
+        "A": "Hello World",
+        "B": "Hello\nWorld",
+        "C": "HelloWorld",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "First cout prints 'Hello' then endl (newline). Second cout prints 'World'. Output: Hello on line 1, World on line 2."
+    },
+    {
+      "id": 93,
+      "topic": "Output Tracing",
+      "difficulty": "medium",
+      "question": "What is the output of the following code?\n#include<iostream>\nusing namespace std;\nint main(){\n  int x=10;\n  cout << x++ << \" \" << x;\n  return 0;\n}",
+      "options": {
+        "A": "10 11",
+        "B": "10 10",
+        "C": "11 11",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "x++ is post-increment: prints x (10) then increments. After increment x=11. So output: 10 11."
+    },
+    {
+      "id": 94,
+      "topic": "Output Tracing",
+      "difficulty": "medium",
+      "question": "What is the output of this code?\n#include<iostream>\nusing namespace std;\nint main(){\n  int a=4, b=2;\n  cout << (a>b ? a : b);\n  return 0;\n}",
+      "options": {
+        "A": "2",
+        "B": "1",
+        "C": "4",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Ternary: a>b is 4>2 = true, so prints a = 4."
+    },
+    {
+      "id": 95,
+      "topic": "Output Tracing",
+      "difficulty": "medium",
+      "question": "What is the output of the following code?\n#include<iostream>\nusing namespace std;\nint main(){\n  for(int i=1; i<=3; i++)\n    cout << i << \" \";\n  return 0;\n}",
+      "options": {
+        "A": "1 2 3 4",
+        "B": "0 1 2",
+        "C": "1 2 3",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Loop: i=1 (print 1), i=2 (print 2), i=3 (print 3), i=4 (4>3, stop). Output: 1 2 3 (with trailing space)."
+    },
+    {
+      "id": 96,
+      "topic": "Output Tracing",
+      "difficulty": "medium",
+      "question": "What is the output of this code?\n#include<iostream>\nusing namespace std;\nint main(){\n  int a=5;\n  cout << sizeof(a);\n  return 0;\n}",
+      "options": {
+        "A": "5",
+        "B": "4",
+        "C": "2",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "sizeof(int) = 2 in Turbo C++ (B→C), 4 in modern compilers (B). Both B and C are possible depending on compiler. D is correct."
+    },
+    {
+      "id": 97,
+      "topic": "Output Tracing",
+      "difficulty": "medium",
+      "question": "What is the output of this code?\n#include<iostream>\nusing namespace std;\nint main(){\n  int x=2;\n  x = x*x + x;\n  cout << x;\n  return 0;\n}",
+      "options": {
+        "A": "6",
+        "B": "4",
+        "C": "8",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "x=2. x*x = 4. 4+x = 4+2 = 6. x=6. cout prints 6."
+    },
+    {
+      "id": 98,
+      "topic": "Output Tracing",
+      "difficulty": "medium",
+      "question": "What is the output of this code?\n#include<iostream>\nusing namespace std;\nint main(){\n  int a=10, b=3;\n  cout << a%b;\n  return 0;\n}",
+      "options": {
+        "A": "1",
+        "B": "3",
+        "C": "0",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "% is modulus operator. 10 % 3 = 1 (10 = 3*3 + 1, remainder is 1). cout prints 1."
+    },
+    {
+      "id": 99,
+      "topic": "Output Tracing",
+      "difficulty": "hard",
+      "question": "What is the output of this code?\n#include<iostream>\nusing namespace std;\nvoid show(int x){ cout << x*2; }\nint main(){\n  show(5);\n  return 0;\n}",
+      "options": {
+        "A": "10",
+        "B": "25",
+        "C": "5",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "show(5) is called. x=5. x*2 = 10. cout prints 10."
+    },
+    {
+      "id": 100,
+      "topic": "Output Tracing",
+      "difficulty": "hard",
+      "question": "What is the output of this code?\n#include<iostream>\nusing namespace std;\nclass A {\npublic:\n  A(){ cout << \"A \"; }\n  ~A(){ cout << \"~A\"; }\n};\nint main(){\n  A obj;\n  return 0;\n}",
+      "options": {
+        "A": "A",
+        "B": "A ~A",
+        "C": "~A A",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Object created: constructor prints 'A '. Object goes out of scope at end of main: destructor prints '~A'. Output: A ~A."
+    }
+  ]
+}

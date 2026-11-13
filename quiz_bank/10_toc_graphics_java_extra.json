@@ -1,0 +1,1508 @@
+{
+  "subject": "Theory of Computation, Computer Graphics, Java/Web & Advanced Algorithms",
+  "module": "10",
+  "total": 100,
+  "exam_relevance": "10-12 questions expected in BPSC TRE CS exam",
+  "questions": [
+    {
+      "id": 1,
+      "topic": "Theory of Computation",
+      "difficulty": "easy",
+      "question": "Which mathematical model is the simplest automaton that recognizes regular languages?",
+      "options": {
+        "A": "Finite Automaton (DFA/NFA)",
+        "B": "Pushdown Automaton (PDA)",
+        "C": "Linear Bounded Automaton",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Finite Automata (DFA and NFA) recognize exactly the class of Regular Languages (Type-3 in Chomsky hierarchy)."
+    },
+    {
+      "id": 2,
+      "topic": "Theory of Computation",
+      "difficulty": "medium",
+      "question": "In a Deterministic Finite Automaton (DFA), for every state and input symbol there is:",
+      "options": {
+        "A": "Zero or more next states",
+        "B": "Exactly one unique next state",
+        "C": "At least two epsilon moves",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "In a DFA, the transition function δ: Q × Σ → Q maps each state and input symbol to exactly one next state, with no ε-transitions."
+    },
+    {
+      "id": 3,
+      "topic": "Theory of Computation",
+      "difficulty": "medium",
+      "question": "If an NFA has n states, what is the maximum number of states in an equivalent DFA?",
+      "options": {
+        "A": "n squared states",
+        "B": "2n states",
+        "C": "2^n states",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "By subset construction, an n-state NFA can be converted into an equivalent DFA with at most 2^n states."
+    },
+    {
+      "id": 4,
+      "topic": "Theory of Computation",
+      "difficulty": "medium",
+      "question": "Which statement holds true regarding the expressive power of DFA, NFA, and ε-NFA?",
+      "options": {
+        "A": "All recognize regular languages",
+        "B": "Every NFA has an equivalent DFA",
+        "C": "Every ε-NFA has an equivalent NFA",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "DFA, NFA, and ε-NFA are equivalent in power and recognize exactly the regular languages. All three statements A, B, and C are true."
+    },
+    {
+      "id": 5,
+      "topic": "Theory of Computation",
+      "difficulty": "easy",
+      "question": "Which regular expression denotes the set of all binary strings over {0, 1} ending with '01'?",
+      "options": {
+        "A": "(0+1)*01",
+        "B": "01(0+1)*",
+        "C": "(01)*01",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "(0+1)* generates any prefix of 0s and 1s, followed by the mandatory suffix '01'."
+    },
+    {
+      "id": 6,
+      "topic": "Theory of Computation",
+      "difficulty": "medium",
+      "question": "The Pumping Lemma for regular languages is primarily used to:",
+      "options": {
+        "A": "Prove a language is regular",
+        "B": "Minimize states in a DFA",
+        "C": "Convert CFG into Chomsky form",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "The Pumping Lemma is a necessary (not sufficient) condition used to prove that a language is NOT regular, not to prove regularity."
+    },
+    {
+      "id": 7,
+      "topic": "Theory of Computation",
+      "difficulty": "medium",
+      "question": "Which of the following languages is NOT regular?",
+      "options": {
+        "A": "{ a^n b^n | n >= 0 }",
+        "B": "{ a^n | n >= 0 }",
+        "C": "{ (ab)^n | n >= 0 }",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "L = { a^n b^n | n >= 0 } requires unbounded counting/memory to match a's and b's, so it is context-free but not regular."
+    },
+    {
+      "id": 8,
+      "topic": "Theory of Computation",
+      "difficulty": "easy",
+      "question": "Which data structure provides auxiliary memory to a Pushdown Automaton (PDA)?",
+      "options": {
+        "A": "Queue",
+        "B": "Stack",
+        "C": "Hash table",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A Pushdown Automaton extends a finite automaton with an unbounded LIFO stack, enabling it to recognize context-free languages."
+    },
+    {
+      "id": 9,
+      "topic": "Theory of Computation",
+      "difficulty": "medium",
+      "question": "Context-Free Grammars (CFGs) are recognized by which class of automata?",
+      "options": {
+        "A": "Deterministic Finite Automata",
+        "B": "Mealy and Moore Machines",
+        "C": "Non-deterministic Pushdown Automata",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Non-deterministic Pushdown Automata (NPDA) recognize all Context-Free Languages; DPDA recognizes only deterministic CFLs."
+    },
+    {
+      "id": 10,
+      "topic": "Theory of Computation",
+      "difficulty": "hard",
+      "question": "In Chomsky Normal Form (CNF), every production rule (except S → ε) has the form:",
+      "options": {
+        "A": "A → BC (two non-terminals)",
+        "B": "A → a (one terminal)",
+        "C": "A → aB (terminal and variable)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "In CNF, productions are A → BC (two variables) or A → a (single terminal), plus optionally S → ε. Thus both A and B are valid."
+    },
+    {
+      "id": 11,
+      "topic": "Theory of Computation",
+      "difficulty": "medium",
+      "question": "A Context-Free Grammar is called ambiguous if:",
+      "options": {
+        "A": "Some string has two parse trees",
+        "B": "It contains epsilon productions",
+        "C": "It has more than one variable",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "A CFG is ambiguous if at least one string in its language has two or more distinct parse trees (or leftmost derivations)."
+    },
+    {
+      "id": 12,
+      "topic": "Theory of Computation",
+      "difficulty": "medium",
+      "question": "According to the Chomsky Hierarchy, Type-2 grammars correspond to:",
+      "options": {
+        "A": "Unrestricted grammars",
+        "B": "Context-Free grammars",
+        "C": "Context-Sensitive grammars",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Chomsky Hierarchy: Type-0 Unrestricted, Type-1 Context-Sensitive, Type-2 Context-Free, Type-3 Regular."
+    },
+    {
+      "id": 13,
+      "topic": "Theory of Computation",
+      "difficulty": "hard",
+      "question": "Which automaton recognizes Type-1 (Context-Sensitive) languages in the Chomsky Hierarchy?",
+      "options": {
+        "A": "Finite State Machine",
+        "B": "Pushdown Automaton",
+        "C": "Linear Bounded Automaton",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A Linear Bounded Automaton (LBA) is a restricted Turing Machine whose tape is bounded by a linear function of input length."
+    },
+    {
+      "id": 14,
+      "topic": "Theory of Computation",
+      "difficulty": "medium",
+      "question": "The class of languages accepted by Turing Machines is known as:",
+      "options": {
+        "A": "Recursively Enumerable languages",
+        "B": "Deterministic Context-Free only",
+        "C": "Finite Regular languages only",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Turing Machines recognize Recursively Enumerable (Type-0) languages, where the machine halts and accepts strings in the language."
+    },
+    {
+      "id": 15,
+      "topic": "Theory of Computation",
+      "difficulty": "hard",
+      "question": "What does the Halting Problem prove about Turing Machines?",
+      "options": {
+        "A": "It is solvable in polynomial time",
+        "B": "It is undecidable by any algorithm",
+        "C": "It requires exponential stack space",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Alan Turing proved in 1936 that no general algorithm can decide for every TM and input whether the TM eventually halts."
+    },
+    {
+      "id": 16,
+      "topic": "Theory of Computation",
+      "difficulty": "hard",
+      "question": "Which problem is decidable for Deterministic Finite Automata (DFA)?",
+      "options": {
+        "A": "Emptiness problem (L(M) = ∅)",
+        "B": "Equivalence problem (L(M1) = L(M2))",
+        "C": "Membership problem (w ∈ L(M))",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Membership, emptiness, finiteness, and equivalence are all decidable for DFAs. All three statements A, B, and C are decidable."
+    },
+    {
+      "id": 17,
+      "topic": "Theory of Computation",
+      "difficulty": "medium",
+      "question": "Regular languages are closed under which of the following operations?",
+      "options": {
+        "A": "Arbitrary subset operation",
+        "B": "Infinite union of languages",
+        "C": "Intersection and Complement",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Regular languages are closed under intersection and complement (as well as finite union), but not under infinite union or arbitrary subsets."
+    },
+    {
+      "id": 18,
+      "topic": "Theory of Computation",
+      "difficulty": "hard",
+      "question": "Context-Free Languages are NOT closed under which operation?",
+      "options": {
+        "A": "Union operation",
+        "B": "Concatenation operation",
+        "C": "Kleene closure operation",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "CFLs ARE closed under union, concatenation, and Kleene star; they are NOT closed under intersection and complementation."
+    },
+    {
+      "id": 19,
+      "topic": "Theory of Computation",
+      "difficulty": "medium",
+      "question": "In a Mealy machine, the output depends on:",
+      "options": {
+        "A": "Present state only",
+        "B": "Next state only",
+        "C": "Present state and input",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "In a Mealy machine, output is a function of both current state and current input; in a Moore machine, it depends only on current state."
+    },
+    {
+      "id": 20,
+      "topic": "Theory of Computation",
+      "difficulty": "medium",
+      "question": "Which theorem states that finite automata and regular expressions have identical expressive power?",
+      "options": {
+        "A": "Kleene's Theorem",
+        "B": "Rice's Theorem",
+        "C": "Cook-Levin Theorem",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Kleene's theorem establishes that a language is accepted by a finite automaton if and only if it is described by a regular expression."
+    },
+    {
+      "id": 21,
+      "topic": "Theory of Computation",
+      "difficulty": "medium",
+      "question": "How does a multi-tape Turing Machine compare in computational power to a single-tape Turing Machine?",
+      "options": {
+        "A": "It solves undecidable problems",
+        "B": "It has identical recognition power",
+        "C": "It recognizes only Type-1 languages",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Every multi-tape Turing Machine can be simulated by a single-tape Turing Machine, so both recognize the exact same class of languages."
+    },
+    {
+      "id": 22,
+      "topic": "Theory of Computation",
+      "difficulty": "hard",
+      "question": "Which thesis states that any effectively computable function can be computed by a Turing Machine?",
+      "options": {
+        "A": "Myhill-Nerode Theorem",
+        "B": "Post Correspondence Principle",
+        "C": "Church-Turing Thesis",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "The Church-Turing Thesis asserts that intuitive algorithmic computability is equivalent to Turing Machine computability."
+    },
+    {
+      "id": 23,
+      "topic": "Theory of Computation",
+      "difficulty": "hard",
+      "question": "Which problem is UNDECIDABLE for general Context-Free Grammars?",
+      "options": {
+        "A": "Membership problem (CYK)",
+        "B": "Emptiness of language",
+        "C": "Finiteness of language",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Membership (via CYK), emptiness, and finiteness are all decidable for CFGs; ambiguity and equivalence of CFGs are undecidable."
+    },
+    {
+      "id": 24,
+      "topic": "Theory of Computation",
+      "difficulty": "medium",
+      "question": "What is the minimum number of states in a DFA accepting all strings over {0,1} whose length is divisible by 3?",
+      "options": {
+        "A": "3 states",
+        "B": "4 states",
+        "C": "6 states",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "States track length mod 3 (remainders 0, 1, 2), requiring 3 states, with remainder 0 as both initial and accepting state."
+    },
+    {
+      "id": 25,
+      "topic": "Theory of Computation",
+      "difficulty": "easy",
+      "question": "In a Turing Machine transition δ(q, a) = (p, b, R), what does 'R' indicate?",
+      "options": {
+        "A": "Reset tape to start",
+        "B": "Reject the input string",
+        "C": "Move head one cell right",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "In δ(q, a) = (p, b, R), the TM switches to state p, writes symbol b, and moves the read/write head one cell to the Right (R)."
+    },
+    {
+      "id": 26,
+      "topic": "Computer Graphics",
+      "difficulty": "easy",
+      "question": "In raster-scan displays, the electron beam sweeps across the screen:",
+      "options": {
+        "A": "Along object edges only",
+        "B": "From top to bottom row by row",
+        "C": "In random vector paths",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A raster-scan CRT sweeps the electron beam horizontally across each scan line from top to bottom, illuminating pixels stored in the frame buffer."
+    },
+    {
+      "id": 27,
+      "topic": "Computer Graphics",
+      "difficulty": "easy",
+      "question": "Random-scan (vector) displays are primarily suited for:",
+      "options": {
+        "A": "Line-drawing CAD applications",
+        "B": "Photorealistic shaded scenes",
+        "C": "Television broadcast frames",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Random-scan displays direct the electron beam only to parts where a picture is drawn, making them ideal for crisp line drawings and CAD."
+    },
+    {
+      "id": 28,
+      "topic": "Computer Graphics",
+      "difficulty": "medium",
+      "question": "How much memory is required for a 1024 × 768 frame buffer with 24 bits per pixel (true color)?",
+      "options": {
+        "A": "768 KB",
+        "B": "1.5 MB",
+        "C": "2.25 MB",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "1024 × 768 × 3 bytes = 2,359,296 bytes = 2304 KB = 2.25 MB (dividing by 1024 × 1024)."
+    },
+    {
+      "id": 29,
+      "topic": "Computer Graphics",
+      "difficulty": "medium",
+      "question": "Why is Bresenham's line algorithm preferred over the DDA algorithm?",
+      "options": {
+        "A": "Uses floating-point division",
+        "B": "Requires trigonometric tables",
+        "C": "Uses only integer arithmetic",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Bresenham's algorithm uses only integer addition, subtraction, and bit shifts, avoiding slow floating-point math and rounding in DDA."
+    },
+    {
+      "id": 30,
+      "topic": "Computer Graphics",
+      "difficulty": "medium",
+      "question": "In the DDA line-drawing algorithm for a line with slope |m| <= 1 (x1 < x2), each step increments:",
+      "options": {
+        "A": "x by 1 and y by m",
+        "B": "y by 1 and x by m",
+        "C": "x by m and y by 1/m",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "When |m| <= 1, x is sampled at unit intervals (Δx = 1) and y increases by m = Δy/Δx at each step."
+    },
+    {
+      "id": 31,
+      "topic": "Computer Graphics",
+      "difficulty": "medium",
+      "question": "In the Midpoint Circle algorithm, symmetry reduces computation from 8 octants to:",
+      "options": {
+        "A": "Four quadrants",
+        "B": "One octant (45 degrees)",
+        "C": "Two semicircles",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Because a circle has 8-way symmetry, computing points in one 45-degree octant yields all 8 symmetric points around the center."
+    },
+    {
+      "id": 32,
+      "topic": "Computer Graphics",
+      "difficulty": "medium",
+      "question": "In the Cohen-Sutherland 2D line clipping algorithm, each endpoint is assigned a:",
+      "options": {
+        "A": "2-bit region code",
+        "B": "8-bit region code",
+        "C": "4-bit region code",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Cohen-Sutherland divides 2D space into 9 regions using a 4-bit outcode (Top, Bottom, Right, Left = TBRL)."
+    },
+    {
+      "id": 33,
+      "topic": "Computer Graphics",
+      "difficulty": "hard",
+      "question": "In Cohen-Sutherland clipping, a line segment is trivially ACCEPTED if:",
+      "options": {
+        "A": "Bitwise AND of codes is non-zero",
+        "B": "Bitwise OR of both codes is 0000",
+        "C": "Bitwise XOR of codes is 1111",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "If both endpoint region codes are 0000 (bitwise OR = 0000), both endpoints lie inside the clipping window, so the line is trivially accepted."
+    },
+    {
+      "id": 34,
+      "topic": "Computer Graphics",
+      "difficulty": "medium",
+      "question": "Why are homogeneous coordinates (3×3 matrices for 2D) used in geometric transformations?",
+      "options": {
+        "A": "To represent translation via matrix multiplication",
+        "B": "To compose multiple transformations uniformly",
+        "C": "To combine scaling and rotation with translation",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Homogeneous coordinates turn translation into matrix multiplication, allowing translation, rotation, and scaling to be composed into one matrix."
+    },
+    {
+      "id": 35,
+      "topic": "Computer Graphics",
+      "difficulty": "medium",
+      "question": "In 2D graphics, rotating a point (x, y) counter-clockwise by angle θ around the origin produces:",
+      "options": {
+        "A": "(x cosθ - y sinθ, x sinθ + y cosθ)",
+        "B": "(x cosθ + y sinθ, x sinθ - y cosθ)",
+        "C": "(x sinθ - y cosθ, x cosθ + y sinθ)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Standard 2D counter-clockwise rotation matrix gives x' = x cosθ - y sinθ and y' = x sinθ + y cosθ."
+    },
+    {
+      "id": 36,
+      "topic": "Computer Graphics",
+      "difficulty": "easy",
+      "question": "Reflection of a 2D point (x, y) across the X-axis yields:",
+      "options": {
+        "A": "(-x, y)",
+        "B": "(-x, -y)",
+        "C": "(x, -y)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Reflecting across the X-axis keeps the x-coordinate unchanged and negates the y-coordinate: (x, -y)."
+    },
+    {
+      "id": 37,
+      "topic": "Computer Graphics",
+      "difficulty": "medium",
+      "question": "Which 2D transformation changes the shape of an object by shifting coordinates proportionally to another axis?",
+      "options": {
+        "A": "Translation",
+        "B": "Shearing",
+        "C": "Uniform scaling",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Shearing distorts an object's shape (e.g., turning a rectangle into a parallelogram) by shifting one coordinate proportional to the other."
+    },
+    {
+      "id": 38,
+      "topic": "Computer Graphics",
+      "difficulty": "medium",
+      "question": "Which projection preserves relative proportions and parallel lines without foreshortening by distance?",
+      "options": {
+        "A": "Perspective projection",
+        "B": "Vanishing-point projection",
+        "C": "Conical projection",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Parallel (orthographic/oblique) projection preserves parallel lines and true proportions regardless of distance; perspective creates vanishing points."
+    },
+    {
+      "id": 39,
+      "topic": "Computer Graphics",
+      "difficulty": "easy",
+      "question": "In perspective projection, objects appear smaller as their distance from the viewer increases due to:",
+      "options": {
+        "A": "Parallel projection rays",
+        "B": "Perspective foreshortening",
+        "C": "Back-face culling",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Perspective projection projects rays converging at a center of projection, causing distant objects to look smaller (foreshortening)."
+    },
+    {
+      "id": 40,
+      "topic": "Computer Graphics",
+      "difficulty": "medium",
+      "question": "Which hidden-surface elimination algorithm uses a depth buffer storing z-values for each pixel?",
+      "options": {
+        "A": "Z-buffer (Depth-buffer) algorithm",
+        "B": "Cohen-Sutherland algorithm",
+        "C": "Midpoint clipping algorithm",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "The Z-buffer algorithm compares the depth (z-value) of each incoming fragment against the stored depth buffer value to keep the closest surface."
+    },
+    {
+      "id": 41,
+      "topic": "Computer Graphics",
+      "difficulty": "hard",
+      "question": "Painter's algorithm eliminates hidden surfaces by:",
+      "options": {
+        "A": "Subdividing windows into quadrants",
+        "B": "Sorting polygons back to front by depth",
+        "C": "Tracing rays from light sources",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Painter's algorithm sorts surfaces from farthest to nearest (back-to-front) and draws them in order so nearer surfaces overwrite farther ones."
+    },
+    {
+      "id": 42,
+      "topic": "Computer Graphics",
+      "difficulty": "hard",
+      "question": "Which shading model interpolates vertex intensities across a polygon rather than surface normals?",
+      "options": {
+        "A": "Flat (constant) shading",
+        "B": "Phong shading",
+        "C": "Gouraud shading",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Gouraud shading computes lighting at vertices and linearly interpolates intensities; Phong shading interpolates normal vectors per pixel."
+    },
+    {
+      "id": 43,
+      "topic": "Computer Graphics",
+      "difficulty": "medium",
+      "question": "Which of the following is an image-space hidden-surface removal method?",
+      "options": {
+        "A": "Z-buffer algorithm",
+        "B": "Scan-line algorithm",
+        "C": "Area-subdivision (Warnock)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Z-buffer, Scan-line, and Warnock area-subdivision algorithms operate in image space (pixel/screen resolution). Back-face detection is object-space."
+    },
+    {
+      "id": 44,
+      "topic": "Computer Graphics",
+      "difficulty": "easy",
+      "question": "Which color model is additive and primarily used for CRT/LCD display monitors?",
+      "options": {
+        "A": "CMYK color model",
+        "B": "RGB color model",
+        "C": "HSV color model",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "RGB (Red, Green, Blue) is an additive color model used by emissive displays; CMYK is subtractive and used for printing."
+    },
+    {
+      "id": 45,
+      "topic": "Computer Graphics",
+      "difficulty": "medium",
+      "question": "In graphics, the jagged stair-step appearance along slanted raster lines is known as:",
+      "options": {
+        "A": "Aliasing",
+        "B": "Dithering",
+        "C": "Clipping",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Aliasing (jaggies) occurs due to discrete pixel sampling of continuous edges; anti-aliasing smooths these transitions."
+    },
+    {
+      "id": 46,
+      "topic": "Computer Graphics",
+      "difficulty": "medium",
+      "question": "Mapping a 2D coordinate window onto a screen display region is called:",
+      "options": {
+        "A": "Back-face culling",
+        "B": "Gouraud shading",
+        "C": "Window-to-viewport transformation",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "The viewing transformation maps world-coordinate window contents onto the device-coordinate viewport."
+    },
+    {
+      "id": 47,
+      "topic": "Computer Graphics",
+      "difficulty": "hard",
+      "question": "Which polygon clipping algorithm clips a polygon against each window boundary sequentially using four clippers?",
+      "options": {
+        "A": "Sutherland-Hodgman algorithm",
+        "B": "Bresenham circle algorithm",
+        "C": "Flood-fill boundary algorithm",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "The Sutherland-Hodgman algorithm clips a polygon edge-by-edge sequentially against the Left, Right, Bottom, and Top window edges."
+    },
+    {
+      "id": 48,
+      "topic": "Computer Graphics",
+      "difficulty": "medium",
+      "question": "How many control points define a standard cubic Bézier curve?",
+      "options": {
+        "A": "Two control points",
+        "B": "Three control points",
+        "C": "Five control points",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "A cubic Bézier curve (degree 3) is defined by 4 control points (P0, P1, P2, P3). None of 2, 3, or 5 is correct."
+    },
+    {
+      "id": 49,
+      "topic": "Computer Graphics",
+      "difficulty": "hard",
+      "question": "In Phong lighting/shading, which illumination components are combined?",
+      "options": {
+        "A": "Ambient reflection",
+        "B": "Diffuse reflection",
+        "C": "Specular reflection",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "The Phong reflection model sums three components: ambient (background), diffuse (matte Lambertian), and specular (shiny highlights)."
+    },
+    {
+      "id": 50,
+      "topic": "Computer Graphics",
+      "difficulty": "easy",
+      "question": "The number of pixels per unit area or total horizontal by vertical pixel count of a display is called:",
+      "options": {
+        "A": "Aspect ratio",
+        "B": "Refresh rate",
+        "C": "Resolution",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Resolution refers to the number of distinct pixels (e.g., 1920 × 1080) that can be displayed; aspect ratio is width-to-height proportion."
+    },
+    {
+      "id": 51,
+      "topic": "Java, JDBC, Servlets, JSP & XML",
+      "difficulty": "medium",
+      "question": "In Java, which access specifier permits access within the same package AND to subclasses in other packages?",
+      "options": {
+        "A": "protected",
+        "B": "private",
+        "C": "package-private",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "In Java, 'protected' grants access to all classes in the same package as well as subclasses in different packages."
+    },
+    {
+      "id": 52,
+      "topic": "Java, JDBC, Servlets, JSP & XML",
+      "difficulty": "easy",
+      "question": "Which Java package contains the ArrayList collection class?",
+      "options": {
+        "A": "java.lang",
+        "B": "java.util",
+        "C": "java.io",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "ArrayList, HashMap, HashSet, and other Java Collections Framework classes reside in the java.util package."
+    },
+    {
+      "id": 53,
+      "topic": "Java, JDBC, Servlets, JSP & XML",
+      "difficulty": "medium",
+      "question": "What is a key characteristic of Java's ArrayList compared to a standard array?",
+      "options": {
+        "A": "Fixed size at compile time",
+        "B": "Stores primitive int directly",
+        "C": "Resizable dynamic array",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "ArrayList grows and shrinks dynamically at runtime and stores object references (primitives require wrapper classes like Integer)."
+    },
+    {
+      "id": 54,
+      "topic": "Java, JDBC, Servlets, JSP & XML",
+      "difficulty": "medium",
+      "question": "In Java exception handling, which statements about try, catch, and finally blocks are true?",
+      "options": {
+        "A": "try encloses risky code",
+        "B": "catch handles thrown exceptions",
+        "C": "finally runs for cleanup",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three are true: try wraps code that may throw, catch handles matching exceptions, and finally executes cleanup code regardless of exceptions."
+    },
+    {
+      "id": 55,
+      "topic": "Java, JDBC, Servlets, JSP & XML",
+      "difficulty": "medium",
+      "question": "Which Java keyword is used inside a method body to explicitly throw an exception object?",
+      "options": {
+        "A": "throws",
+        "B": "catch",
+        "C": "raise",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Java uses the 'throw' keyword to explicitly throw an exception instance inside a method; 'throws' declares checked exceptions in a signature."
+    },
+    {
+      "id": 56,
+      "topic": "Java, JDBC, Servlets, JSP & XML",
+      "difficulty": "hard",
+      "question": "Which of the following is an unchecked exception (subclass of RuntimeException) in Java?",
+      "options": {
+        "A": "NullPointerException",
+        "B": "IOException",
+        "C": "SQLException",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "NullPointerException extends RuntimeException (unchecked). IOException and SQLException are checked exceptions verified at compile time."
+    },
+    {
+      "id": 57,
+      "topic": "Java, JDBC, Servlets, JSP & XML",
+      "difficulty": "easy",
+      "question": "What does JDBC stand for in Java?",
+      "options": {
+        "A": "Java Data Binary Connector",
+        "B": "Java Database Connectivity",
+        "C": "Java Dynamic Buffer Control",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "JDBC stands for Java Database Connectivity, the standard Java API for connecting and executing queries against relational databases."
+    },
+    {
+      "id": 58,
+      "topic": "Java, JDBC, Servlets, JSP & XML",
+      "difficulty": "medium",
+      "question": "Which JDBC class establishes a Connection object using a database URL, username, and password?",
+      "options": {
+        "A": "ResultSet",
+        "B": "Statement",
+        "C": "DriverManager",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "DriverManager.getConnection(url, user, pass) selects an appropriate registered JDBC driver and returns a Connection object."
+    },
+    {
+      "id": 59,
+      "topic": "Java, JDBC, Servlets, JSP & XML",
+      "difficulty": "medium",
+      "question": "In JDBC, which interface holds the tabular data returned by a SELECT SQL query?",
+      "options": {
+        "A": "ResultSet",
+        "B": "Connection",
+        "C": "DriverManager",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Statement.executeQuery() returns a ResultSet object with a cursor to iterate row by row using next()."
+    },
+    {
+      "id": 60,
+      "topic": "Java, JDBC, Servlets, JSP & XML",
+      "difficulty": "hard",
+      "question": "Which JDBC Statement method executes INSERT, UPDATE, or DELETE queries and returns the affected row count?",
+      "options": {
+        "A": "executeQuery()",
+        "B": "executeUpdate()",
+        "C": "executeSelect()",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "executeUpdate() runs DML statements (INSERT/UPDATE/DELETE) and returns an int count of modified rows; executeQuery() is for SELECT."
+    },
+    {
+      "id": 61,
+      "topic": "Java, JDBC, Servlets, JSP & XML",
+      "difficulty": "medium",
+      "question": "Which method in the Java Servlet lifecycle is called ONLY ONCE when the servlet is first loaded?",
+      "options": {
+        "A": "service()",
+        "B": "doGet()",
+        "C": "init()",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "The Servlet container calls init() once at initialization, service() for each incoming request, and destroy() once before unloading."
+    },
+    {
+      "id": 62,
+      "topic": "Java, JDBC, Servlets, JSP & XML",
+      "difficulty": "medium",
+      "question": "Which sequence of methods defines the standard javax.servlet.Servlet lifecycle?",
+      "options": {
+        "A": "start(), run(), stop()",
+        "B": "open(), read(), close()",
+        "C": "init(), service(), destroy()",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "The Servlet interface defines exactly three lifecycle methods: init() on load, service() per request, and destroy() before unloading."
+    },
+    {
+      "id": 63,
+      "topic": "Java, JDBC, Servlets, JSP & XML",
+      "difficulty": "easy",
+      "question": "In Java Servlets, which method handles HTTP GET requests in HttpServlet?",
+      "options": {
+        "A": "doGet()",
+        "B": "doPost()",
+        "C": "doPut()",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "HttpServlet's service() dispatches HTTP GET requests to doGet(HttpServletRequest, HttpServletResponse) and POST to doPost()."
+    },
+    {
+      "id": 64,
+      "topic": "Java, JDBC, Servlets, JSP & XML",
+      "difficulty": "medium",
+      "question": "A JSP (JavaServer Pages) file is internally compiled by the container into a:",
+      "options": {
+        "A": "Static CSS stylesheet",
+        "B": "Java Servlet",
+        "C": "Standalone SQL script",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "The JSP container translates a .jsp file into Java source code for a Servlet and compiles it into bytecode before execution."
+    },
+    {
+      "id": 65,
+      "topic": "Java, JDBC, Servlets, JSP & XML",
+      "difficulty": "medium",
+      "question": "Which of the following are implicit objects available in JSP without explicit declaration?",
+      "options": {
+        "A": "request and response",
+        "B": "session and application",
+        "C": "out and pageContext",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "JSP provides 9 implicit objects including request, response, session, application, out, pageContext, config, page, and exception."
+    },
+    {
+      "id": 66,
+      "topic": "Java, JDBC, Servlets, JSP & XML",
+      "difficulty": "hard",
+      "question": "In JSP syntax, which tag evaluates a Java expression and writes its result directly to the output stream?",
+      "options": {
+        "A": "<%! ... %>",
+        "B": "<%@ ... %>",
+        "C": "<%= ... %>",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "<%= expr %> is a JSP expression tag that outputs the evaluated value; <%! ... %> declares variables/methods; <%@ ... %> is a directive."
+    },
+    {
+      "id": 67,
+      "topic": "Java, JDBC, Servlets, JSP & XML",
+      "difficulty": "easy",
+      "question": "What does XML stand for?",
+      "options": {
+        "A": "eXtensible Markup Language",
+        "B": "eXtra Modern Link",
+        "C": "eXecutable Meta Logic",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "XML stands for eXtensible Markup Language, a W3C standard for storing and transporting structured data using custom tags."
+    },
+    {
+      "id": 68,
+      "topic": "Java, JDBC, Servlets, JSP & XML",
+      "difficulty": "medium",
+      "question": "When is an XML document considered 'well-formed'?",
+      "options": {
+        "A": "It validates against a CSS file",
+        "B": "It obeys XML syntax rules",
+        "C": "It uses only HTML5 tags",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A well-formed XML document follows XML syntax rules: single root element, proper nesting, closing tags, case sensitivity, and quoted attributes."
+    },
+    {
+      "id": 69,
+      "topic": "Java, JDBC, Servlets, JSP & XML",
+      "difficulty": "hard",
+      "question": "What makes a 'valid' XML document different from merely a 'well-formed' XML document?",
+      "options": {
+        "A": "It uses lowercase tags only",
+        "B": "It omits a root element",
+        "C": "It conforms to a DTD or XSD",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A valid XML document is both well-formed AND conforms to the structure and rules defined in a DTD or XML Schema (XSD)."
+    },
+    {
+      "id": 70,
+      "topic": "Java, JDBC, Servlets, JSP & XML",
+      "difficulty": "medium",
+      "question": "Which statement is TRUE about XML tags?",
+      "options": {
+        "A": "XML tags are case-insensitive",
+        "B": "Closing tags are optional",
+        "C": "Multiple root elements are required",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "In XML, tags are strictly case-sensitive, every non-empty tag must be closed, and there must be exactly ONE root element."
+    },
+    {
+      "id": 71,
+      "topic": "Java, JDBC, Servlets, JSP & XML",
+      "difficulty": "medium",
+      "question": "In Java, which JDBC interface helps prevent SQL Injection by precompiling parameterized SQL queries?",
+      "options": {
+        "A": "PreparedStatement",
+        "B": "ResultSetMetaData",
+        "C": "DriverManager",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "PreparedStatement precompiles SQL with '?' placeholders, separating SQL logic from user parameters and preventing SQL injection."
+    },
+    {
+      "id": 72,
+      "topic": "Java, JDBC, Servlets, JSP & XML",
+      "difficulty": "hard",
+      "question": "In Java, which block is skipped ONLY if System.exit(0) is called or the JVM crashes?",
+      "options": {
+        "A": "try block",
+        "B": "finally block",
+        "C": "catch block",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "The finally block always executes after try/catch (even on return statements), except when System.exit() terminates the JVM or a fatal error occurs."
+    },
+    {
+      "id": 73,
+      "topic": "Java, JDBC, Servlets, JSP & XML",
+      "difficulty": "medium",
+      "question": "Which of the following is a valid rule or feature of standard XML?",
+      "options": {
+        "A": "Uses predefined fixed tags only",
+        "B": "Allows multiple root elements",
+        "C": "Ignores tag case sensitivity",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "XML uses custom user-defined tags, requires exactly one root element, and is strictly case-sensitive. All A, B, and C are false."
+    },
+    {
+      "id": 74,
+      "topic": "Java, JDBC, Servlets, JSP & XML",
+      "difficulty": "hard",
+      "question": "Which method of Java's ArrayList inserts an element at the end of the list?",
+      "options": {
+        "A": "pushBack()",
+        "B": "append()",
+        "C": "insertLast()",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Java's ArrayList uses the add(E element) method to append an element to the end of the list, not pushBack(), append(), or insertLast()."
+    },
+    {
+      "id": 75,
+      "topic": "Java, JDBC, Servlets, JSP & XML",
+      "difficulty": "medium",
+      "question": "Which XML technology is used to define the valid structure and data types of an XML document?",
+      "options": {
+        "A": "DTD (Document Type Definition)",
+        "B": "XSD (XML Schema Definition)",
+        "C": "XSLT (Stylesheet Transformation)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Both DTD and XSD (XML Schema Definition) define valid XML structure and rules (XSD also adds rich data types). XSLT transforms XML."
+    },
+    {
+      "id": 76,
+      "topic": "Algorithms, Optimization & ADC/DAC",
+      "difficulty": "easy",
+      "question": "How does Dynamic Programming (DP) differ from the Greedy approach?",
+      "options": {
+        "A": "DP stores overlapping subproblem results",
+        "B": "Greedy makes locally optimal choices",
+        "C": "DP guarantees global optimum for optimal substructure",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three statements accurately contrast DP (memoization/tabulation of overlapping subproblems) with Greedy (irrevocable local choices)."
+    },
+    {
+      "id": 77,
+      "topic": "Algorithms, Optimization & ADC/DAC",
+      "difficulty": "medium",
+      "question": "Which problem can be solved optimally by a Greedy algorithm?",
+      "options": {
+        "A": "Fractional Knapsack problem",
+        "B": "0/1 Knapsack problem",
+        "C": "Longest Common Subsequence",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Fractional Knapsack is solved greedily by sorting by value/weight ratio; 0/1 Knapsack and LCS require Dynamic Programming."
+    },
+    {
+      "id": 78,
+      "topic": "Algorithms, Optimization & ADC/DAC",
+      "difficulty": "medium",
+      "question": "Dijkstra's single-source shortest path algorithm fails to guarantee correctness when the graph contains:",
+      "options": {
+        "A": "Zero-weight edges",
+        "B": "Negative-weight edges",
+        "C": "Directed cycles with positive weights",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Dijkstra's greedy relaxation assumes path distances never decrease when extended; negative-weight edges break this (use Bellman-Ford instead)."
+    },
+    {
+      "id": 79,
+      "topic": "Algorithms, Optimization & ADC/DAC",
+      "difficulty": "medium",
+      "question": "What is the time complexity of Dijkstra's algorithm using a binary min-heap on a graph with V vertices and E edges?",
+      "options": {
+        "A": "O(V^3)",
+        "B": "O(V + E)",
+        "C": "O((V + E) log V)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Using an adjacency list and binary min-heap, Dijkstra performs at most V extract-min and E decrease-key operations, taking O((V + E) log V)."
+    },
+    {
+      "id": 80,
+      "topic": "Algorithms, Optimization & ADC/DAC",
+      "difficulty": "easy",
+      "question": "Prim's and Kruskal's algorithms are both greedy algorithms used to find:",
+      "options": {
+        "A": "Minimum Spanning Tree (MST)",
+        "B": "All-pairs shortest paths",
+        "C": "Maximum network flow",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Both Prim's (vertex-growing) and Kruskal's (edge-sorting with Union-Find) compute a Minimum Spanning Tree of a weighted connected undirected graph."
+    },
+    {
+      "id": 81,
+      "topic": "Algorithms, Optimization & ADC/DAC",
+      "difficulty": "medium",
+      "question": "Which data structure does Kruskal's algorithm rely on to detect cycles efficiently?",
+      "options": {
+        "A": "Adjacency Matrix",
+        "B": "Disjoint Set (Union-Find)",
+        "C": "Red-Black Tree",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Kruskal's algorithm sorts edges by weight and uses Disjoint Set Union (Find/Union) to skip edges whose endpoints are already connected."
+    },
+    {
+      "id": 82,
+      "topic": "Algorithms, Optimization & ADC/DAC",
+      "difficulty": "hard",
+      "question": "In a graph with n vertices, a Minimum Spanning Tree always contains how many edges?",
+      "options": {
+        "A": "n edges",
+        "B": "n + 1 edges",
+        "C": "n - 1 edges",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Every spanning tree on n vertices is a connected acyclic subgraph and therefore has exactly n - 1 edges."
+    },
+    {
+      "id": 83,
+      "topic": "Algorithms, Optimization & ADC/DAC",
+      "difficulty": "medium",
+      "question": "What is the worst-case time complexity of the KMP (Knuth-Morris-Pratt) string matching algorithm for text length n and pattern length m?",
+      "options": {
+        "A": "O(n × m)",
+        "B": "O(n + m)",
+        "C": "O(n log m)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "KMP precomputes the LPS (longest proper prefix-suffix) failure table in O(m) and scans the text without backtracking in O(n), totaling O(n + m)."
+    },
+    {
+      "id": 84,
+      "topic": "Algorithms, Optimization & ADC/DAC",
+      "difficulty": "hard",
+      "question": "What does the LPS (failure function) array in KMP store for pattern index i?",
+      "options": {
+        "A": "Length of longest proper prefix that is also a suffix",
+        "B": "Total character frequency in the pattern",
+        "C": "Hash value of the substring up to index i",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "KMP's LPS array stores the length of the longest proper prefix of P[0..i] that is also a suffix of P[0..i], avoiding redundant comparisons."
+    },
+    {
+      "id": 85,
+      "topic": "Algorithms, Optimization & ADC/DAC",
+      "difficulty": "medium",
+      "question": "Which properties must hold for every valid Red-Black Tree?",
+      "options": {
+        "A": "The root is always black",
+        "B": "No two adjacent red nodes exist",
+        "C": "Equal black-height on all root-to-NIL paths",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three are core Red-Black Tree invariants: black root, no red-red parent-child pair, and uniform black-height from any node to its descendant leaves."
+    },
+    {
+      "id": 86,
+      "topic": "Algorithms, Optimization & ADC/DAC",
+      "difficulty": "hard",
+      "question": "What is the worst-case height of a Red-Black Tree with n internal nodes?",
+      "options": {
+        "A": "O(n)",
+        "B": "O(√n)",
+        "C": "At most 2 log2(n + 1)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A Red-Black Tree with n internal nodes has height h <= 2 log2(n + 1) = O(log n), guaranteeing logarithmic search, insert, and delete."
+    },
+    {
+      "id": 87,
+      "topic": "Algorithms, Optimization & ADC/DAC",
+      "difficulty": "medium",
+      "question": "According to the Max-Flow Min-Cut Theorem, the maximum flow from source s to sink t equals:",
+      "options": {
+        "A": "Capacity of the maximum s-t cut",
+        "B": "Capacity of the minimum s-t cut",
+        "C": "Sum of all edge capacities",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Ford and Fulkerson's Max-Flow Min-Cut Theorem states that the maximum s-t flow value equals the minimum capacity among all s-t cuts."
+    },
+    {
+      "id": 88,
+      "topic": "Algorithms, Optimization & ADC/DAC",
+      "difficulty": "hard",
+      "question": "Which algorithm computes maximum flow in a flow network by repeatedly finding augmenting paths in a residual graph?",
+      "options": {
+        "A": "Ford-Fulkerson method",
+        "B": "Floyd-Warshall algorithm",
+        "C": "Strassen's algorithm",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "The Ford-Fulkerson method (and Edmonds-Karp using BFS) increases flow along augmenting s-t paths in the residual graph until none remain."
+    },
+    {
+      "id": 89,
+      "topic": "Algorithms, Optimization & ADC/DAC",
+      "difficulty": "medium",
+      "question": "The Simplex algorithm is a classic optimization method used to solve:",
+      "options": {
+        "A": "Linear Programming (LP) problems",
+        "B": "All-pairs shortest paths",
+        "C": "Boolean SAT in constant time",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "George Dantzig's Simplex method solves Linear Programming problems by moving along vertices of the feasible convex polytope to optimize the objective."
+    },
+    {
+      "id": 90,
+      "topic": "Algorithms, Optimization & ADC/DAC",
+      "difficulty": "hard",
+      "question": "In the Simplex method for Linear Programming, an optimal solution (if finite) always occurs at:",
+      "options": {
+        "A": "The strict interior of the region",
+        "B": "Only the origin (0, 0)",
+        "C": "A vertex (corner point) of the feasible region",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "By the Fundamental Theorem of Linear Programming, if an optimal solution exists, at least one extreme point (vertex) of the feasible polytope is optimal."
+    },
+    {
+      "id": 91,
+      "topic": "Algorithms, Optimization & ADC/DAC",
+      "difficulty": "medium",
+      "question": "In a Successive Approximation Register (SAR) ADC, how many clock cycles are needed to convert an n-bit digital output?",
+      "options": {
+        "A": "2^n clock cycles",
+        "B": "n clock cycles",
+        "C": "1 clock cycle",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A Successive Approximation ADC performs binary search from MSB to LSB, requiring exactly n clock cycles for an n-bit conversion."
+    },
+    {
+      "id": 92,
+      "topic": "Algorithms, Optimization & ADC/DAC",
+      "difficulty": "medium",
+      "question": "Which property holds true for a Successive Approximation Register (SAR) ADC?",
+      "options": {
+        "A": "Converts n bits in 1 clock cycle",
+        "B": "Requires 2^n - 1 comparators",
+        "C": "Uses dual-slope integration",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "A SAR ADC uses 1 comparator, an internal DAC, and takes n clock cycles; Flash ADC uses 2^n - 1 comparators in 1 cycle."
+    },
+    {
+      "id": 93,
+      "topic": "Algorithms, Optimization & ADC/DAC",
+      "difficulty": "medium",
+      "question": "Why is the R/2R ladder DAC preferred over a binary-weighted resistor DAC for higher bit resolutions?",
+      "options": {
+        "A": "It requires only two resistor values (R and 2R)",
+        "B": "It avoids extreme resistor ratios",
+        "C": "It is easier to fabricate on ICs",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "An R/2R ladder uses only two resistor values (R and 2R), avoiding huge resistance spreads and simplifying integrated circuit fabrication."
+    },
+    {
+      "id": 94,
+      "topic": "Algorithms, Optimization & ADC/DAC",
+      "difficulty": "hard",
+      "question": "What is the resolution (step size) of an 8-bit DAC with a full-scale reference voltage of 5 V?",
+      "options": {
+        "A": "5 / 256 V",
+        "B": "5 / 128 V",
+        "C": "5 / 8 V",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Step size (1 LSB) = V_ref / (2^n - 1) = 5 / 255 V ≈ 19.6 mV (full-scale output is V_ref × 255/256 if V_ref is full-scale step; standard formula uses 2^n - 1 = 255)."
+    },
+    {
+      "id": 95,
+      "topic": "Algorithms, Optimization & ADC/DAC",
+      "difficulty": "medium",
+      "question": "Which type of Analog-to-Digital Converter (ADC) is the fastest, completing conversion in a single step?",
+      "options": {
+        "A": "Dual-slope integrating ADC",
+        "B": "Flash (parallel comparator) ADC",
+        "C": "Counter-type ramp ADC",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A Flash ADC uses 2^n - 1 parallel comparators to convert an analog input in one step, making it the fastest ADC type."
+    },
+    {
+      "id": 96,
+      "topic": "Algorithms, Optimization & ADC/DAC",
+      "difficulty": "hard",
+      "question": "How many comparators does a 4-bit Flash ADC require?",
+      "options": {
+        "A": "4 comparators",
+        "B": "8 comparators",
+        "C": "16 comparators",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "An n-bit Flash ADC requires 2^n - 1 comparators. For 4 bits, 2^4 - 1 = 15 comparators are needed."
+    },
+    {
+      "id": 97,
+      "topic": "Algorithms, Optimization & ADC/DAC",
+      "difficulty": "medium",
+      "question": "Which two key conditions are required for a problem to be solved effectively using Dynamic Programming?",
+      "options": {
+        "A": "Optimal substructure",
+        "B": "Overlapping subproblems",
+        "C": "Greedy-choice property only",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Dynamic Programming applies when a problem exhibits both optimal substructure (A) and overlapping subproblems (B)."
+    },
+    {
+      "id": 98,
+      "topic": "Algorithms, Optimization & ADC/DAC",
+      "difficulty": "medium",
+      "question": "In an R/2R ladder DAC with n bits, how many distinct resistor values are used?",
+      "options": {
+        "A": "Two values (R and 2R)",
+        "B": "n distinct values",
+        "C": "2^n distinct values",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Regardless of the bit count n, an R/2R ladder network uses only two resistance values: R and 2R."
+    },
+    {
+      "id": 99,
+      "topic": "Algorithms, Optimization & ADC/DAC",
+      "difficulty": "hard",
+      "question": "In the 0/1 Knapsack problem with n items and capacity W, what is the standard Dynamic Programming time complexity?",
+      "options": {
+        "A": "O(n log n)",
+        "B": "O(n × W)",
+        "C": "O(n + W)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Filling the 2D DP table of size (n+1) × (W+1) takes O(n × W) pseudo-polynomial time and space (or O(W) space with 1D DP)."
+    },
+    {
+      "id": 100,
+      "topic": "Algorithms, Optimization & ADC/DAC",
+      "difficulty": "hard",
+      "question": "Which algorithm solves All-Pairs Shortest Paths in O(V^3) time using Dynamic Programming?",
+      "options": {
+        "A": "Prim's algorithm",
+        "B": "Kruskal's algorithm",
+        "C": "Floyd-Warshall algorithm",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "The Floyd-Warshall algorithm uses Dynamic Programming over intermediate vertices k = 1..V to find all-pairs shortest paths in O(V^3) time."
+    }
+  ]
+}

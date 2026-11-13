@@ -1,0 +1,1508 @@
+{
+  "subject": "Operating Systems",
+  "module": "05",
+  "total": 100,
+  "exam_relevance": "8-10 questions expected in BPSC TRE CS exam",
+  "questions": [
+    {
+      "id": 1,
+      "topic": "OS Types & Functions",
+      "difficulty": "easy",
+      "question": "Which of the following is NOT an operating system?",
+      "options": {
+        "A": "Windows",
+        "B": "Oracle",
+        "C": "Linux",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Oracle is a Database Management System (DBMS), not an OS. Linux and Windows are operating systems. (BPSC TRE 2.0 actual question)"
+    },
+    {
+      "id": 2,
+      "topic": "OS Types & Functions",
+      "difficulty": "easy",
+      "question": "The software that runs on hardware and serves as a platform for other software is called:",
+      "options": {
+        "A": "Database",
+        "B": "Compiler",
+        "C": "Operating System",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "An OS is system software that manages hardware resources and provides a platform for application software. (BPSC TRE 2.0)"
+    },
+    {
+      "id": 3,
+      "topic": "OS Types & Functions",
+      "difficulty": "easy",
+      "question": "Which technique marks the beginning of computer communications by allowing multiple users to use a computer simultaneously?",
+      "options": {
+        "A": "Time Sharing",
+        "B": "Real-Time Processing",
+        "C": "Batch Processing",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Time Sharing OS allows multiple users to share CPU time simultaneously, marking the start of computer communications. (BPSC TRE 1.0)"
+    },
+    {
+      "id": 4,
+      "topic": "OS Types & Functions",
+      "difficulty": "easy",
+      "question": "In a Batch Operating System, jobs are:",
+      "options": {
+        "A": "Processed one by one without user interaction",
+        "B": "Processed in real time with strict deadlines",
+        "C": "Shared among multiple users simultaneously",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Batch OS groups similar jobs and processes them without user interaction. No real-time interaction occurs."
+    },
+    {
+      "id": 5,
+      "topic": "OS Types & Functions",
+      "difficulty": "medium",
+      "question": "A Real-Time Operating System (RTOS) is used in:",
+      "options": {
+        "A": "Air traffic control systems",
+        "B": "Missile guidance systems",
+        "C": "Medical life-support systems",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "RTOS is used wherever strict time constraints exist: air traffic control, missile systems, and medical equipment all qualify."
+    },
+    {
+      "id": 6,
+      "topic": "OS Types & Functions",
+      "difficulty": "medium",
+      "question": "Which is NOT a system tool among the following?",
+      "options": {
+        "A": "Folder",
+        "B": "Defragmenter",
+        "C": "Scandisk",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Folder is a file system concept, not a system tool. Scandisk and Defragmenter are system maintenance tools. (BPSC TRE 2.0)"
+    },
+    {
+      "id": 7,
+      "topic": "OS Types & Functions",
+      "difficulty": "easy",
+      "question": "Which of the following is a function of an Operating System?",
+      "options": {
+        "A": "Memory Management",
+        "B": "Process Management",
+        "C": "File System Management",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "OS handles memory management, process management, and file system management — all three are core OS functions."
+    },
+    {
+      "id": 8,
+      "topic": "OS Types & Functions",
+      "difficulty": "medium",
+      "question": "A Distributed Operating System manages:",
+      "options": {
+        "A": "Multiple computers connected via a network as a single system",
+        "B": "A single processor with multiple cores",
+        "C": "Multiple processors on a single machine",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Distributed OS manages multiple independent computers connected via network, presenting them as a single unified system."
+    },
+    {
+      "id": 9,
+      "topic": "OS Types & Functions",
+      "difficulty": "medium",
+      "question": "Which OS type is best suited for applications requiring guaranteed response within a fixed time limit?",
+      "options": {
+        "A": "Batch OS",
+        "B": "Time-Sharing OS",
+        "C": "Real-Time OS",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Real-Time OS guarantees that critical tasks complete within fixed deadlines, essential for safety-critical applications."
+    },
+    {
+      "id": 10,
+      "topic": "OS Types & Functions",
+      "difficulty": "easy",
+      "question": "The kernel is:",
+      "options": {
+        "A": "An application program",
+        "B": "The core part of the operating system",
+        "C": "A type of compiler",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "The kernel is the core of the OS that manages hardware resources, process scheduling, and system calls."
+    },
+    {
+      "id": 11,
+      "topic": "Process States & PCB",
+      "difficulty": "easy",
+      "question": "Which of the following is a valid process state in an operating system?",
+      "options": {
+        "A": "Ready",
+        "B": "Running",
+        "C": "Waiting (Blocked)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three — Ready, Running, and Waiting — are valid process states. The five states are: New, Ready, Running, Waiting, Terminated."
+    },
+    {
+      "id": 12,
+      "topic": "Process States & PCB",
+      "difficulty": "easy",
+      "question": "The Process Control Block (PCB) stores:",
+      "options": {
+        "A": "Process ID (PID) and Process State",
+        "B": "Program Counter and CPU Registers",
+        "C": "Memory Management Information",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "PCB stores PID, state, program counter, CPU registers, memory info, I/O status — all three options are part of PCB."
+    },
+    {
+      "id": 13,
+      "topic": "Process States & PCB",
+      "difficulty": "medium",
+      "question": "When a running process requests an I/O operation, it moves to the _____ state:",
+      "options": {
+        "A": "Terminated",
+        "B": "Waiting (Blocked)",
+        "C": "Ready",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "When a process requests I/O, it cannot continue CPU execution and moves to Waiting/Blocked state until I/O completes."
+    },
+    {
+      "id": 14,
+      "topic": "Process States & PCB",
+      "difficulty": "medium",
+      "question": "The Program Counter (PC) in a PCB stores:",
+      "options": {
+        "A": "The total memory used by the process",
+        "B": "The address of the next instruction to be executed",
+        "C": "The number of instructions executed so far",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Program Counter stores the address of the next instruction to execute, allowing the process to resume after a context switch."
+    },
+    {
+      "id": 15,
+      "topic": "Process States & PCB",
+      "difficulty": "easy",
+      "question": "A process moves from the New state to the Ready state when:",
+      "options": {
+        "A": "The CPU scheduler assigns it the CPU",
+        "B": "It is admitted by the OS and loaded into memory",
+        "C": "It completes execution",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A new process is admitted (loaded into main memory) and placed in the Ready queue; it then transitions to the Ready state."
+    },
+    {
+      "id": 16,
+      "topic": "Process States & PCB",
+      "difficulty": "medium",
+      "question": "Context switching refers to:",
+      "options": {
+        "A": "Saving the state of the current process and loading the state of the next process",
+        "B": "Terminating one process and starting another",
+        "C": "Switching between user mode and kernel mode",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Context switch saves PCB of current process and loads PCB of next scheduled process, allowing CPU to switch between processes."
+    },
+    {
+      "id": 17,
+      "topic": "Process States & PCB",
+      "difficulty": "medium",
+      "question": "Which component of the PCB stores the values of all CPU registers at the time of a context switch?",
+      "options": {
+        "A": "Process Priority",
+        "B": "CPU Register Save Area",
+        "C": "Memory Limits",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "CPU register save area in PCB stores all register values (accumulators, index registers, etc.) so process can resume correctly."
+    },
+    {
+      "id": 18,
+      "topic": "Process States & PCB",
+      "difficulty": "easy",
+      "question": "A process is in the Running state means:",
+      "options": {
+        "A": "It is waiting for I/O completion",
+        "B": "It is ready to execute but waiting for the CPU",
+        "C": "It is currently executing on the CPU",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Running state means the process is currently being executed by the CPU. Only one process runs per CPU at any instant."
+    },
+    {
+      "id": 19,
+      "topic": "Process States & PCB",
+      "difficulty": "medium",
+      "question": "The scheduler that selects a process from the ready queue to give CPU is called:",
+      "options": {
+        "A": "Short-term scheduler (CPU scheduler)",
+        "B": "Medium-term scheduler",
+        "C": "Long-term scheduler",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Short-term scheduler (CPU scheduler) selects which ready process gets the CPU next. It runs very frequently (milliseconds)."
+    },
+    {
+      "id": 20,
+      "topic": "Process States & PCB",
+      "difficulty": "medium",
+      "question": "Dispatch latency is the time taken by the dispatcher to:",
+      "options": {
+        "A": "Stop one process and start another on the CPU",
+        "B": "Complete an I/O operation",
+        "C": "Load a new process from disk to memory",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Dispatch latency = time for dispatcher to stop current process, perform context switch, and start the next process."
+    },
+    {
+      "id": 21,
+      "topic": "CPU Scheduling",
+      "difficulty": "easy",
+      "question": "In FCFS (First Come First Served) scheduling, processes are served in the order they:",
+      "options": {
+        "A": "Have the highest priority",
+        "B": "Have the shortest burst time",
+        "C": "Arrive in the ready queue",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "FCFS is non-preemptive and serves processes in arrival order. It is the simplest CPU scheduling algorithm."
+    },
+    {
+      "id": 22,
+      "topic": "CPU Scheduling",
+      "difficulty": "medium",
+      "question": "The Convoy Effect in FCFS scheduling occurs when:",
+      "options": {
+        "A": "Processes wait indefinitely (starvation)",
+        "B": "Short processes are stuck waiting behind a long CPU-bound process",
+        "C": "High-priority processes wait for low-priority processes",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Convoy effect: short processes wait behind one long process in FCFS, causing all CPU and I/O devices to wait — reduces utilization."
+    },
+    {
+      "id": 23,
+      "topic": "CPU Scheduling",
+      "difficulty": "medium",
+      "question": "SJF (Shortest Job First) scheduling is optimal in terms of:",
+      "options": {
+        "A": "Fairness to all processes",
+        "B": "Minimizing average waiting time",
+        "C": "Maximizing CPU throughput",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "SJF is proven optimal for minimizing average waiting time among all non-preemptive algorithms. But it may cause starvation."
+    },
+    {
+      "id": 24,
+      "topic": "CPU Scheduling",
+      "difficulty": "medium",
+      "question": "SRTF (Shortest Remaining Time First) is the preemptive version of:",
+      "options": {
+        "A": "SJF",
+        "B": "Round Robin",
+        "C": "FCFS",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "SRTF is preemptive SJF: a new process with shorter remaining time preempts the current running process."
+    },
+    {
+      "id": 25,
+      "topic": "CPU Scheduling",
+      "difficulty": "medium",
+      "question": "In Round Robin scheduling, the time quantum (time slice) determines:",
+      "options": {
+        "A": "The priority of each process",
+        "B": "The order of process arrival",
+        "C": "How long each process runs before being preempted",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "RR gives each process a fixed time slice (quantum). After quantum expires, the process is preempted and placed at end of queue."
+    },
+    {
+      "id": 26,
+      "topic": "CPU Scheduling",
+      "difficulty": "medium",
+      "question": "In Priority Scheduling, starvation can occur because:",
+      "options": {
+        "A": "All processes have the same priority",
+        "B": "Low-priority jobs wait indefinitely for CPU",
+        "C": "The CPU is always idle",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Starvation: low-priority processes wait indefinitely as high-priority processes continuously arrive. Solution: aging (increase priority over time)."
+    },
+    {
+      "id": 27,
+      "topic": "CPU Scheduling",
+      "difficulty": "easy",
+      "question": "Which scheduling algorithm is preemptive by nature?",
+      "options": {
+        "A": "FCFS",
+        "B": "Non-preemptive SJF",
+        "C": "Round Robin",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Round Robin is inherently preemptive — each process runs for a time quantum then is preempted. FCFS and non-preemptive SJF run to completion."
+    },
+    {
+      "id": 28,
+      "topic": "CPU Scheduling",
+      "difficulty": "medium",
+      "question": "If processes P1, P2, P3 arrive at time 0 with burst times 24, 3, 3 respectively using FCFS, the average waiting time is:",
+      "options": {
+        "A": "10 ms",
+        "B": "17 ms",
+        "C": "27 ms",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "P1 waits 0, P2 waits 24, P3 waits 27. Avg WT = (0+24+27)/3 = 51/3 = 17 ms. Classic Silberschatz example."
+    },
+    {
+      "id": 29,
+      "topic": "CPU Scheduling",
+      "difficulty": "hard",
+      "question": "For the same processes P1(BT=24), P2(BT=3), P3(BT=3) using SJF, the average waiting time is:",
+      "options": {
+        "A": "7 ms",
+        "B": "3 ms",
+        "C": "17 ms",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "SJF order: P2(0→3), P3(3→6), P1(6→30). WT: P2=0, P3=3, P1=6. Avg=(0+3+6)/3=3 ms. SJF optimal for avg waiting time."
+    },
+    {
+      "id": 30,
+      "topic": "CPU Scheduling",
+      "difficulty": "medium",
+      "question": "Turnaround time for a process is defined as:",
+      "options": {
+        "A": "Time from submission to completion of the process",
+        "B": "Time the process spends waiting in the ready queue",
+        "C": "Time the process spends on the CPU",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Turnaround Time = Completion Time − Arrival Time = Burst Time + Waiting Time."
+    },
+    {
+      "id": 31,
+      "topic": "CPU Scheduling",
+      "difficulty": "medium",
+      "question": "Aging is a technique used in scheduling to:",
+      "options": {
+        "A": "Gradually increase the priority of processes that have waited long",
+        "B": "Reduce the time quantum for long-running processes",
+        "C": "Terminate processes that have been running too long",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Aging prevents starvation by gradually increasing the priority of waiting processes so they eventually get CPU time."
+    },
+    {
+      "id": 32,
+      "topic": "CPU Scheduling",
+      "difficulty": "easy",
+      "question": "Which CPU scheduling algorithm is best for interactive systems?",
+      "options": {
+        "A": "Round Robin",
+        "B": "FCFS",
+        "C": "SJF",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Round Robin is best for time-sharing/interactive systems as it gives each process a fair share of CPU time (small time quantum)."
+    },
+    {
+      "id": 33,
+      "topic": "CPU Scheduling",
+      "difficulty": "medium",
+      "question": "If the time quantum in Round Robin is very large, it behaves like:",
+      "options": {
+        "A": "FCFS",
+        "B": "Priority Scheduling",
+        "C": "SJF",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "With a very large time quantum, each process runs to completion before the next starts — identical to FCFS behavior."
+    },
+    {
+      "id": 34,
+      "topic": "CPU Scheduling",
+      "difficulty": "medium",
+      "question": "CPU utilization and throughput are measures of:",
+      "options": {
+        "A": "CPU performance criteria",
+        "B": "Memory performance criteria",
+        "C": "Disk performance criteria",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "CPU utilization (% time CPU is busy) and throughput (processes completed per unit time) are CPU scheduling performance metrics."
+    },
+    {
+      "id": 35,
+      "topic": "CPU Scheduling",
+      "difficulty": "hard",
+      "question": "In Multilevel Queue Scheduling, which queue gets the HIGHEST priority?",
+      "options": {
+        "A": "Interactive processes",
+        "B": "Background (batch) processes",
+        "C": "System processes",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "In multilevel queue: System processes > Interactive processes > Background processes. System processes have highest priority."
+    },
+    {
+      "id": 36,
+      "topic": "Synchronization & Deadlock",
+      "difficulty": "medium",
+      "question": "The four necessary conditions for deadlock are:",
+      "options": {
+        "A": "Mutual Exclusion and Hold & Wait",
+        "B": "No Preemption and Circular Wait",
+        "C": "Starvation and Priority Inversion",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Deadlock requires ALL four: Mutual Exclusion, Hold & Wait, No Preemption, Circular Wait. A and B are both correct — D applies."
+    },
+    {
+      "id": 37,
+      "topic": "Synchronization & Deadlock",
+      "difficulty": "easy",
+      "question": "Mutual Exclusion as a deadlock condition means:",
+      "options": {
+        "A": "Processes must hold resources while waiting for more",
+        "B": "At least one resource must be held in a non-sharable mode",
+        "C": "Resources cannot be forcibly taken from a process",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Mutual Exclusion: at least one resource is non-sharable — only one process at a time can use it."
+    },
+    {
+      "id": 38,
+      "topic": "Synchronization & Deadlock",
+      "difficulty": "medium",
+      "question": "The Banker's Algorithm is used for:",
+      "options": {
+        "A": "Deadlock avoidance",
+        "B": "Deadlock detection",
+        "C": "Deadlock prevention",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Banker's Algorithm (Dijkstra) is a deadlock AVOIDANCE algorithm. It checks if granting a resource keeps the system in a safe state."
+    },
+    {
+      "id": 39,
+      "topic": "Synchronization & Deadlock",
+      "difficulty": "medium",
+      "question": "A semaphore is a synchronization primitive that can be used to:",
+      "options": {
+        "A": "Solve the critical section problem",
+        "B": "Control access to shared resources",
+        "C": "Implement mutual exclusion",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Semaphores solve critical section problems, control shared resource access, and implement mutual exclusion — all three are correct."
+    },
+    {
+      "id": 40,
+      "topic": "Synchronization & Deadlock",
+      "difficulty": "medium",
+      "question": "A binary semaphore can take values:",
+      "options": {
+        "A": "0 or 1 only",
+        "B": "0 to N (any non-negative integer)",
+        "C": "1 to N only",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Binary semaphore: values restricted to 0 or 1. Used for mutual exclusion (like a mutex). Counting semaphore takes 0 to N."
+    },
+    {
+      "id": 41,
+      "topic": "Synchronization & Deadlock",
+      "difficulty": "easy",
+      "question": "The critical section problem requires which properties to be satisfied?",
+      "options": {
+        "A": "Mutual Exclusion",
+        "B": "Progress",
+        "C": "Bounded Waiting",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Critical section solution must satisfy all three: Mutual Exclusion, Progress, and Bounded Waiting (Silberschatz Chapter 6)."
+    },
+    {
+      "id": 42,
+      "topic": "Synchronization & Deadlock",
+      "difficulty": "medium",
+      "question": "Circular Wait as a deadlock condition means:",
+      "options": {
+        "A": "All processes are in a circular CPU queue",
+        "B": "Processes form a ring topology in a network",
+        "C": "A set of processes each waiting for a resource held by the next process in the set",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Circular Wait: P1 waits for resource held by P2, P2 waits for resource held by P3, ... Pn waits for resource held by P1."
+    },
+    {
+      "id": 43,
+      "topic": "Synchronization & Deadlock",
+      "difficulty": "medium",
+      "question": "To prevent deadlock, which condition can be eliminated by enforcing a total ordering on resource types?",
+      "options": {
+        "A": "Circular Wait",
+        "B": "Hold and Wait",
+        "C": "Mutual Exclusion",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Circular Wait is eliminated by assigning a total order to resource types and requiring processes to request resources in that order."
+    },
+    {
+      "id": 44,
+      "topic": "Synchronization & Deadlock",
+      "difficulty": "hard",
+      "question": "Which of the following is NOT one of the four necessary conditions for deadlock?",
+      "options": {
+        "A": "Mutual Exclusion",
+        "B": "Hold and Wait",
+        "C": "Circular Wait",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Mutual Exclusion, Hold and Wait, No Preemption, and Circular Wait are all 4 necessary conditions. Hence none of A/B/C is excluded."
+    },
+    {
+      "id": 45,
+      "topic": "Synchronization & Deadlock",
+      "difficulty": "medium",
+      "question": "The wait() (P) operation on a semaphore S performs:",
+      "options": {
+        "A": "Increments S and wakes a blocked process if any",
+        "B": "Resets S to its initial value",
+        "C": "Decrements S; if S < 0, the process blocks",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "wait(S)/P(S): S--; if S<0, block the process. signal(S)/V(S): S++; if S<=0, wake a blocked process."
+    },
+    {
+      "id": 46,
+      "topic": "Synchronization & Deadlock",
+      "difficulty": "medium",
+      "question": "Which deadlock handling approach checks the state before allocating resources?",
+      "options": {
+        "A": "Deadlock Detection & Recovery",
+        "B": "Deadlock Prevention",
+        "C": "Deadlock Avoidance",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Deadlock Avoidance (e.g., Banker's Algorithm) checks system state before each allocation to ensure a safe state is maintained."
+    },
+    {
+      "id": 47,
+      "topic": "Synchronization & Deadlock",
+      "difficulty": "easy",
+      "question": "Race condition occurs when:",
+      "options": {
+        "A": "A process runs faster than another",
+        "B": "Concurrent access to shared data causes race",
+        "C": "Two processes compete for CPU time",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Race condition: outcome depends on process execution order. Solved by synchronization mechanisms like mutex and semaphores."
+    },
+    {
+      "id": 48,
+      "topic": "Memory Management",
+      "difficulty": "medium",
+      "question": "Which memory management technique is used to shift processes to make all free memory contiguous (in one block)?",
+      "options": {
+        "A": "Paging",
+        "B": "Segmentation",
+        "C": "Compaction",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Compaction: relocates processes to consolidate all free memory into one large block, eliminating external fragmentation. (BPSC TRE 1.0)"
+    },
+    {
+      "id": 49,
+      "topic": "Memory Management",
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a memory management technique?",
+      "options": {
+        "A": "Segmentation",
+        "B": "Fragmentation",
+        "C": "Paging",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Fragmentation is a problem/side-effect, not a technique. Paging and Segmentation are memory management techniques. (BPSC TRE 3.0)"
+    },
+    {
+      "id": 50,
+      "topic": "Memory Management",
+      "difficulty": "easy",
+      "question": "In Paging, a page is:",
+      "options": {
+        "A": "A variable-size block of physical memory",
+        "B": "A named segment of a program",
+        "C": "A fixed-size block of virtual (logical) memory",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "In paging, logical memory is divided into fixed-size blocks called pages; physical memory is divided into frames of same size. (BPSC TRE 3.0)"
+    },
+    {
+      "id": 51,
+      "topic": "Memory Management",
+      "difficulty": "medium",
+      "question": "If page size is 4 KB, the number of bits required for the page offset is:",
+      "options": {
+        "A": "16 bits",
+        "B": "12 bits",
+        "C": "10 bits",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "4 KB = 4096 = 2^12 bytes, so page offset needs 12 bits to address any byte within a page. (BPSC TRE 3.0)"
+    },
+    {
+      "id": 52,
+      "topic": "Memory Management",
+      "difficulty": "medium",
+      "question": "If physical memory is 6 GB and virtual address space is 10 GB, the amount of data that must be swapped out is:",
+      "options": {
+        "A": "4 GB",
+        "B": "6 GB",
+        "C": "10 GB",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Virtual - Physical = 10 - 6 = 4 GB must reside on disk (swap space) at any time when fully loaded. (BPSC TRE 3.0)"
+    },
+    {
+      "id": 53,
+      "topic": "Memory Management",
+      "difficulty": "medium",
+      "question": "Internal fragmentation occurs in:",
+      "options": {
+        "A": "Paging",
+        "B": "Fixed-size partitioning",
+        "C": "Segmentation",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Internal fragmentation (wasted space inside allocated block) occurs in both Paging and Fixed-size partitioning, not Segmentation."
+    },
+    {
+      "id": 54,
+      "topic": "Memory Management",
+      "difficulty": "medium",
+      "question": "External fragmentation occurs in:",
+      "options": {
+        "A": "Paging",
+        "B": "Segmentation",
+        "C": "Fixed-size partitioning",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "External fragmentation (free memory in non-contiguous blocks) occurs in Segmentation and variable partitioning, not Paging."
+    },
+    {
+      "id": 55,
+      "topic": "Memory Management",
+      "difficulty": "medium",
+      "question": "The page table in paging is used to:",
+      "options": {
+        "A": "Store the contents of each page",
+        "B": "Map logical page numbers to physical frame numbers",
+        "C": "Manage disk scheduling",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Page table maps each logical page number to the corresponding physical frame number for address translation."
+    },
+    {
+      "id": 56,
+      "topic": "Memory Management",
+      "difficulty": "hard",
+      "question": "In a system with 32-bit logical address and 4 KB page size, the number of entries in the page table is:",
+      "options": {
+        "A": "2^20",
+        "B": "2^12",
+        "C": "2^32",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Page offset = 12 bits (4KB=2^12), page number = 32-12 = 20 bits, so page table entries = 2^20 = 1M entries."
+    },
+    {
+      "id": 57,
+      "topic": "Memory Management",
+      "difficulty": "medium",
+      "question": "In segmentation, the logical address consists of:",
+      "options": {
+        "A": "Frame number and byte offset",
+        "B": "Page number and page offset",
+        "C": "Segment number and offset within the segment",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Segmentation logical address = <segment number, offset>. Each segment has a base and limit in the segment table."
+    },
+    {
+      "id": 58,
+      "topic": "Memory Management",
+      "difficulty": "easy",
+      "question": "Which memory allocation strategy selects the smallest hole that is large enough to accommodate the process?",
+      "options": {
+        "A": "Best Fit",
+        "B": "Worst Fit",
+        "C": "First Fit",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Best Fit: allocates the smallest sufficient hole. Minimizes wasted space in the allocated hole but can leave tiny unusable fragments."
+    },
+    {
+      "id": 59,
+      "topic": "Memory Management",
+      "difficulty": "medium",
+      "question": "Swapping in memory management refers to:",
+      "options": {
+        "A": "Replacing one page with another in main memory",
+        "B": "Exchanging two processes between ready queue and running state",
+        "C": "Moving an entire process from main memory to disk and back",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Swapping: entire process moved to backing store (disk) when memory is needed, then swapped back in for execution."
+    },
+    {
+      "id": 60,
+      "topic": "Page Replacement Algorithms",
+      "difficulty": "easy",
+      "question": "In FIFO page replacement, which page is replaced when a page fault occurs?",
+      "options": {
+        "A": "The page that has been in memory the longest (oldest)",
+        "B": "The least recently used page",
+        "C": "The page that will not be used for the longest time",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "FIFO replaces the oldest page (the one that entered memory first), maintaining a simple queue of pages."
+    },
+    {
+      "id": 61,
+      "topic": "Page Replacement Algorithms",
+      "difficulty": "medium",
+      "question": "Belady's Anomaly refers to the phenomenon where:",
+      "options": {
+        "A": "Increasing the number of page frames increases the number of page faults in FIFO",
+        "B": "LRU gives worse performance than FIFO",
+        "C": "More processes cause fewer page faults",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Belady's Anomaly: in FIFO, more frames can paradoxically cause more page faults. LRU and Optimal do not suffer from this anomaly."
+    },
+    {
+      "id": 62,
+      "topic": "Page Replacement Algorithms",
+      "difficulty": "medium",
+      "question": "The Optimal Page Replacement algorithm replaces:",
+      "options": {
+        "A": "Page not used for longest future time",
+        "B": "The page that arrived first",
+        "C": "The least recently used page",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Optimal (OPT/MIN) replaces the page that won't be needed for the longest future time — theoretically optimal but needs future knowledge."
+    },
+    {
+      "id": 63,
+      "topic": "Page Replacement Algorithms",
+      "difficulty": "medium",
+      "question": "LRU (Least Recently Used) page replacement replaces:",
+      "options": {
+        "A": "The page with the lowest page number",
+        "B": "The page that was used least recently (longest time ago)",
+        "C": "The page that was loaded most recently",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "LRU replaces the page that was used least recently, based on the principle of temporal locality."
+    },
+    {
+      "id": 64,
+      "topic": "Page Replacement Algorithms",
+      "difficulty": "medium",
+      "question": "Thrashing in an operating system refers to:",
+      "options": {
+        "A": "A type of disk fragmentation",
+        "B": "A CPU scheduling algorithm",
+        "C": "Excessive paging over actual execution",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Thrashing: excessive page faults cause the system to spend more time swapping pages than executing processes — CPU utilization drops drastically."
+    },
+    {
+      "id": 65,
+      "topic": "Page Replacement Algorithms",
+      "difficulty": "medium",
+      "question": "Which page replacement algorithm does NOT suffer from Belady's Anomaly?",
+      "options": {
+        "A": "FIFO with clock",
+        "B": "FIFO",
+        "C": "LRU",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "LRU and Optimal are stack algorithms — they never suffer Belady's Anomaly. FIFO and Clock are not stack algorithms."
+    },
+    {
+      "id": 66,
+      "topic": "Page Replacement Algorithms",
+      "difficulty": "hard",
+      "question": "For the reference string 7,0,1,2,0,3,0,4,2,3,0,3,2 with 3 frames using FIFO, number of page faults is:",
+      "options": {
+        "A": "15",
+        "B": "12",
+        "C": "9",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Classic Silberschatz example: 7,0,1,2,0,3,0,4,2,3,0,3,2 with 3 frames FIFO gives 9 page faults (3 compulsory + 6 replacement)."
+    },
+    {
+      "id": 67,
+      "topic": "Page Replacement Algorithms",
+      "difficulty": "medium",
+      "question": "The working set model in virtual memory is used to:",
+      "options": {
+        "A": "Implement CPU scheduling",
+        "B": "Track pages actively used by a process",
+        "C": "Manage disk scheduling",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Working Set Model tracks the set of pages a process actively references in a time window to prevent thrashing."
+    },
+    {
+      "id": 68,
+      "topic": "Page Replacement Algorithms",
+      "difficulty": "medium",
+      "question": "A page fault occurs when:",
+      "options": {
+        "A": "The CPU tries to execute an illegal instruction",
+        "B": "A referenced page is not in main memory (not in any frame)",
+        "C": "Main memory is completely full",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Page fault: page referenced by process is not in physical memory — OS must load it from disk into a free or replaced frame."
+    },
+    {
+      "id": 69,
+      "topic": "Page Replacement Algorithms",
+      "difficulty": "medium",
+      "question": "Among FIFO, LRU, and Optimal page replacement algorithms, which gives the minimum number of page faults?",
+      "options": {
+        "A": "LRU",
+        "B": "FIFO",
+        "C": "Optimal",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Optimal gives the minimum possible page faults (theoretical upper bound). It needs future reference knowledge, so not implementable."
+    },
+    {
+      "id": 70,
+      "topic": "Virtual Memory & TLB",
+      "difficulty": "medium",
+      "question": "TLB (Translation Lookaside Buffer) is typically organized as:",
+      "options": {
+        "A": "Associative cache (content-addressable memory)",
+        "B": "Fully sequential memory",
+        "C": "Direct-mapped cache",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "TLB is an associative/content-addressable cache that searches all entries simultaneously for fast page table lookups. (BPSC TRE 3.0)"
+    },
+    {
+      "id": 71,
+      "topic": "Virtual Memory & TLB",
+      "difficulty": "medium",
+      "question": "Virtual memory allows:",
+      "options": {
+        "A": "Programs larger than physical memory to run",
+        "B": "More processes to run concurrently than physical memory would allow",
+        "C": "Processes to be isolated from each other's memory space",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Virtual memory provides all three benefits: running programs larger than RAM, more multiprogramming, and process isolation."
+    },
+    {
+      "id": 72,
+      "topic": "Virtual Memory & TLB",
+      "difficulty": "medium",
+      "question": "The effective memory access time (EMAT) with TLB is calculated using:",
+      "options": {
+        "A": "Only memory access time",
+        "B": "CPU clock speed and memory bus width",
+        "C": "TLB hit ratio, TLB access time, and memory access time",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "EMAT = (hit ratio × (TLB time + mem time)) + ((1-hit ratio) × (TLB time + 2×mem time)). All three factors in A are needed."
+    },
+    {
+      "id": 73,
+      "topic": "Virtual Memory & TLB",
+      "difficulty": "easy",
+      "question": "Swap space in virtual memory is located on:",
+      "options": {
+        "A": "The hard disk (secondary storage)",
+        "B": "Main memory (RAM)",
+        "C": "CPU cache",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Swap space (backing store) is a reserved area on the hard disk used to hold pages not currently in physical memory."
+    },
+    {
+      "id": 74,
+      "topic": "Virtual Memory & TLB",
+      "difficulty": "medium",
+      "question": "When the TLB misses (page number not found in TLB), the OS:",
+      "options": {
+        "A": "Terminates the process",
+        "B": "Looks up the page table in main memory to find the frame number",
+        "C": "Immediately causes a page fault",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "TLB miss: access main memory page table to get frame number, then update TLB with this mapping (unless page is also absent → page fault)."
+    },
+    {
+      "id": 75,
+      "topic": "Virtual Memory & TLB",
+      "difficulty": "medium",
+      "question": "Demand paging means:",
+      "options": {
+        "A": "All pages of a process are loaded before execution begins",
+        "B": "Pages are prefetched based on prediction",
+        "C": "Pages are loaded into memory only when they are needed (on page fault)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Demand paging: pages brought into memory only on demand (when page fault occurs), reducing initial load time and memory use."
+    },
+    {
+      "id": 76,
+      "topic": "Virtual Memory & TLB",
+      "difficulty": "medium",
+      "question": "The valid-invalid bit in a page table entry indicates:",
+      "options": {
+        "A": "Whether the page can be executed",
+        "B": "Whether page is in RAM or on disk",
+        "C": "Whether the page has been modified",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Valid bit=1: page is in physical memory. Valid bit=0: page is on disk — accessing it triggers a page fault."
+    },
+    {
+      "id": 77,
+      "topic": "Virtual Memory & TLB",
+      "difficulty": "hard",
+      "question": "If physical memory is 64 GB and page size is 4 KB, the number of bits for the physical frame number is:",
+      "options": {
+        "A": "34 bits",
+        "B": "36 bits",
+        "C": "24 bits",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "64 GB = 2^36 bytes; page size = 4 KB = 2^12. Frames = 2^36/2^12 = 2^24. So frame number needs 24 bits."
+    },
+    {
+      "id": 78,
+      "topic": "Disk Scheduling",
+      "difficulty": "hard",
+      "question": "With disk head at cylinder 53, service request queue 98,183,37,122,14,124,65,67 using FCFS disk scheduling, the total head movement is:",
+      "options": {
+        "A": "208",
+        "B": "640",
+        "C": "236",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "FCFS: 53→98→183→37→122→14→124→65→67. Movement: 45+85+146+85+108+110+59+2=640. (BPSC TRE 3.0 actual question)"
+    },
+    {
+      "id": 79,
+      "topic": "Disk Scheduling",
+      "difficulty": "easy",
+      "question": "SSTF (Shortest Seek Time First) disk scheduling selects the request:",
+      "options": {
+        "A": "With the highest cylinder number",
+        "B": "Closest to the current head position",
+        "C": "That arrived first in the queue",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "SSTF always services the request nearest to the current head position, minimizing seek time but potentially causing starvation."
+    },
+    {
+      "id": 80,
+      "topic": "Disk Scheduling",
+      "difficulty": "medium",
+      "question": "In SCAN (elevator) disk scheduling, the disk head:",
+      "options": {
+        "A": "Moves in one direction servicing requests, reaches end, then reverses",
+        "B": "Always moves from innermost to outermost cylinder",
+        "C": "Services requests in arrival order",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "SCAN (elevator): head moves in one direction, services all requests, then reverses — like an elevator. Avoids starvation unlike SSTF."
+    },
+    {
+      "id": 81,
+      "topic": "Disk Scheduling",
+      "difficulty": "medium",
+      "question": "C-SCAN (Circular SCAN) differs from SCAN in that:",
+      "options": {
+        "A": "It services requests in circular order regardless of head position",
+        "B": "It reverses direction after servicing each request",
+        "C": "At the end, head jumps back to start without servicing on the return trip",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "C-SCAN: head sweeps in one direction; at end, jumps back to start without servicing — provides more uniform wait times than SCAN."
+    },
+    {
+      "id": 82,
+      "topic": "Disk Scheduling",
+      "difficulty": "medium",
+      "question": "Which disk scheduling algorithm can cause starvation of requests at the edges of the disk?",
+      "options": {
+        "A": "SCAN",
+        "B": "SSTF",
+        "C": "FCFS",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "SSTF can cause starvation: if requests keep arriving near current head position, distant requests wait indefinitely."
+    },
+    {
+      "id": 83,
+      "topic": "Disk Scheduling",
+      "difficulty": "medium",
+      "question": "The seek time in disk I/O is the time for:",
+      "options": {
+        "A": "Transferring data from disk to memory",
+        "B": "Waiting for the desired sector to rotate under the head",
+        "C": "Moving the disk arm to the correct cylinder (track)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Seek time: arm movement to correct track. Rotational latency: waiting for sector. Transfer time: actual data transfer."
+    },
+    {
+      "id": 84,
+      "topic": "Disk Scheduling",
+      "difficulty": "medium",
+      "question": "Total disk access time = :",
+      "options": {
+        "A": "Seek time + Rotational latency + Transfer time",
+        "B": "Rotational latency + Transfer time only",
+        "C": "Seek time + Transfer time only",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Total disk access time = Seek Time (arm to track) + Rotational Latency (wait for sector) + Transfer Time (data read/write)."
+    },
+    {
+      "id": 85,
+      "topic": "Disk Scheduling",
+      "difficulty": "medium",
+      "question": "FCFS disk scheduling is:",
+      "options": {
+        "A": "Preemptive",
+        "B": "Fair to all requests but can have high total head movement",
+        "C": "Optimal for minimizing seek time",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "FCFS is fair (no starvation) but can have high total head movement as it doesn't optimize for seek distance."
+    },
+    {
+      "id": 86,
+      "topic": "System Software",
+      "difficulty": "easy",
+      "question": "A compiler translates:",
+      "options": {
+        "A": "High-level language line by line during execution",
+        "B": "Assembly language to machine code",
+        "C": "High-level language to machine code (all at once)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Compiler translates entire high-level language program to machine code at once before execution. Interpreter translates line by line."
+    },
+    {
+      "id": 87,
+      "topic": "System Software",
+      "difficulty": "easy",
+      "question": "An assembler converts:",
+      "options": {
+        "A": "High-level language to assembly language",
+        "B": "Machine language to assembly language",
+        "C": "Assembly language (mnemonic code) to machine language (binary)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Assembler: assembly language (mnemonics like MOV, ADD) → machine language (binary opcodes). One-to-one translation."
+    },
+    {
+      "id": 88,
+      "topic": "System Software",
+      "difficulty": "medium",
+      "question": "The difference between a compiler and an interpreter is:",
+      "options": {
+        "A": "Compiler translates entire program at once; interpreter translates one statement at a time",
+        "B": "Compiler is faster during execution; interpreter is slower",
+        "C": "Interpreter produces an executable file; compiler does not",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Both A and B are correct: compiler translates all at once (faster execution); interpreter line-by-line (slower execution). D applies."
+    },
+    {
+      "id": 89,
+      "topic": "System Software",
+      "difficulty": "medium",
+      "question": "A linker is responsible for:",
+      "options": {
+        "A": "Combining multiple object files and libraries into a single executable",
+        "B": "Loading the executable into memory for execution",
+        "C": "Converting source code into object code",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Linker: combines compiled object files (.obj) and library files into a single executable file, resolving external references."
+    },
+    {
+      "id": 90,
+      "topic": "System Software",
+      "difficulty": "medium",
+      "question": "A loader is responsible for:",
+      "options": {
+        "A": "Translating source code to object code",
+        "B": "Loading the executable program from disk into main memory for execution",
+        "C": "Linking object files together",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Loader: loads the executable file from secondary storage into RAM and prepares it for CPU execution."
+    },
+    {
+      "id": 91,
+      "topic": "System Software",
+      "difficulty": "medium",
+      "question": "Method of accessing I/O by repeatedly checking the status of an I/O device is called:",
+      "options": {
+        "A": "Interrupt-Driven I/O",
+        "B": "Direct Memory Access (DMA)",
+        "C": "Polling (Program-Controlled I/O)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Polling: CPU repeatedly checks I/O device status in a busy-wait loop. Wasteful of CPU time. Also called program-controlled I/O. (BPSC TRE 1.0)"
+    },
+    {
+      "id": 92,
+      "topic": "System Software",
+      "difficulty": "medium",
+      "question": "In Interrupt-Driven I/O, the CPU:",
+      "options": {
+        "A": "Directly accesses memory without CPU involvement",
+        "B": "Continuously polls the device until I/O completes",
+        "C": "Initiates I/O then continues other work; device interrupts CPU when done",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Interrupt-driven I/O: CPU starts I/O, continues other tasks, device sends interrupt when done — more efficient than polling."
+    },
+    {
+      "id": 93,
+      "topic": "System Software",
+      "difficulty": "medium",
+      "question": "DMA (Direct Memory Access) is used to:",
+      "options": {
+        "A": "Transfer data directly between I/O devices and memory without CPU involvement",
+        "B": "Replace the need for a memory controller",
+        "C": "Speed up CPU arithmetic operations",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "DMA controller transfers data between I/O devices and RAM directly, freeing CPU for other tasks during large data transfers."
+    },
+    {
+      "id": 94,
+      "topic": "Miscellaneous OS",
+      "difficulty": "medium",
+      "question": "The Dining Philosophers problem illustrates:",
+      "options": {
+        "A": "Deadlock and starvation in concurrent systems",
+        "B": "CPU scheduling algorithms",
+        "C": "Memory management techniques",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Dining Philosophers: 5 philosophers, 5 chopsticks — classic problem illustrating deadlock and starvation in resource allocation."
+    },
+    {
+      "id": 95,
+      "topic": "Miscellaneous OS",
+      "difficulty": "medium",
+      "question": "The Reader-Writer problem addresses:",
+      "options": {
+        "A": "File system organization",
+        "B": "Concurrent reads and exclusive writes",
+        "C": "Disk read and write scheduling",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Reader-Writer: multiple readers can read simultaneously, but writers need exclusive access. Requires synchronization to prevent inconsistency."
+    },
+    {
+      "id": 96,
+      "topic": "Miscellaneous OS",
+      "difficulty": "medium",
+      "question": "Peterson's solution solves the critical section problem for:",
+      "options": {
+        "A": "Three processes only",
+        "B": "Two processes",
+        "C": "N processes (any number)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Peterson's solution is a software-based solution for the critical section problem for exactly two processes."
+    },
+    {
+      "id": 97,
+      "topic": "Miscellaneous OS",
+      "difficulty": "easy",
+      "question": "A process and a thread differ in that:",
+      "options": {
+        "A": "Threads share the same address space within a process; processes have separate address spaces",
+        "B": "Processes are faster to create than threads",
+        "C": "Threads are heavier than processes in terms of resource consumption",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Threads share code, data, and OS resources of their parent process. Processes are independent with separate address spaces."
+    },
+    {
+      "id": 98,
+      "topic": "Miscellaneous OS",
+      "difficulty": "medium",
+      "question": "Spooling (Simultaneous Peripheral Operations On-Line) is used for:",
+      "options": {
+        "A": "Virtual memory management",
+        "B": "CPU scheduling of processes",
+        "C": "Buffering slow I/O output onto disk",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Spooling: output for slow devices (printers) is written to disk spool queue, allowing CPU to continue while printer works at its own pace."
+    },
+    {
+      "id": 99,
+      "topic": "Miscellaneous OS",
+      "difficulty": "medium",
+      "question": "A monolithic kernel, as used in Linux, means:",
+      "options": {
+        "A": "The kernel runs in user space",
+        "B": "Each OS service runs in a separate process",
+        "C": "All OS services run in kernel space (single large executable)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Monolithic kernel: all OS services (file system, drivers, scheduler) run in kernel space as one unit. Efficient but less modular."
+    },
+    {
+      "id": 100,
+      "topic": "Miscellaneous OS",
+      "difficulty": "medium",
+      "question": "The Producer-Consumer problem is solved using semaphores where:",
+      "options": {
+        "A": "Mutex ensures mutual exclusion on the buffer",
+        "B": "Full semaphore tracks filled slots; Empty semaphore tracks empty slots",
+        "C": "Both mutex and counting semaphores are used together",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Producer-Consumer uses: Empty (count empty slots), Full (count filled slots) counting semaphores + mutex for exclusive buffer access. All three correct."
+    }
+  ]
+}

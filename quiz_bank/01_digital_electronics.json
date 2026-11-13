@@ -1,0 +1,1508 @@
+{
+  "subject": "Digital Electronics & Number Systems",
+  "module": "01",
+  "total": 100,
+  "exam_relevance": "15 questions expected in BPSC TRE CS exam",
+  "questions": [
+    {
+      "id": 1,
+      "topic": "Number Systems",
+      "difficulty": "medium",
+      "question": "The binary equivalent of decimal number 1234 is:",
+      "options": {
+        "A": "10011010010",
+        "B": "10011100010",
+        "C": "10011010100",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "1234÷2 repeatedly: remainders read upward give 10011010010. Verify: 1024+128+64+16+2=1234."
+    },
+    {
+      "id": 2,
+      "topic": "Number Systems",
+      "difficulty": "medium",
+      "question": "The octal equivalent of decimal number 1234 is:",
+      "options": {
+        "A": "3222",
+        "B": "2232",
+        "C": "2322",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "1234÷8=154r2, 154÷8=19r2, 19÷8=2r3, 2÷8=0r2. Read upward: 2322 (octal)."
+    },
+    {
+      "id": 3,
+      "topic": "Number Systems",
+      "difficulty": "medium",
+      "question": "The hexadecimal equivalent of decimal number 1234 is:",
+      "options": {
+        "A": "4D2",
+        "B": "4E2",
+        "C": "D42",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "1234÷16=77r2, 77÷16=4r13(D), 4÷16=0r4. Read upward: 4D2 (hex)."
+    },
+    {
+      "id": 4,
+      "topic": "Number Systems",
+      "difficulty": "easy",
+      "question": "The binary equivalent of decimal number 25 is:",
+      "options": {
+        "A": "11001",
+        "B": "11010",
+        "C": "10110",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "25=16+8+1=2^4+2^3+2^0=11001. Division: 25→12r1→6r0→3r0→1r1→0r1 → read upward: 11001."
+    },
+    {
+      "id": 5,
+      "topic": "Number Systems",
+      "difficulty": "easy",
+      "question": "The decimal equivalent of binary number 11010 is:",
+      "options": {
+        "A": "24",
+        "B": "26",
+        "C": "28",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "11010 = 1×16+1×8+0×4+1×2+0×1 = 16+8+2 = 26."
+    },
+    {
+      "id": 6,
+      "topic": "Number Systems",
+      "difficulty": "easy",
+      "question": "The hexadecimal number FF in decimal is:",
+      "options": {
+        "A": "256",
+        "B": "255",
+        "C": "250",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "FF = 15×16 + 15×1 = 240+15 = 255. FF is the maximum value of one hex byte."
+    },
+    {
+      "id": 7,
+      "topic": "Number Systems",
+      "difficulty": "medium",
+      "question": "The binary fraction 0.101 in decimal is:",
+      "options": {
+        "A": "0.625",
+        "B": "0.5",
+        "C": "0.75",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "0.101 = 1×2^-1 + 0×2^-2 + 1×2^-3 = 0.5+0+0.125 = 0.625."
+    },
+    {
+      "id": 8,
+      "topic": "Number Systems",
+      "difficulty": "medium",
+      "question": "The octal number 777 in decimal is:",
+      "options": {
+        "A": "512",
+        "B": "255",
+        "C": "511",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "777(octal) = 7×64+7×8+7×1 = 448+56+7 = 511."
+    },
+    {
+      "id": 9,
+      "topic": "Number Systems",
+      "difficulty": "easy",
+      "question": "To convert octal to binary, each octal digit is replaced by:",
+      "options": {
+        "A": "4 binary digits",
+        "B": "3 binary digits",
+        "C": "2 binary digits",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Each octal digit (0-7) maps exactly to 3 bits (000 to 111) since 2^3=8."
+    },
+    {
+      "id": 10,
+      "topic": "Number Systems",
+      "difficulty": "easy",
+      "question": "To convert hexadecimal to binary, each hex digit is replaced by:",
+      "options": {
+        "A": "4 binary digits",
+        "B": "3 binary digits",
+        "C": "8 binary digits",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Each hex digit (0-F, i.e., 0-15) maps to exactly 4 bits (0000 to 1111) since 2^4=16."
+    },
+    {
+      "id": 11,
+      "topic": "Number Systems",
+      "difficulty": "medium",
+      "question": "The binary number 10110100 in hexadecimal is:",
+      "options": {
+        "A": "A4",
+        "B": "B4",
+        "C": "C4",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Group in 4s: 1011=B, 0100=4. So 10110100(binary) = B4(hex)."
+    },
+    {
+      "id": 12,
+      "topic": "Number Systems",
+      "difficulty": "medium",
+      "question": "The decimal number 0.625 converted to binary fraction is:",
+      "options": {
+        "A": "0.011",
+        "B": "0.101",
+        "C": "0.110",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "0.625×2=1.25→1; 0.25×2=0.5→0; 0.5×2=1.0→1. Read downward: 0.101."
+    },
+    {
+      "id": 13,
+      "topic": "Complements & Signed Numbers",
+      "difficulty": "easy",
+      "question": "The 1's complement of binary number 10110 is:",
+      "options": {
+        "A": "11001",
+        "B": "01010",
+        "C": "01001",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "1's complement: flip every bit. 10110 → 01001. Each 1 becomes 0 and each 0 becomes 1."
+    },
+    {
+      "id": 14,
+      "topic": "Complements & Signed Numbers",
+      "difficulty": "easy",
+      "question": "The 2's complement of binary number 10110 is:",
+      "options": {
+        "A": "01010",
+        "B": "01011",
+        "C": "01001",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "2's complement = 1's complement + 1. 1's comp of 10110 = 01001; 01001+1 = 01010."
+    },
+    {
+      "id": 15,
+      "topic": "Complements & Signed Numbers",
+      "difficulty": "easy",
+      "question": "The 9's complement of decimal number 456 is:",
+      "options": {
+        "A": "554",
+        "B": "544",
+        "C": "543",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "9's complement: subtract each digit from 9. 9-4=5, 9-5=4, 9-6=3. Result: 543."
+    },
+    {
+      "id": 16,
+      "topic": "Complements & Signed Numbers",
+      "difficulty": "easy",
+      "question": "The 10's complement of decimal number 456 is:",
+      "options": {
+        "A": "554",
+        "B": "544",
+        "C": "543",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "10's complement = 9's complement + 1. 9's comp of 456 = 543; 543+1 = 544."
+    },
+    {
+      "id": 17,
+      "topic": "Complements & Signed Numbers",
+      "difficulty": "medium",
+      "question": "In an 8-bit signed 2's complement representation, the range of integers that can be represented is:",
+      "options": {
+        "A": "-128 to +127",
+        "B": "-128 to +128",
+        "C": "-127 to +127",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "8-bit 2's complement: range = -2^7 to 2^7-1 = -128 to +127. MSB=1 means negative."
+    },
+    {
+      "id": 18,
+      "topic": "Complements & Signed Numbers",
+      "difficulty": "medium",
+      "question": "In 2's complement 8-bit system, the decimal value of 11111111 is:",
+      "options": {
+        "A": "-127",
+        "B": "255",
+        "C": "-1",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "11111111 in 2's complement: MSB=1 means negative. 2's comp of 11111111 = 00000001 = 1. So value = -1."
+    },
+    {
+      "id": 19,
+      "topic": "Complements & Signed Numbers",
+      "difficulty": "medium",
+      "question": "Subtraction A - B using 2's complement is performed as:",
+      "options": {
+        "A": "(2's complement of A) + B",
+        "B": "A + (1's complement of B)",
+        "C": "A + (2's complement of B)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A - B = A + (-B). In 2's complement, -B is represented as 2's complement of B."
+    },
+    {
+      "id": 20,
+      "topic": "Complements & Signed Numbers",
+      "difficulty": "medium",
+      "question": "Overflow occurs in 2's complement addition when:",
+      "options": {
+        "A": "Two positive numbers add to give a negative result",
+        "B": "Two negative numbers add to give a positive result",
+        "C": "A positive and negative number are added",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Overflow occurs when two positives give negative OR two negatives give positive. Both A and B are correct overflow conditions."
+    },
+    {
+      "id": 21,
+      "topic": "Complements & Signed Numbers",
+      "difficulty": "hard",
+      "question": "In sign-magnitude representation, +0 and -0 are:",
+      "options": {
+        "A": "Not possible to represent",
+        "B": "Same representation",
+        "C": "Two different representations of zero",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Sign-magnitude has +0 (0 0000000) and -0 (1 0000000) — two distinct bit patterns for zero, unlike 2's complement."
+    },
+    {
+      "id": 22,
+      "topic": "Complements & Signed Numbers",
+      "difficulty": "medium",
+      "question": "The 1's complement representation of -7 in 4-bit system is:",
+      "options": {
+        "A": "1001",
+        "B": "1000",
+        "C": "1110",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "+7 = 0111 in 4-bit. 1's complement of 0111 = 1000. So -7 in 1's complement = 1000."
+    },
+    {
+      "id": 23,
+      "topic": "Complements & Signed Numbers",
+      "difficulty": "medium",
+      "question": "The 2's complement representation of -7 in 4-bit system is:",
+      "options": {
+        "A": "1001",
+        "B": "1110",
+        "C": "1000",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "+7=0111. 1's comp=1000. 2's comp=1000+1=1001. So -7 in 2's complement 4-bit = 1001."
+    },
+    {
+      "id": 24,
+      "topic": "Complements & Signed Numbers",
+      "difficulty": "hard",
+      "question": "In 4-bit 2's complement, the number 1000 represents:",
+      "options": {
+        "A": "-7",
+        "B": "+8",
+        "C": "-8",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "4-bit 2's comp: 1000 → take 2's comp: 0111+1=1000. This is -8. Range is -8 to +7 for 4-bit."
+    },
+    {
+      "id": 25,
+      "topic": "Complements & Signed Numbers",
+      "difficulty": "medium",
+      "question": "Subtraction 15 - 9 using 10's complement method gives:",
+      "options": {
+        "A": "6",
+        "B": "24",
+        "C": "4",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "10's comp of 09 = 91. 15+91=106. Discard carry: 06. Result = 6. Correct."
+    },
+    {
+      "id": 26,
+      "topic": "Binary Codes",
+      "difficulty": "easy",
+      "question": "The BCD (Binary Coded Decimal) representation of decimal 9 is:",
+      "options": {
+        "A": "1000",
+        "B": "1001",
+        "C": "1010",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "BCD encodes each decimal digit separately in 4 bits. Decimal 9 = 1001 in BCD."
+    },
+    {
+      "id": 27,
+      "topic": "Binary Codes",
+      "difficulty": "easy",
+      "question": "The maximum decimal digit that can be represented in BCD is:",
+      "options": {
+        "A": "15",
+        "B": "16",
+        "C": "8",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "BCD max digit is 9 (1001). Codes 1010–1111 (10–15) are invalid in BCD. None of A/B/C is correct."
+    },
+    {
+      "id": 28,
+      "topic": "Binary Codes",
+      "difficulty": "medium",
+      "question": "The Excess-3 code is obtained from BCD by:",
+      "options": {
+        "A": "Adding 3 (0011) to each BCD digit",
+        "B": "Adding 6 to each BCD digit",
+        "C": "Subtracting 3 from each BCD digit",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Excess-3 (XS-3) = BCD + 0011. E.g., decimal 5 = BCD 0101; XS-3 = 0101+0011 = 1000."
+    },
+    {
+      "id": 29,
+      "topic": "Binary Codes",
+      "difficulty": "medium",
+      "question": "The Excess-3 code for decimal digit 0 is:",
+      "options": {
+        "A": "0000",
+        "B": "0011",
+        "C": "0110",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "XS-3 of 0 = BCD(0)+3 = 0000+0011 = 0011."
+    },
+    {
+      "id": 30,
+      "topic": "Binary Codes",
+      "difficulty": "medium",
+      "question": "Gray code is also known as:",
+      "options": {
+        "A": "Reflected Binary Code",
+        "B": "Unit Distance Code",
+        "C": "Cyclic Code",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Gray code is called Reflected Binary Code, Unit Distance Code, AND Cyclic Code. All three terms are used in textbooks."
+    },
+    {
+      "id": 31,
+      "topic": "Binary Codes",
+      "difficulty": "medium",
+      "question": "The key property of Gray code is that consecutive values differ by exactly:",
+      "options": {
+        "A": "2 bits",
+        "B": "3 bits",
+        "C": "1 bit",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Gray code is a unit-distance code: consecutive values differ by exactly 1 bit, reducing errors in analog-to-digital conversion."
+    },
+    {
+      "id": 32,
+      "topic": "Binary Codes",
+      "difficulty": "medium",
+      "question": "To convert binary to Gray code, the MSB of Gray code is:",
+      "options": {
+        "A": "Complement of the MSB of binary",
+        "B": "Same as the MSB of binary",
+        "C": "XOR of all binary bits",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Binary to Gray: MSB of Gray = MSB of binary. Each subsequent Gray bit = XOR of corresponding and previous binary bit."
+    },
+    {
+      "id": 33,
+      "topic": "Binary Codes",
+      "difficulty": "hard",
+      "question": "In Hamming code, the minimum number of parity bits required to protect 4 data bits is:",
+      "options": {
+        "A": "3",
+        "B": "2",
+        "C": "4",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Hamming condition: 2^r ≥ r+m+1. For m=4: 2^3=8 ≥ 3+4+1=8. So r=3 parity bits are needed."
+    },
+    {
+      "id": 34,
+      "topic": "Binary Codes",
+      "difficulty": "hard",
+      "question": "Hamming code can detect and correct:",
+      "options": {
+        "A": "Single-bit errors",
+        "B": "Burst errors",
+        "C": "Double-bit errors",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Standard Hamming code corrects single-bit errors. With an extra parity bit (SECDED) it detects double-bit errors but cannot correct them."
+    },
+    {
+      "id": 35,
+      "topic": "Binary Codes",
+      "difficulty": "medium",
+      "question": "BCD code uses how many bits to represent each decimal digit?",
+      "options": {
+        "A": "3",
+        "B": "8",
+        "C": "4",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "BCD (Binary Coded Decimal) uses 4 bits per decimal digit. E.g., 5 → 0101."
+    },
+    {
+      "id": 36,
+      "topic": "Boolean Algebra",
+      "difficulty": "easy",
+      "question": "According to the Absorption law in Boolean algebra, x + xy equals:",
+      "options": {
+        "A": "xy",
+        "B": "x + y",
+        "C": "x",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Absorption law: x + xy = x(1+y) = x·1 = x. This is the standard absorption identity."
+    },
+    {
+      "id": 37,
+      "topic": "Boolean Algebra",
+      "difficulty": "easy",
+      "question": "According to De Morgan's theorem, the complement of (A + B) is:",
+      "options": {
+        "A": "AB",
+        "B": "A'B'",
+        "C": "A'+B'",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "De Morgan's: (A+B)' = A'·B'. Complement of OR = AND of complements."
+    },
+    {
+      "id": 38,
+      "topic": "Boolean Algebra",
+      "difficulty": "easy",
+      "question": "According to De Morgan's theorem, the complement of (A · B) is:",
+      "options": {
+        "A": "A' + B'",
+        "B": "A'B'",
+        "C": "A + B",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "De Morgan's: (A·B)' = A'+B'. Complement of AND = OR of complements."
+    },
+    {
+      "id": 39,
+      "topic": "Boolean Algebra",
+      "difficulty": "medium",
+      "question": "The simplified form of Boolean expression F = AC + AB + ABC + BC is:",
+      "options": {
+        "A": "AC + B",
+        "B": "A + BC",
+        "C": "C + AB",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "F=AC+AB+ABC+BC. ABC is redundant (covered by AC and AB). BC+AC=C(A+B+1)... by consensus: F=C+AB (from TRE 2.0)."
+    },
+    {
+      "id": 40,
+      "topic": "Boolean Algebra",
+      "difficulty": "medium",
+      "question": "The expression AB + AB' + A'C + AC simplifies to (independent of which variable)?",
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "AB+AB'=A(B+B')=A. A'C+AC=(A'+A)C=C. So expression = A+C, which is independent of B."
+    },
+    {
+      "id": 41,
+      "topic": "Boolean Algebra",
+      "difficulty": "easy",
+      "question": "The Boolean expression Y = AB + BC + AC is in which form?",
+      "options": {
+        "A": "SOP (Sum of Products)",
+        "B": "Canonical minterm",
+        "C": "POS (Product of Sums)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Y=AB+BC+AC is a Sum of Products (SOP): AND terms (products) ORed (summed) together."
+    },
+    {
+      "id": 42,
+      "topic": "Boolean Algebra",
+      "difficulty": "medium",
+      "question": "Boolean algebra can be used for:",
+      "options": {
+        "A": "Simplifying logic circuits",
+        "B": "Analyzing switching circuits",
+        "C": "Designing digital systems",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Boolean algebra is used for simplifying circuits, analyzing switching networks, and designing digital systems. All three are correct."
+    },
+    {
+      "id": 43,
+      "topic": "Boolean Algebra",
+      "difficulty": "easy",
+      "question": "The dual of Boolean expression A + 0 = A is:",
+      "options": {
+        "A": "A · 1 = A",
+        "B": "A · 0 = 0",
+        "C": "A + 1 = 1",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Duality principle: swap + with · and 0 with 1. A+0=A becomes A·1=A."
+    },
+    {
+      "id": 44,
+      "topic": "Boolean Algebra",
+      "difficulty": "medium",
+      "question": "The idempotent law in Boolean algebra states:",
+      "options": {
+        "A": "A + A = A",
+        "B": "A · A = A",
+        "C": "A + 0 = A",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Idempotent law: A+A=A AND A·A=A. Both A and B are correct statements of the idempotent law."
+    },
+    {
+      "id": 45,
+      "topic": "Boolean Algebra",
+      "difficulty": "easy",
+      "question": "The complement law in Boolean algebra states A + A' equals:",
+      "options": {
+        "A": "A",
+        "B": "1",
+        "C": "0",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Complement law: A + A' = 1 (always true). A · A' = 0 (always false)."
+    },
+    {
+      "id": 46,
+      "topic": "Boolean Algebra",
+      "difficulty": "medium",
+      "question": "The Boolean expression A + A'B simplifies to:",
+      "options": {
+        "A": "A'B",
+        "B": "AB",
+        "C": "A + B",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A+A'B = (A+A')(A+B) = 1·(A+B) = A+B. This uses the distributive law expansion."
+    },
+    {
+      "id": 47,
+      "topic": "Boolean Algebra",
+      "difficulty": "hard",
+      "question": "The consensus theorem states that AB + A'C + BC equals:",
+      "options": {
+        "A": "AB + A'C",
+        "B": "A'C + BC",
+        "C": "AB + BC",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Consensus theorem: AB + A'C + BC = AB + A'C. The term BC is redundant (consensus term)."
+    },
+    {
+      "id": 48,
+      "topic": "Boolean Algebra",
+      "difficulty": "medium",
+      "question": "According to the involution law (double complement), (A')' equals:",
+      "options": {
+        "A": "A'",
+        "B": "A",
+        "C": "1",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Involution law: double complementation returns original value. (A')' = A."
+    },
+    {
+      "id": 49,
+      "topic": "Boolean Algebra",
+      "difficulty": "medium",
+      "question": "Shannon's expansion theorem expresses any Boolean function as:",
+      "options": {
+        "A": "f = x·f(1,...) + x'·f(0,...)",
+        "B": "f = f(x) · f(x')",
+        "C": "f = x + f(0,...)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Shannon expansion: f(x,...)=x·f(1,...)+x'·f(0,...). It decomposes any function about a variable."
+    },
+    {
+      "id": 50,
+      "topic": "Boolean Algebra",
+      "difficulty": "easy",
+      "question": "The Boolean law A · 1 = A is called:",
+      "options": {
+        "A": "Complement law",
+        "B": "Null law",
+        "C": "Identity law",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A·1=A is the Identity law for AND. Similarly, A+0=A is the identity law for OR."
+    },
+    {
+      "id": 51,
+      "topic": "Logic Gates",
+      "difficulty": "easy",
+      "question": "Which of the following gates are considered universal gates?",
+      "options": {
+        "A": "NAND",
+        "B": "NOR",
+        "C": "XOR",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Both NAND and NOR are universal gates — any Boolean function can be implemented using only NAND or only NOR gates."
+    },
+    {
+      "id": 52,
+      "topic": "Logic Gates",
+      "difficulty": "easy",
+      "question": "Any digital circuit can be made by repeated use of:",
+      "options": {
+        "A": "NAND gates only",
+        "B": "NOR gates only",
+        "C": "AND and OR gates only",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "NAND alone (A) and NOR alone (B) are both sufficient to implement any circuit. Both A and B are correct."
+    },
+    {
+      "id": 53,
+      "topic": "Logic Gates",
+      "difficulty": "medium",
+      "question": "The output of an XOR gate is 1 when:",
+      "options": {
+        "A": "Both inputs are 0",
+        "B": "Both inputs are 1",
+        "C": "Inputs are different (one 0, one 1)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "XOR (Exclusive OR): output=1 only when inputs differ. 0⊕0=0, 0⊕1=1, 1⊕0=1, 1⊕1=0."
+    },
+    {
+      "id": 54,
+      "topic": "Logic Gates",
+      "difficulty": "medium",
+      "question": "The output of an XNOR gate is 1 when:",
+      "options": {
+        "A": "Both inputs are equal (both 0 or both 1)",
+        "B": "Inputs are different",
+        "C": "At least one input is 1",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "XNOR = complement of XOR. Output=1 when inputs are equal: 0⊙0=1, 1⊙1=1, 0⊙1=0."
+    },
+    {
+      "id": 55,
+      "topic": "Logic Gates",
+      "difficulty": "easy",
+      "question": "An OR gate with 4 inputs has how many rows in its truth table?",
+      "options": {
+        "A": "12",
+        "B": "8",
+        "C": "16",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Truth table rows = 2^n where n=number of inputs. For 4 inputs: 2^4 = 16 rows."
+    },
+    {
+      "id": 56,
+      "topic": "Logic Gates",
+      "difficulty": "medium",
+      "question": "The minimum number of NAND gates required to implement f = x'y + xy' (XOR function) is:",
+      "options": {
+        "A": "5",
+        "B": "4",
+        "C": "3",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "XOR using NAND: f=x'y+xy' needs 4 NAND gates: G1=NAND(x,y), G2=NAND(x,G1), G3=NAND(G1,y), G4=NAND(G2,G3)."
+    },
+    {
+      "id": 57,
+      "topic": "Logic Gates",
+      "difficulty": "easy",
+      "question": "The output of a NAND gate is equivalent to:",
+      "options": {
+        "A": "NOT(AND)",
+        "B": "AND followed by XOR",
+        "C": "NOT(OR)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "NAND = NOT AND. Output = (A·B)'. It is the complement of the AND gate output."
+    },
+    {
+      "id": 58,
+      "topic": "Logic Gates",
+      "difficulty": "medium",
+      "question": "To implement NOT gate using a single NAND gate, the inputs should be:",
+      "options": {
+        "A": "Both connected to the same input A",
+        "B": "One input A, other input 0",
+        "C": "One input A, other input 1",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "NAND(A,A) = (A·A)' = A'. Connecting both inputs to same signal gives NOT function."
+    },
+    {
+      "id": 59,
+      "topic": "Logic Gates",
+      "difficulty": "medium",
+      "question": "To implement AND gate using NAND gates, the minimum number of NAND gates required is:",
+      "options": {
+        "A": "4",
+        "B": "3",
+        "C": "2",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "AND using NAND: NAND followed by NOT (which itself is a NAND with both inputs tied). Total = 2 NAND gates."
+    },
+    {
+      "id": 60,
+      "topic": "Logic Gates",
+      "difficulty": "medium",
+      "question": "Which of the following statements about digital circuits is correct?",
+      "options": {
+        "A": "Digital circuits use continuous signals",
+        "B": "Digital circuits use only two voltage levels",
+        "C": "Digital circuits process analog waveforms directly",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Digital circuits operate on discrete (binary) voltage levels: HIGH (1) and LOW (0), not continuous signals."
+    },
+    {
+      "id": 61,
+      "topic": "Logic Gates",
+      "difficulty": "easy",
+      "question": "Examples of digital electronic devices include:",
+      "options": {
+        "A": "Mobile phone",
+        "B": "Digital camera",
+        "C": "Calculator",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Mobile phone, digital camera, and calculator all process binary data digitally. All three are digital electronic devices."
+    },
+    {
+      "id": 62,
+      "topic": "Logic Gates",
+      "difficulty": "medium",
+      "question": "The bubble at the output of a logic gate symbol represents:",
+      "options": {
+        "A": "Inversion (NOT operation)",
+        "B": "Amplification",
+        "C": "AND operation",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "A circle (bubble) at input or output of a gate symbol represents logical inversion (NOT operation)."
+    },
+    {
+      "id": 63,
+      "topic": "K-Map",
+      "difficulty": "medium",
+      "question": "In a 3-variable K-map, the number of cells is:",
+      "options": {
+        "A": "4",
+        "B": "8",
+        "C": "16",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A 3-variable K-map has 2^3 = 8 cells, one for each minterm m0 through m7."
+    },
+    {
+      "id": 64,
+      "topic": "K-Map",
+      "difficulty": "medium",
+      "question": "In a 4-variable K-map, the number of cells is:",
+      "options": {
+        "A": "32",
+        "B": "16",
+        "C": "8",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A 4-variable K-map has 2^4 = 16 cells, for minterms m0 through m15."
+    },
+    {
+      "id": 65,
+      "topic": "K-Map",
+      "difficulty": "easy",
+      "question": "In Karnaugh map, groups (prime implicants) must have size that is a power of:",
+      "options": {
+        "A": "2 (i.e., 1, 2, 4, 8, 16)",
+        "B": "10 (i.e., 10, 100)",
+        "C": "3 (i.e., 3, 9, 27)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "K-map groups must contain 1, 2, 4, 8, or 16 cells — always a power of 2. This eliminates one variable per doubling."
+    },
+    {
+      "id": 66,
+      "topic": "K-Map",
+      "difficulty": "medium",
+      "question": "Don't-care conditions in a K-map can be used to:",
+      "options": {
+        "A": "Add more minterms",
+        "B": "Increase the size of groups for better simplification",
+        "C": "Reduce the number of inputs",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Don't-care cells (marked X) may be included in groups to form larger groups, achieving greater simplification."
+    },
+    {
+      "id": 67,
+      "topic": "K-Map",
+      "difficulty": "medium",
+      "question": "In a K-map, cells are arranged so that adjacent cells differ by:",
+      "options": {
+        "A": "Exactly one variable (Gray code order)",
+        "B": "Any number of variables",
+        "C": "Exactly two variables",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "K-map uses Gray code ordering so adjacent cells differ by exactly 1 variable, enabling grouping to eliminate that variable."
+    },
+    {
+      "id": 68,
+      "topic": "K-Map",
+      "difficulty": "hard",
+      "question": "A group of 4 cells in a 4-variable K-map eliminates how many variables?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "1",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "A group of 2^k cells eliminates k variables. Group of 4=2^2 cells eliminates 2 variables from the product term."
+    },
+    {
+      "id": 69,
+      "topic": "K-Map",
+      "difficulty": "medium",
+      "question": "The K-map method was proposed by:",
+      "options": {
+        "A": "Claude Shannon",
+        "B": "Maurice Karnaugh",
+        "C": "George Boole",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "The Karnaugh map was proposed by Maurice Karnaugh in 1953 as a graphical method for Boolean simplification."
+    },
+    {
+      "id": 70,
+      "topic": "K-Map",
+      "difficulty": "hard",
+      "question": "The essential prime implicant in a K-map is a prime implicant that:",
+      "options": {
+        "A": "Is the largest group possible",
+        "B": "Covers at least one unique minterm",
+        "C": "Covers all minterms",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "An essential prime implicant must be included as it covers at least one minterm not covered by any other prime implicant."
+    },
+    {
+      "id": 71,
+      "topic": "K-Map",
+      "difficulty": "medium",
+      "question": "In a K-map, the corner cells (all four corners) of a 4-variable map can be grouped because they are:",
+      "options": {
+        "A": "All minterms with value 0",
+        "B": "All minterms with value 1",
+        "C": "Adjacent due to the wrap-around (toroidal) property",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "K-map wraps around horizontally and vertically (toroidal). The four corner cells are mutually adjacent and can form a group of 4."
+    },
+    {
+      "id": 72,
+      "topic": "K-Map",
+      "difficulty": "hard",
+      "question": "The simplified SOP for F(A,B,C) = Σm(0,1,2,5,6,7) using K-map is:",
+      "options": {
+        "A": "A'B' + AC + BC",
+        "B": "A'C' + AC + AB",
+        "C": "A + B'C'",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "F=Σm(0,1,2,5,6,7): group {0,1,2}→A'C'+A'B; group {5,6,7}→AB+AC. Simplified: A+B'C'. Verify by K-map plotting."
+    },
+    {
+      "id": 73,
+      "topic": "Combinational Circuits",
+      "difficulty": "easy",
+      "question": "The outputs of a Half Adder are:",
+      "options": {
+        "A": "Carry and Borrow",
+        "B": "Sum and Borrow",
+        "C": "Sum and Carry",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A Half Adder adds two single bits and produces two outputs: Sum (S = A XOR B) and Carry (C = A AND B)."
+    },
+    {
+      "id": 74,
+      "topic": "Combinational Circuits",
+      "difficulty": "medium",
+      "question": "A Full Adder differs from a Half Adder in that it also takes:",
+      "options": {
+        "A": "An overflow bit",
+        "B": "A carry input (carry-in)",
+        "C": "A borrow input",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Full Adder has 3 inputs: A, B, and Carry-in (Cin). It produces Sum and Carry-out. Half Adder has only 2 inputs."
+    },
+    {
+      "id": 75,
+      "topic": "Combinational Circuits",
+      "difficulty": "medium",
+      "question": "An 8-to-1 Multiplexer has how many select lines?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "2",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "An 8-to-1 MUX selects 1 of 8 inputs. 2^3=8, so 3 select lines are required."
+    },
+    {
+      "id": 76,
+      "topic": "Combinational Circuits",
+      "difficulty": "medium",
+      "question": "PLA stands for:",
+      "options": {
+        "A": "Parallel Logic Array",
+        "B": "Programmable Logic Array",
+        "C": "Programmable Logic Architecture",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "PLA = Programmable Logic Array. Both AND and OR planes are programmable. (Not 'Architecture' — that's a common distractor in BPSC.)"
+    },
+    {
+      "id": 77,
+      "topic": "Combinational Circuits",
+      "difficulty": "medium",
+      "question": "A seven-segment display decoder is used for:",
+      "options": {
+        "A": "Storing binary data",
+        "B": "Displaying time at railway stations",
+        "C": "Performing arithmetic operations",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Seven-segment decoders drive 7-segment LED displays used for showing numeric information like time at railway stations."
+    },
+    {
+      "id": 78,
+      "topic": "Combinational Circuits",
+      "difficulty": "medium",
+      "question": "A 4-to-16 decoder has how many output lines?",
+      "options": {
+        "A": "16",
+        "B": "8",
+        "C": "32",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "A 4-to-16 decoder has 4 input lines and 2^4=16 output lines. At any time, exactly one output is active."
+    },
+    {
+      "id": 79,
+      "topic": "Combinational Circuits",
+      "difficulty": "medium",
+      "question": "An encoder performs which function?",
+      "options": {
+        "A": "Converts n input lines to 2^n output lines",
+        "B": "Converts 2^n input lines to n output lines (binary code)",
+        "C": "Selects one of many inputs",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Encoder: 2^n inputs → n binary output bits. E.g., 8-to-3 priority encoder converts 8 active-high inputs to 3-bit binary code."
+    },
+    {
+      "id": 80,
+      "topic": "Combinational Circuits",
+      "difficulty": "medium",
+      "question": "A 1-to-8 Demultiplexer (DEMUX) has how many select lines?",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "3",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "1-to-8 DEMUX routes 1 input to 1 of 8 outputs. 2^3=8, so 3 select lines needed."
+    },
+    {
+      "id": 81,
+      "topic": "Combinational Circuits",
+      "difficulty": "medium",
+      "question": "The difference between PLA and PAL is:",
+      "options": {
+        "A": "In PAL, the OR plane is fixed; in PLA, both AND and OR planes are programmable",
+        "B": "In PAL, the AND plane is fixed; in PLA, both are fixed",
+        "C": "PLA has only AND plane; PAL has only OR plane",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "PAL: programmable AND + fixed OR. PLA: both AND and OR planes are programmable. PAL is simpler and cheaper."
+    },
+    {
+      "id": 82,
+      "topic": "Combinational Circuits",
+      "difficulty": "medium",
+      "question": "A Half Subtractor circuit produces which outputs?",
+      "options": {
+        "A": "Quotient and Remainder",
+        "B": "Difference and Borrow",
+        "C": "Sum and Carry",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Half Subtractor subtracts two bits and produces Difference (D=A XOR B) and Borrow (Bout = A'B)."
+    },
+    {
+      "id": 83,
+      "topic": "Combinational Circuits",
+      "difficulty": "hard",
+      "question": "A 4-bit parallel adder requires how many Full Adders?",
+      "options": {
+        "A": "5",
+        "B": "4",
+        "C": "3",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A 4-bit parallel adder needs 4 Full Adders, one per bit position. The first FA can be a Half Adder if no initial carry-in."
+    },
+    {
+      "id": 84,
+      "topic": "Combinational Circuits",
+      "difficulty": "medium",
+      "question": "Which logic expression is implemented by a circuit from TRE 1.0 paper?",
+      "options": {
+        "A": "C(A+B)DE",
+        "B": "ABCDE",
+        "C": "A(B+C)+DE",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "From TRE 1.0: a specific logic circuit implements the Boolean expression C(A+B)DE. Option A is the correct reading."
+    },
+    {
+      "id": 85,
+      "topic": "Combinational Circuits",
+      "difficulty": "medium",
+      "question": "A Multiplexer (MUX) is also known as:",
+      "options": {
+        "A": "Data selector",
+        "B": "Priority encoder",
+        "C": "Data distributor",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "MUX is called a data selector because it selects one of many data inputs based on select lines and routes it to output."
+    },
+    {
+      "id": 86,
+      "topic": "Combinational Circuits",
+      "difficulty": "medium",
+      "question": "A DEMUX (Demultiplexer) is also known as:",
+      "options": {
+        "A": "Data selector",
+        "B": "Data encoder",
+        "C": "Data distributor",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "DEMUX is called a data distributor. It takes one input and routes it to one of many outputs based on select lines."
+    },
+    {
+      "id": 87,
+      "topic": "Sequential Circuits",
+      "difficulty": "easy",
+      "question": "A SR flip-flop has an invalid (forbidden) state when:",
+      "options": {
+        "A": "S=0 and R=0",
+        "B": "Both S=1 and R=1",
+        "C": "S=1 and R=0",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "SR flip-flop: S=R=1 is the forbidden state because it drives both Q and Q' to 1, violating their complementary relationship."
+    },
+    {
+      "id": 88,
+      "topic": "Sequential Circuits",
+      "difficulty": "medium",
+      "question": "The race-around condition occurs in which flip-flop?",
+      "options": {
+        "A": "Clocked JK flip-flop (level-triggered)",
+        "B": "D flip-flop",
+        "C": "T flip-flop",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Race-around occurs in level-triggered JK flip-flop when J=K=1 and clock is HIGH for too long, causing multiple state changes."
+    },
+    {
+      "id": 89,
+      "topic": "Sequential Circuits",
+      "difficulty": "medium",
+      "question": "The race-around problem in JK flip-flop is solved by using:",
+      "options": {
+        "A": "Adding more clock pulses",
+        "B": "SR flip-flop",
+        "C": "Master-slave JK flip-flop or edge-triggered flip-flop",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Race-around is eliminated by using master-slave configuration or edge-triggered (not level-triggered) JK flip-flop."
+    },
+    {
+      "id": 90,
+      "topic": "Sequential Circuits",
+      "difficulty": "medium",
+      "question": "A D flip-flop (Data/Delay flip-flop) is used to:",
+      "options": {
+        "A": "Store a single bit and delay it by one clock cycle",
+        "B": "Toggle its state on every clock pulse",
+        "C": "Act as a universal flip-flop",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "D flip-flop stores the D input value on clock edge. Q(next)=D. It eliminates the indeterminate state of SR flip-flop."
+    },
+    {
+      "id": 91,
+      "topic": "Sequential Circuits",
+      "difficulty": "medium",
+      "question": "A T flip-flop (Toggle flip-flop) toggles its output when:",
+      "options": {
+        "A": "T = 1 always, without clock",
+        "B": "T = 0 and a clock edge occurs",
+        "C": "T = 1 and a clock edge occurs",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "T flip-flop: when T=1, output toggles on clock edge. When T=0, output holds. Q(next)=T XOR Q."
+    },
+    {
+      "id": 92,
+      "topic": "Sequential Circuits",
+      "difficulty": "medium",
+      "question": "A JK flip-flop with J=1 and K=1 behaves as:",
+      "options": {
+        "A": "SR flip-flop (set-reset)",
+        "B": "D flip-flop (stores D)",
+        "C": "T flip-flop (toggles on clock edge)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "JK flip-flop with J=K=1 toggles on clock edge, acting like a T flip-flop. This is the toggle mode of JK."
+    },
+    {
+      "id": 93,
+      "topic": "Sequential Circuits",
+      "difficulty": "easy",
+      "question": "The difference between a latch and a flip-flop is that:",
+      "options": {
+        "A": "A latch stores more bits than a flip-flop",
+        "B": "A latch is edge-triggered; a flip-flop is level-sensitive",
+        "C": "A latch is level-sensitive; a flip-flop is edge-triggered",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Latch: level-triggered (responds while enable is high). Flip-flop: edge-triggered (responds only at clock edge)."
+    },
+    {
+      "id": 94,
+      "topic": "Sequential Circuits",
+      "difficulty": "medium",
+      "question": "The excitation table of a JK flip-flop shows J=0, K=X (don't care) when:",
+      "options": {
+        "A": "Q(present)=0 and Q(next)=1",
+        "B": "Q(present)=1 and Q(next)=0",
+        "C": "Q(present)=0 and Q(next)=0 (no change to 0)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "JK excitation: for 0→0 transition, J=0, K=X. J must be 0 (no set), K can be anything (Q already 0 so reset doesn't matter)."
+    },
+    {
+      "id": 95,
+      "topic": "Sequential Circuits",
+      "difficulty": "hard",
+      "question": "A sequential circuit differs from a combinational circuit in that it has:",
+      "options": {
+        "A": "Only AND and OR gates",
+        "B": "Memory elements (flip-flops) and feedback",
+        "C": "No clock input",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Sequential circuits have memory (flip-flops) and feedback, so output depends on current input AND past state (history)."
+    },
+    {
+      "id": 96,
+      "topic": "Sequential Circuits",
+      "difficulty": "hard",
+      "question": "A Mealy machine output depends on:",
+      "options": {
+        "A": "Only current state",
+        "B": "Both current state and current input",
+        "C": "Only current input",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Mealy machine: output = f(current state, current input). Moore machine: output = f(current state only)."
+    },
+    {
+      "id": 97,
+      "topic": "Counters & Registers",
+      "difficulty": "medium",
+      "question": "A ring counter with n flip-flops has a modulus (number of states) of:",
+      "options": {
+        "A": "2^n",
+        "B": "2n",
+        "C": "n",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Ring counter: n flip-flops circulate a single '1' through n states. It counts in a cycle of n states, so modulus = n."
+    },
+    {
+      "id": 98,
+      "topic": "Counters & Registers",
+      "difficulty": "medium",
+      "question": "A Johnson counter (switch-tail counter) with n flip-flops has a modulus of:",
+      "options": {
+        "A": "n",
+        "B": "2^n",
+        "C": "2n",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Johnson counter: n flip-flops produce 2n distinct states. It recirculates the complement of output, doubling the ring counter states."
+    },
+    {
+      "id": 99,
+      "topic": "Counters & Registers",
+      "difficulty": "medium",
+      "question": "A Mod-6 counter counts from:",
+      "options": {
+        "A": "0 to 6 (7 states)",
+        "B": "0 to 5 (6 states: 000 to 101)",
+        "C": "1 to 6",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Mod-6 counter has 6 states: 0,1,2,3,4,5 (000 to 101). After state 5 it resets to 0. Needs 3 flip-flops."
+    },
+    {
+      "id": 100,
+      "topic": "Counters & Registers",
+      "difficulty": "medium",
+      "question": "The difference between a synchronous and an asynchronous counter is:",
+      "options": {
+        "A": "In synchronous, FF trigger is cascaded; in asynchronous, all share one clock",
+        "B": "Synchronous counters are slower than asynchronous counters",
+        "C": "In synchronous, all FFs share one clock; in asynchronous, FF trigger is cascaded",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Synchronous: common clock to all FFs (faster, no cumulative delay). Asynchronous (ripple): each FF clocked by previous FF output (slower)."
+    }
+  ]
+}

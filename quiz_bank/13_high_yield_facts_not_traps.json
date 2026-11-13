@@ -1,0 +1,1508 @@
+{
+  "subject": "BPSC CS High-Yield Facts, Standards & NOT-Traps",
+  "module": "13",
+  "total": 100,
+  "exam_relevance": "20-25 direct factual & NOT-type questions expected in BPSC TRE CS",
+  "questions": [
+    {
+      "id": 1,
+      "topic": "Inventors, Fathers & Landmarks",
+      "difficulty": "easy",
+      "question": "Who developed the C programming language at Bell Laboratories in 1972?",
+      "options": {
+        "A": "Dennis Ritchie",
+        "B": "Bjarne Stroustrup",
+        "C": "Ken Thompson",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Dennis Ritchie created C at Bell Labs in 1972 (Thompson created B; Stroustrup created C++)."
+    },
+    {
+      "id": 2,
+      "topic": "Inventors, Fathers & Landmarks",
+      "difficulty": "easy",
+      "question": "Who designed and developed the C++ programming language (originally called 'C with Classes')?",
+      "options": {
+        "A": "James Gosling",
+        "B": "Bjarne Stroustrup",
+        "C": "Guido van Rossum",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Bjarne Stroustrup developed C++ at Bell Labs starting in 1979 (originally C with Classes)."
+    },
+    {
+      "id": 3,
+      "topic": "Inventors, Fathers & Landmarks",
+      "difficulty": "easy",
+      "question": "Who is the creator of the Python programming language (released in 1991)?",
+      "options": {
+        "A": "Guido van Rossum",
+        "B": "Larry Wall",
+        "C": "Brendan Eich",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Guido van Rossum created Python (Eich created JavaScript; Wall created Perl)."
+    },
+    {
+      "id": 4,
+      "topic": "Inventors, Fathers & Landmarks",
+      "difficulty": "easy",
+      "question": "Which computer scientist led the team at Sun Microsystems that created the Java language?",
+      "options": {
+        "A": "James Gosling",
+        "B": "Anders Hejlsberg",
+        "C": "Niklaus Wirth",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "James Gosling created Java at Sun Microsystems (originally named Oak, released 1995)."
+    },
+    {
+      "id": 5,
+      "topic": "Inventors, Fathers & Landmarks",
+      "difficulty": "easy",
+      "question": "Who invented the World Wide Web (WWW), HTML, and the HTTP protocol at CERN?",
+      "options": {
+        "A": "Vint Cerf",
+        "B": "Tim Berners-Lee",
+        "C": "Marc Andreessen",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Tim Berners-Lee invented WWW, HTML, HTTP, and URLs at CERN in 1989-1991."
+    },
+    {
+      "id": 6,
+      "topic": "Inventors, Fathers & Landmarks",
+      "difficulty": "medium",
+      "question": "Who authored the famous 1970 paper introducing the Relational Database Model and 12 Rules?",
+      "options": {
+        "A": "Edgar F. Codd",
+        "B": "Raymond Boyce",
+        "C": "Peter Chen",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Edgar F. Codd proposed the Relational Model in 1970 and defined Codd's 12 rules."
+    },
+    {
+      "id": 7,
+      "topic": "Inventors, Fathers & Landmarks",
+      "difficulty": "medium",
+      "question": "Who introduced the Entity-Relationship (ER) model in 1976 for conceptual database design?",
+      "options": {
+        "A": "Charles Bachman",
+        "B": "Donald Chamberlin",
+        "C": "Michael Stonebraker",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Peter Chen proposed the Entity-Relationship (ER) model in 1976 (none of A, B, C)."
+    },
+    {
+      "id": 8,
+      "topic": "Inventors, Fathers & Landmarks",
+      "difficulty": "easy",
+      "question": "Who formulated Boolean Algebra in the mid-19th century, laying the foundation for digital logic?",
+      "options": {
+        "A": "George Boole",
+        "B": "Claude Shannon",
+        "C": "Augustus De Morgan",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "George Boole formulated Boolean Algebra; Claude Shannon later applied it to switching circuits."
+    },
+    {
+      "id": 9,
+      "topic": "Inventors, Fathers & Landmarks",
+      "difficulty": "easy",
+      "question": "The stored-program computer architecture, where instructions and data share memory, is named after:",
+      "options": {
+        "A": "Alan Turing",
+        "B": "John von Neumann",
+        "C": "Howard Aiken",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "John von Neumann described the stored-program architecture (EDVAC report, 1945)."
+    },
+    {
+      "id": 10,
+      "topic": "Inventors, Fathers & Landmarks",
+      "difficulty": "easy",
+      "question": "Who is widely recognized as the world's first computer programmer for her algorithm on the Analytical Engine?",
+      "options": {
+        "A": "Ada Lovelace",
+        "B": "Margaret Hamilton",
+        "C": "Grace Hopper",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Ada Lovelace wrote the first published algorithm for Babbage's Analytical Engine in 1843."
+    },
+    {
+      "id": 11,
+      "topic": "Inventors, Fathers & Landmarks",
+      "difficulty": "easy",
+      "question": "Who designed the Difference Engine and Analytical Engine and is called the 'Father of Computers'?",
+      "options": {
+        "A": "Charles Babbage",
+        "B": "Blaise Pascal",
+        "C": "Gottfried Leibniz",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Charles Babbage designed both the Difference Engine and Analytical Engine."
+    },
+    {
+      "id": 12,
+      "topic": "Inventors, Fathers & Landmarks",
+      "difficulty": "medium",
+      "question": "Which was the world's first commercially produced single-chip microprocessor (1971, 4-bit)?",
+      "options": {
+        "A": "Intel 8080",
+        "B": "Intel 4004",
+        "C": "Intel 8085",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Intel 4004 (1971), architected by Ted Hoff and Federico Faggin, was the first commercial microprocessor."
+    },
+    {
+      "id": 13,
+      "topic": "Inventors, Fathers & Landmarks",
+      "difficulty": "easy",
+      "question": "Who created the Linux operating system kernel in 1991 and later developed Git?",
+      "options": {
+        "A": "Linus Torvalds",
+        "B": "Andrew Tanenbaum",
+        "C": "Richard Stallman",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Linus Torvalds created the Linux kernel in 1991 and Git in 2005 (Stallman founded GNU)."
+    },
+    {
+      "id": 14,
+      "topic": "Inventors, Fathers & Landmarks",
+      "difficulty": "medium",
+      "question": "Which landmark 1969 packet-switched network served as the precursor to the modern Internet?",
+      "options": {
+        "A": "ARPANET",
+        "B": "NSFNET",
+        "C": "CYCLADES",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "ARPANET (1969, US DoD ARPA) was the first operational packet-switching network and Internet precursor."
+    },
+    {
+      "id": 15,
+      "topic": "Inventors, Fathers & Landmarks",
+      "difficulty": "medium",
+      "question": "Which computer pioneers received the Turing Award for developing the TCP/IP protocols used on the Internet?",
+      "options": {
+        "A": "Vint Cerf",
+        "B": "Bob Kahn",
+        "C": "Tim Berners-Lee",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Both Vint Cerf and Bob Kahn co-designed TCP/IP and won the 2004 Turing Award."
+    },
+    {
+      "id": 16,
+      "topic": "Standards, PDUs, Ports & Extensions",
+      "difficulty": "easy",
+      "question": "Which IEEE 802 standard defines Ethernet (CSMA/CD wired LAN)?",
+      "options": {
+        "A": "IEEE 802.3",
+        "B": "IEEE 802.5",
+        "C": "IEEE 802.11",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "IEEE 802.3 is Ethernet; 802.5 is Token Ring; 802.11 is Wi-Fi."
+    },
+    {
+      "id": 17,
+      "topic": "Standards, PDUs, Ports & Extensions",
+      "difficulty": "medium",
+      "question": "Which IEEE 802 standard specifies Token Ring LANs?",
+      "options": {
+        "A": "IEEE 802.4",
+        "B": "IEEE 802.5",
+        "C": "IEEE 802.3",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "IEEE 802.5 is Token Ring (802.4 is Token Bus; 802.3 is Ethernet)."
+    },
+    {
+      "id": 18,
+      "topic": "Standards, PDUs, Ports & Extensions",
+      "difficulty": "medium",
+      "question": "Which IEEE 802 standard specifies Token Bus networks?",
+      "options": {
+        "A": "IEEE 802.4",
+        "B": "IEEE 802.5",
+        "C": "IEEE 802.3",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "IEEE 802.4 defines Token Bus; 802.3 is Ethernet; 802.5 is Token Ring."
+    },
+    {
+      "id": 19,
+      "topic": "Standards, PDUs, Ports & Extensions",
+      "difficulty": "easy",
+      "question": "Which IEEE standard family defines Wireless LAN (Wi-Fi)?",
+      "options": {
+        "A": "IEEE 802.11",
+        "B": "IEEE 802.15",
+        "C": "IEEE 802.16",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "IEEE 802.11 is Wi-Fi (WLAN); 802.15 is WPAN/Bluetooth; 802.16 is WiMAX."
+    },
+    {
+      "id": 20,
+      "topic": "Standards, PDUs, Ports & Extensions",
+      "difficulty": "medium",
+      "question": "Which IEEE 802 standards correspond to Bluetooth (WPAN) and WiMAX (WMAN) respectively?",
+      "options": {
+        "A": "802.11 and 802.3",
+        "B": "802.15 and 802.16",
+        "C": "802.16 and 802.15",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "IEEE 802.15 covers WPAN (Bluetooth/ZigBee) and IEEE 802.16 covers Broadband Wireless/WiMAX."
+    },
+    {
+      "id": 21,
+      "topic": "Standards, PDUs, Ports & Extensions",
+      "difficulty": "medium",
+      "question": "What are the OSI Protocol Data Units (PDUs) for Physical, Data Link, Network, and Transport layers respectively?",
+      "options": {
+        "A": "Bits, Frame, Packet, Segment",
+        "B": "Frame, Bits, Segment, Packet",
+        "C": "Bits, Packet, Frame, Segment",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Physical=Bits, Data Link=Frame, Network=Packet, Transport=Segment (TCP)/Datagram (UDP)."
+    },
+    {
+      "id": 22,
+      "topic": "Standards, PDUs, Ports & Extensions",
+      "difficulty": "medium",
+      "question": "In the OSI model, the PDU at the Session, Presentation, and Application layers is called:",
+      "options": {
+        "A": "Segment",
+        "B": "Packet",
+        "C": "Frame",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "The top three layers (Application, Presentation, Session) use Data (or Message) as their PDU."
+    },
+    {
+      "id": 23,
+      "topic": "Standards, PDUs, Ports & Extensions",
+      "difficulty": "easy",
+      "question": "Which default TCP port numbers are used by FTP (Data and Control) respectively?",
+      "options": {
+        "A": "Port 20 and Port 21",
+        "B": "Port 22 and Port 23",
+        "C": "Port 25 and Port 53",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "FTP uses TCP port 20 for data transfer and port 21 for control/commands."
+    },
+    {
+      "id": 24,
+      "topic": "Standards, PDUs, Ports & Extensions",
+      "difficulty": "easy",
+      "question": "Which default TCP ports are used by SSH and Telnet respectively?",
+      "options": {
+        "A": "Port 21 and Port 22",
+        "B": "Port 22 and Port 23",
+        "C": "Port 23 and Port 25",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "SSH uses TCP port 22 (encrypted) and Telnet uses TCP port 23 (plain text)."
+    },
+    {
+      "id": 25,
+      "topic": "Standards, PDUs, Ports & Extensions",
+      "difficulty": "easy",
+      "question": "Which protocol uses TCP port 25 for sending outgoing emails across mail servers?",
+      "options": {
+        "A": "POP3",
+        "B": "SMTP",
+        "C": "IMAP",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "SMTP uses port 25; POP3 uses port 110; IMAP uses port 143."
+    },
+    {
+      "id": 26,
+      "topic": "Standards, PDUs, Ports & Extensions",
+      "difficulty": "easy",
+      "question": "Which well-known port number is assigned to DNS (Domain Name System)?",
+      "options": {
+        "A": "Port 53",
+        "B": "Port 67",
+        "C": "Port 80",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "DNS uses UDP/TCP port 53; DHCP uses UDP 67/68; HTTP uses TCP 80."
+    },
+    {
+      "id": 27,
+      "topic": "Standards, PDUs, Ports & Extensions",
+      "difficulty": "medium",
+      "question": "Which UDP port numbers are used by DHCP (Server and Client respectively)?",
+      "options": {
+        "A": "Port 53 and Port 54",
+        "B": "Port 67 and Port 68",
+        "C": "Port 80 and Port 443",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "DHCP server listens on UDP port 67 and DHCP client listens on UDP port 68."
+    },
+    {
+      "id": 28,
+      "topic": "Standards, PDUs, Ports & Extensions",
+      "difficulty": "easy",
+      "question": "Which default TCP ports are used by HTTP and HTTPS respectively?",
+      "options": {
+        "A": "Port 21 and Port 22",
+        "B": "Port 80 and Port 443",
+        "C": "Port 80 and Port 8080",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "HTTP uses TCP port 80 and HTTPS (HTTP over TLS/SSL) uses TCP port 443."
+    },
+    {
+      "id": 29,
+      "topic": "Standards, PDUs, Ports & Extensions",
+      "difficulty": "medium",
+      "question": "Which default TCP ports are used by POP3 and IMAP for retrieving email?",
+      "options": {
+        "A": "Port 110 (POP3) and Port 143 (IMAP)",
+        "B": "Port 25 (POP3) and Port 110 (IMAP)",
+        "C": "Port 143 (POP3) and Port 443 (IMAP)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "POP3 uses TCP port 110 and IMAP uses TCP port 143 (SMTP uses port 25)."
+    },
+    {
+      "id": 30,
+      "topic": "Standards, PDUs, Ports & Extensions",
+      "difficulty": "easy",
+      "question": "Which standard file extensions are used for C++ source files and C/C++ header files?",
+      "options": {
+        "A": ".java and .class",
+        "B": ".cpp and .h",
+        "C": ".py and .pyc",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "C++ source files typically use .cpp and header files use .h (or .hpp)."
+    },
+    {
+      "id": 31,
+      "topic": "Standards, PDUs, Ports & Extensions",
+      "difficulty": "easy",
+      "question": "What are the standard file extensions for Microsoft Access database files (older vs newer versions)?",
+      "options": {
+        "A": ".sql and .db",
+        "B": ".mdb and .accdb",
+        "C": ".xls and .xlsx",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "MS Access uses .mdb (Access 2003 and earlier) and .accdb (Access 2007 and later)."
+    },
+    {
+      "id": 32,
+      "topic": "Standards, PDUs, Ports & Extensions",
+      "difficulty": "easy",
+      "question": "Which file extensions represent web markup and SQL script files?",
+      "options": {
+        "A": ".html and .xml",
+        "B": ".sql",
+        "C": ".exe and .dll",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Both A (.html, .xml for web markup) and B (.sql for SQL scripts) are correct."
+    },
+    {
+      "id": 33,
+      "topic": "Standards, PDUs, Ports & Extensions",
+      "difficulty": "medium",
+      "question": "Which well-known port range is reserved by IANA for system/well-known services like HTTP, FTP, and DNS?",
+      "options": {
+        "A": "0 to 1023",
+        "B": "1024 to 49151",
+        "C": "49152 to 65535",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "0-1023 are Well-Known ports; 1024-49151 are Registered ports; 49152-65535 are Dynamic/Ephemeral ports."
+    },
+    {
+      "id": 34,
+      "topic": "Standards, PDUs, Ports & Extensions",
+      "difficulty": "medium",
+      "question": "In Java, what file extension does the compiler (`javac`) produce for compiled bytecode?",
+      "options": {
+        "A": ".java",
+        "B": ".obj",
+        "C": ".exe",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "The Java compiler produces .class files containing platform-independent bytecode (not .java, .obj, or .exe)."
+    },
+    {
+      "id": 35,
+      "topic": "Standards, PDUs, Ports & Extensions",
+      "difficulty": "medium",
+      "question": "Which IEEE 802 committee standards operate primarily at the Physical and Data Link layers?",
+      "options": {
+        "A": "IEEE 802.3 (Ethernet)",
+        "B": "IEEE 802.11 (Wi-Fi)",
+        "C": "IEEE 802.5 (Token Ring)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All IEEE 802 LAN/MAN/PAN standards (802.3, 802.5, 802.11) define Physical and Data Link (MAC/LLC) layers."
+    },
+    {
+      "id": 36,
+      "topic": "Shortcuts, Keywords, Defaults & Limits",
+      "difficulty": "medium",
+      "question": "In Turbo C++ IDE, which keyboard shortcut compiles AND runs the current program?",
+      "options": {
+        "A": "Ctrl + F9",
+        "B": "Alt + F9",
+        "C": "Alt + F5",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "In Turbo C++: Ctrl+F9 runs the program, Alt+F9 compiles only, F9 makes/links, and Alt+F5 shows output screen."
+    },
+    {
+      "id": 37,
+      "topic": "Shortcuts, Keywords, Defaults & Limits",
+      "difficulty": "medium",
+      "question": "In Turbo C++ IDE, which shortcut displays the output (User Screen) and which compiles without running?",
+      "options": {
+        "A": "F9 (User Screen) and Ctrl+F9 (Compile)",
+        "B": "Alt+F5 (User Screen) and Alt+F9 (Compile)",
+        "C": "Alt+F9 (User Screen) and Alt+F5 (Compile)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "Alt+F5 views the User Screen (output) and Alt+F9 compiles the file; F9 performs Make."
+    },
+    {
+      "id": 38,
+      "topic": "Shortcuts, Keywords, Defaults & Limits",
+      "difficulty": "easy",
+      "question": "In SQL, which of the following command pairs belong to Data Definition Language (DDL)?",
+      "options": {
+        "A": "CREATE and ALTER",
+        "B": "DROP and TRUNCATE",
+        "C": "INSERT and DELETE",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "CREATE, ALTER, DROP, and TRUNCATE are all DDL commands (both A and B); INSERT and DELETE are DML."
+    },
+    {
+      "id": 39,
+      "topic": "Shortcuts, Keywords, Defaults & Limits",
+      "difficulty": "easy",
+      "question": "In SQL, which sublanguages do GRANT/REVOKE and COMMIT/ROLLBACK belong to respectively?",
+      "options": {
+        "A": "DCL and TCL",
+        "B": "DDL and DML",
+        "C": "TCL and DCL",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "GRANT/REVOKE are Data Control Language (DCL); COMMIT/ROLLBACK/SAVEPOINT are Transaction Control Language (TCL)."
+    },
+    {
+      "id": 40,
+      "topic": "Shortcuts, Keywords, Defaults & Limits",
+      "difficulty": "medium",
+      "question": "In C++, which operator has the HIGHEST precedence and which has the LOWEST precedence?",
+      "options": {
+        "A": "Unary ++ (highest) and Assignment = (lowest)",
+        "B": "Scope resolution :: (highest) and Comma , (lowest)",
+        "C": "Member access . (highest) and Ternary ?: (lowest)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "In C++, scope resolution (::) has the highest precedence and the comma operator (,) has the lowest."
+    },
+    {
+      "id": 41,
+      "topic": "Shortcuts, Keywords, Defaults & Limits",
+      "difficulty": "medium",
+      "question": "In C and C++, which operators have Right-to-Left associativity?",
+      "options": {
+        "A": "Unary operators (e.g., !, ~, ++prefix)",
+        "B": "Conditional (?:) and Assignment (=, +=) operators",
+        "C": "Binary arithmetic operators (+, -, *, /)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Unary, conditional ternary (?:), and assignment operators all associate Right-to-Left (A and B are both true)."
+    },
+    {
+      "id": 42,
+      "topic": "Shortcuts, Keywords, Defaults & Limits",
+      "difficulty": "medium",
+      "question": "In Java, what are the default values of uninitialized instance fields of type `int`, `boolean`, and an object reference?",
+      "options": {
+        "A": "Garbage, false, null",
+        "B": "0, true, 0",
+        "C": "0, false, null",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Java initializes instance variables to 0 (numeric), false (boolean), and null (object reference)."
+    },
+    {
+      "id": 43,
+      "topic": "Shortcuts, Keywords, Defaults & Limits",
+      "difficulty": "medium",
+      "question": "In C++, what is the initial value of an uninitialized local automatic `int` variable vs an uninitialized `static` or global `int`?",
+      "options": {
+        "A": "Garbage (indeterminate) for local; 0 for static/global",
+        "B": "0 for local; Garbage for static/global",
+        "C": "0 for both local and static/global",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "In C/C++, uninitialized local automatic variables hold indeterminate garbage; static and global variables default to 0."
+    },
+    {
+      "id": 44,
+      "topic": "Shortcuts, Keywords, Defaults & Limits",
+      "difficulty": "easy",
+      "question": "In HTTP, what do the status codes 200, 404, and 500 signify respectively?",
+      "options": {
+        "A": "Not Found, OK, Server Error",
+        "B": "OK, Not Found, Internal Server Error",
+        "C": "OK, Unauthorized, Bad Gateway",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "HTTP 200 = OK, 404 = Not Found (client error), 500 = Internal Server Error."
+    },
+    {
+      "id": 45,
+      "topic": "Shortcuts, Keywords, Defaults & Limits",
+      "difficulty": "medium",
+      "question": "In HTTP response codes, which number ranges represent Redirection, Client Errors, and Server Errors?",
+      "options": {
+        "A": "1xx, 2xx, 3xx",
+        "B": "2xx, 3xx, 4xx",
+        "C": "3xx, 4xx, 5xx",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "HTTP codes: 1xx Informational, 2xx Success, 3xx Redirection, 4xx Client Error, 5xx Server Error."
+    },
+    {
+      "id": 46,
+      "topic": "Shortcuts, Keywords, Defaults & Limits",
+      "difficulty": "easy",
+      "question": "What is the bit length of a MAC address, an IPv4 address, and an IPv6 address respectively?",
+      "options": {
+        "A": "32 bits, 48 bits, 128 bits",
+        "B": "48 bits, 32 bits, 64 bits",
+        "C": "48 bits, 64 bits, 128 bits",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Correct sizes are: MAC = 48 bits (6 bytes), IPv4 = 32 bits (4 bytes), IPv6 = 128 bits (16 bytes)."
+    },
+    {
+      "id": 47,
+      "topic": "Shortcuts, Keywords, Defaults & Limits",
+      "difficulty": "easy",
+      "question": "Standard ASCII is a _____ code (128 characters), whereas Extended ASCII uses _____ bits (256 characters).",
+      "options": {
+        "A": "7-bit; 8",
+        "B": "8-bit; 16",
+        "C": "6-bit; 8",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Standard ASCII uses 7 bits (0-127, 128 chars); Extended ASCII uses 8 bits (256 chars)."
+    },
+    {
+      "id": 48,
+      "topic": "Shortcuts, Keywords, Defaults & Limits",
+      "difficulty": "medium",
+      "question": "Unicode UTF-16 encodes basic characters using how many bits per code unit?",
+      "options": {
+        "A": "8 bits",
+        "B": "16 bits",
+        "C": "32 bits",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "UTF-16 uses 16-bit code units (2 bytes for BMP characters; surrogate pairs for others)."
+    },
+    {
+      "id": 49,
+      "topic": "Shortcuts, Keywords, Defaults & Limits",
+      "difficulty": "easy",
+      "question": "In C++, what is the default access specifier for members of a `class` and members of a `struct` respectively?",
+      "options": {
+        "A": "public for class; private for struct",
+        "B": "protected for class; public for struct",
+        "C": "private for class; public for struct",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "In C++, class members (and inheritance) default to private, whereas struct members default to public."
+    },
+    {
+      "id": 50,
+      "topic": "Shortcuts, Keywords, Defaults & Limits",
+      "difficulty": "medium",
+      "question": "In C++, how many `goto` or `return` or `break` keywords exist, and which loop ALWAYS executes its body at least once?",
+      "options": {
+        "A": "do-while loop",
+        "B": "while loop",
+        "C": "for loop",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "do-while is exit-controlled, so its body executes at least once before evaluating the condition."
+    },
+    {
+      "id": 51,
+      "topic": "Shortcuts, Keywords, Defaults & Limits",
+      "difficulty": "medium",
+      "question": "In HTML, how many heading tag levels exist (`<h1>` through `<h?>`) and which is the largest by default?",
+      "options": {
+        "A": "5 levels; <h1> is largest",
+        "B": "6 levels; <h1> is largest",
+        "C": "6 levels; <h6> is largest",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "HTML defines 6 heading levels (<h1> to <h6>), where <h1> is the largest/most important and <h6> is smallest."
+    },
+    {
+      "id": 52,
+      "topic": "Shortcuts, Keywords, Defaults & Limits",
+      "difficulty": "medium",
+      "question": "In C++ (32/64-bit typical Turbo C++ vs GCC), the `sizeof(char)` in standard C++ is ALWAYS:",
+      "options": {
+        "A": "2 bytes",
+        "B": "4 bytes",
+        "C": "1 byte",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "The C and C++ standards guarantee sizeof(char) is always exactly 1 byte."
+    },
+    {
+      "id": 53,
+      "topic": "Shortcuts, Keywords, Defaults & Limits",
+      "difficulty": "medium",
+      "question": "In Java, what is the default access modifier when no specifier (`public`, `private`, `protected`) is written?",
+      "options": {
+        "A": "public",
+        "B": "private",
+        "C": "protected",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "When omitted in Java, the default access is package-private (accessible only within the same package)."
+    },
+    {
+      "id": 54,
+      "topic": "Shortcuts, Keywords, Defaults & Limits",
+      "difficulty": "medium",
+      "question": "Which statements about C++ keywords and identifiers are TRUE?",
+      "options": {
+        "A": "Identifiers cannot start with a digit",
+        "B": "Keywords cannot be used as variable names",
+        "C": "C++ identifiers are case-sensitive",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "All three (A, B, C) are fundamental C++ lexical rules."
+    },
+    {
+      "id": 55,
+      "topic": "Shortcuts, Keywords, Defaults & Limits",
+      "difficulty": "hard",
+      "question": "In SQL `ORDER BY`, how does standard SQL treat `NULL` values compared to non-NULL values (or in MySQL ASC)?",
+      "options": {
+        "A": "In MySQL ASC, NULLs appear first; in Oracle ASC, NULLs appear last by default",
+        "B": "SQL allows NULLS FIRST / NULLS LAST to specify placement explicitly",
+        "C": "NULLs are automatically deleted by ORDER BY",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "MySQL places NULLs first in ASC while Oracle places them last by default, and standard SQL provides NULLS FIRST/LAST (A and B)."
+    },
+    {
+      "id": 56,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which of the following statements about Logic Gates and Digital Electronics is NOT true?",
+      "options": {
+        "A": "NAND and NOR are both universal gates",
+        "B": "XOR output is 1 when both inputs are identical",
+        "C": "De Morgan's theorem states (A + B)' = A' · B'",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "XOR outputs 1 when inputs are DIFFERENT (0 when identical; XNOR outputs 1 when identical). A and C are true."
+    },
+    {
+      "id": 57,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a valid BCD (Binary Coded Decimal) 4-bit code for a single decimal digit?",
+      "options": {
+        "A": "1001",
+        "B": "0111",
+        "C": "1010",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Valid 8421 BCD codes represent 0-9 (0000 to 1001). 1010 (10) through 1111 (15) are invalid in BCD."
+    },
+    {
+      "id": 58,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which of the following statements about Sequential Circuits is FALSE?",
+      "options": {
+        "A": "Output depends on both current inputs and past state",
+        "B": "A JK flip-flop toggles when J=1 and K=1 on a clock edge",
+        "C": "An SR flip-flop has an invalid/forbidden state when S=1 and R=1",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "All three statements A, B, and C are TRUE about sequential circuits and flip-flops, so none is false."
+    },
+    {
+      "id": 59,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a combinational logic circuit?",
+      "options": {
+        "A": "Shift Register",
+        "B": "Multiplexer",
+        "C": "Full Adder",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "A Shift Register is built from flip-flops (sequential circuit with memory); MUX and Full Adder are combinational."
+    },
+    {
+      "id": 60,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which of the following statements about Number Systems is NOT true?",
+      "options": {
+        "A": "Gray code changes only one bit between consecutive numbers",
+        "B": "In 2's complement, zero has only one representation",
+        "C": "Octal number system has base 8 using digits 0 to 8",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Octal uses digits 0 to 7 (never 8). A and B are both true."
+    },
+    {
+      "id": 61,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which of the following are volatile read-write RAM types rather than non-volatile ROM?",
+      "options": {
+        "A": "SRAM (Static RAM)",
+        "B": "DRAM (Dynamic RAM)",
+        "C": "EEPROM (Electrically Erasable PROM)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Both SRAM (A) and DRAM (B) are volatile RAM types; EEPROM is non-volatile ROM."
+    },
+    {
+      "id": 62,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which statement about Cache Memory and COA is FALSE?",
+      "options": {
+        "A": "Cache memory sits between CPU and main memory based on locality of reference",
+        "B": "SRAM is faster and more expensive than DRAM",
+        "C": "DMA transfers require the CPU to copy every single byte manually",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "DMA (Direct Memory Access) transfers blocks directly between I/O and RAM without CPU copying each byte."
+    },
+    {
+      "id": 63,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which of the following is NOT an 8085 microprocessor hardware interrupt?",
+      "options": {
+        "A": "TRAP",
+        "B": "RST 7.5",
+        "C": "INTR",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "TRAP, RST 7.5, RST 6.5, RST 5.5, and INTR are all 8085 hardware interrupts, so none of A, B, C is a non-interrupt."
+    },
+    {
+      "id": 64,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which of the following registers in a CPU is NOT typically user-visible or general-purpose?",
+      "options": {
+        "A": "MAR (Memory Address Register)",
+        "B": "MDR (Memory Data Register)",
+        "C": "Accumulator",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Both MAR (A) and MDR (B) are internal control/interface registers, not general-purpose user registers."
+    },
+    {
+      "id": 65,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "hard",
+      "question": "Which statement about RISC vs CISC architectures is NOT true?",
+      "options": {
+        "A": "RISC uses fixed-length instructions and load-store memory access",
+        "B": "CISC typically has variable-length instructions and many addressing modes",
+        "C": "RISC processors generally have fewer registers and more complex microcode than CISC",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "RISC has MORE general-purpose registers and hardwired control (fewer instructions), not fewer registers/microcode."
+    },
+    {
+      "id": 66,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a linear data structure?",
+      "options": {
+        "A": "Binary Search Tree",
+        "B": "Queue",
+        "C": "Linked List",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Binary Search Tree (and graphs) are non-linear hierarchical structures; Queue and Linked List are linear."
+    },
+    {
+      "id": 67,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which statement about Sorting Algorithms is FALSE?",
+      "options": {
+        "A": "Merge Sort has O(n log n) worst-case time complexity",
+        "B": "Quick Sort has O(n^2) worst-case time complexity",
+        "C": "Bubble Sort has O(n log n) average-case time complexity",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Bubble Sort has O(n^2) average and worst-case time complexity, not O(n log n). A and B are true."
+    },
+    {
+      "id": 68,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which of the following statements about Stacks and Queues is NOT true?",
+      "options": {
+        "A": "Stack follows LIFO and is used for recursion and function calls",
+        "B": "Queue follows FIFO and is used in Breadth-First Search (BFS)",
+        "C": "Infix-to-postfix conversion typically uses a Queue",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Infix-to-postfix conversion and postfix evaluation use a Stack (not a Queue). A and B are true."
+    },
+    {
+      "id": 69,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which of the following is NOT true about a Binary Search Tree (BST)?",
+      "options": {
+        "A": "Inorder traversal of a BST yields elements in sorted ascending order",
+        "B": "Left subtree keys are smaller than root and right subtree keys are larger",
+        "C": "Worst-case search time in an unbalanced BST is O(log n)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Worst-case search in a skewed (unbalanced) BST is O(n), not O(log n). A and B are true."
+    },
+    {
+      "id": 70,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which of the following is NOT an in-place sorting algorithm (ignoring recursion stack)?",
+      "options": {
+        "A": "Insertion Sort",
+        "B": "Heap Sort",
+        "C": "Selection Sort",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Insertion Sort, Heap Sort, and Selection Sort are ALL in-place O(1) extra space algorithms."
+    },
+    {
+      "id": 71,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a valid collision resolution technique in Hashing?",
+      "options": {
+        "A": "Linear Probing",
+        "B": "Separate Chaining",
+        "C": "Binary Probing",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Linear probing, quadratic probing, double hashing, and separate chaining are valid; 'Binary Probing' is not."
+    },
+    {
+      "id": 72,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which statement about C++ Constructors and Destructors is NOT true?",
+      "options": {
+        "A": "A constructor can be overloaded",
+        "B": "A destructor can be overloaded",
+        "C": "A constructor has the same name as the class and no return type",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A destructor takes no parameters and CANNOT be overloaded (there is at most one per class). A and C are true."
+    },
+    {
+      "id": 73,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which statements about C++ Inheritance and Access Specifiers are FALSE?",
+      "options": {
+        "A": "A private base-class member is directly accessible inside a derived class",
+        "B": "A protected base-class member is directly accessible on an object in main()",
+        "C": "C++ supports single, multilevel, and multiple inheritance",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Both A and B are false: private members aren't accessible in derived classes, and protected members aren't accessible in main()."
+    },
+    {
+      "id": 74,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which statement about `friend` functions in C++ is FALSE?",
+      "options": {
+        "A": "A friend function can access private and protected members of the class",
+        "B": "A friend function is invoked using the dot operator on an object (obj.func())",
+        "C": "Friendship in C++ is neither inherited nor mutual",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "A friend function is NOT a member function, so it is called like a normal function (func(obj)), not obj.func()."
+    },
+    {
+      "id": 75,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which of the following is NOT true about Virtual Functions and Polymorphism in C++?",
+      "options": {
+        "A": "Virtual functions support runtime (dynamic) polymorphism",
+        "B": "A class with a pure virtual function (= 0) is an abstract class",
+        "C": "A static member function can be declared virtual",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Static member functions belong to the class (no `this` pointer) and CANNOT be declared `virtual` in C++."
+    },
+    {
+      "id": 76,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a pillar of Object-Oriented Programming (OOP)?",
+      "options": {
+        "A": "Encapsulation",
+        "B": "Polymorphism",
+        "C": "Inheritance",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Encapsulation, Polymorphism, Inheritance (and Abstraction) are all core pillars of OOP."
+    },
+    {
+      "id": 77,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which statement about C++ Pointers and References is NOT true?",
+      "options": {
+        "A": "A pointer can be reassigned to point to a different variable",
+        "B": "A reference variable can be initialized as NULL",
+        "C": "A pointer variable can store the address of another pointer",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "In C++, a reference MUST be bound to a valid object at declaration and cannot be NULL or reseated."
+    },
+    {
+      "id": 78,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a necessary Coffman condition for Deadlock in an OS?",
+      "options": {
+        "A": "Mutual Exclusion",
+        "B": "Circular Wait",
+        "C": "Preemption",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "The condition is NO Preemption (resources cannot be forcibly taken), not Preemption."
+    },
+    {
+      "id": 79,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which statement about CPU Scheduling algorithms is FALSE?",
+      "options": {
+        "A": "FCFS scheduling can suffer from the convoy effect",
+        "B": "Round Robin scheduling is preemptive and uses a time quantum",
+        "C": "SJF scheduling can never cause starvation",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "SJF and Priority scheduling CAN cause starvation of long/low-priority jobs if short/high-priority jobs keep arriving."
+    },
+    {
+      "id": 80,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which of the following page replacement algorithms suffers from Belady's Anomaly?",
+      "options": {
+        "A": "LRU (Least Recently Used)",
+        "B": "Optimal Page Replacement",
+        "C": "FIFO (First-In First-Out)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "FIFO can exhibit Belady's Anomaly (more frames causing more faults); stack algorithms LRU and Optimal never do."
+    },
+    {
+      "id": 81,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which statement about OS Threads vs Processes is NOT true?",
+      "options": {
+        "A": "Threads within the same process share the heap and global data",
+        "B": "Each thread maintains its own stack and register set",
+        "C": "Each thread within a process has its own completely separate virtual address space",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Threads of the same process SHARE the process's address space (code, data, heap); only processes have separate address spaces."
+    },
+    {
+      "id": 82,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a valid disk scheduling algorithm?",
+      "options": {
+        "A": "Round Robin (RR)",
+        "B": "SSTF (Shortest Seek Time First)",
+        "C": "C-SCAN (Circular SCAN)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "A",
+      "explanation": "Round Robin is a CPU scheduling algorithm, whereas SSTF and C-SCAN are disk scheduling algorithms."
+    },
+    {
+      "id": 83,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which statement about Memory Management in an OS is FALSE?",
+      "options": {
+        "A": "Paging eliminates external fragmentation",
+        "B": "Segmentation eliminates internal fragmentation",
+        "C": "Thrashing increases CPU utilization dramatically",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Thrashing causes CPU utilization to PLUMMET because the system spends most of its time swapping pages."
+    },
+    {
+      "id": 84,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which statement about Keys in a Relational Database is NOT true?",
+      "options": {
+        "A": "A table can have multiple candidate keys",
+        "B": "A primary key attribute can accept NULL values",
+        "C": "A foreign key can reference a unique or primary key in another table",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "By Entity Integrity, no attribute of a Primary Key can contain NULL values."
+    },
+    {
+      "id": 85,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which of the following SQL aggregate functions ignores NULL values when evaluating a column?",
+      "options": {
+        "A": "SUM(col) and AVG(col)",
+        "B": "MIN(col) and MAX(col)",
+        "C": "COUNT(*)",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "Both A (SUM, AVG) and B (MIN, MAX) ignore NULLs; only COUNT(*) counts rows containing NULLs."
+    },
+    {
+      "id": 86,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which statement about Database Normalization is NOT true?",
+      "options": {
+        "A": "1NF disallows repeating groups and multivalued attributes",
+        "B": "2NF eliminates partial functional dependencies",
+        "C": "Every relation in 3NF is automatically in BCNF",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Every BCNF relation is in 3NF, but NOT every 3NF relation is in BCNF (BCNF is strictly stronger)."
+    },
+    {
+      "id": 87,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "easy",
+      "question": "Which of the following is NOT an ACID property of database transactions?",
+      "options": {
+        "A": "Atomicity",
+        "B": "Consistency",
+        "C": "Durability",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Atomicity, Consistency, Isolation, and Durability are all ACID properties, so none of A, B, C is invalid."
+    },
+    {
+      "id": 88,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which statement about SQL `DELETE`, `TRUNCATE`, and `DROP` is FALSE?",
+      "options": {
+        "A": "DELETE can be rolled back inside a transaction",
+        "B": "DROP removes both table data and table structure",
+        "C": "TRUNCATE deletes only rows matching a WHERE condition",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "TRUNCATE removes ALL rows of a table and does NOT support a WHERE clause."
+    },
+    {
+      "id": 89,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "easy",
+      "question": "Which of the following is NOT one of the 7 layers of the OSI Reference Model?",
+      "options": {
+        "A": "Presentation Layer",
+        "B": "Internet Layer",
+        "C": "Session Layer",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "'Internet Layer' belongs to the 4-layer TCP/IP model (OSI calls Layer 3 the Network Layer)."
+    },
+    {
+      "id": 90,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which of the following is NOT true about UDP compared to TCP?",
+      "options": {
+        "A": "UDP is connectionless and has lower header overhead (8 bytes)",
+        "B": "UDP guarantees ordered, reliable packet delivery with acknowledgments",
+        "C": "UDP is commonly used for DNS queries and live video streaming",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "UDP is unreliable and unordered (no ACKs/retransmission); TCP provides reliable ordered delivery."
+    },
+    {
+      "id": 91,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a valid private IPv4 address block defined in RFC 1918?",
+      "options": {
+        "A": "10.0.0.0/8",
+        "B": "172.16.0.0/12",
+        "C": "192.168.0.0/16",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "All three (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) are the exact RFC 1918 private IPv4 ranges."
+    },
+    {
+      "id": 92,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which statement about Network Devices is NOT true?",
+      "options": {
+        "A": "A Hub operates at Layer 1 (Physical) and broadcasts incoming signals to all ports",
+        "B": "A Switch operates at Layer 2 (Data Link) and forwards frames using MAC addresses",
+        "C": "A Router operates at Layer 2 and separates collision domains without looking at IP addresses",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "A Router operates at Layer 3 (Network) and routes packets using IP addresses (Switches work at Layer 2)."
+    },
+    {
+      "id": 93,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which of the following IPv4 addresses is NOT a valid host IP address on a standard Class C /24 network?",
+      "options": {
+        "A": "192.168.1.0",
+        "B": "192.168.1.255",
+        "C": "192.168.1.256",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "D",
+      "explanation": "In 192.168.1.0/24, .0 is the network address, .255 is broadcast, and .256 exceeds 255 — none is a valid host IP!"
+    },
+    {
+      "id": 94,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which of the following protocols does NOT operate at the Application Layer of the TCP/IP suite?",
+      "options": {
+        "A": "HTTP",
+        "B": "ARP",
+        "C": "SMTP",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "B",
+      "explanation": "ARP (Address Resolution Protocol) operates between Data Link and Network layers, whereas HTTP and SMTP are Application layer."
+    },
+    {
+      "id": 95,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which statement about Software Engineering and SDLC models is FALSE?",
+      "options": {
+        "A": "The Spiral model explicitly incorporates risk analysis in every iteration",
+        "B": "The Waterfall model works poorly when requirements change frequently",
+        "C": "White-box testing inspects internal source code paths and logic",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "All three statements (A, B, C) are true about Spiral, Waterfall, and White-box testing, so none is false."
+    },
+    {
+      "id": 96,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "In Software Engineering, which of the following is NOT true about Coupling and Cohesion?",
+      "options": {
+        "A": "Good software design aims for LOW coupling and HIGH cohesion",
+        "B": "High coupling makes modules tightly interdependent and harder to maintain",
+        "C": "High cohesion means elements inside a module are unrelated",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "High cohesion means elements within a module are strongly focused on a single related task (desirable)."
+    },
+    {
+      "id": 97,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a valid type of Software Maintenance?",
+      "options": {
+        "A": "Corrective maintenance",
+        "B": "Adaptive maintenance",
+        "C": "Perfective maintenance",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "E",
+      "explanation": "Corrective, Adaptive, Perfective (and Preventive) are all standard categories of software maintenance."
+    },
+    {
+      "id": 98,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which statement about Web Technologies (HTML, CSS, XML) is NOT true?",
+      "options": {
+        "A": "HTML uses predefined tags primarily for displaying web content",
+        "B": "XML tags are case-sensitive and user-defined for storing/transporting data",
+        "C": "HTML tags are strictly case-sensitive just like XML tags",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "HTML tags are case-insensitive (though lowercase is recommended), whereas XML tags are strictly case-sensitive."
+    },
+    {
+      "id": 99,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a characteristic of Big-O / Asymptotic Complexity?",
+      "options": {
+        "A": "O(1) < O(log n) < O(n) < O(n log n) < O(n^2)",
+        "B": "Big-O notation gives an asymptotic upper bound on growth rate",
+        "C": "Constant multipliers and lower-order terms are kept in Big-O notation",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "Big-O drops constant coefficients and lower-order terms (e.g., 3n^2 + 5n is written as O(n^2))."
+    },
+    {
+      "id": 100,
+      "topic": "NOT-True & Exception Traps",
+      "difficulty": "hard",
+      "question": "Which of the following statements about Relational Algebra and SQL are FALSE?",
+      "options": {
+        "A": "Projection (π) selects specific columns while Selection (σ) filters rows",
+        "B": "Cartesian product (×) is a binary operator while Rename (ρ) is unary",
+        "C": "SQL automatically removes all duplicate rows in every SELECT query without DISTINCT",
+        "D": "More than one of the above",
+        "E": "None of the above"
+      },
+      "correct": "C",
+      "explanation": "SQL uses multiset (bag) semantics and keeps duplicate rows in SELECT unless DISTINCT is specified."
+    }
+  ]
+}
