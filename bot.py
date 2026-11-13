@@ -113,6 +113,17 @@ def get_groups_config() -> dict[str, Any]:
     return USER_PROGRESS.setdefault("groups", {})
 
 
+def get_channel_config() -> dict[str, Any]:
+    """Retrieve or initialize broadcast channel configuration."""
+    return USER_PROGRESS.setdefault("channel_config", {
+        "channel": "@coding_with_sudhir",
+        "time": "19:00",
+        "count": 30,
+        "enabled": True,
+        "last_run": "",
+    })
+
+
 def load_all_progress() -> dict[str, Any]:
     """Load persistent user progress from JSON file."""
     if not PROGRESS_FILE.exists():
@@ -285,20 +296,23 @@ def get_quiz_set(set_id: str) -> tuple[str, list[dict[str, Any]]]:
 
 
 def build_set_preview_card(set_id: str, title: str, count: int, back_cb: str) -> tuple[str, InlineKeyboardMarkup]:
-    """Generate @QuizBot-style set preview card with 'Start in DM' and 'Start in Group' buttons."""
+    """Generate @QuizBot-style set preview card with DM, Group, and Channel buttons."""
     bot_username = "Bpsc_tier4_bot"
     group_url = f"https://t.me/{bot_username}?startgroup={set_id}"
+    chan_cfg = get_channel_config()
+    channel_name = chan_cfg.get("channel", "@coding_with_sudhir")
     text = (
         f"📘 <b>{html.escape(title)}</b>\n\n"
         f"📋 <b>Total Questions:</b> <code>{count}</code>\n"
-        f"⏱ <b>Question Timer:</b> <code>60 seconds</code> per question\n"
+        f"⏱ <b>Question Timer:</b> <code>60 seconds</code> (in group/DM)\n"
         f"🎯 <b>Format:</b> BPSC 5-Options (A, B, C, D, E)\n"
-        f"🏆 <b>Leaderboard:</b> Group mein sabhi participants ka live rank aayega!\n\n"
+        f"📢 <b>Target Channel:</b> <code>{html.escape(channel_name)}</code>\n\n"
         f"<i>Neeche option choose karein:</i>"
     )
     kb = InlineKeyboardMarkup([
         [InlineKeyboardButton("▶️ Start in Private (DM)", callback_data=f"start_set:{set_id}")],
         [InlineKeyboardButton("👥 Start Quiz in Group", url=group_url)],
+        [InlineKeyboardButton(f"📢 Post to Channel ({channel_name})", callback_data=f"chan_ask:{set_id}")],
         [InlineKeyboardButton("« Back", callback_data=back_cb)],
     ])
     return text, kb
@@ -496,21 +510,27 @@ async def start_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 async def help_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Handle /help command."""
+    chan_name = get_channel_config().get("channel", "@coding_with_sudhir")
     text = (
         "📘 <b>BPSC TRE CS Quiz Bot — Commands & Help</b>\n\n"
         "<b>Personal / DM Commands:</b>\n"
-        "• <code>/start</code> or <code>/menu</code> — Main dashboard & subject selector\n"
+        "• <code>/start</code> or <code>/menu</code> — Main dashboard & subject sets\n"
         "• <code>/stats</code> — Subject-wise accuracy & 75+/80 tracker\n"
         "• <code>/stop</code> — Active DM quiz stop karo\n"
         "• <code>/next</code> — Timed poll expire hone par next question\n\n"
+        "<b>Channel Commands (@coding_with_sudhir):</b>\n"
+        f"• <code>/post_channel [count]</code> — Abhi channel ({chan_name}) par questions post karo\n"
+        f"• <code>/set_daily_channel [HH:MM]</code> — Channel mein daily 7:00 PM auto-quiz schedule karo\n"
+        "• <code>/stop_daily_channel</code> — Channel auto-quiz band karo\n"
+        "• <code>/channel_status</code> — Channel settings aur schedule dekho\n"
+        "• <code>/set_channel @name</code> — Target channel username change karo\n\n"
         "<b>Group Commands (Daily 7:00 PM Quiz & Live Competition):</b>\n"
         "• <code>/set_daily_quiz</code> — Group mein daily 7:00 PM IST (30 Qs, 60s/Q) schedule karo\n"
-        "• <code>/set_daily_quiz 19:00</code> — Custom time set karo (e.g. 19:00 ya 07:00)\n"
-        "• <code>/start_quiz [count]</code> — Abhi group mein live quiz start karo (e.g. <code>/start_quiz 30</code>)\n"
+        "• <code>/start_quiz [count]</code> — Abhi group mein live quiz start karo\n"
         "• <code>/stop_quiz</code> — Running group quiz stop karo aur leaderboard dekho\n"
-        "• <code>/stop_daily_quiz</code> — Daily auto-quiz band karo\n"
+        "• <code>/stop_daily_quiz</code> — Group daily auto-quiz band karo\n"
         "• <code>/quiz_status</code> — Group schedule aur settings dekho\n\n"
-        "💡 <i>Tip: Group mein bot ko Admin banayein taaki polls post karne ki permission rahe!</i>"
+        "💡 <i>Tip: Bot ko channel aur group dono mein Admin banakar rakhein!</i>"
     )
     await update.message.reply_text(text, parse_mode=ParseMode.HTML)
 
@@ -747,6 +767,48 @@ async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
         )
         return
 
+    if data.startswith("chan_ask:"):
+        set_id = data.split(":", 1)[1]
+        title, questions = get_quiz_set(set_id)
+        chan_cfg = get_channel_config()
+        channel_name = chan_cfg.get("channel", "@coding_with_sudhir")
+        text = (
+            f"📢 <b>Confirm Channel Broadcast</b>\n\n"
+            f"• <b>Quiz:</b> {html.escape(title)}\n"
+            f"• <b>Questions:</b> <code>{len(questions)}</code>\n"
+            f"• <b>Channel:</b> <code>{html.escape(channel_name)}</code>\n\n"
+            f"Kya aap is quiz ko direct apne channel par post karna chahte hain?"
+        )
+        kb = InlineKeyboardMarkup([
+            [InlineKeyboardButton("✅ Yes, Post to Channel Now", callback_data=f"chan_do:{set_id}")],
+            [InlineKeyboardButton("❌ Cancel", callback_data=f"preview_set:{set_id}")],
+        ])
+        await query.message.edit_text(text, parse_mode=ParseMode.HTML, reply_markup=kb)
+        return
+
+    if data.startswith("chan_do:"):
+        set_id = data.split(":", 1)[1]
+        title, questions = get_quiz_set(set_id)
+        chan_cfg = get_channel_config()
+        channel_name = chan_cfg.get("channel", "@coding_with_sudhir")
+        await query.message.edit_text(
+            f"🚀 <b>Channel Posting Started!</b>\n\n"
+            f"• <b>Quiz:</b> {html.escape(title)} (<code>{len(questions)}</code> Qs)\n"
+            f"• <b>Target:</b> <code>{html.escape(channel_name)}</code>\n\n"
+            f"<i>Questions channel par broadcast ho rahe hain... Apne channel par dekhein!</i>",
+            parse_mode=ParseMode.HTML,
+        )
+        asyncio.create_task(
+            run_channel_quiz(
+                context.bot,
+                channel_id=channel_name,
+                questions=questions,
+                title=title,
+                delay_between_qs=4,
+            )
+        )
+        return
+
     if data.startswith("start:"):
         _, mode, param = data.split(":", 2)
         title, questions = build_quiz_session_questions(mode, param, user_id)
@@ -818,6 +880,55 @@ async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
         sess["index"] += 1
         await send_pyq_flashcard(context.bot, chat_id, user_id, reveal=False, edit_msg=query.message)
         return
+
+
+async def run_channel_quiz(
+    bot: Any,
+    channel_id: str,
+    questions: list[dict[str, Any]],
+    title: str = "🎯 BPSC Channel Quiz",
+    delay_between_qs: int = 4,
+) -> None:
+    """Post quiz questions sequentially to the Telegram channel as native quiz polls."""
+    start_msg = (
+        f"📢 <b>{html.escape(title)}</b>\n\n"
+        f"📋 <b>Total Questions:</b> <code>{len(questions)}</code>\n"
+        f"🎯 <b>Format:</b> BPSC 5-Options (A, B, C, D, E)\n"
+        f"💡 Sabhi questions ke polls neeche aa rahe hain. Sahi option tap karein aur bulb par click karke explanation dekhein!\n\n"
+        f"<i>Target: 75+ / 80 Marks</i>"
+    )
+    try:
+        await bot.send_message(chat_id=channel_id, text=start_msg, parse_mode=ParseMode.HTML)
+    except Exception as e:
+        logger.exception("Failed to send intro message to channel %s: %s", channel_id, e)
+        return
+
+    await asyncio.sleep(2)
+
+    for idx, q in enumerate(questions):
+        try:
+            total = len(questions)
+            mod_label = MODULE_META.get(q["module"], (q["module"], 0))[0]
+            header = f"[Q {idx + 1}/{total} | {mod_label}] "
+            poll_question = truncate(header + q["question"], 300)
+            options_list = [truncate(f"({k}) {q['options'][k]}", 100) for k in OPTION_KEYS]
+            correct_idx = OPTION_KEYS.index(q["correct"])
+            explanation = truncate(q.get("explanation", ""), 200)
+
+            await bot.send_poll(
+                chat_id=channel_id,
+                question=poll_question,
+                options=options_list,
+                type=Poll.QUIZ,
+                correct_option_id=correct_idx,
+                explanation=explanation or None,
+                is_anonymous=True,
+            )
+            if idx < len(questions) - 1:
+                await asyncio.sleep(delay_between_qs)
+        except Exception as e:
+            logger.exception("Failed to send poll Q%d to channel %s: %s", idx + 1, channel_id, e)
+            await asyncio.sleep(2)
 
 
 async def run_group_quiz(
@@ -963,6 +1074,30 @@ async def daily_scheduler_loop(app: Application) -> None:
                             title=f"🎯 BPSC Daily Quiz ({current_date_str} • {target_time} IST)",
                         )
                     )
+
+            # Channel daily broadcast (e.g. @coding_with_sudhir at 19:00 IST)
+            chan_cfg = get_channel_config()
+            if chan_cfg.get("enabled", True):
+                target_chan = chan_cfg.get("channel", "@coding_with_sudhir")
+                chan_time = chan_cfg.get("time", "19:00")
+                chan_last = chan_cfg.get("last_run", "")
+                if current_time_str == chan_time and chan_last != current_date_str:
+                    chan_cfg["last_run"] = current_date_str
+                    save_progress()
+                    count = chan_cfg.get("count", 30)
+                    all_qs = list(QUESTION_BY_UID.values())
+                    random.shuffle(all_qs)
+                    qs = all_qs[:count]
+                    logger.info("Triggering scheduled channel quiz for %s at %s IST (%d Qs)", target_chan, current_time_str, count)
+                    asyncio.create_task(
+                        run_channel_quiz(
+                            app.bot,
+                            channel_id=target_chan,
+                            questions=qs,
+                            title=f"📢 BPSC Daily Quiz ({current_date_str} • {chan_time} IST)",
+                            delay_between_qs=4,
+                        )
+                    )
         except Exception as e:
             logger.exception("Error in daily_scheduler_loop: %s", e)
 
@@ -1070,6 +1205,113 @@ async def quiz_status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         f"• <b>Questions:</b> <code>{cfg.get('count', 30)}</code>\n"
         f"• <b>Timer:</b> <code>{cfg.get('duration', 60)}s</code>\n"
         f"• <b>Last Run:</b> <code>{cfg.get('last_run') or 'Pending'}</code>"
+    )
+    await update.message.reply_text(text, parse_mode=ParseMode.HTML)
+
+
+async def post_channel_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Manually post a quiz set or count to channel (e.g. /post_channel or /post_channel 10)."""
+    chan_cfg = get_channel_config()
+    target_chan = chan_cfg.get("channel", "@coding_with_sudhir")
+
+    set_or_count = context.args[0].strip() if context.args else "30"
+    if set_or_count.startswith("set_") or set_or_count in ("mock_80", "detrap_30", "num_30", "facts_30"):
+        title, questions = get_quiz_set(set_or_count)
+    else:
+        try:
+            count = max(1, min(100, int(set_or_count)))
+        except ValueError:
+            count = 30
+        all_qs = list(QUESTION_BY_UID.values())
+        random.shuffle(all_qs)
+        questions = all_qs[:count]
+        title = f"🎯 BPSC Channel Quiz ({len(questions)} Qs)"
+
+    await update.message.reply_text(
+        f"🚀 <b>Channel Posting Started!</b>\n\n"
+        f"• <b>Target:</b> <code>{html.escape(target_chan)}</code>\n"
+        f"• <b>Quiz:</b> {html.escape(title)}\n"
+        f"• <b>Questions:</b> <code>{len(questions)}</code>\n\n"
+        f"<i>Questions channel par post ho rahe hain!</i>",
+        parse_mode=ParseMode.HTML,
+    )
+    asyncio.create_task(
+        run_channel_quiz(
+            context.bot,
+            channel_id=target_chan,
+            questions=questions,
+            title=title,
+            delay_between_qs=4,
+        )
+    )
+
+
+async def set_channel_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Configure or change the default broadcast channel (e.g. /set_channel @coding_with_sudhir)."""
+    chan_cfg = get_channel_config()
+    if not context.args:
+        cur = chan_cfg.get("channel", "@coding_with_sudhir")
+        await update.message.reply_text(
+            f"Current Target Channel: <code>{html.escape(cur)}</code>\n"
+            f"Change karne ke liye: <code>/set_channel @channel_name</code>",
+            parse_mode=ParseMode.HTML,
+        )
+        return
+
+    new_chan = context.args[0].strip()
+    if not new_chan.startswith("@"):
+        new_chan = "@" + new_chan
+    chan_cfg["channel"] = new_chan
+    save_progress()
+    await update.message.reply_text(f"✅ Target Channel set to: <code>{html.escape(new_chan)}</code>", parse_mode=ParseMode.HTML)
+
+
+async def set_daily_channel_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Schedule automated daily posting to the channel (e.g. /set_daily_channel 19:00)."""
+    target_time = "19:00"
+    if context.args:
+        arg_time = context.args[0].strip()
+        try:
+            datetime.strptime(arg_time, "%H:%M")
+            target_time = arg_time
+        except ValueError:
+            await update.message.reply_text("❌ Galat format! Use: <code>/set_daily_channel 19:00</code>", parse_mode=ParseMode.HTML)
+            return
+
+    chan_cfg = get_channel_config()
+    chan_cfg["time"] = target_time
+    chan_cfg["enabled"] = True
+    save_progress()
+    target_chan = chan_cfg.get("channel", "@coding_with_sudhir")
+    await update.message.reply_text(
+        f"✅ <b>Daily Channel Auto-Quiz Scheduled!</b>\n\n"
+        f"• <b>Channel:</b> <code>{html.escape(target_chan)}</code>\n"
+        f"• <b>Daily Time:</b> <code>{target_time} IST</code>\n"
+        f"• <b>Questions:</b> <code>30</code>\n\n"
+        f"<i>Roz is samay bot channel mein automatically 30 questions post karega!</i>",
+        parse_mode=ParseMode.HTML,
+    )
+
+
+async def stop_daily_channel_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Disable automated daily posting to the channel."""
+    chan_cfg = get_channel_config()
+    chan_cfg["enabled"] = False
+    save_progress()
+    await update.message.reply_text("🛑 Daily channel auto-quiz schedule cancel kar diya gaya hai.")
+
+
+async def channel_status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Show channel broadcast settings and status."""
+    chan_cfg = get_channel_config()
+    status_str = "Active ✅" if chan_cfg.get("enabled", True) else "Paused ⏸"
+    text = (
+        f"📢 <b>Channel Broadcast Status</b>\n\n"
+        f"• <b>Target Channel:</b> <code>{html.escape(chan_cfg.get('channel', '@coding_with_sudhir'))}</code>\n"
+        f"• <b>Daily Schedule:</b> {status_str}\n"
+        f"• <b>Daily Time:</b> <code>{chan_cfg.get('time', '19:00')} IST</code>\n"
+        f"• <b>Questions:</b> <code>{chan_cfg.get('count', 30)}</code>\n"
+        f"• <b>Last Run:</b> <code>{chan_cfg.get('last_run') or 'Pending'}</code>"
     )
     await update.message.reply_text(text, parse_mode=ParseMode.HTML)
 
@@ -1206,6 +1448,11 @@ def main() -> None:
     app.add_handler(CommandHandler(["set_daily_quiz", "daily_quiz"], set_daily_quiz_cmd))
     app.add_handler(CommandHandler(["stop_daily_quiz"], stop_daily_quiz_cmd))
     app.add_handler(CommandHandler(["quiz_status"], quiz_status_cmd))
+    app.add_handler(CommandHandler(["post_channel", "channel_quiz"], post_channel_cmd))
+    app.add_handler(CommandHandler(["set_channel"], set_channel_cmd))
+    app.add_handler(CommandHandler(["set_daily_channel", "daily_channel"], set_daily_channel_cmd))
+    app.add_handler(CommandHandler(["stop_daily_channel"], stop_daily_channel_cmd))
+    app.add_handler(CommandHandler(["channel_status"], channel_status_cmd))
     app.add_handler(CallbackQueryHandler(on_callback))
     app.add_handler(PollAnswerHandler(on_poll_answer))
 
