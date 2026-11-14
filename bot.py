@@ -305,7 +305,7 @@ def build_set_preview_card(set_id: str, title: str, count: int, back_cb: str) ->
     text = (
         f"📘 <b>{html.escape(title)}</b>\n\n"
         f"📋 <b>Total Questions:</b> <code>{count}</code>\n"
-        f"⏱ <b>Question Timer:</b> <code>30 seconds</code> per question\n"
+        f"⏱ <b>Question Timer:</b> <code>60 seconds</code> per question\n"
         f"🎯 <b>Format:</b> BPSC 5-Options (A, B, C, D, E)\n"
         f"📢 <b>Target Channel:</b> <code>{html.escape(channel_name)}</code>\n\n"
         f"<i>Neeche option choose karein:</i>"
@@ -805,8 +805,8 @@ async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
                 channel_id=channel_name,
                 questions=questions,
                 title=title,
-                duration=30,
-                delay_between_qs=30,
+                duration=60,
+                delay_between_qs=60,
             )
         )
         return
@@ -889,10 +889,10 @@ async def run_channel_quiz(
     channel_id: str,
     questions: list[dict[str, Any]],
     title: str = "🎯 BPSC Channel Quiz",
-    duration: int = 30,
-    delay_between_qs: int = 30,
+    duration: int = 60,
+    delay_between_qs: int = 60,
 ) -> None:
-    """Post quiz questions sequentially to the Telegram channel as native quiz polls with 30s timer and shuffle."""
+    """Post quiz questions sequentially to the Telegram channel as native quiz polls with 60s timer and shuffle."""
     shuffled_qs = list(questions)
     random.shuffle(shuffled_qs)
 
@@ -902,7 +902,7 @@ async def run_channel_quiz(
         f"⏱ <b>Timer:</b> <code>{duration} seconds</code> per question\n"
         f"🔀 <b>Shuffle:</b> Random order ON ✅\n"
         f"🎯 <b>Format:</b> BPSC 5-Options (A, B, C, D, E)\n\n"
-        f"💡 <i>Har question 30s tak open rahega. Turant vote karein aur 💡 bulb icon par tap karke explanation padhein!</i>"
+        f"💡 <i>Har question 60s tak open rahega. Turant vote karein aur 💡 bulb icon par tap karke explanation padhein!</i>"
     )
     try:
         await bot.send_message(chat_id=channel_id, text=start_msg, parse_mode=ParseMode.HTML)
@@ -1119,8 +1119,8 @@ async def daily_scheduler_loop(app: Application) -> None:
                             channel_id=target_chan,
                             questions=qs,
                             title=f"📢 BPSC Daily Quiz ({current_date_str} • {chan_time} IST)",
-                            duration=30,
-                            delay_between_qs=30,
+                            duration=60,
+                            delay_between_qs=60,
                         )
                     )
         except Exception as e:
@@ -1266,8 +1266,8 @@ async def post_channel_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -
             channel_id=target_chan,
             questions=questions,
             title=title,
-            duration=30,
-            delay_between_qs=30,
+            duration=60,
+            delay_between_qs=60,
         )
     )
 
